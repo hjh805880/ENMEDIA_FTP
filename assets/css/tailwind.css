@@ -1,0 +1,142 @@
+@import 'font.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply overflow-x-hidden;
+  }
+  b {
+    @apply font-bold;
+  }
+  eb {
+    @apply font-extrabold;
+  }
+  section {
+    @apply break-keep m-auto;
+  }
+  article {
+    @apply break-keep m-auto;
+  }
+  ::selection {
+    @apply bg-primary-500 text-white;
+  }
+  ::-moz-selection {
+    @apply bg-primary-500 text-white;
+  }
+  img {
+    -webkit-user-drag: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span {
+    @apply rotate-[0.03deg];
+  }
+}
+
+@layer components {
+  /* 사용자 정의 */
+  .rowCenter {
+    @apply flex flex-row items-center justify-center;
+  }
+  .colCenter {
+    @apply flex flex-col items-center justify-center;
+  }
+  .sectionWrapper {
+    @apply colCenter break-keep container mx-auto;
+  }
+    /* -------- */
+
+  /* 텍스트 이펙트 */
+  .sectionText {
+    @apply relative z-10 w-fit after:-z-10 after:content-[url('~/assets/img/text_effect.webp')] after:absolute after:w-fit after:opacity-60 after:-bottom-4;
+  }
+  .section1Text {
+    @apply sectionText after:-right-16;
+  }
+  .section2Text {
+    @apply sectionText after:-right-20;
+  }
+  .section3TextWhite {
+    @apply sectionText after:content-[url('~/assets/img/text_effect_w.webp')] after:-right-20;
+  }
+  .section4Text {
+    @apply sectionText after:-right-16;
+  }
+  .section5Text {
+    @apply sectionText after:-right-20;
+  }
+  .section6Text {
+    @apply sectionText after:-right-20;
+  }
+  .section7Text {
+    @apply sectionText after:-right-20;
+  }
+  .section8TextWhite {
+    @apply sectionText after:content-[url('~/assets/img/text_effect_w.webp')] after:opacity-100 after:-right-16;
+  }
+  .section9TextWhite {
+    @apply sectionText after:content-[url('~/assets/img/text_effect_w.webp')] after:opacity-100 after:-right-20;
+  }
+  /* -------- */
+
+  /* 리드양식 신청폼 */
+  .onnuriInput {
+    @apply border-black-700 focus:border-black-700 focus:outline-none text-black-700 ring-black-700 placeholder:font-normal placeholder:text-black-500 w-full px-3 py-3 font-medium rounded-md;
+  }
+  /* -------- */
+
+  /* 섹션6 */
+  .section6_list {
+    @apply rowCenter px-6;
+  }
+  .section6_list::before {
+    content: '';
+    @apply w-2 h-2 min-w-[.5rem] min-h-[.5rem] bg-black-700 rounded-full inline-block mr-3;
+  }
+  .section6_list_color {
+    @apply bg-primary-500 border-primary-500 text-white border-2;
+  }
+  .section6_list_black {
+    @apply bg-black-200 text-black-500 border-black-300 border-2;
+  }
+  .section6_list_black p {
+    @apply bg-black-500 text-white;
+  }
+}
+
+@layer utilities {
+  /* 우선 적용 */
+  .sr-only {
+    clip: rect(0, 0, 0, 0) !important;
+    border-width: 0 !important;
+    @apply absolute w-[1px] h-[1px] p-0 -m-[1px] overflow-hidden whitespace-nowrap z-[-999999] opacity-0 !important;
+  }
+  @media screen(lg) {
+    .mo-only {
+      @apply hidden !important;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .pc-only {
+      @apply hidden !important;
+    }
+  }
+
+  .form-select {
+    background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'%3E%3Cpath stroke='%23946efa' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 1 4 4 4-4'/%3E%3C/svg%3E") !important;
+  }
+
+  @keyframes pulse {
+    50% {
+      opacity: .8;
+    }
+  }
+}
