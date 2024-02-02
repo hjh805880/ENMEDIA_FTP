@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
-  modules: ['@vueuse/nuxt', '@nuxt/image', '@nuxtseo/module', '@nuxtjs/critters', 'nuxt-og-image'],
-  devtools: { enabled: false },
+  modules: ['@vueuse/nuxt', '@nuxt/image', '@nuxtseo/module', '@nuxtjs/critters', 'nuxt-og-image', '@nuxt/content'],
+  devtools: { enabled: true },
   css: ["~/assets/css/tailwind.css"],
   app: {
     baseURL: '/',

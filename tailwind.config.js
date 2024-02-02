@@ -6,6 +6,9 @@ export default {
       sans: ["'Pretendard'", "sans-serif"],
     },
     extend: {
+      maxWidth: {
+        'gui': '90rem',
+      },
       colors: {
         primary: {
           100: "#e5d3fd",
