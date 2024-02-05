@@ -65,7 +65,7 @@ const isLastItemOffset = computed(() => {
         <a @click.prevent="openModal(item)">
           <div class="colCenter w-full space-y-6">
             <div class="lg:h-32 colCenter w-full overflow-hidden">
-              <NuxtImg :src="`/img/portfolio/${item.titleImg}`" :alt="`이엔미디어 포트폴리오 업체 ${item.title} 썸네일 이미지`" class="group-hover/portfolio:scale-100 w-full transition-all duration-700 ease-in-out scale-150" />
+              <NuxtImg format="webp" :src="`/img/portfolio/${item.titleImg}`" :alt="`이엔미디어 포트폴리오 업체 ${item.title} 썸네일 이미지`" class="group-hover/portfolio:scale-100 w-full transition-all duration-700 ease-in-out scale-150" />
             </div>
             <div class="colCenter px-4 space-y-4">
               <NuxtImg :src="`/img/portfolio/${item.logo}`" :alt="`이엔미디어 포트폴리오 업체 ${item.title} 로고`" class="w-16" />
@@ -105,7 +105,7 @@ const isLastItemOffset = computed(() => {
       </div>
       <div class="py-14 flex items-center justify-center w-full px-16 space-x-12">
         <div class="max-w-[40%] size-full aspect-1 overflow-hidden rounded-full colCenter shadow-inner">
-          <NuxtImg :src="`/img/portfolio/${selectedItem.titleImg}`" :alt="`이엔미디어 포트폴리오 업체 ${selectedItem.title} 타이틀 이미지`" class="hover:scale-125 object-cover w-full h-full transition-all duration-500 ease-in-out shadow-inner" />
+          <NuxtImg format="webp" :src="`/img/portfolio/${selectedItem.titleImg}`" :alt="`이엔미디어 포트폴리오 업체 ${selectedItem.title} 타이틀 이미지`" class="hover:scale-125 object-cover w-full h-full transition-all duration-500 ease-in-out shadow-inner" />
         </div>
         <div class="flex flex-col w-full max-w-[60%] space-y-6 items-start justify-center">
           <div class="flex items-center justify-start w-full space-x-4">
