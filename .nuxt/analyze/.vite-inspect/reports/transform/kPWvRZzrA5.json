@@ -1,0 +1,234 @@
+{
+  "resolvedId": "/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/components/SubTop.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, toDisplayString as _toDisplayString, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = {\n  id: \"subtop\",\n  class: \"text-center\"\n}\nconst _hoisted_2 = { class: \"flex flex-col items-center justify-center w-full lg:h-[300px] h-[200px] text-white relative overflow-hidden\" }\nconst _hoisted_3 = { class: \"colCenter absolute top-[30%]\" }\nconst _hoisted_4 = { class: \"lg:text-4xl z-20 text-3xl font-extrabold\" }\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"z-20 w-12 pt-3 border-b-4 border-white\" }, null, -1)\nconst _hoisted_6 = { class: \"lg:text-xl z-20 px-8 pt-5\" }\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'SubTop',\n  props: {\n  subTopImg: String,\n  subTopTitle: String,\n  subTopDesc: String,\n},\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")!\n\n  return (_openBlock(), _createElementBlock(\"article\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createVNode(_component_NuxtImg, {\n        src: __props.subTopImg,\n        alt: `이엔미디어 ${__props.subTopTitle} 페이지 상단이미지`,\n        class: \"object-cover w-full h-full\"\n      }, null, 8, [\"src\", \"alt\"]),\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"h2\", _hoisted_4, _toDisplayString(__props.subTopTitle), 1),\n        _hoisted_5,\n        _createElementVNode(\"h3\", _hoisted_6, _toDisplayString(__props.subTopDesc), 1)\n      ])\n    ])\n  ]))\n}\n}\n\n})",
+      "start": 1706885057990,
+      "end": 1706885057990
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1706885057990,
+      "end": 1706885057990,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1706885057990,
+      "end": 1706885057990,
+      "order": "pre"
+    },
+    {
+      "name": "content-slot",
+      "start": 1706885057990,
+      "end": 1706885057990,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1706885057990,
+      "end": 1706885057990,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1706885057990,
+      "end": 1706885057990,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, toDisplayString as _toDisplayString, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\";\nconst _hoisted_1 = {\n  id: \"subtop\",\n  class: \"text-center\"\n};\nconst _hoisted_2 = { class: \"flex flex-col items-center justify-center w-full lg:h-[300px] h-[200px] text-white relative overflow-hidden\" };\nconst _hoisted_3 = { class: \"colCenter absolute top-[30%]\" };\nconst _hoisted_4 = { class: \"lg:text-4xl z-20 text-3xl font-extrabold\" };\nconst _hoisted_5 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"z-20 w-12 pt-3 border-b-4 border-white\" }, null, -1);\nconst _hoisted_6 = { class: \"lg:text-xl z-20 px-8 pt-5\" };\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"SubTop\",\n  props: {\n    subTopImg: String,\n    subTopTitle: String,\n    subTopDesc: String\n  },\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_NuxtImg = _resolveComponent(\"NuxtImg\");\n      return _openBlock(), _createElementBlock(\"article\", _hoisted_1, [\n        _createElementVNode(\"div\", _hoisted_2, [\n          _createVNode(_component_NuxtImg, {\n            src: __props.subTopImg,\n            alt: `이엔미디어 ${__props.subTopTitle} 페이지 상단이미지`,\n            class: \"object-cover w-full h-full\"\n          }, null, 8, [\"src\", \"alt\"]),\n          _createElementVNode(\"div\", _hoisted_3, [\n            _createElementVNode(\"h2\", _hoisted_4, _toDisplayString(__props.subTopTitle), 1),\n            _hoisted_5,\n            _createElementVNode(\"h3\", _hoisted_6, _toDisplayString(__props.subTopDesc), 1)\n          ])\n        ])\n      ]);\n    };\n  }\n});\n",
+      "start": 1706885057990,
+      "end": 1706885058085,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/components/SubTop.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, toDisplayString as _toDisplayString, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = {\n  id: \"subtop\",\n  class: \"text-center\"\n}\nconst _hoisted_2 = { class: \"flex flex-col items-center justify-center w-full lg:h-[300px] h-[200px] text-white relative overflow-hidden\" }\nconst _hoisted_3 = { class: \"colCenter absolute top-[30%]\" }\nconst _hoisted_4 = { class: \"lg:text-4xl z-20 text-3xl font-extrabold\" }\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"z-20 w-12 pt-3 border-b-4 border-white\" }, null, -1)\nconst _hoisted_6 = { class: \"lg:text-xl z-20 px-8 pt-5\" }\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'SubTop',\n  props: {\n  subTopImg: String,\n  subTopTitle: String,\n  subTopDesc: String,\n},\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")!\n\n  return (_openBlock(), _createElementBlock(\"article\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createVNode(_component_NuxtImg, {\n        src: __props.subTopImg,\n        alt: `이엔미디어 ${__props.subTopTitle} 페이지 상단이미지`,\n        class: \"object-cover w-full h-full\"\n      }, null, 8, [\"src\", \"alt\"]),\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"h2\", _hoisted_4, _toDisplayString(__props.subTopTitle), 1),\n        _hoisted_5,\n        _createElementVNode(\"h3\", _hoisted_6, _toDisplayString(__props.subTopDesc), 1)\n      ])\n    ])\n  ]))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,oBAAoB,mBAAmB,eAAe,cAAc,mBAAmB,kBAAkB,sBAAsB,qBAAqB,aAAa,YAAY,sBAAsB,2BAA2B;AAEvO,MAAM,aAAa;AAAA,EACjB,IAAI;AAAA,EACJ,OAAO;AACT;AACA,MAAM,aAAa,EAAE,OAAO,8GAA8G;AAC1I,MAAM,aAAa,EAAE,OAAO,+BAA+B;AAC3D,MAAM,aAAa,EAAE,OAAO,2CAA2C;AACvE,MAAM,aAA0B,oCAAoB,OAAO,EAAE,OAAO,yCAAyC,GAAG,MAAM,EAAE;AACxH,MAAM,aAAa,EAAE,OAAO,4BAA4B;AAGxD,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,OAAO;AAAA,IACP,WAAW;AAAA,IACX,aAAa;AAAA,IACb,YAAY;AAAA,EACd;AAAA,EACE,MAAM,SAAS;AAIjB,WAAO,CAAC,MAAU,WAAgB;AAChC,YAAM,qBAAqB,kBAAkB,SAAS;AAEtD,aAAQ,WAAW,GAAG,oBAAoB,WAAW,YAAY;AAAA,QAC/D,oBAAoB,OAAO,YAAY;AAAA,UACrC,aAAa,oBAAoB;AAAA,YAC/B,KAAK,QAAQ;AAAA,YACb,KAAK,SAAS,QAAQ,WAAW;AAAA,YACjC,OAAO;AAAA,UACT,GAAG,MAAM,GAAG,CAAC,OAAO,KAAK,CAAC;AAAA,UAC1B,oBAAoB,OAAO,YAAY;AAAA,YACrC,oBAAoB,MAAM,YAAY,iBAAiB,QAAQ,WAAW,GAAG,CAAC;AAAA,YAC9E;AAAA,YACA,oBAAoB,MAAM,YAAY,iBAAiB,QAAQ,UAAU,GAAG,CAAC;AAAA,UAC/E,CAAC;AAAA,QACH,CAAC;AAAA,MACH,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1706885058085,
+      "end": 1706885058085,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1706885058085,
+      "end": 1706885058086,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1706885058086,
+      "end": 1706885058086,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1706885058086,
+      "end": 1706885058086,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1706885058086,
+      "end": 1706885058086,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1706885058086,
+      "end": 1706885058086,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/node_modules/@nuxt/image/dist/runtime/components/nuxt-img\";\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, toDisplayString as _toDisplayString, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\";\nconst _hoisted_1 = {\n  id: \"subtop\",\n  class: \"text-center\"\n};\nconst _hoisted_2 = { class: \"flex flex-col items-center justify-center w-full lg:h-[300px] h-[200px] text-white relative overflow-hidden\" };\nconst _hoisted_3 = { class: \"colCenter absolute top-[30%]\" };\nconst _hoisted_4 = { class: \"lg:text-4xl z-20 text-3xl font-extrabold\" };\nconst _hoisted_5 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"z-20 w-12 pt-3 border-b-4 border-white\" }, null, -1);\nconst _hoisted_6 = { class: \"lg:text-xl z-20 px-8 pt-5\" };\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"SubTop\",\n  props: {\n    subTopImg: String,\n    subTopTitle: String,\n    subTopDesc: String\n  },\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_NuxtImg = __nuxt_component_0;\n      return _openBlock(), _createElementBlock(\"article\", _hoisted_1, [\n        _createElementVNode(\"div\", _hoisted_2, [\n          _createVNode(_component_NuxtImg, {\n            src: __props.subTopImg,\n            alt: `이엔미디어 ${__props.subTopTitle} 페이지 상단이미지`,\n            class: \"object-cover w-full h-full\"\n          }, null, 8, [\"src\", \"alt\"]),\n          _createElementVNode(\"div\", _hoisted_3, [\n            _createElementVNode(\"h2\", _hoisted_4, _toDisplayString(__props.subTopTitle), 1),\n            _hoisted_5,\n            _createElementVNode(\"h3\", _hoisted_6, _toDisplayString(__props.subTopDesc), 1)\n          ])\n        ])\n      ]);\n    };\n  }\n});\n",
+      "start": 1706885058086,
+      "end": 1706885058086,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1706885058086,
+      "end": 1706885058086,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1706885058086,
+      "end": 1706885058086,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1706885058086,
+      "end": 1706885058086,
+      "order": "normal"
+    }
+  ]
+}

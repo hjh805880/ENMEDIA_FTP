@@ -1,0 +1,17 @@
+{
+  "resolvedId": "/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/node_modules/nuxt/dist/app/types.js",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "",
+      "start": 1706885059520,
+      "end": 1706885059520
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1706885059520,
+      "end": 1706885059520,
+      "order": "normal"
+    }
+  ]
+}
