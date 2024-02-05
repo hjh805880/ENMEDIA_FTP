@@ -1,8 +1,8 @@
 module.exports = {
   apps: [
     {
-      name: "onnuriloan",
-      cwd: "/home/bitnami/htdocs",
+      name: "ENMEDIA",
+      cwd: "/home/ubuntu/enmedia",
       script: "./.output/server/index.mjs",
       exec_mode: "cluster",
       instances: "max",

@@ -97,13 +97,16 @@
 
   /* 섹션1 정의 */
   .mainTextAfter {
-    @apply after:absolute after:lg:top-[13%] after:left-0 after:lg:left-[72%] after:z-30 after:content-[url('~/assets/img/main_visual_text_spin.webp')] after:animate-spin after:animate-ease-linear after:animate-duration-[7000ms];
+    @apply after:absolute after:lg:top-[13%] after:left-0 after:lg:left-[72%] after:z-30 after:content-[url('/img/main_visual_text_spin.webp')] after:animate-spin after:animate-ease-linear after:animate-duration-[7000ms];
   }
   /* -------- */
 
   /* 섹션2 정의 */
   .cls-1 {
     @apply animate-pulse animate-ease-in-out animate-infinite animate-duration-[1000ms];
+  }
+  .creative-cls-1 {
+    @apply cls-1;
   }
 }
 

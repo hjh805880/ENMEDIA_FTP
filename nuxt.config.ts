@@ -1,18 +1,21 @@
+import site from "./site";
+const { name, description, url, keywords, defaultLocale, identity, trailingSlash, titleSeparator } = site;
+
 export default defineNuxtConfig({
-  modules: ['@vueuse/nuxt', '@nuxt/image', '@nuxtseo/module', '@nuxtjs/critters', 'nuxt-og-image', '@nuxt/content'],
+  modules: ["@vueuse/nuxt", "@nuxt/image", "@nuxtseo/module", "@nuxtjs/critters", "nuxt-og-image", "@nuxt/content"],
   devtools: { enabled: true },
   css: ["~/assets/css/tailwind.css"],
   app: {
-    baseURL: '/',
+    baseURL: "/",
   },
   critters: {
     config: {
-      preload: 'swap',
+      preload: "swap",
     },
   },
   image: {
-    dir: 'assets/img',
-    format: ['webp, png, jpg']
+    dir : "public",
+    format: ["webp, png, jpg"],
   },
   postcss: {
     plugins: {
@@ -21,13 +24,20 @@ export default defineNuxtConfig({
     },
   },
   site: {
-    defaultLocale: 'ko',
-    identity: {
-      type: 'Corporation',
-    }
+    url,
+    name,
+    keywords,
+    description,
+    defaultLocale,
+    identity,
+    trailingSlash,
+    titleSeparator,
+  },
+  robots: {
+    blockNonSeoBots: true,
   },
   seo: {
     redirectToCanonicalSiteUrl: true,
-    splash: true
+    splash: true,
   },
 });
