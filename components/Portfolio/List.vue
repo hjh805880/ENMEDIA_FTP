@@ -1,42 +1,37 @@
 <script setup>
-// Props 정의
 const props = defineProps({
-  maxItems: Number, // 최대 항목 수
-  showCategoryButtons: Boolean, // 카테고리 버튼 표시 여부
+  maxItems: Number,
+  showCategoryButtons: Boolean,
 });
 
 const { data: portfolio, error } = await useAsyncData("portfolio", () => $fetch("/api/portfolio"));
 const selectedCategory = ref(null);
 
-// 필터링 및 정렬된 포트폴리오 항목
 const filteredPortfolio = computed(() => {
   if (!portfolio.value || error.value) return [];
   let filtered = portfolio.value.filter((item) => item && item.title != null);
   if (selectedCategory.value) {
     filtered = filtered.filter((item) => item.category === selectedCategory.value);
   }
-  // position을 기준으로 정렬하되, position이 없는 경우 title을 기준으로 정렬합니다.
   const sorted = filtered.sort((a, b) => {
     if (a.position !== undefined && b.position !== undefined) {
-      return a.position - b.position; // 두 항목 모두 position이 정의된 경우
+      return a.position - b.position;
     } else if (a.position !== undefined) {
-      return -1; // 오직 a만 position이 정의된 경우
+      return -1;
     } else if (b.position !== undefined) {
-      return 1; // 오직 b만 position이 정의된 경우
+      return 1;
     }
-    return (a.title || "").localeCompare(b.title || ""); // position이 없는 경우 title로 정렬
+    return (a.title || "").localeCompare(b.title || "");
   });
   return props.maxItems ? sorted.slice(0, props.maxItems) : sorted;
 });
 
-// 카테고리 선택 핸들러
 const setCategory = (category) => {
   selectedCategory.value = selectedCategory.value === category ? null : category;
 };
 
 const isOffset = (index) => index % 5 === 1 || index % 5 === 3;
 
-// 모달 열기 핸들러
 const selectedItem = ref(null);
 const openModal = (item) => {
   selectedItem.value = item;
@@ -61,7 +56,7 @@ const isLastItemOffset = computed(() => {
       <button @click="setCategory('그 외')" class="text-black-700 px-6 py-1 rounded-full" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '그 외', 'bg-transparent text-white border-2 border-white': selectedCategory !== '그 외' }">그 외</button>
     </div>
     <div class="grid grid-cols-5 gap-5">
-      <div data-aos="fade-up" date-aos-duration="1200" v-for="(item, index) in filteredPortfolio" :key="item.slug" class="shadow-primary-700/60 group/portfolio text-black-800 rounded-2xl pb-14 relative w-full col-span-1 overflow-hidden text-center bg-white shadow-xl" :class="{ 'transform translate-y-24': isOffset(index) }">
+      <div v-for="(item, index) in filteredPortfolio" :key="item.slug" class="shadow-primary-700/60 group/portfolio text-black-800 rounded-2xl pb-14 relative w-full col-span-1 overflow-hidden text-center bg-white shadow-xl" :class="{ 'transform translate-y-24': isOffset(index) }">
         <a @click.prevent="openModal(item)">
           <div class="colCenter w-full space-y-6">
             <div class="lg:h-32 colCenter w-full overflow-hidden">
@@ -105,7 +100,7 @@ const isLastItemOffset = computed(() => {
       </div>
       <div class="py-14 flex items-center justify-center w-full px-16 space-x-12">
         <div class="max-w-[40%] size-full aspect-1 overflow-hidden rounded-full colCenter shadow-inner">
-          <NuxtImg format="webp" :src="`/img/portfolio/${selectedItem.titleImg}`" :alt="`이엔미디어 포트폴리오 업체 ${selectedItem.title} 타이틀 이미지`" class="hover:scale-125 object-cover w-full h-full transition-all duration-500 ease-in-out shadow-inner" />
+          <NuxtImg v-zoom format="webp" :src="`/img/portfolio/${selectedItem.titleImg}`" :alt="`이엔미디어 포트폴리오 업체 ${selectedItem.title} 타이틀 이미지`" class="hover:scale-125 object-cover z-[999999] w-full h-full transition-all duration-500 ease-in-out shadow-inner" />
         </div>
         <div class="flex flex-col w-full max-w-[60%] space-y-6 items-start justify-center">
           <div class="flex items-center justify-start w-full space-x-4">

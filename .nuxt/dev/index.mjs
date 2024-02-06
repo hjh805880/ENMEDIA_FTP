@@ -499,59 +499,9 @@ const _inlineRuntimeConfig = {
           "/"
         ],
         "allow": []
-      },
-      {
-        "userAgent": [
-          "Nuclei",
-          "WikiDo",
-          "Riddler",
-          "PetalBot",
-          "Zoominfobot",
-          "Go-http-client",
-          "Node/simplecrawler",
-          "CazoodleBot",
-          "dotbot/1.0",
-          "Gigabot",
-          "Barkrowler",
-          "BLEXBot",
-          "magpie-crawler"
-        ],
-        "comment": [
-          "Block bots that don't benefit us."
-        ],
-        "disallow": [
-          "/"
-        ],
-        "allow": []
-      },
-      {
-        "userAgent": [
-          "Nuclei",
-          "WikiDo",
-          "Riddler",
-          "PetalBot",
-          "Zoominfobot",
-          "Go-http-client",
-          "Node/simplecrawler",
-          "CazoodleBot",
-          "dotbot/1.0",
-          "Gigabot",
-          "Barkrowler",
-          "BLEXBot",
-          "magpie-crawler"
-        ],
-        "comment": [
-          "Block bots that don't benefit us."
-        ],
-        "disallow": [
-          "/"
-        ],
-        "allow": []
       }
     ],
     "sitemap": [
-      "/sitemap.xml",
-      "/sitemap.xml",
       "/sitemap.xml",
       "/sitemap.xml",
       "/sitemap.xml",

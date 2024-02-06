@@ -15,6 +15,7 @@ onMounted(() => {
     once: false,
   });
 });
+
 </script>
 
 <template>
