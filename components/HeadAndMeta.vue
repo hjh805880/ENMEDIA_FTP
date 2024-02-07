@@ -48,27 +48,27 @@ watch(() => route.path, () => {
         {
           rel: "apple-touch-icon",
           sizes: "180x180",
-          href: "/apple-touch-icon.png",
+          href: "/favicon/apple-touch-icon.png",
         },
         {
           rel: "icon",
           type: "image/png",
           sizes: "32x32",
-          href: "/favicon-32x32.png",
+          href: "/favicon/favicon-32x32.png",
         },
         {
           rel: "icon",
           type: "image/png",
           sizes: "16x16",
-          href: "/favicon-16x16.png",
+          href: "/favicon/favicon-16x16.png",
         },
         { rel: "manifest", href: "/site.webmanifest" },
         {
           rel: "mask-icon",
-          href: "/safari-pinned-tab.svg",
-          color: "#946efa",
+          href: "/favicon/safari-pinned-tab.svg",
+          color: "#ffffff",
         },
-        { rel: "shortcut icon", href: "/favicon.ico" },
+        { rel: "shortcut icon", href: "/favicon/favicon.ico" },
       ],
 
       // 스크립트 설정
