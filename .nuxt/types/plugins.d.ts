@@ -26,8 +26,6 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../node_modules/nuxt-seo-experiments/dist/runtime/nuxt/plugins/inferSeoMetaPlugin").default> &
   InjectionType<typeof import("../../node_modules/nuxt-schema-org/dist/runtime/nuxt/plugin/defaults").default> &
   InjectionType<typeof import("../../node_modules/nuxt-schema-org/dist/runtime/nuxt/plugin/init").default> &
-  InjectionType<typeof import("../../node_modules/nuxt-og-image/dist/runtime/nuxt/plugins/og-image-canonical-urls.server").default> &
-  InjectionType<typeof import("../../node_modules/nuxt-og-image/dist/runtime/nuxt/plugins/route-rule-og-image.server").default> &
   InjectionType<typeof import("../../node_modules/nuxt-simple-robots/dist/runtime/nuxt/plugins/robot-meta.server").default> &
   InjectionType<typeof import("../../node_modules/nuxt-site-config/dist/runtime/nuxt/plugins/0.siteConfig").default> &
   InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/chunk-reload.client").default> &

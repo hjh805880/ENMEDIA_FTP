@@ -33,9 +33,7 @@ export { useSiteConfig } from '../node_modules/nuxt-site-config/dist/runtime/nux
 export { createSitePathResolver, withSiteTrailingSlash, withSiteUrl } from '../node_modules/nuxt-site-config/dist/runtime/nuxt/composables/utils';
 export { useImage } from '../node_modules/@nuxt/image/dist/runtime/composables';
 export { defineRobotMeta } from '../node_modules/nuxt-simple-robots/dist/runtime/nuxt/composables/defineRobotMeta';
-export { defineOgImage } from '../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/defineOgImage';
-export { defineOgImageComponent } from '../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/defineOgImageComponent';
-export { defineOgImageScreenshot } from '../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/defineOgImageScreenshot';
+export { defineOgImage, defineOgImageComponent, defineOgImageScreenshot } from '../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/mock';
 export { useSchemaOrg } from '../node_modules/nuxt-schema-org/dist/runtime/nuxt/imports/useSchemaOrg';
 export { useI18n } from '../node_modules/@nuxtjs/seo/dist/runtime/nuxt/composables/polyfills';
 export { useBreadcrumbItems } from '../node_modules/@nuxtjs/seo/dist/runtime/nuxt/composables/useBreadcrumbItems';

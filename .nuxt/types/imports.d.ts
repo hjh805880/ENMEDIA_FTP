@@ -58,9 +58,9 @@ declare global {
   const defineNuxtPlugin: typeof import('../../node_modules/nuxt/dist/app/nuxt')['defineNuxtPlugin']
   const defineNuxtRouteMiddleware: typeof import('../../node_modules/nuxt/dist/app/composables/router')['defineNuxtRouteMiddleware']
   const defineOffer: typeof import('../../node_modules/@unhead/schema-org/vue')['defineOffer']
-  const defineOgImage: typeof import('../../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/defineOgImage')['defineOgImage']
-  const defineOgImageComponent: typeof import('../../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/defineOgImageComponent')['defineOgImageComponent']
-  const defineOgImageScreenshot: typeof import('../../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/defineOgImageScreenshot')['defineOgImageScreenshot']
+  const defineOgImage: typeof import('../../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/mock')['defineOgImage']
+  const defineOgImageComponent: typeof import('../../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/mock')['defineOgImageComponent']
+  const defineOgImageScreenshot: typeof import('../../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/mock')['defineOgImageScreenshot']
   const defineOpeningHours: typeof import('../../node_modules/@unhead/schema-org/vue')['defineOpeningHours']
   const defineOptions: typeof import('../../node_modules/vue')['defineOptions']
   const defineOrganization: typeof import('../../node_modules/@unhead/schema-org/vue')['defineOrganization']
@@ -485,9 +485,9 @@ declare module 'vue' {
     readonly defineNuxtPlugin: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['defineNuxtPlugin']>
     readonly defineNuxtRouteMiddleware: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['defineNuxtRouteMiddleware']>
     readonly defineOffer: UnwrapRef<typeof import('../../node_modules/@unhead/schema-org/vue')['defineOffer']>
-    readonly defineOgImage: UnwrapRef<typeof import('../../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/defineOgImage')['defineOgImage']>
-    readonly defineOgImageComponent: UnwrapRef<typeof import('../../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/defineOgImageComponent')['defineOgImageComponent']>
-    readonly defineOgImageScreenshot: UnwrapRef<typeof import('../../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/defineOgImageScreenshot')['defineOgImageScreenshot']>
+    readonly defineOgImage: UnwrapRef<typeof import('../../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/mock')['defineOgImage']>
+    readonly defineOgImageComponent: UnwrapRef<typeof import('../../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/mock')['defineOgImageComponent']>
+    readonly defineOgImageScreenshot: UnwrapRef<typeof import('../../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/mock')['defineOgImageScreenshot']>
     readonly defineOpeningHours: UnwrapRef<typeof import('../../node_modules/@unhead/schema-org/vue')['defineOpeningHours']>
     readonly defineOptions: UnwrapRef<typeof import('../../node_modules/vue')['defineOptions']>
     readonly defineOrganization: UnwrapRef<typeof import('../../node_modules/@unhead/schema-org/vue')['defineOrganization']>
@@ -905,9 +905,9 @@ declare module '@vue/runtime-core' {
     readonly defineNuxtPlugin: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['defineNuxtPlugin']>
     readonly defineNuxtRouteMiddleware: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['defineNuxtRouteMiddleware']>
     readonly defineOffer: UnwrapRef<typeof import('../../node_modules/@unhead/schema-org/vue')['defineOffer']>
-    readonly defineOgImage: UnwrapRef<typeof import('../../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/defineOgImage')['defineOgImage']>
-    readonly defineOgImageComponent: UnwrapRef<typeof import('../../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/defineOgImageComponent')['defineOgImageComponent']>
-    readonly defineOgImageScreenshot: UnwrapRef<typeof import('../../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/defineOgImageScreenshot')['defineOgImageScreenshot']>
+    readonly defineOgImage: UnwrapRef<typeof import('../../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/mock')['defineOgImage']>
+    readonly defineOgImageComponent: UnwrapRef<typeof import('../../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/mock')['defineOgImageComponent']>
+    readonly defineOgImageScreenshot: UnwrapRef<typeof import('../../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/mock')['defineOgImageScreenshot']>
     readonly defineOpeningHours: UnwrapRef<typeof import('../../node_modules/@unhead/schema-org/vue')['defineOpeningHours']>
     readonly defineOptions: UnwrapRef<typeof import('../../node_modules/vue')['defineOptions']>
     readonly defineOrganization: UnwrapRef<typeof import('../../node_modules/@unhead/schema-org/vue')['defineOrganization']>

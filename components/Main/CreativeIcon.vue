@@ -41,8 +41,8 @@
       <stop offset=".6" stop-color="#7b22f3" />
       <stop offset="1" stop-color="#6ca8f5" />
     </linearGradient>
-    <circle class="creative-cls-5" cx="1358" cy="144" r="144" />
-    <circle class="creative-cls-4" cx="144" cy="144" r="144" />
+    <circle class="creative-cls-5 hover:fill-primary-500" cx="1358" cy="144" r="144" />
+    <circle class="creative-cls-4 hover:fill-secondary-500" cx="144" cy="144" r="144" />
     <circle class="creative-cls-2" cx="365" cy="144" r="144" />
     <circle class="creative-cls-3" cx="1129" cy="144" r="144" />
     <path class="creative-cls-1" d="M913,0c-23.1,0-44.93,5.45-64.28,15.12-3.24,1.21-6.8,3.14-10.72,5.88-.32.22-.63.43-.95.65-2.3,1.43-4.57,2.93-6.78,4.48-86.63,54.63-159.27.87-159.27.87,0,0,0,.02,0,.03-23.64-17.01-52.65-27.03-83.99-27.03-79.53,0-144,64.47-144,144s64.47,144,144,144c31.22,0,60.11-9.94,83.7-26.81.1-.06.2-.12.3-.19,75.2-48.02,146.3-7.38,159,.68,23.46,16.58,52.09,26.32,83,26.32,79.53,0,144-64.47,144-144S992.53,0,913,0Z" />

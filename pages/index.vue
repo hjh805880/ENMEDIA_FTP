@@ -32,11 +32,9 @@ onUnmounted(() => {
         <h1 class="sr-only">주식회사 이엔미디어</h1>
         <NuxtImg src="/img/main_visual_text.webp" alt="이엔미디어" class="lg:w-[calc(83%+1.25rem)] w-[90%]" />
       </div>
-      <div class="rowCenter space-x-3 absolute lg:top-[85%] left-0 lg:left-[15%] z-30 animate-bounce animate-ease-in-out">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-10 shadow-black-800/60 drop-shadow-md">
-          <path stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-        </svg>
-        <span class="shadow-black-800/60 drop-shadow-md text-xl font-bold">SCROLL DOWN</span>
+      <div class="rowCenter space-x-3 absolute lg:top-[85%] left-0 lg:left-[calc(15%+12px)] z-30">
+        <div class="mainScrollMouse"></div>
+        <span class="text-xl font-bold">SCROLL DOWN</span>
       </div>
     </div>
   </section>
@@ -102,17 +100,33 @@ onUnmounted(() => {
           </h4>
         </div>
         <div class="flex flex-col items-end justify-end space-y-2">
-          <h3 class="text-primary-500 text-2xl font-bold">Performance Marketing</h3>
+          <h3 class="text-secondary-500 text-2xl font-bold">Brand Marketing</h3>
           <h4 class="text-black-700 flex items-center justify-end w-full space-x-3 text-lg font-light text-right">
-            <span class="">SearchAD</span>
-            <span class="">Retargeting AD</span>
+            <span class="">Video Ad</span>
+            <span class="">OOH</span>
           </h4>
           <h4 class="text-black-700 flex items-center justify-end w-full space-x-3 text-lg font-light text-right">
-            <span class="">Display AD</span>
-            <span class="">SNS</span>
+            <span class="">Brand Consulting</span>
+            <span class="">ATL</span>
+          </h4>
+          <h4 class="text-black-700 flex items-center justify-end w-full space-x-3 text-lg font-light text-right">
+            <span class="">Creative Strategy</span>
+            <span class="">BTL</span>
           </h4>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- 섹션5 시작 -->
+  <section id="section5" class="bg-[url('/img/section5_visual_bg.webp')] w-screen overflow-hidden min-h-lvh text-center text-white bg-center bg-no-repeat bg-cover">
+    <div class="max-w-gui space-y-80 colCenter px-12 py-32 mx-auto">
+      <div data-aos="fade-up" date-aos-duration="1000" class="colCenter space-y-4">
+        <h2 class="pb-4 text-4xl font-extrabold">SERVICE</h2>
+        <div class="w-12 border-b-8 border-white"></div>
+        <h3 class="pt-1 text-xl font-light">더 많은 소비자에게 도달할 수 있는 키워드 검색 광고를 집행합니다.</h3>
+      </div>
+      <ServiceObject />
     </div>
   </section>
 </template>

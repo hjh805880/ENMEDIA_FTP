@@ -16,7 +16,6 @@
 /// <reference path="module/nuxt-site-config.d.ts" />
 /// <reference path="module/nuxt-simple-robots.d.ts" />
 /// <reference path="module/@nuxtjs/sitemap.d.ts" />
-/// <reference path="module/nuxt-og-image.d.ts" />
 /// <reference path="module/nuxt-schema-org.d.ts" />
 /// <reference path="module/nuxt-seo-experiments.assets.d.ts" />
 /// <reference path="module/nuxt-seo-experiments.d.ts" />

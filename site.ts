@@ -12,7 +12,7 @@ export default {
   titleSeparator: '|',
   nav: [
     {
-      text: 'HOME',
+      text: 'ENMEDIA',
       link: '/',
       type: 'primary',
     },
