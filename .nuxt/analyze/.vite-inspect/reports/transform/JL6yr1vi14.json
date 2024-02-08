@@ -4,173 +4,173 @@
     {
       "name": "vite:load-fallback",
       "result": "import { fixSlashes, resolveSitePath } from \"site-config-stack/urls\";\nimport { computed, unref, useNitroOrigin, useRuntimeConfig, useSiteConfig } from \"#imports\";\nexport function createSitePathResolver(options = {}) {\n  const siteConfig = useSiteConfig();\n  const nitroOrigin = useNitroOrigin();\n  const nuxtBase = useRuntimeConfig().app.baseURL || \"/\";\n  return (path) => {\n    return computed(() => resolveSitePath(unref(path), {\n      absolute: unref(options.absolute),\n      withBase: unref(options.withBase),\n      siteUrl: unref(options.canonical) !== false || process.env.prerender ? siteConfig.url : nitroOrigin,\n      trailingSlash: siteConfig.trailingSlash,\n      base: nuxtBase\n    }));\n  };\n}\nexport function withSiteTrailingSlash(path) {\n  const siteConfig = useSiteConfig();\n  return computed(() => fixSlashes(siteConfig.trailingSlash, unref(path)));\n}\nexport function withSiteUrl(path, options = {}) {\n  const siteConfig = useSiteConfig();\n  const nitroOrigin = useNitroOrigin();\n  const base = useRuntimeConfig().app.baseURL || \"/\";\n  return computed(() => {\n    return resolveSitePath(unref(path), {\n      absolute: true,\n      siteUrl: unref(options.canonical) !== false || process.env.prerender ? siteConfig.url : nitroOrigin,\n      trailingSlash: siteConfig.trailingSlash,\n      base,\n      withBase: unref(options.withBase)\n    });\n  });\n}\n",
-      "start": 1706885057044,
-      "end": 1706885057087,
+      "start": 1707272756202,
+      "end": 1707272756269,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1706885057087,
-      "end": 1706885057087,
+      "start": 1707272756269,
+      "end": 1707272756269,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1706885057087,
-      "end": 1706885057087,
+      "start": 1707272756269,
+      "end": 1707272756269,
       "order": "pre"
     },
     {
       "name": "content-slot",
-      "start": 1706885057087,
-      "end": 1706885057087,
+      "start": 1707272756269,
+      "end": 1707272756269,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1706885057087,
-      "end": 1706885057087,
+      "start": 1707272756269,
+      "end": 1707272756269,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1706885057087,
-      "end": 1706885057087,
+      "start": 1707272756269,
+      "end": 1707272756269,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1706885057087,
-      "end": 1706885057087,
+      "start": 1707272756269,
+      "end": 1707272756269,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1706885057087,
-      "end": 1706885057087,
+      "start": 1707272756269,
+      "end": 1707272756269,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1706885057087,
-      "end": 1706885057087,
+      "start": 1707272756269,
+      "end": 1707272756269,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1706885057087,
-      "end": 1706885057087,
+      "start": 1707272756269,
+      "end": 1707272756269,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1706885057087,
-      "end": 1706885057087,
+      "start": 1707272756269,
+      "end": 1707272756269,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1706885057087,
-      "end": 1706885057087,
+      "start": 1707272756269,
+      "end": 1707272756269,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1706885057087,
-      "end": 1706885057087,
+      "start": 1707272756269,
+      "end": 1707272756269,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1706885057087,
-      "end": 1706885057087,
+      "start": 1707272756269,
+      "end": 1707272756269,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1706885057087,
-      "end": 1706885057087,
+      "start": 1707272756269,
+      "end": 1707272756269,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1706885057087,
-      "end": 1706885057087,
+      "start": 1707272756269,
+      "end": 1707272756269,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1706885057087,
-      "end": 1706885057087,
+      "start": 1707272756269,
+      "end": 1707272756269,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "var define_process_env_default = {};\nimport { fixSlashes, resolveSitePath } from \"site-config-stack/urls\";\nimport { computed, unref, useNitroOrigin, useRuntimeConfig, useSiteConfig } from \"#imports\";\nexport function createSitePathResolver(options = {}) {\n  const siteConfig = useSiteConfig();\n  const nitroOrigin = useNitroOrigin();\n  const nuxtBase = useRuntimeConfig().app.baseURL || \"/\";\n  return (path) => {\n    return computed(() => resolveSitePath(unref(path), {\n      absolute: unref(options.absolute),\n      withBase: unref(options.withBase),\n      siteUrl: unref(options.canonical) !== false || define_process_env_default.prerender ? siteConfig.url : nitroOrigin,\n      trailingSlash: siteConfig.trailingSlash,\n      base: nuxtBase\n    }));\n  };\n}\nexport function withSiteTrailingSlash(path) {\n  const siteConfig = useSiteConfig();\n  return computed(() => fixSlashes(siteConfig.trailingSlash, unref(path)));\n}\nexport function withSiteUrl(path, options = {}) {\n  const siteConfig = useSiteConfig();\n  const nitroOrigin = useNitroOrigin();\n  const base = useRuntimeConfig().app.baseURL || \"/\";\n  return computed(() => {\n    return resolveSitePath(unref(path), {\n      absolute: true,\n      siteUrl: unref(options.canonical) !== false || define_process_env_default.prerender ? siteConfig.url : nitroOrigin,\n      trailingSlash: siteConfig.trailingSlash,\n      base,\n      withBase: unref(options.withBase)\n    });\n  });\n}\n",
-      "start": 1706885057087,
-      "end": 1706885057470,
+      "start": 1707272756269,
+      "end": 1707272756483,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:css-post",
-      "start": 1706885057470,
-      "end": 1706885057470,
+      "start": 1707272756483,
+      "end": 1707272756483,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1706885057470,
-      "end": 1706885057470,
+      "start": 1707272756483,
+      "end": 1707272756483,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1706885057470,
-      "end": 1706885057470,
+      "start": 1707272756483,
+      "end": 1707272756483,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1706885057470,
-      "end": 1706885057470,
+      "start": 1707272756483,
+      "end": 1707272756483,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1706885057470,
-      "end": 1706885057470,
+      "start": 1707272756483,
+      "end": 1707272756483,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1706885057470,
-      "end": 1706885057470,
+      "start": 1707272756483,
+      "end": 1707272756483,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1706885057470,
-      "end": 1706885057470,
+      "start": 1707272756483,
+      "end": 1707272756483,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1706885057470,
-      "end": 1706885057470,
+      "start": 1707272756483,
+      "end": 1707272756483,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1706885057470,
-      "end": 1706885057470,
+      "start": 1707272756483,
+      "end": 1707272756483,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { computed, unref } from 'vue';\nimport { useNitroOrigin } from '/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/node_modules/nuxt-site-config/dist/runtime/nuxt/composables/useNitroOrigin.mjs';\nimport { useRuntimeConfig } from '#app/nuxt';\nimport { useSiteConfig } from '/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/node_modules/nuxt-site-config/dist/runtime/nuxt/composables/useSiteConfig.mjs';\nvar define_process_env_default = {};\nimport { fixSlashes, resolveSitePath } from \"site-config-stack/urls\";\nexport function createSitePathResolver(options = {}) {\n  const siteConfig = useSiteConfig();\n  const nitroOrigin = useNitroOrigin();\n  const nuxtBase = useRuntimeConfig().app.baseURL || \"/\";\n  return (path) => {\n    return computed(() => resolveSitePath(unref(path), {\n      absolute: unref(options.absolute),\n      withBase: unref(options.withBase),\n      siteUrl: unref(options.canonical) !== false || define_process_env_default.prerender ? siteConfig.url : nitroOrigin,\n      trailingSlash: siteConfig.trailingSlash,\n      base: nuxtBase\n    }));\n  };\n}\nexport function withSiteTrailingSlash(path) {\n  const siteConfig = useSiteConfig();\n  return computed(() => fixSlashes(siteConfig.trailingSlash, unref(path)));\n}\nexport function withSiteUrl(path, options = {}) {\n  const siteConfig = useSiteConfig();\n  const nitroOrigin = useNitroOrigin();\n  const base = useRuntimeConfig().app.baseURL || \"/\";\n  return computed(() => {\n    return resolveSitePath(unref(path), {\n      absolute: true,\n      siteUrl: unref(options.canonical) !== false || define_process_env_default.prerender ? siteConfig.url : nitroOrigin,\n      trailingSlash: siteConfig.trailingSlash,\n      base,\n      withBase: unref(options.withBase)\n    });\n  });\n}\n",
-      "start": 1706885057470,
-      "end": 1706885057471,
+      "start": 1707272756483,
+      "end": 1707272756484,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -183,50 +183,50 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1706885057471,
-      "end": 1706885057471,
+      "start": 1707272756484,
+      "end": 1707272756484,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1706885057471,
-      "end": 1706885057471,
+      "start": 1707272756484,
+      "end": 1707272756484,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1706885057471,
-      "end": 1706885057471,
+      "start": 1707272756484,
+      "end": 1707272756484,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1706885057471,
-      "end": 1706885057471,
+      "start": 1707272756484,
+      "end": 1707272756484,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1706885057471,
-      "end": 1706885057471,
+      "start": 1707272756484,
+      "end": 1707272756484,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1706885057471,
-      "end": 1706885057471,
+      "start": 1707272756484,
+      "end": 1707272756484,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1706885057471,
-      "end": 1706885057471,
+      "start": 1707272756484,
+      "end": 1707272756484,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1706885057471,
-      "end": 1706885057471,
+      "start": 1707272756484,
+      "end": 1707272756484,
       "order": "normal"
     }
   ]

@@ -4,220 +4,220 @@
     {
       "name": "virtual",
       "result": "import { default as company2QySS6Qvy6Meta } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/company.vue?macro=true\";\nimport { default as contactDI01HspPb2Meta } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/contact.vue?macro=true\";\nimport { default as indexuV1A7Bo0qaMeta } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/index.vue?macro=true\";\nimport { default as indexWEfJhyy4isMeta } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/portfolio/index.vue?macro=true\";\nimport { default as serviceoEmnr7rdcSMeta } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/service.vue?macro=true\";\nimport { default as solutionRhjhgDWgXNMeta } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/solution.vue?macro=true\";\nexport default [\n  {\n    name: company2QySS6Qvy6Meta?.name ?? \"company\",\n    path: company2QySS6Qvy6Meta?.path ?? \"/company\",\n    meta: company2QySS6Qvy6Meta || {},\n    alias: company2QySS6Qvy6Meta?.alias || [],\n    redirect: company2QySS6Qvy6Meta?.redirect,\n    component: () => import(\"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/company.vue\").then(m => m.default || m)\n  },\n  {\n    name: contactDI01HspPb2Meta?.name ?? \"contact\",\n    path: contactDI01HspPb2Meta?.path ?? \"/contact\",\n    meta: contactDI01HspPb2Meta || {},\n    alias: contactDI01HspPb2Meta?.alias || [],\n    redirect: contactDI01HspPb2Meta?.redirect,\n    component: () => import(\"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/contact.vue\").then(m => m.default || m)\n  },\n  {\n    name: indexuV1A7Bo0qaMeta?.name ?? \"index\",\n    path: indexuV1A7Bo0qaMeta?.path ?? \"/\",\n    meta: indexuV1A7Bo0qaMeta || {},\n    alias: indexuV1A7Bo0qaMeta?.alias || [],\n    redirect: indexuV1A7Bo0qaMeta?.redirect,\n    component: () => import(\"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: indexWEfJhyy4isMeta?.name ?? \"portfolio\",\n    path: indexWEfJhyy4isMeta?.path ?? \"/portfolio\",\n    meta: indexWEfJhyy4isMeta || {},\n    alias: indexWEfJhyy4isMeta?.alias || [],\n    redirect: indexWEfJhyy4isMeta?.redirect,\n    component: () => import(\"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/portfolio/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: serviceoEmnr7rdcSMeta?.name ?? \"service\",\n    path: serviceoEmnr7rdcSMeta?.path ?? \"/service\",\n    meta: serviceoEmnr7rdcSMeta || {},\n    alias: serviceoEmnr7rdcSMeta?.alias || [],\n    redirect: serviceoEmnr7rdcSMeta?.redirect,\n    component: () => import(\"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/service.vue\").then(m => m.default || m)\n  },\n  {\n    name: solutionRhjhgDWgXNMeta?.name ?? \"solution\",\n    path: solutionRhjhgDWgXNMeta?.path ?? \"/solution\",\n    meta: solutionRhjhgDWgXNMeta || {},\n    alias: solutionRhjhgDWgXNMeta?.alias || [],\n    redirect: solutionRhjhgDWgXNMeta?.redirect,\n    component: () => import(\"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/solution.vue\").then(m => m.default || m)\n  }\n]",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756204,
+      "end": 1707272756204,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756204,
+      "end": 1707272756204,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756204,
+      "end": 1707272756204,
       "order": "pre"
     },
     {
       "name": "content-slot",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756204,
+      "end": 1707272756204,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756204,
+      "end": 1707272756204,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756204,
+      "end": 1707272756204,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756204,
+      "end": 1707272756204,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756204,
+      "end": 1707272756204,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756204,
+      "end": 1707272756204,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756204,
+      "end": 1707272756204,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756204,
+      "end": 1707272756204,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756204,
+      "end": 1707272756204,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756204,
+      "end": 1707272756204,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756204,
+      "end": 1707272756204,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756204,
+      "end": 1707272756204,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756204,
+      "end": 1707272756204,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756204,
+      "end": 1707272756204,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756205,
+      "end": 1707272756205,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756205,
+      "end": 1707272756205,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756205,
+      "end": 1707272756205,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756205,
+      "end": 1707272756205,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756205,
+      "end": 1707272756205,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756205,
+      "end": 1707272756205,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1706885057014,
-      "end": 1706885057014,
+      "start": 1707272756205,
+      "end": 1707272756205,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1706885057015,
-      "end": 1706885057015,
+      "start": 1707272756205,
+      "end": 1707272756205,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1706885057015,
-      "end": 1706885057015,
+      "start": 1707272756205,
+      "end": 1707272756205,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1706885057015,
-      "end": 1706885057015,
+      "start": 1707272756205,
+      "end": 1707272756205,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1706885057015,
-      "end": 1706885057017,
+      "start": 1707272756205,
+      "end": 1707272756205,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1706885057017,
-      "end": 1706885057017,
+      "start": 1707272756205,
+      "end": 1707272756206,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1706885057017,
-      "end": 1706885057017,
+      "start": 1707272756206,
+      "end": 1707272756206,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1706885057017,
-      "end": 1706885057017,
+      "start": 1707272756206,
+      "end": 1707272756206,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1706885057017,
-      "end": 1706885057017,
+      "start": 1707272756206,
+      "end": 1707272756206,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1706885057017,
-      "end": 1706885057017,
+      "start": 1707272756206,
+      "end": 1707272756206,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1706885057017,
-      "end": 1706885057017,
+      "start": 1707272756206,
+      "end": 1707272756206,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
       "result": "import { __vitePreload } from \"\u0000vite/preload-helper.js\";import { default as company2QySS6Qvy6Meta } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/company.vue?macro=true\";\nimport { default as contactDI01HspPb2Meta } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/contact.vue?macro=true\";\nimport { default as indexuV1A7Bo0qaMeta } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/index.vue?macro=true\";\nimport { default as indexWEfJhyy4isMeta } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/portfolio/index.vue?macro=true\";\nimport { default as serviceoEmnr7rdcSMeta } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/service.vue?macro=true\";\nimport { default as solutionRhjhgDWgXNMeta } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/solution.vue?macro=true\";\nexport default [\n  {\n    name: company2QySS6Qvy6Meta?.name ?? \"company\",\n    path: company2QySS6Qvy6Meta?.path ?? \"/company\",\n    meta: company2QySS6Qvy6Meta || {},\n    alias: company2QySS6Qvy6Meta?.alias || [],\n    redirect: company2QySS6Qvy6Meta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/company.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: contactDI01HspPb2Meta?.name ?? \"contact\",\n    path: contactDI01HspPb2Meta?.path ?? \"/contact\",\n    meta: contactDI01HspPb2Meta || {},\n    alias: contactDI01HspPb2Meta?.alias || [],\n    redirect: contactDI01HspPb2Meta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/contact.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexuV1A7Bo0qaMeta?.name ?? \"index\",\n    path: indexuV1A7Bo0qaMeta?.path ?? \"/\",\n    meta: indexuV1A7Bo0qaMeta || {},\n    alias: indexuV1A7Bo0qaMeta?.alias || [],\n    redirect: indexuV1A7Bo0qaMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexWEfJhyy4isMeta?.name ?? \"portfolio\",\n    path: indexWEfJhyy4isMeta?.path ?? \"/portfolio\",\n    meta: indexWEfJhyy4isMeta || {},\n    alias: indexWEfJhyy4isMeta?.alias || [],\n    redirect: indexWEfJhyy4isMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/portfolio/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: serviceoEmnr7rdcSMeta?.name ?? \"service\",\n    path: serviceoEmnr7rdcSMeta?.path ?? \"/service\",\n    meta: serviceoEmnr7rdcSMeta || {},\n    alias: serviceoEmnr7rdcSMeta?.alias || [],\n    redirect: serviceoEmnr7rdcSMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/service.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: solutionRhjhgDWgXNMeta?.name ?? \"solution\",\n    path: solutionRhjhgDWgXNMeta?.path ?? \"/solution\",\n    meta: solutionRhjhgDWgXNMeta || {},\n    alias: solutionRhjhgDWgXNMeta?.alias || [],\n    redirect: solutionRhjhgDWgXNMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/pages/solution.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  }\n]",
-      "start": 1706885057017,
-      "end": 1706885057017,
+      "start": 1707272756206,
+      "end": 1707272756206,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:reporter",
-      "start": 1706885057017,
-      "end": 1706885057017,
+      "start": 1707272756206,
+      "end": 1707272756206,
       "order": "normal"
     }
   ]

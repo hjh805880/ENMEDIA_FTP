@@ -10,7 +10,7 @@ declare module '#app' {
 }
 declare module '@unhead/schema' {
 
-  type PublicFiles = '/2024_ENMEDIA_INTRODUCE.pdf' | '/img/logo.svg' | '/img/logo_w.svg' | '/img/main_visual_text.webp' | '/img/main_visual_text_spin.webp' | '/img/section2_visual_bg.webp' | '/img/section3_visual_bg.webp' | '/img/section4_visual_bg.webp' | '/img/subtop_visual_company.webp' | '/img/subtop_visual_contact.webp' | '/img/subtop_visual_portfolio.webp' | '/img/subtop_visual_service.webp' | '/img/subtop_visual_solution.webp' | '/img/symbol.svg' | '/img/portfolio/appleLogo.png' | '/img/portfolio/appleTitle.jpg' | '/img/portfolio/daehwanLogo.svg' | '/img/portfolio/daehwanTitle.jpg' | (string & Record<never, never>)
+  type PublicFiles = '/2024_ENMEDIA_INTRODUCE.pdf' | '/favicon/android-chrome-192x192.png' | '/favicon/android-chrome-512x512.png' | '/favicon/apple-touch-icon.png' | '/favicon/browserconfig.xml' | '/favicon/favicon-16x16.png' | '/favicon/favicon-32x32.png' | '/favicon/favicon.ico' | '/favicon/mstile-150x150.png' | '/favicon/safari-pinned-tab.svg' | '/favicon/site.webmanifest' | '/img/logo.svg' | '/img/logo_w.svg' | '/img/main_visual_text.webp' | '/img/main_visual_text_spin.webp' | '/img/section2_visual_bg.webp' | '/img/section3_visual_bg.webp' | '/img/section4_visual_bg.webp' | '/img/subtop_visual_company.webp' | '/img/subtop_visual_contact.webp' | '/img/subtop_visual_portfolio.webp' | '/img/subtop_visual_service.webp' | '/img/subtop_visual_solution.webp' | '/img/symbol.svg' | '/img/portfolio/appleLogo.png' | '/img/portfolio/appleTitle.jpg' | '/img/portfolio/daehwanLogo.svg' | '/img/portfolio/daehwanTitle.jpg' | (string & Record<never, never>)
   type JsFiles = (string & Record<never, never>)
 
   interface SchemaAugmentations {

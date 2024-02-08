@@ -217,7 +217,7 @@ declare global {
   const useBase64: typeof import('../../node_modules/@vueuse/core')['useBase64']
   const useBattery: typeof import('../../node_modules/@vueuse/core')['useBattery']
   const useBluetooth: typeof import('../../node_modules/@vueuse/core')['useBluetooth']
-  const useBreadcrumbItems: typeof import('../../node_modules/@nuxtseo/module/dist/runtime/nuxt/composables/useBreadcrumbItems')['useBreadcrumbItems']
+  const useBreadcrumbItems: typeof import('../../node_modules/@nuxtjs/seo/dist/runtime/nuxt/composables/useBreadcrumbItems')['useBreadcrumbItems']
   const useBreakpoints: typeof import('../../node_modules/@vueuse/core')['useBreakpoints']
   const useBroadcastChannel: typeof import('../../node_modules/@vueuse/core')['useBroadcastChannel']
   const useBrowserLocation: typeof import('../../node_modules/@vueuse/core')['useBrowserLocation']
@@ -275,7 +275,7 @@ declare global {
   const useHead: typeof import('../../node_modules/@unhead/vue')['useHead']
   const useHeadSafe: typeof import('../../node_modules/@unhead/vue')['useHeadSafe']
   const useHydration: typeof import('../../node_modules/nuxt/dist/app/composables/hydrate')['useHydration']
-  const useI18n: typeof import('../../node_modules/@nuxtseo/module/dist/runtime/nuxt/composables/polyfills')['useI18n']
+  const useI18n: typeof import('../../node_modules/@nuxtjs/seo/dist/runtime/nuxt/composables/polyfills')['useI18n']
   const useId: typeof import('../../node_modules/nuxt/dist/app/composables/id')['useId']
   const useIdle: typeof import('../../node_modules/@vueuse/core')['useIdle']
   const useImage: typeof import('../../node_modules/@nuxt/image/dist/runtime/composables')['useImage']
@@ -644,7 +644,7 @@ declare module 'vue' {
     readonly useBase64: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useBase64']>
     readonly useBattery: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useBattery']>
     readonly useBluetooth: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useBluetooth']>
-    readonly useBreadcrumbItems: UnwrapRef<typeof import('../../node_modules/@nuxtseo/module/dist/runtime/nuxt/composables/useBreadcrumbItems')['useBreadcrumbItems']>
+    readonly useBreadcrumbItems: UnwrapRef<typeof import('../../node_modules/@nuxtjs/seo/dist/runtime/nuxt/composables/useBreadcrumbItems')['useBreadcrumbItems']>
     readonly useBreakpoints: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useBreakpoints']>
     readonly useBroadcastChannel: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useBroadcastChannel']>
     readonly useBrowserLocation: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useBrowserLocation']>
@@ -702,7 +702,7 @@ declare module 'vue' {
     readonly useHead: UnwrapRef<typeof import('../../node_modules/@unhead/vue')['useHead']>
     readonly useHeadSafe: UnwrapRef<typeof import('../../node_modules/@unhead/vue')['useHeadSafe']>
     readonly useHydration: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/hydrate')['useHydration']>
-    readonly useI18n: UnwrapRef<typeof import('../../node_modules/@nuxtseo/module/dist/runtime/nuxt/composables/polyfills')['useI18n']>
+    readonly useI18n: UnwrapRef<typeof import('../../node_modules/@nuxtjs/seo/dist/runtime/nuxt/composables/polyfills')['useI18n']>
     readonly useId: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/id')['useId']>
     readonly useIdle: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useIdle']>
     readonly useImage: UnwrapRef<typeof import('../../node_modules/@nuxt/image/dist/runtime/composables')['useImage']>
@@ -1064,7 +1064,7 @@ declare module '@vue/runtime-core' {
     readonly useBase64: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useBase64']>
     readonly useBattery: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useBattery']>
     readonly useBluetooth: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useBluetooth']>
-    readonly useBreadcrumbItems: UnwrapRef<typeof import('../../node_modules/@nuxtseo/module/dist/runtime/nuxt/composables/useBreadcrumbItems')['useBreadcrumbItems']>
+    readonly useBreadcrumbItems: UnwrapRef<typeof import('../../node_modules/@nuxtjs/seo/dist/runtime/nuxt/composables/useBreadcrumbItems')['useBreadcrumbItems']>
     readonly useBreakpoints: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useBreakpoints']>
     readonly useBroadcastChannel: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useBroadcastChannel']>
     readonly useBrowserLocation: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useBrowserLocation']>
@@ -1122,7 +1122,7 @@ declare module '@vue/runtime-core' {
     readonly useHead: UnwrapRef<typeof import('../../node_modules/@unhead/vue')['useHead']>
     readonly useHeadSafe: UnwrapRef<typeof import('../../node_modules/@unhead/vue')['useHeadSafe']>
     readonly useHydration: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/hydrate')['useHydration']>
-    readonly useI18n: UnwrapRef<typeof import('../../node_modules/@nuxtseo/module/dist/runtime/nuxt/composables/polyfills')['useI18n']>
+    readonly useI18n: UnwrapRef<typeof import('../../node_modules/@nuxtjs/seo/dist/runtime/nuxt/composables/polyfills')['useI18n']>
     readonly useId: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/id')['useId']>
     readonly useIdle: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useIdle']>
     readonly useImage: UnwrapRef<typeof import('../../node_modules/@nuxt/image/dist/runtime/composables')['useImage']>

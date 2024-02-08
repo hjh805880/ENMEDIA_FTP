@@ -4,219 +4,219 @@
     {
       "name": "vite:load-fallback",
       "result": "import { defu } from \"defu\";\nimport { parseURL, withoutBase } from \"ufo\";\nimport { createRouter as createRadixRouter, toRouteMatcher } from \"radix3\";\nimport { getOgImagePath, isInternalRoute, useOgImageRuntimeConfig } from \"../../shared.mjs\";\nimport { createOgImageMeta, normaliseOptions } from \"../utils.mjs\";\nimport { defineNuxtPlugin, useRequestEvent } from \"#imports\";\nexport default defineNuxtPlugin((nuxtApp) => {\n  nuxtApp.hooks.hook(\"app:rendered\", async (ctx) => {\n    const { ssrContext } = ctx;\n    const e = useRequestEvent();\n    const path = parseURL(e.path).pathname;\n    if (isInternalRoute(path))\n      return;\n    const _routeRulesMatcher = toRouteMatcher(\n      createRadixRouter({ routes: ssrContext?.runtimeConfig?.nitro?.routeRules })\n    );\n    let routeRules = defu({}, ..._routeRulesMatcher.matchAll(\n      withoutBase(path.split(\"?\")[0], ssrContext?.runtimeConfig?.app.baseURL)\n    ).reverse()).ogImage;\n    if (typeof routeRules === \"undefined\")\n      return;\n    const ogImageInstances = nuxtApp.ssrContext._ogImageInstances || [];\n    if (routeRules === false) {\n      ogImageInstances?.forEach((e2) => {\n        e2.dispose();\n      });\n      nuxtApp.ssrContext._ogImagePayload = void 0;\n      nuxtApp.ssrContext._ogImageInstances = void 0;\n      return;\n    }\n    routeRules = defu(nuxtApp.ssrContext?.event.context._nitro?.routeRules?.ogImage, routeRules);\n    const { defaults } = useOgImageRuntimeConfig();\n    const resolvedOptions = normaliseOptions(defu(routeRules, defaults));\n    const src = getOgImagePath(ssrContext.url, resolvedOptions);\n    createOgImageMeta(src, routeRules, resolvedOptions, nuxtApp.ssrContext);\n  });\n});\n",
-      "start": 1706885058677,
-      "end": 1706885058800,
+      "start": 1707272758192,
+      "end": 1707272758448,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1706885058800,
-      "end": 1706885058800,
+      "start": 1707272758448,
+      "end": 1707272758448,
       "order": "pre"
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1706885058800,
-      "end": 1706885058800,
+      "start": 1707272758448,
+      "end": 1707272758448,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1706885058800,
-      "end": 1706885058800,
+      "start": 1707272758448,
+      "end": 1707272758448,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1706885058800,
-      "end": 1706885058800,
+      "start": 1707272758448,
+      "end": 1707272758448,
       "order": "pre"
     },
     {
       "name": "content-slot",
-      "start": 1706885058800,
-      "end": 1706885058800,
+      "start": 1707272758448,
+      "end": 1707272758448,
       "order": "pre"
     },
     {
       "name": "content-slot",
-      "start": 1706885058800,
-      "end": 1706885058800,
+      "start": 1707272758448,
+      "end": 1707272758448,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1706885058800,
-      "end": 1706885058801,
+      "start": 1707272758448,
+      "end": 1707272758448,
       "order": "pre"
     },
     {
       "name": "server-only-component-transform",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758448,
+      "end": 1707272758448,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758448,
+      "end": 1707272758448,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758448,
+      "end": 1707272758448,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758448,
+      "end": 1707272758448,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758448,
+      "end": 1707272758448,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758448,
+      "end": 1707272758448,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758448,
+      "end": 1707272758448,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758448,
+      "end": 1707272758448,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758448,
+      "end": 1707272758448,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758448,
+      "end": 1707272758449,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758448,
+      "end": 1707272758449,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "post"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "post"
     },
     {
       "name": "unhead:remove-server-composables",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { defineNuxtPlugin } from '#app/nuxt';\nimport { useRequestEvent } from '#app/composables/ssr';\nimport { defu } from \"defu\";\nimport { parseURL, withoutBase } from \"ufo\";\nimport { createRouter as createRadixRouter, toRouteMatcher } from \"radix3\";\nimport { getOgImagePath, isInternalRoute, useOgImageRuntimeConfig } from \"../../shared.mjs\";\nimport { createOgImageMeta, normaliseOptions } from \"../utils.mjs\";\nexport default defineNuxtPlugin((nuxtApp) => {\n  nuxtApp.hooks.hook(\"app:rendered\", async (ctx) => {\n    const { ssrContext } = ctx;\n    const e = useRequestEvent();\n    const path = parseURL(e.path).pathname;\n    if (isInternalRoute(path))\n      return;\n    const _routeRulesMatcher = toRouteMatcher(\n      createRadixRouter({ routes: ssrContext?.runtimeConfig?.nitro?.routeRules })\n    );\n    let routeRules = defu({}, ..._routeRulesMatcher.matchAll(\n      withoutBase(path.split(\"?\")[0], ssrContext?.runtimeConfig?.app.baseURL)\n    ).reverse()).ogImage;\n    if (typeof routeRules === \"undefined\")\n      return;\n    const ogImageInstances = nuxtApp.ssrContext._ogImageInstances || [];\n    if (routeRules === false) {\n      ogImageInstances?.forEach((e2) => {\n        e2.dispose();\n      });\n      nuxtApp.ssrContext._ogImagePayload = void 0;\n      nuxtApp.ssrContext._ogImageInstances = void 0;\n      return;\n    }\n    routeRules = defu(nuxtApp.ssrContext?.event.context._nitro?.routeRules?.ogImage, routeRules);\n    const { defaults } = useOgImageRuntimeConfig();\n    const resolvedOptions = normaliseOptions(defu(routeRules, defaults));\n    const src = getOgImagePath(ssrContext.url, resolvedOptions);\n    createOgImageMeta(src, routeRules, resolvedOptions, nuxtApp.ssrContext);\n  });\n});\n",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -230,8 +230,8 @@
     {
       "name": "nuxt:imports-transform",
       "result": "import { defineNuxtPlugin } from '#app/nuxt';\nimport { useRequestEvent } from '#app/composables/ssr';\nimport { defu } from \"defu\";\nimport { parseURL, withoutBase } from \"ufo\";\nimport { createRouter as createRadixRouter, toRouteMatcher } from \"radix3\";\nimport { getOgImagePath, isInternalRoute, useOgImageRuntimeConfig } from \"../../shared.mjs\";\nimport { createOgImageMeta, normaliseOptions } from \"../utils.mjs\";\nexport default defineNuxtPlugin((nuxtApp) => {\n  nuxtApp.hooks.hook(\"app:rendered\", async (ctx) => {\n    const { ssrContext } = ctx;\n    const e = useRequestEvent();\n    const path = parseURL(e.path).pathname;\n    if (isInternalRoute(path))\n      return;\n    const _routeRulesMatcher = toRouteMatcher(\n      createRadixRouter({ routes: ssrContext?.runtimeConfig?.nitro?.routeRules })\n    );\n    let routeRules = defu({}, ..._routeRulesMatcher.matchAll(\n      withoutBase(path.split(\"?\")[0], ssrContext?.runtimeConfig?.app.baseURL)\n    ).reverse()).ogImage;\n    if (typeof routeRules === \"undefined\")\n      return;\n    const ogImageInstances = nuxtApp.ssrContext._ogImageInstances || [];\n    if (routeRules === false) {\n      ogImageInstances?.forEach((e2) => {\n        e2.dispose();\n      });\n      nuxtApp.ssrContext._ogImagePayload = void 0;\n      nuxtApp.ssrContext._ogImageInstances = void 0;\n      return;\n    }\n    routeRules = defu(nuxtApp.ssrContext?.event.context._nitro?.routeRules?.ogImage, routeRules);\n    const { defaults } = useOgImageRuntimeConfig();\n    const resolvedOptions = normaliseOptions(defu(routeRules, defaults));\n    const src = getOgImagePath(ssrContext.url, resolvedOptions);\n    createOgImageMeta(src, routeRules, resolvedOptions, nuxtApp.ssrContext);\n  });\n});\n",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -244,56 +244,56 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-template",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1706885058801,
-      "end": 1706885058801,
+      "start": 1707272758449,
+      "end": 1707272758449,
       "order": "normal"
     }
   ]

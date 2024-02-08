@@ -4,219 +4,219 @@
     {
       "name": "vite:load-fallback",
       "result": "import { defu } from \"defu\";\nimport { withQuery } from \"ufo\";\nimport { getExtension, separateProps } from \"../shared.mjs\";\nimport { unref, useServerHead } from \"#imports\";\nimport { componentNames } from \"#build/nuxt-og-image/components.mjs\";\nexport function createOgImageMeta(src, input, resolvedOptions, ssrContext) {\n  const _input = separateProps(defu(input, ssrContext._ogImagePayload));\n  let url = src || input.url || resolvedOptions.url;\n  if (!url)\n    return;\n  if (input._query && Object.keys(input._query).length && url)\n    url = withQuery(url, { _query: input._query });\n  let urlExtension = getExtension(url) || resolvedOptions.extension;\n  if (urlExtension === \"jpg\")\n    urlExtension = \"jpeg\";\n  const meta = [\n    { property: \"og:image\", content: url },\n    { property: \"og:image:type\", content: `image/${urlExtension}` },\n    { name: \"twitter:card\", content: \"summary_large_image\" },\n    // we don't need this but avoids issue when using useSeoMeta({ twitterImage })\n    { name: \"twitter:image\", content: url },\n    { name: \"twitter:image:src\", content: url }\n  ];\n  if (resolvedOptions.width) {\n    meta.push({ property: \"og:image:width\", content: resolvedOptions.width });\n    meta.push({ name: \"twitter:image:width\", content: resolvedOptions.width });\n  }\n  if (resolvedOptions.height) {\n    meta.push({ property: \"og:image:height\", content: resolvedOptions.height });\n    meta.push({ name: \"twitter:image:height\", content: resolvedOptions.height });\n  }\n  if (resolvedOptions.alt) {\n    meta.push({ property: \"og:image:alt\", content: resolvedOptions.alt });\n    meta.push({ name: \"twitter:image:alt\", content: resolvedOptions.alt });\n  }\n  ssrContext._ogImageInstances = ssrContext._ogImageInstances || [];\n  const script = [];\n  if (src) {\n    script.push({\n      id: \"nuxt-og-image-options\",\n      type: \"application/json\",\n      processTemplateParams: true,\n      innerHTML: () => {\n        if (!_input.props.title)\n          _input.props.title = \"%s\";\n        delete _input.url;\n        return _input;\n      },\n      // we want this to be last in our head\n      tagPosition: \"bodyClose\"\n    });\n  }\n  const instance = useServerHead({\n    script,\n    meta\n  }, {\n    tagPriority: 35\n  });\n  ssrContext._ogImagePayload = _input;\n  ssrContext._ogImageInstances.push(instance);\n}\nexport function normaliseOptions(_options) {\n  const options = { ...unref(_options) };\n  if (!options)\n    return options;\n  if (options.component && componentNames) {\n    const originalName = options.component;\n    for (const component of componentNames) {\n      if (component.pascalName.endsWith(originalName) || component.kebabName.endsWith(originalName)) {\n        options.component = component.pascalName;\n        break;\n      }\n    }\n  }\n  return options;\n}\n",
-      "start": 1706885059119,
-      "end": 1706885059156,
+      "start": 1707272758532,
+      "end": 1707272758668,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1706885059156,
-      "end": 1706885059156,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "pre"
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1706885059156,
-      "end": 1706885059156,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1706885059156,
-      "end": 1706885059156,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1706885059156,
-      "end": 1706885059156,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "pre"
     },
     {
       "name": "content-slot",
-      "start": 1706885059156,
-      "end": 1706885059156,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "pre"
     },
     {
       "name": "content-slot",
-      "start": 1706885059156,
-      "end": 1706885059156,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1706885059156,
-      "end": 1706885059156,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "pre"
     },
     {
       "name": "server-only-component-transform",
-      "start": 1706885059156,
-      "end": 1706885059156,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1706885059156,
-      "end": 1706885059156,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1706885059156,
-      "end": 1706885059156,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1706885059156,
-      "end": 1706885059156,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1706885059156,
-      "end": 1706885059156,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1706885059156,
-      "end": 1706885059156,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1706885059156,
-      "end": 1706885059156,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "post"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "post"
     },
     {
       "name": "unhead:remove-server-composables",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758668,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { unref } from 'vue';\nimport { useServerHead } from '@unhead/vue';\nimport { defu } from \"defu\";\nimport { withQuery } from \"ufo\";\nimport { getExtension, separateProps } from \"../shared.mjs\";\nimport { componentNames } from \"#build/nuxt-og-image/components.mjs\";\nexport function createOgImageMeta(src, input, resolvedOptions, ssrContext) {\n  const _input = separateProps(defu(input, ssrContext._ogImagePayload));\n  let url = src || input.url || resolvedOptions.url;\n  if (!url)\n    return;\n  if (input._query && Object.keys(input._query).length && url)\n    url = withQuery(url, { _query: input._query });\n  let urlExtension = getExtension(url) || resolvedOptions.extension;\n  if (urlExtension === \"jpg\")\n    urlExtension = \"jpeg\";\n  const meta = [\n    { property: \"og:image\", content: url },\n    { property: \"og:image:type\", content: `image/${urlExtension}` },\n    { name: \"twitter:card\", content: \"summary_large_image\" },\n    // we don't need this but avoids issue when using useSeoMeta({ twitterImage })\n    { name: \"twitter:image\", content: url },\n    { name: \"twitter:image:src\", content: url }\n  ];\n  if (resolvedOptions.width) {\n    meta.push({ property: \"og:image:width\", content: resolvedOptions.width });\n    meta.push({ name: \"twitter:image:width\", content: resolvedOptions.width });\n  }\n  if (resolvedOptions.height) {\n    meta.push({ property: \"og:image:height\", content: resolvedOptions.height });\n    meta.push({ name: \"twitter:image:height\", content: resolvedOptions.height });\n  }\n  if (resolvedOptions.alt) {\n    meta.push({ property: \"og:image:alt\", content: resolvedOptions.alt });\n    meta.push({ name: \"twitter:image:alt\", content: resolvedOptions.alt });\n  }\n  ssrContext._ogImageInstances = ssrContext._ogImageInstances || [];\n  const script = [];\n  if (src) {\n    script.push({\n      id: \"nuxt-og-image-options\",\n      type: \"application/json\",\n      processTemplateParams: true,\n      innerHTML: () => {\n        if (!_input.props.title)\n          _input.props.title = \"%s\";\n        delete _input.url;\n        return _input;\n      },\n      // we want this to be last in our head\n      tagPosition: \"bodyClose\"\n    });\n  }\n  const instance = useServerHead({\n    script,\n    meta\n  }, {\n    tagPriority: 35\n  });\n  ssrContext._ogImagePayload = _input;\n  ssrContext._ogImageInstances.push(instance);\n}\nexport function normaliseOptions(_options) {\n  const options = { ...unref(_options) };\n  if (!options)\n    return options;\n  if (options.component && componentNames) {\n    const originalName = options.component;\n    for (const component of componentNames) {\n      if (component.pascalName.endsWith(originalName) || component.kebabName.endsWith(originalName)) {\n        options.component = component.pascalName;\n        break;\n      }\n    }\n  }\n  return options;\n}\n",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758669,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -230,8 +230,8 @@
     {
       "name": "nuxt:imports-transform",
       "result": "import { unref } from 'vue';\nimport { useServerHead } from '@unhead/vue';\nimport { defu } from \"defu\";\nimport { withQuery } from \"ufo\";\nimport { getExtension, separateProps } from \"../shared.mjs\";\nimport { componentNames } from \"#build/nuxt-og-image/components.mjs\";\nexport function createOgImageMeta(src, input, resolvedOptions, ssrContext) {\n  const _input = separateProps(defu(input, ssrContext._ogImagePayload));\n  let url = src || input.url || resolvedOptions.url;\n  if (!url)\n    return;\n  if (input._query && Object.keys(input._query).length && url)\n    url = withQuery(url, { _query: input._query });\n  let urlExtension = getExtension(url) || resolvedOptions.extension;\n  if (urlExtension === \"jpg\")\n    urlExtension = \"jpeg\";\n  const meta = [\n    { property: \"og:image\", content: url },\n    { property: \"og:image:type\", content: `image/${urlExtension}` },\n    { name: \"twitter:card\", content: \"summary_large_image\" },\n    // we don't need this but avoids issue when using useSeoMeta({ twitterImage })\n    { name: \"twitter:image\", content: url },\n    { name: \"twitter:image:src\", content: url }\n  ];\n  if (resolvedOptions.width) {\n    meta.push({ property: \"og:image:width\", content: resolvedOptions.width });\n    meta.push({ name: \"twitter:image:width\", content: resolvedOptions.width });\n  }\n  if (resolvedOptions.height) {\n    meta.push({ property: \"og:image:height\", content: resolvedOptions.height });\n    meta.push({ name: \"twitter:image:height\", content: resolvedOptions.height });\n  }\n  if (resolvedOptions.alt) {\n    meta.push({ property: \"og:image:alt\", content: resolvedOptions.alt });\n    meta.push({ name: \"twitter:image:alt\", content: resolvedOptions.alt });\n  }\n  ssrContext._ogImageInstances = ssrContext._ogImageInstances || [];\n  const script = [];\n  if (src) {\n    script.push({\n      id: \"nuxt-og-image-options\",\n      type: \"application/json\",\n      processTemplateParams: true,\n      innerHTML: () => {\n        if (!_input.props.title)\n          _input.props.title = \"%s\";\n        delete _input.url;\n        return _input;\n      },\n      // we want this to be last in our head\n      tagPosition: \"bodyClose\"\n    });\n  }\n  const instance = useServerHead({\n    script,\n    meta\n  }, {\n    tagPriority: 35\n  });\n  ssrContext._ogImagePayload = _input;\n  ssrContext._ogImageInstances.push(instance);\n}\nexport function normaliseOptions(_options) {\n  const options = { ...unref(_options) };\n  if (!options)\n    return options;\n  if (options.component && componentNames) {\n    const originalName = options.component;\n    for (const component of componentNames) {\n      if (component.pascalName.endsWith(originalName) || component.kebabName.endsWith(originalName)) {\n        options.component = component.pascalName;\n        break;\n      }\n    }\n  }\n  return options;\n}\n",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758668,
+      "end": 1707272758669,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -244,56 +244,56 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758669,
+      "end": 1707272758669,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758669,
+      "end": 1707272758669,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758669,
+      "end": 1707272758669,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758669,
+      "end": 1707272758669,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-template",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758669,
+      "end": 1707272758669,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758669,
+      "end": 1707272758669,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758669,
+      "end": 1707272758669,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758669,
+      "end": 1707272758669,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1706885059157,
-      "end": 1706885059157,
+      "start": 1707272758669,
+      "end": 1707272758669,
       "order": "normal"
     }
   ]

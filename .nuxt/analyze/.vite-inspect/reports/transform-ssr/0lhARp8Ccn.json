@@ -4,8 +4,8 @@
     {
       "name": "vite:vue",
       "result": "[Error]",
-      "start": 1706885059490,
-      "end": 1706885059490,
+      "start": 1707272758913,
+      "end": 1707272758913,
       "error": {
         "message": "ENOENT: no such file or directory, open '/Users/hanjeonghun/Documents/GitHub/\\u110B\\u1175\\u110B\\u1166\\u11AB\\u1106\\u1175\\u1103\\u1175\\u110B\\u1165_\\u1112\\u1169\\u11B7\\u1111\\u1166\\u110B\\u1175\\u110C\\u1175FTP/node_modules/@nuxt/content/dist/runtime/components/Prose/ProsePre.vue'",
         "stack": [
@@ -75,6 +75,13 @@
             "lineNumber": 17762,
             "columnNumber": 33,
             "source": "    at async file:///Users/hanjeonghun/Documents/GitHub/%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%86%E1%85%B5%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A5_%E1%84%92%E1%85%A9%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5FTP/node_modules/rollup/dist/es/shared/node-entry.js:17762:33"
+          },
+          {
+            "functionName": "async Queue.work",
+            "fileName": "file:///Users/hanjeonghun/Documents/GitHub/%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%86%E1%85%B5%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A5_%E1%84%92%E1%85%A9%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5FTP/node_modules/rollup/dist/es/shared/node-entry.js",
+            "lineNumber": 18802,
+            "columnNumber": 32,
+            "source": "    at async Queue.work (file:///Users/hanjeonghun/Documents/GitHub/%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%86%E1%85%B5%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A5_%E1%84%92%E1%85%A9%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5FTP/node_modules/rollup/dist/es/shared/node-entry.js:18802:32)"
           }
         ],
         "raw": {

@@ -4,63 +4,63 @@
     {
       "name": "vite:load-fallback",
       "result": "<style>\n.cls-1 {\n  stroke: #7b22f3;\n}\n.cls-1,\n.cls-2 {\n  fill: none;\n  stroke-linecap: round;\n  stroke-linejoin: round;\n  stroke-width: 3px;\n}\n.cls-2 {\n  stroke: #404040;\n}\n</style>\n<template>\n  <div class=\"colCenter relative w-full\">\n    <svg class=\"relative w-[40%]\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 69 76.16\">\n      <line class=\"cls-2\" x1=\"1.5\" y1=\"8.82\" x2=\"67.5\" y2=\"8.82\" />\n      <polygon class=\"cls-1\" points=\"34.76 1.5 48.5 22.66 20.5 22.66 34.76 1.5\" />\n      <path class=\"cls-1\" d=\"M20.5,55.31V22.66h28v32.66\" />\n      <line class=\"cls-1\" x1=\"34.5\" y1=\"22.66\" x2=\"34.5\" y2=\"55.31\" />\n      <polyline class=\"cls-2\" points=\"67.5 8.82 67.5 56.32 1.5 56.32 1.5 8.82\" />\n      <line class=\"cls-2\" x1=\"13.31\" y1=\"74.66\" x2=\"55.31\" y2=\"74.66\" />\n      <line class=\"cls-2\" x1=\"27.03\" y1=\"56.49\" x2=\"21.94\" y2=\"74.49\" />\n      <line class=\"cls-2\" x1=\"41.59\" y1=\"56.49\" x2=\"46.69\" y2=\"74.49\" />\n    </svg>\n    <div class=\"bg-primary-500 size-12 aspect-1 opacity-60 right-[25%] bottom-[7%] absolute rounded-full animate-pulse\"></div>\n  </div>\n</template>\n",
-      "start": 1706885058088,
-      "end": 1706885058100,
+      "start": 1707272757329,
+      "end": 1707272757338,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1706885058100,
-      "end": 1706885058100,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1706885058100,
-      "end": 1706885058100,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "pre"
     },
     {
       "name": "content-slot",
-      "start": 1706885058100,
-      "end": 1706885058100,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1706885058100,
-      "end": 1706885058100,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1706885058100,
-      "end": 1706885058100,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1706885058100,
-      "end": 1706885058100,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1706885058100,
-      "end": 1706885058100,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1706885058100,
-      "end": 1706885058100,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"colCenter relative w-full\" }\nconst _hoisted_2 = /*#__PURE__*/_createStaticVNode(\"<svg class=\\\"relative w-[40%]\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\" viewBox=\\\"0 0 69 76.16\\\"><line class=\\\"cls-2\\\" x1=\\\"1.5\\\" y1=\\\"8.82\\\" x2=\\\"67.5\\\" y2=\\\"8.82\\\"></line><polygon class=\\\"cls-1\\\" points=\\\"34.76 1.5 48.5 22.66 20.5 22.66 34.76 1.5\\\"></polygon><path class=\\\"cls-1\\\" d=\\\"M20.5,55.31V22.66h28v32.66\\\"></path><line class=\\\"cls-1\\\" x1=\\\"34.5\\\" y1=\\\"22.66\\\" x2=\\\"34.5\\\" y2=\\\"55.31\\\"></line><polyline class=\\\"cls-2\\\" points=\\\"67.5 8.82 67.5 56.32 1.5 56.32 1.5 8.82\\\"></polyline><line class=\\\"cls-2\\\" x1=\\\"13.31\\\" y1=\\\"74.66\\\" x2=\\\"55.31\\\" y2=\\\"74.66\\\"></line><line class=\\\"cls-2\\\" x1=\\\"27.03\\\" y1=\\\"56.49\\\" x2=\\\"21.94\\\" y2=\\\"74.49\\\"></line><line class=\\\"cls-2\\\" x1=\\\"41.59\\\" y1=\\\"56.49\\\" x2=\\\"46.69\\\" y2=\\\"74.49\\\"></line></svg><div class=\\\"bg-primary-500 size-12 aspect-1 opacity-60 right-[25%] bottom-[7%] absolute rounded-full animate-pulse\\\"></div>\", 2)\nconst _hoisted_4 = [\n  _hoisted_2\n]\n\nfunction _sfc_render(_ctx, _cache) {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, _hoisted_4))\n}\n\nimport \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/components/Main/PortfolioIcon.vue?vue&type=style&index=0&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
-      "start": 1706885058100,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -68,158 +68,158 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757338,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757338,
+      "end": 1707272757339,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757339,
+      "end": 1707272757339,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757339,
+      "end": 1707272757339,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757339,
+      "end": 1707272757339,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1706885058101,
-      "end": 1706885058101,
+      "start": 1707272757339,
+      "end": 1707272757339,
       "order": "normal"
     }
   ]

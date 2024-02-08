@@ -118,7 +118,7 @@ const _inlineRuntimeConfig = {
         "id": "schema-org-graph"
       },
       "identity": "",
-      "version": "3.3.2"
+      "version": "3.3.3"
     },
     "nuxt-link-checker": {
       "version": "3.0.0-rc.5",
@@ -229,11 +229,12 @@ const _inlineRuntimeConfig = {
       }
     }
   },
-  "nuxt-simple-sitemap": {
+  "sitemap": {
     "isI18nMapped": false,
     "sitemapName": "sitemap.xml",
     "isMultiSitemap": false,
     "excludeAppSources": [],
+    "cacheMaxAgeSeconds": 0,
     "autoLastmod": false,
     "defaultSitemapsChunkSize": 1000,
     "sortEntries": true,
@@ -259,7 +260,7 @@ const _inlineRuntimeConfig = {
       }
     ],
     "credits": true,
-    "version": "4.4.0",
+    "version": "5.1.0",
     "sitemaps": {
       "sitemap.xml": {
         "sitemapName": "sitemap.xml",
@@ -386,11 +387,11 @@ const _inlineRuntimeConfig = {
         "titleSeparator": "|"
       }
     ],
-    "version": "2.2.8",
+    "version": "2.2.9",
     "debug": false
   },
   "nuxt-simple-robots": {
-    "version": "4.0.0-rc.12",
+    "version": "4.0.0-rc.13",
     "usingNuxtContent": true,
     "debug": false,
     "credits": true,
@@ -427,84 +428,9 @@ const _inlineRuntimeConfig = {
           "/"
         ],
         "allow": []
-      },
-      {
-        "userAgent": [
-          "Nuclei",
-          "WikiDo",
-          "Riddler",
-          "PetalBot",
-          "Zoominfobot",
-          "Go-http-client",
-          "Node/simplecrawler",
-          "CazoodleBot",
-          "dotbot/1.0",
-          "Gigabot",
-          "Barkrowler",
-          "BLEXBot",
-          "magpie-crawler"
-        ],
-        "comment": [
-          "Block bots that don't benefit us."
-        ],
-        "disallow": [
-          "/"
-        ],
-        "allow": []
-      },
-      {
-        "userAgent": [
-          "Nuclei",
-          "WikiDo",
-          "Riddler",
-          "PetalBot",
-          "Zoominfobot",
-          "Go-http-client",
-          "Node/simplecrawler",
-          "CazoodleBot",
-          "dotbot/1.0",
-          "Gigabot",
-          "Barkrowler",
-          "BLEXBot",
-          "magpie-crawler"
-        ],
-        "comment": [
-          "Block bots that don't benefit us."
-        ],
-        "disallow": [
-          "/"
-        ],
-        "allow": []
-      },
-      {
-        "userAgent": [
-          "Nuclei",
-          "WikiDo",
-          "Riddler",
-          "PetalBot",
-          "Zoominfobot",
-          "Go-http-client",
-          "Node/simplecrawler",
-          "CazoodleBot",
-          "dotbot/1.0",
-          "Gigabot",
-          "Barkrowler",
-          "BLEXBot",
-          "magpie-crawler"
-        ],
-        "comment": [
-          "Block bots that don't benefit us."
-        ],
-        "disallow": [
-          "/"
-        ],
-        "allow": []
       }
     ],
     "sitemap": [
-      "/sitemap.xml",
-      "/sitemap.xml",
-      "/sitemap.xml",
       "/sitemap.xml"
     ],
     "robotsEnabledValue": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
@@ -1296,23 +1222,28 @@ function getSiteRobotConfig(e) {
   const hints = [];
   const { groups, debug } = useRuntimeConfig(e)["nuxt-simple-robots"];
   let indexable = getSiteIndexable(e);
-  if (groups.some((g) => g.userAgent.includes("*") && g.disallow.includes("/"))) {
-    indexable = false;
-    hints.push("You have a disallow rule with `/` which blocks all routes.");
-  }
   const queryIndexableEnabled = String(query.mockProductionEnv) === "true" || query.mockProductionEnv === "";
-  if ((debug || true) && !indexable) {
+  if (debug || true) {
     const { _context } = useSiteConfig(e, { debug: debug || true });
-    if (queryIndexableEnabled && !_context.indexable) {
+    if (queryIndexableEnabled) {
       indexable = true;
       hints.push("You are mocking a production enviroment with ?mockProductionEnv query.");
-    } else if (_context.indexable === "nuxt-simple-robots:config") {
+    } else if (!indexable && _context.indexable === "nuxt-simple-robots:config") {
       hints.push("You are blocking indexing with your nuxt-simple-robots config.");
-    } else if (!_context.indexable) {
-      hints.push(`Indexing is blocked because of the environment. You can mock a production environment with ?mockProductionEnv query.`);
-    } else {
+    } else if (!queryIndexableEnabled && !_context.indexable) {
+      hints.push(`Indexing is blocked in development. You can mock a production environment with ?mockProductionEnv query.`);
+    } else if (!indexable && !queryIndexableEnabled) {
       hints.push(`Indexing is blocked by site config set by ${_context.indexable}.`);
+    } else if (indexable && !queryIndexableEnabled) {
+      hints.push(`Indexing is enabled from ${_context.indexable}.`);
     }
+  }
+  const hasWildcardDisallow = groups.some((g) => g.userAgent.includes("*") && g.disallow.includes("/"));
+  if (groups.length === 1 && hasWildcardDisallow) {
+    indexable = false;
+    hints.push("You have a disallow rule with `Disallow /` which blocks all routes.");
+  } else {
+    hints.push("You are blocking most crawlers with `Disallow /`.");
   }
   return { indexable, hints };
 }
@@ -2147,7 +2078,7 @@ async function resolveRobotsTxtContext(e, nitro = useNitroApp()) {
 }
 
 const _0u6hLf6B2t = defineNitroPlugin(async (nitroApp) => {
-  const { usingNuxtContent } = useRuntimeConfig()["nuxt-simple-robots"];
+  const { usingNuxtContent, robotsDisabledValue } = useRuntimeConfig()["nuxt-simple-robots"];
   nitroApp._robots = {};
   await resolveRobotsTxtContext(void 0, nitroApp);
   const nuxtContentUrls = /* @__PURE__ */ new Set();
@@ -2156,16 +2087,6 @@ const _0u6hLf6B2t = defineNitroPlugin(async (nitroApp) => {
     urls.forEach((url) => nuxtContentUrls.add(withoutTrailingSlash(url)));
   }
   nitroApp._robots.nuxtContentUrls = nuxtContentUrls;
-  nitroApp.hooks.hook("render:html", async (ctx, { event }) => {
-    if (!event.context.robots)
-      return;
-    const routeOptions = getRouteRules(event);
-    const isIsland = event.path.startsWith("/__nuxt_island");
-    event.path;
-    const noSSR = event.context.nuxt?.noSSR || routeOptions.ssr === false && !isIsland || (false);
-    if (noSSR)
-      ctx.head.push(`<meta name="robots" content="${event.context.robots.rule}" />`);
-  });
 });
 
 const merger = createDefu((obj, key, value) => {
@@ -2187,7 +2108,6 @@ function splitForLocales(path, locales) {
     return [prefix, path.replace(`/${prefix}`, "")];
   return [null, path];
 }
-
 const StringifiedRegExpPattern = /\/(.*?)\/([gimsuy]*)$/;
 function normalizeRuntimeFilters(input) {
   return (input || []).map((rule) => {
@@ -2199,8 +2119,9 @@ function normalizeRuntimeFilters(input) {
     return false;
   }).filter(Boolean);
 }
-function useSimpleSitemapRuntimeConfig() {
-  const clone = JSON.parse(JSON.stringify(useRuntimeConfig()["nuxt-simple-sitemap"]));
+
+function useSimpleSitemapRuntimeConfig(e) {
+  const clone = JSON.parse(JSON.stringify(useRuntimeConfig(e).sitemap));
   for (const k in clone.sitemaps) {
     const sitemap = clone.sitemaps[k];
     sitemap.include = normalizeRuntimeFilters(sitemap.include);
@@ -2210,10 +2131,11 @@ function useSimpleSitemapRuntimeConfig() {
   return Object.freeze(clone);
 }
 
-const _aq6yOugvTx = defineNitroPlugin$1((nitroApp) => {
+const _OdphSn49HZ = defineNitroPlugin$1((nitroApp) => {
   const { discoverImages, isNuxtContentDocumentDriven } = useSimpleSitemapRuntimeConfig();
   nitroApp.hooks.hook("content:file:afterParse", async (content) => {
-    if (content.sitemap === false || content._draft || content._extension !== "md" || content._partial || content.indexable === false || content.index === false)
+    const validExtensions = ["md", "mdx"];
+    if (content.sitemap === false || content._draft || !validExtensions.includes(content._extension) || content._partial || content.indexable === false || content.index === false)
       return;
     let images = [];
     if (discoverImages) {
@@ -2237,7 +2159,7 @@ const _aq6yOugvTx = defineNitroPlugin$1((nitroApp) => {
       if (content.path && content.path && content.path.startsWith("/"))
         definition.loc = content.path;
       if (Object.keys(sitemapConfig).length > 0 && true)
-        console.warn(`[nuxt-simple-sitemap] The @nuxt/content file \`${content._path}\` is missing a sitemap \`loc\`.`);
+        console.warn(`[@nuxtjs/content] The @nuxt/content file \`${content._path}\` is missing a sitemap \`loc\`.`);
     }
     content.sitemap = definition;
     if (!definition.loc)
@@ -2618,7 +2540,7 @@ const plugins = [
   _3MIqRgxDty,
 _N1ggSxayi6,
 _0u6hLf6B2t,
-_aq6yOugvTx,
+_OdphSn49HZ,
 _yAHtPTuta0,
 _G4FUZ0oey1,
 _T1PDbh7gFm
@@ -2781,7 +2703,8 @@ const _F63346 = defineEventHandler(async (e) => {
   let robotsTxt = generateRobotsTxt(robotsTxtCtx);
   if (hints.length) {
     robotsTxt += `
-# DEVELOPMENT HINTS: ${hints.join(", ")}
+# DEVELOPMENT HINTS:
+ - ${hints.join("\n - ")}
 `;
   }
   if (credits) {
@@ -4337,7 +4260,7 @@ const _irwA6L = defineEventHandler(async (e) => {
   });
 });
 
-const _hw2StL = defineEventHandler(async (e) => {
+const _WDLg68 = defineEventHandler(async (e) => {
   const contentList = await serverQueryContent(e).find();
   return contentList.map((c) => c.sitemap).filter(Boolean);
 });
@@ -4388,7 +4311,7 @@ async function fetchDataSource(input) {
       context.tips.push("The request has taken too long. Make sure app sources respond within 5 seconds or adjust the timeout fetch option.");
     else
       context.tips.push(`Response returned a status of ${error.response?.status || "unknown"}.`);
-    console.error("[nuxt-simple-sitemap] Failed to fetch source.", { url, error });
+    console.error("[@nuxtjs/sitemap] Failed to fetch source.", { url, error });
     return {
       ...input,
       context,
@@ -4425,7 +4348,7 @@ async function resolveSitemapSources(sources) {
   )).flat();
 }
 
-const _PKlcMi = defineEventHandler(async (e) => {
+const _eH5Xg0 = defineEventHandler(async (e) => {
   const _runtimeConfig = useSimpleSitemapRuntimeConfig();
   const { sitemaps: _sitemaps } = _runtimeConfig;
   const runtimeConfig = { ..._runtimeConfig };
@@ -4447,13 +4370,16 @@ const _PKlcMi = defineEventHandler(async (e) => {
   };
 });
 
-const _2vrsWU = defineEventHandler(async (e) => {
-  setHeader(e, "Content-Type", "application/xslt+xml");
+const _Du2ZhA = defineEventHandler(async (e) => {
   const fixPath = createSitePathResolver(e, { absolute: false, withBase: true });
-  const { sitemapName: fallbackSitemapName, version, xslColumns, xslTips } = useSimpleSitemapRuntimeConfig();
+  const { sitemapName: fallbackSitemapName, cacheMaxAgeSeconds, version, xslColumns, xslTips } = useSimpleSitemapRuntimeConfig();
+  setHeader(e, "Content-Type", "application/xslt+xml");
+  if (cacheMaxAgeSeconds)
+    setHeader(e, "Cache-Control", `public, max-age=${cacheMaxAgeSeconds}, must-revalidate`);
+  else
+    setHeader(e, "Cache-Control", `no-cache, no-store`);
   const svgIcon = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="icon" style="margin-right: 4px; font-size: 25px;" width="1em" height="1em" viewBox="0 0 32 32"><path fill="#93c5fd" d="M4 26h4v4H4zm10 0h4v4h-4zm10 0h4v4h-4zm1-10h-8v-2h-2v2H7a2.002 2.002 0 0 0-2 2v6h2v-6h8v6h2v-6h8v6h2v-6a2.002 2.002 0 0 0-2-2zM9 2v10h14V2zm2 2h2v6h-2zm10 6h-6V4h6z"></path></svg>`;
-  const creditName = `<a href="https://github.com/harlan-zw/nuxt-simple-sitemap" style="color: black; display: flex; align-items: center; font-weight: 500;" target="_blank" rel="noopener">${svgIcon} Nuxt
-            Simple Sitemap v${version}</a>`;
+  const creditName = `<a href="https://github.com/nuxt-modules/sitemap" style="color: black; display: flex; align-items: center; font-weight: 500;" target="_blank" rel="noopener">${svgIcon} Nuxt Sitemap v${version}</a>`;
   const { name: siteName, url: siteUrl } = useSiteConfig(e);
   const referrer = getHeader(e, "Referer") || "/";
   const isNotIndexButHasIndex = referrer !== fixPath("/sitemap.xml") && parseURL(referrer).pathname.endsWith("-sitemap.xml");
@@ -4731,18 +4657,36 @@ function normaliseSitemapUrls(data, resolvers) {
     "_key"
   );
 }
+const IS_VALID_W3C_DATE = [
+  /(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))/,
+  /^\d{4}-[01]\d-[0-3]\d$/,
+  /^\d{4}-[01]\d$/,
+  /^\d{4}$/
+];
+function isValidW3CDate(d) {
+  return IS_VALID_W3C_DATE.some((r) => r.test(d));
+}
 function normaliseDate(d) {
   if (typeof d === "string") {
-    d = d.replace("Z", "");
-    d = d.replace(/\.\d+$/, "");
-    if (d.match(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}$/) || d.match(/^\d{4}-\d{2}-\d{2}$/))
-      return d;
+    if (d.includes("T")) {
+      const t = d.split("T")[1];
+      if (!t.includes("+") && !t.includes("-") && !t.includes("Z")) {
+        d += "Z";
+      }
+    }
+    if (!isValidW3CDate(d))
+      return false;
     d = new Date(d);
+    d.setMilliseconds(0);
     if (Number.isNaN(d.getTime()))
       return false;
   }
   const z = (n) => `0${n}`.slice(-2);
-  return `${d.getUTCFullYear()}-${z(d.getUTCMonth() + 1)}-${z(d.getUTCDate())}T${z(d.getUTCHours())}:${z(d.getUTCMinutes())}:${z(d.getUTCSeconds())}+00:00`;
+  const date = `${d.getUTCFullYear()}-${z(d.getUTCMonth() + 1)}-${z(d.getUTCDate())}`;
+  if (d.getUTCHours() > 0 || d.getUTCMinutes() > 0 || d.getUTCSeconds() > 0) {
+    return `${date}T${z(d.getUTCHours())}:${z(d.getUTCMinutes())}:${z(d.getUTCSeconds())}Z`;
+  }
+  return date;
 }
 
 function createFilter(options = {}) {
@@ -5030,12 +4974,12 @@ function handleArray(key, arr) {
 function handleEntry(k, e) {
   return Array.isArray(e[k]) ? handleArray(k, e[k]) : typeof e[k] === "object" ? handleObject(k, e[k]) : `        <${k}>${escapeValueForXml(e[k])}</${k}>`;
 }
-function wrapSitemapXml(input, resolvers, wrapSitemapXmlOptions) {
-  const xsl = wrapSitemapXmlOptions.xsl ? resolvers.relativeBaseUrlResolver(wrapSitemapXmlOptions.xsl) : false;
-  const credits = wrapSitemapXmlOptions.credits;
+function wrapSitemapXml(input, resolvers, options) {
+  const xsl = options.xsl ? resolvers.relativeBaseUrlResolver(options.xsl) : false;
+  const credits = options.credits;
   input.unshift(`<?xml version="1.0" encoding="UTF-8"?>${xsl ? `<?xml-stylesheet type="text/xsl" href="${xsl}"?>` : ""}`);
   if (credits)
-    input.push(`<!-- XML Sitemap generated by Nuxt Simple Sitemap v${wrapSitemapXmlOptions.version} -->`);
+    input.push(`<!-- XML Sitemap generated by @nuxtjs/sitemap v${options.version} at ${(/* @__PURE__ */ new Date()).toISOString()} -->`);
   return input.join("\n");
 }
 function escapeValueForXml(value) {
@@ -5044,11 +4988,10 @@ function escapeValueForXml(value) {
   return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
 }
 
-async function buildSitemap(sitemap, resolvers) {
+async function buildSitemap(sitemap, resolvers, runtimeConfig) {
   const {
     sitemaps,
     // enhancing
-    autoLastmod,
     autoI18n,
     isI18nMapped,
     isMultiSitemap,
@@ -5060,7 +5003,7 @@ async function buildSitemap(sitemap, resolvers) {
     version,
     xsl,
     credits
-  } = useSimpleSitemapRuntimeConfig();
+  } = runtimeConfig;
   const isChunking = typeof sitemaps.chunks !== "undefined" && !Number.isNaN(Number(sitemap.sitemapName));
   function maybeSort(urls2) {
     return sortEntries ? sortSitemapUrls(urls2) : urls2;
@@ -5091,7 +5034,6 @@ async function buildSitemap(sitemap, resolvers) {
   if (autoI18n)
     resolvedSources = normaliseI18nSources(resolvedSources, { autoI18n, isI18nMapped });
   const normalisedUrls = normaliseSitemapUrls(resolvedSources.map((e) => e.urls).flat(), resolvers);
-  ({ ...sitemap.defaults || {} });
   const routeRuleMatcher = createNitroRouteRuleMatcher();
   let enhancedUrls = normalisedUrls.map((e) => defu$1(e, sitemap.defaults)).map((e) => {
     const path = parseURL(e.loc).pathname;
@@ -5138,7 +5080,7 @@ async function buildSitemap(sitemap, resolvers) {
   ], resolvers, { version, xsl, credits });
 }
 
-async function buildSitemapIndex(resolvers) {
+async function buildSitemapIndex(resolvers, runtimeConfig) {
   const {
     sitemaps,
     // enhancing
@@ -5152,7 +5094,7 @@ async function buildSitemapIndex(resolvers) {
     version,
     xsl,
     credits
-  } = useSimpleSitemapRuntimeConfig();
+  } = runtimeConfig;
   if (!sitemaps)
     throw new Error("Attempting to build a sitemap index without required `sitemaps` configuration.");
   function maybeSort(urls) {
@@ -5194,8 +5136,11 @@ async function buildSitemapIndex(resolvers) {
       entry.lastmod = normaliseDate(lastmod);
     entries.push(entry);
   }
-  if (sitemaps.index)
-    entries.push(...sitemaps.index.sitemaps);
+  if (sitemaps.index) {
+    entries.push(...sitemaps.index.sitemaps.map((entry) => {
+      return typeof entry === "string" ? { sitemap: entry } : entry;
+    }));
+  }
   const sitemapXml = entries.map((e) => [
     "    <sitemap>",
     `        <loc>${escapeValueForXml(e.sitemap)}</loc>`,
@@ -5226,24 +5171,29 @@ function useNitroUrlResolvers(e) {
     relativeBaseUrlResolver: createSitePathResolver(e, { absolute: false, withBase: true })
   };
 }
-async function createSitemap(e, definition) {
+async function createSitemap(e, definition, runtimeConfig) {
   const { sitemapName } = definition;
   const nitro = useNitroApp();
-  let sitemap = await (definition.sitemapName === "index" ? buildSitemapIndex(useNitroUrlResolvers(e)) : buildSitemap(definition, useNitroUrlResolvers(e)));
+  let sitemap = await (definition.sitemapName === "index" ? buildSitemapIndex(useNitroUrlResolvers(e), runtimeConfig) : buildSitemap(definition, useNitroUrlResolvers(e), runtimeConfig));
   const ctx = { sitemap, sitemapName };
   await nitro.hooks.callHook("sitemap:output", ctx);
   sitemap = ctx.sitemap;
   setHeader(e, "Content-Type", "text/xml; charset=UTF-8");
+  if (runtimeConfig.cacheMaxAgeSeconds)
+    setHeader(e, "Cache-Control", `public, max-age=${runtimeConfig.cacheMaxAgeSeconds}, must-revalidate`);
+  else
+    setHeader(e, "Cache-Control", `no-cache, no-store`);
   e.context._isSitemap = true;
   return sitemap;
 }
 
-const _OLVgXz = defineEventHandler(async (e) => {
-  const { sitemaps } = useSimpleSitemapRuntimeConfig();
+const _Crkkht = defineEventHandler(async (e) => {
+  const runtimeConfig = useSimpleSitemapRuntimeConfig();
+  const { sitemaps } = runtimeConfig;
   if ("index" in sitemaps) {
     return sendRedirect(e, withBase("/sitemap_index.xml", useRuntimeConfig().app.baseURL), 302 );
   }
-  return createSitemap(e, Object.values(sitemaps)[0]);
+  return createSitemap(e, Object.values(sitemaps)[0], runtimeConfig);
 });
 
 const _thirlS = defineEventHandler(async (e) => {
@@ -5718,15 +5668,14 @@ const _SMaF1H = defineEventHandler(async (e) => {
   };
 });
 
-const _i4kkhT = defineEventHandler((e) => {
+const _IUQ3nF = defineEventHandler((e) => {
   const siteConfig = useSiteConfig(e);
   if (siteConfig.site) {
+    const siteConfigHostName = new URL(e.path, siteConfig.site).hostname;
     const origin = useNitroOrigin(e);
-    if (!siteConfig.site.startsWith(origin)) {
-      const url = new URL(e.path, origin);
-      url.hostname = siteConfig.site;
-      return sendRedirect(e, joinURL(siteConfig.site, url.pathname), 301);
-    }
+    const originHostname = new URL(e.path, origin).hostname;
+    if (originHostname !== siteConfigHostName)
+      return sendRedirect(e, joinURL(siteConfig.site, e.path), 301);
   }
 });
 
@@ -6016,10 +5965,10 @@ const handlers = [
   { route: '/__robots__/nuxt-content.json', handler: _1ic1pL, lazy: false, middleware: false, method: undefined },
   { route: '/__robots__/debug.json', handler: _BO7kbG, lazy: false, middleware: false, method: undefined },
   { route: '/__robots__/debug-path.json', handler: _irwA6L, lazy: false, middleware: false, method: undefined },
-  { route: '/__sitemap__/nuxt-content-urls.json', handler: _hw2StL, lazy: false, middleware: false, method: undefined },
-  { route: '/__sitemap__/debug.json', handler: _PKlcMi, lazy: false, middleware: false, method: undefined },
-  { route: '/__sitemap__/style.xsl', handler: _2vrsWU, lazy: false, middleware: false, method: undefined },
-  { route: '/sitemap.xml', handler: _OLVgXz, lazy: false, middleware: false, method: undefined },
+  { route: '/__sitemap__/nuxt-content-urls.json', handler: _WDLg68, lazy: false, middleware: false, method: undefined },
+  { route: '/__sitemap__/debug.json', handler: _eH5Xg0, lazy: false, middleware: false, method: undefined },
+  { route: '/__sitemap__/style.xsl', handler: _Du2ZhA, lazy: false, middleware: false, method: undefined },
+  { route: '/sitemap.xml', handler: _Crkkht, lazy: false, middleware: false, method: undefined },
   { route: '/__og-image__/font/**', handler: _lazy_QnATaL, lazy: true, middleware: false, method: undefined },
   { route: '/__og-image__/debug.json', handler: _lazy_L9zwaY, lazy: true, middleware: false, method: undefined },
   { route: '/__og-image__/image/**', handler: _lazy_3ZJW7A, lazy: true, middleware: false, method: undefined },
@@ -6028,7 +5977,7 @@ const handlers = [
   { route: '/__link-checker__/inspect', handler: _zpLl2h, lazy: false, middleware: false, method: undefined },
   { route: '/__link-checker__/links', handler: _ydsu0d, lazy: false, middleware: false, method: undefined },
   { route: '/__link-checker__/debug.json', handler: _SMaF1H, lazy: false, middleware: false, method: undefined },
-  { route: '', handler: _i4kkhT, lazy: false, middleware: true, method: undefined },
+  { route: '', handler: _IUQ3nF, lazy: false, middleware: true, method: undefined },
   { route: '/api/_content/query/:qid/**:params', handler: _GXImQc, lazy: false, middleware: false, method: "get" },
   { route: '/api/_content/query/:qid', handler: _GXImQc, lazy: false, middleware: false, method: "get" },
   { route: '/api/_content/query', handler: _GXImQc, lazy: false, middleware: false, method: "get" },

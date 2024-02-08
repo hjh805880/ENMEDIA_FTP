@@ -2,7 +2,7 @@ import site from "./site";
 const { name, description, url, keywords, defaultLocale, identity, trailingSlash, titleSeparator } = site;
 
 export default defineNuxtConfig({
-  modules: ["@vueuse/nuxt", "@nuxt/image", "@nuxtseo/module", "@nuxtjs/critters", "nuxt-og-image", "@nuxt/content"],
+  modules: ["@vueuse/nuxt", "@nuxt/image", "@nuxtjs/seo", "@nuxtjs/critters", "@nuxt/content", "@nuxtjs/sitemap"],
   devtools: { enabled: true },
   css: ["~/assets/css/tailwind.css"],
   app: {
@@ -39,5 +39,8 @@ export default defineNuxtConfig({
   seo: {
     redirectToCanonicalSiteUrl: true,
     splash: true,
+  },
+  ogImage: {
+    enabled: false
   },
 });

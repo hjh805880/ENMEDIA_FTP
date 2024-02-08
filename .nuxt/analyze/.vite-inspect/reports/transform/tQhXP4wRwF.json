@@ -4,44 +4,44 @@
     {
       "name": "vite:vue",
       "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { normalizeStyle as _normalizeStyle, createElementVNode as _createElementVNode, toDisplayString as _toDisplayString, normalizeClass as _normalizeClass, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, unref as _unref, createVNode as _createVNode, Fragment as _Fragment } from \"vue\"\n\nconst _hoisted_1 = { class: \"h-full w-full justify-between relative\" }\nconst _hoisted_2 = { class: \"flex flex-row justify-between items-start\" }\nconst _hoisted_3 = { class: \"flex flex-col w-full max-w-[65%]\" }\nconst _hoisted_4 = { class: \"m-0 font-bold mb-[30px] text-[75px]\" }\nconst _hoisted_5 = {\n  key: 0,\n  style: {\"width\":\"30%\"},\n  class: \"flex justify-end\"\n}\nconst _hoisted_6 = { class: \"flex flex-row justify-center items-center text-left w-full\" }\nconst _hoisted_7 = [\"src\"]\nconst _hoisted_8 = {\n  height: \"50\",\n  width: \"50\",\n  class: \"mr-3\",\n  viewBox: \"0 0 200 200\",\n  xmlns: \"http://www.w3.org/2000/svg\"\n}\nconst _hoisted_9 = [\"fill\"]\nconst _hoisted_10 = {\n  key: 0,\n  style: {\"font-size\":\"25px\"},\n  class: \"font-bold\"\n}\n\nimport { computed, defineComponent, h, resolveComponent } from 'vue'\nimport { useOgImageRuntimeConfig } from '../../../../shared'\nimport { useSiteConfig } from '#imports'\n\n// convert to typescript props\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'NuxtSeo',\n  props: {\n    colorMode: {},\n    title: { default: 'title' },\n    description: {},\n    icon: { type: [String, Boolean] },\n    siteName: {},\n    siteLogo: {},\n    theme: { default: '#00dc82' }\n  },\n  setup(__props: any) {\n\n/**\n * @credits Nuxt SEO <https://nuxtseo.com/>\n */\n\nconst props = __props\n\nconst HexRegex = /^#([0-9a-f]{3}){1,2}$/i\n\nconst runtimeConfig = useOgImageRuntimeConfig()\n\nconst colorMode = computed(() => {\n  return props.colorMode || runtimeConfig.colorPreference || 'light'\n})\n\nconst themeHex = computed(() => {\n  // regex test if valid hex\n  if (HexRegex.test(props.theme))\n    return props.theme\n\n  // if it's hex without the hash, just add the hash\n  if (HexRegex.test(`#${props.theme}`))\n    return `#${props.theme}`\n\n  // if it's rgb or rgba, we convert it to hex\n  if (props.theme.startsWith('rgb')) {\n    const rgb = props.theme\n      .replace('rgb(', '')\n      .replace('rgba(', '')\n      .replace(')', '')\n      .split(',')\n      .map(v => Number.parseInt(v.trim(), 10))\n    const hex = rgb\n      .map((v) => {\n        const hex = v.toString(16)\n        return hex.length === 1 ? `0${hex}` : hex\n      })\n      .join('')\n    return `#${hex}`\n  }\n  return '#FFFFFF'\n})\n\nconst themeRgb = computed(() => {\n  // we want to convert it so it's just `<red>, <green>, <blue>` (255, 255, 255)\n  return themeHex.value\n    .replace('#', '')\n    .match(/.{1,2}/g)\n    ?.map(v => Number.parseInt(v, 16))\n    .join(', ')\n})\n\nconst siteConfig = useSiteConfig()\nconst siteName = computed(() => {\n  return props.siteName || siteConfig.name\n})\nconst siteLogo = computed(() => {\n  return props.siteLogo || siteConfig.logo\n})\n\nconst IconComponent = runtimeConfig.hasNuxtIcon\n  ? resolveComponent('Icon')\n  : defineComponent({\n    render() {\n      return h('div', 'missing nuxt-icon')\n    },\n  })\nif (typeof props.icon === 'string' && !runtimeConfig.hasNuxtIcon && process.dev) {\n  console.warn('Please install `nuxt-icon` to use icons with the fallback OG Image component.')\n  // eslint-disable-next-line no-console\n  console.log('\\nnpm add -D nuxt-icon\\n')\n  // create simple div renderer component\n}\n\nreturn (_ctx: any,_cache: any) => {\n  return (_openBlock(), _createElementBlock(\"div\", {\n    class: _normalizeClass([\"w-full h-full flex justify-between relative p-[60px]\", [\n      colorMode.value === 'light' ? ['bg-white', 'text-gray-900'] : ['bg-gray-900', 'text-gray-50'],\n    ]])\n  }, [\n    _createElementVNode(\"div\", {\n      class: \"flex absolute top-0 right-[-100%]\",\n      style: _normalizeStyle({\n        width: '200%',\n        height: '200%',\n        backgroundImage: `radial-gradient(circle, rgba(${themeRgb.value}, 0.5) 0%,  ${colorMode.value === 'dark' ? 'rgba(5, 5, 5,0.3)' : 'rgba(255, 255, 255, 0.7)'} 50%, ${props.colorMode === 'dark' ? 'rgba(5, 5, 5,0)' : 'rgba(255, 255, 255, 0)'} 70%)`,\n      })\n    }, null, 4),\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createElementVNode(\"div\", _hoisted_3, [\n          _createElementVNode(\"h1\", _hoisted_4, _toDisplayString(_ctx.title), 1),\n          (_ctx.description)\n            ? (_openBlock(), _createElementBlock(\"p\", {\n                key: 0,\n                class: _normalizeClass([\"text-[35px]\", [\n              colorMode.value === 'light' ? ['text-gray-700'] : ['text-gray-300'],\n            ]])\n              }, _toDisplayString(_ctx.description), 3))\n            : _createCommentVNode(\"\", true)\n        ]),\n        (Boolean(_ctx.icon))\n          ? (_openBlock(), _createElementBlock(\"div\", _hoisted_5, [\n              _createVNode(_unref(IconComponent), {\n                name: _ctx.icon,\n                size: \"250px\",\n                style: {\"margin\":\"0 auto\",\"opacity\":\"0.7\"}\n              }, null, 8, [\"name\"])\n            ]))\n          : _createCommentVNode(\"\", true)\n      ]),\n      _createElementVNode(\"div\", _hoisted_6, [\n        (siteLogo.value)\n          ? (_openBlock(), _createElementBlock(\"img\", {\n              key: 0,\n              src: siteLogo.value,\n              height: \"30\"\n            }, null, 8, _hoisted_7))\n          : (_openBlock(), _createElementBlock(_Fragment, { key: 1 }, [\n              (_openBlock(), _createElementBlock(\"svg\", _hoisted_8, [\n                _createElementVNode(\"path\", {\n                  fill: _ctx.theme.includes('#') ? _ctx.theme : `#${_ctx.theme}`,\n                  d: \"M62.3,-53.9C74.4,-34.5,73.5,-9,67.1,13.8C60.6,36.5,48.7,56.5,30.7,66.1C12.7,75.7,-11.4,74.8,-31.6,65.2C-51.8,55.7,-67.9,37.4,-73.8,15.7C-79.6,-6,-75.1,-31.2,-61.1,-51C-47.1,-70.9,-23.6,-85.4,0.8,-86C25.1,-86.7,50.2,-73.4,62.3,-53.9Z\",\n                  transform: \"translate(100 100)\"\n                }, null, 8, _hoisted_9)\n              ])),\n              (siteName.value)\n                ? (_openBlock(), _createElementBlock(\"p\", _hoisted_10, _toDisplayString(siteName.value), 1))\n                : _createCommentVNode(\"\", true)\n            ], 64))\n      ])\n    ])\n  ], 2))\n}\n}\n\n})",
-      "start": 1706885058023,
-      "end": 1706885058023
+      "start": 1707272757133,
+      "end": 1707272757133
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1706885058023,
-      "end": 1706885058023,
+      "start": 1707272757133,
+      "end": 1707272757133,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1706885058023,
-      "end": 1706885058023,
+      "start": 1707272757133,
+      "end": 1707272757133,
       "order": "pre"
     },
     {
       "name": "content-slot",
-      "start": 1706885058023,
-      "end": 1706885058023,
+      "start": 1707272757133,
+      "end": 1707272757133,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1706885058023,
-      "end": 1706885058023,
+      "start": 1707272757133,
+      "end": 1707272757133,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1706885058023,
-      "end": 1706885058023,
+      "start": 1707272757133,
+      "end": 1707272757133,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
       "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { normalizeStyle as _normalizeStyle, createElementVNode as _createElementVNode, toDisplayString as _toDisplayString, normalizeClass as _normalizeClass, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, unref as _unref, createVNode as _createVNode, Fragment as _Fragment } from \"vue\";\nconst _hoisted_1 = { class: \"h-full w-full justify-between relative\" };\nconst _hoisted_2 = { class: \"flex flex-row justify-between items-start\" };\nconst _hoisted_3 = { class: \"flex flex-col w-full max-w-[65%]\" };\nconst _hoisted_4 = { class: \"m-0 font-bold mb-[30px] text-[75px]\" };\nconst _hoisted_5 = {\n  key: 0,\n  style: { \"width\": \"30%\" },\n  class: \"flex justify-end\"\n};\nconst _hoisted_6 = { class: \"flex flex-row justify-center items-center text-left w-full\" };\nconst _hoisted_7 = [\"src\"];\nconst _hoisted_8 = {\n  height: \"50\",\n  width: \"50\",\n  class: \"mr-3\",\n  viewBox: \"0 0 200 200\",\n  xmlns: \"http://www.w3.org/2000/svg\"\n};\nconst _hoisted_9 = [\"fill\"];\nconst _hoisted_10 = {\n  key: 0,\n  style: { \"font-size\": \"25px\" },\n  class: \"font-bold\"\n};\nimport { computed, defineComponent, h, resolveComponent } from \"vue\";\nimport { useOgImageRuntimeConfig } from \"../../../../shared\";\nimport { useSiteConfig } from \"#imports\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"NuxtSeo\",\n  props: {\n    colorMode: {},\n    title: { default: \"title\" },\n    description: {},\n    icon: { type: [String, Boolean] },\n    siteName: {},\n    siteLogo: {},\n    theme: { default: \"#00dc82\" }\n  },\n  setup(__props) {\n    const props = __props;\n    const HexRegex = /^#([0-9a-f]{3}){1,2}$/i;\n    const runtimeConfig = useOgImageRuntimeConfig();\n    const colorMode = computed(() => {\n      return props.colorMode || runtimeConfig.colorPreference || \"light\";\n    });\n    const themeHex = computed(() => {\n      if (HexRegex.test(props.theme))\n        return props.theme;\n      if (HexRegex.test(`#${props.theme}`))\n        return `#${props.theme}`;\n      if (props.theme.startsWith(\"rgb\")) {\n        const rgb = props.theme.replace(\"rgb(\", \"\").replace(\"rgba(\", \"\").replace(\")\", \"\").split(\",\").map((v) => Number.parseInt(v.trim(), 10));\n        const hex = rgb.map((v) => {\n          const hex2 = v.toString(16);\n          return hex2.length === 1 ? `0${hex2}` : hex2;\n        }).join(\"\");\n        return `#${hex}`;\n      }\n      return \"#FFFFFF\";\n    });\n    const themeRgb = computed(() => {\n      return themeHex.value.replace(\"#\", \"\").match(/.{1,2}/g)?.map((v) => Number.parseInt(v, 16)).join(\", \");\n    });\n    const siteConfig = useSiteConfig();\n    const siteName = computed(() => {\n      return props.siteName || siteConfig.name;\n    });\n    const siteLogo = computed(() => {\n      return props.siteLogo || siteConfig.logo;\n    });\n    const IconComponent = runtimeConfig.hasNuxtIcon ? resolveComponent(\"Icon\") : defineComponent({\n      render() {\n        return h(\"div\", \"missing nuxt-icon\");\n      }\n    });\n    if (typeof props.icon === \"string\" && !runtimeConfig.hasNuxtIcon && process.dev) {\n      console.warn(\"Please install `nuxt-icon` to use icons with the fallback OG Image component.\");\n      console.log(\"\\nnpm add -D nuxt-icon\\n\");\n    }\n    return (_ctx, _cache) => {\n      return _openBlock(), _createElementBlock(\"div\", {\n        class: _normalizeClass([\"w-full h-full flex justify-between relative p-[60px]\", [\n          colorMode.value === \"light\" ? [\"bg-white\", \"text-gray-900\"] : [\"bg-gray-900\", \"text-gray-50\"]\n        ]])\n      }, [\n        _createElementVNode(\"div\", {\n          class: \"flex absolute top-0 right-[-100%]\",\n          style: _normalizeStyle({\n            width: \"200%\",\n            height: \"200%\",\n            backgroundImage: `radial-gradient(circle, rgba(${themeRgb.value}, 0.5) 0%,  ${colorMode.value === \"dark\" ? \"rgba(5, 5, 5,0.3)\" : \"rgba(255, 255, 255, 0.7)\"} 50%, ${props.colorMode === \"dark\" ? \"rgba(5, 5, 5,0)\" : \"rgba(255, 255, 255, 0)\"} 70%)`\n          })\n        }, null, 4),\n        _createElementVNode(\"div\", _hoisted_1, [\n          _createElementVNode(\"div\", _hoisted_2, [\n            _createElementVNode(\"div\", _hoisted_3, [\n              _createElementVNode(\"h1\", _hoisted_4, _toDisplayString(_ctx.title), 1),\n              _ctx.description ? (_openBlock(), _createElementBlock(\"p\", {\n                key: 0,\n                class: _normalizeClass([\"text-[35px]\", [\n                  colorMode.value === \"light\" ? [\"text-gray-700\"] : [\"text-gray-300\"]\n                ]])\n              }, _toDisplayString(_ctx.description), 3)) : _createCommentVNode(\"\", true)\n            ]),\n            Boolean(_ctx.icon) ? (_openBlock(), _createElementBlock(\"div\", _hoisted_5, [\n              _createVNode(_unref(IconComponent), {\n                name: _ctx.icon,\n                size: \"250px\",\n                style: { \"margin\": \"0 auto\", \"opacity\": \"0.7\" }\n              }, null, 8, [\"name\"])\n            ])) : _createCommentVNode(\"\", true)\n          ]),\n          _createElementVNode(\"div\", _hoisted_6, [\n            siteLogo.value ? (_openBlock(), _createElementBlock(\"img\", {\n              key: 0,\n              src: siteLogo.value,\n              height: \"30\"\n            }, null, 8, _hoisted_7)) : (_openBlock(), _createElementBlock(_Fragment, { key: 1 }, [\n              (_openBlock(), _createElementBlock(\"svg\", _hoisted_8, [\n                _createElementVNode(\"path\", {\n                  fill: _ctx.theme.includes(\"#\") ? _ctx.theme : `#${_ctx.theme}`,\n                  d: \"M62.3,-53.9C74.4,-34.5,73.5,-9,67.1,13.8C60.6,36.5,48.7,56.5,30.7,66.1C12.7,75.7,-11.4,74.8,-31.6,65.2C-51.8,55.7,-67.9,37.4,-73.8,15.7C-79.6,-6,-75.1,-31.2,-61.1,-51C-47.1,-70.9,-23.6,-85.4,0.8,-86C25.1,-86.7,50.2,-73.4,62.3,-53.9Z\",\n                  transform: \"translate(100 100)\"\n                }, null, 8, _hoisted_9)\n              ])),\n              siteName.value ? (_openBlock(), _createElementBlock(\"p\", _hoisted_10, _toDisplayString(siteName.value), 1)) : _createCommentVNode(\"\", true)\n            ], 64))\n          ])\n        ])\n      ], 2);\n    };\n  }\n});\n",
-      "start": 1706885058023,
-      "end": 1706885058120,
+      "start": 1707272757133,
+      "end": 1707272757333,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -59,131 +59,131 @@
     },
     {
       "name": "vite:json",
-      "start": 1706885058120,
-      "end": 1706885058120,
+      "start": 1707272757333,
+      "end": 1707272757333,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1706885058120,
-      "end": 1706885058120,
+      "start": 1707272757333,
+      "end": 1707272757333,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1706885058120,
-      "end": 1706885058120,
+      "start": 1707272757333,
+      "end": 1707272757333,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1706885058120,
-      "end": 1706885058120,
+      "start": 1707272757333,
+      "end": 1707272757333,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1706885058120,
-      "end": 1706885058120,
+      "start": 1707272757333,
+      "end": 1707272757333,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1706885058120,
-      "end": 1706885058120,
+      "start": 1707272757333,
+      "end": 1707272757333,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1706885058120,
-      "end": 1706885058120,
+      "start": 1707272757333,
+      "end": 1707272757333,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1706885058120,
-      "end": 1706885058120,
+      "start": 1707272757333,
+      "end": 1707272757333,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1706885058120,
-      "end": 1706885058121,
+      "start": 1707272757333,
+      "end": 1707272757333,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1706885058121,
-      "end": 1706885058121,
+      "start": 1707272757333,
+      "end": 1707272757334,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { normalizeStyle as _normalizeStyle, createElementVNode as _createElementVNode, toDisplayString as _toDisplayString, normalizeClass as _normalizeClass, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, unref as _unref, createVNode as _createVNode, Fragment as _Fragment } from \"vue\";\nconst _hoisted_1 = { class: \"h-full w-full justify-between relative\" };\nconst _hoisted_2 = { class: \"flex flex-row justify-between items-start\" };\nconst _hoisted_3 = { class: \"flex flex-col w-full max-w-[65%]\" };\nconst _hoisted_4 = { class: \"m-0 font-bold mb-[30px] text-[75px]\" };\nconst _hoisted_5 = {\n  key: 0,\n  style: { \"width\": \"30%\" },\n  class: \"flex justify-end\"\n};\nconst _hoisted_6 = { class: \"flex flex-row justify-center items-center text-left w-full\" };\nconst _hoisted_7 = [\"src\"];\nconst _hoisted_8 = {\n  height: \"50\",\n  width: \"50\",\n  class: \"mr-3\",\n  viewBox: \"0 0 200 200\",\n  xmlns: \"http://www.w3.org/2000/svg\"\n};\nconst _hoisted_9 = [\"fill\"];\nconst _hoisted_10 = {\n  key: 0,\n  style: { \"font-size\": \"25px\" },\n  class: \"font-bold\"\n};\nimport { computed, defineComponent, h, resolveComponent } from \"vue\";\nimport { useOgImageRuntimeConfig } from \"../../../../shared\";\nimport { useSiteConfig } from \"#imports\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"NuxtSeo\",\n  props: {\n    colorMode: {},\n    title: { default: \"title\" },\n    description: {},\n    icon: { type: [String, Boolean] },\n    siteName: {},\n    siteLogo: {},\n    theme: { default: \"#00dc82\" }\n  },\n  setup(__props) {\n    const props = __props;\n    const HexRegex = /^#([0-9a-f]{3}){1,2}$/i;\n    const runtimeConfig = useOgImageRuntimeConfig();\n    const colorMode = computed(() => {\n      return props.colorMode || runtimeConfig.colorPreference || \"light\";\n    });\n    const themeHex = computed(() => {\n      if (HexRegex.test(props.theme))\n        return props.theme;\n      if (HexRegex.test(`#${props.theme}`))\n        return `#${props.theme}`;\n      if (props.theme.startsWith(\"rgb\")) {\n        const rgb = props.theme.replace(\"rgb(\", \"\").replace(\"rgba(\", \"\").replace(\")\", \"\").split(\",\").map((v) => Number.parseInt(v.trim(), 10));\n        const hex = rgb.map((v) => {\n          const hex2 = v.toString(16);\n          return hex2.length === 1 ? `0${hex2}` : hex2;\n        }).join(\"\");\n        return `#${hex}`;\n      }\n      return \"#FFFFFF\";\n    });\n    const themeRgb = computed(() => {\n      return themeHex.value.replace(\"#\", \"\").match(/.{1,2}/g)?.map((v) => Number.parseInt(v, 16)).join(\", \");\n    });\n    const siteConfig = useSiteConfig();\n    const siteName = computed(() => {\n      return props.siteName || siteConfig.name;\n    });\n    const siteLogo = computed(() => {\n      return props.siteLogo || siteConfig.logo;\n    });\n    const IconComponent = runtimeConfig.hasNuxtIcon ? resolveComponent(\"Icon\") : defineComponent({\n      render() {\n        return h(\"div\", \"missing nuxt-icon\");\n      }\n    });\n    if (typeof props.icon === \"string\" && !runtimeConfig.hasNuxtIcon && false) {\n      console.warn(\"Please install `nuxt-icon` to use icons with the fallback OG Image component.\");\n      console.log(\"\\nnpm add -D nuxt-icon\\n\");\n    }\n    return (_ctx, _cache) => {\n      return _openBlock(), _createElementBlock(\"div\", {\n        class: _normalizeClass([\"w-full h-full flex justify-between relative p-[60px]\", [\n          colorMode.value === \"light\" ? [\"bg-white\", \"text-gray-900\"] : [\"bg-gray-900\", \"text-gray-50\"]\n        ]])\n      }, [\n        _createElementVNode(\"div\", {\n          class: \"flex absolute top-0 right-[-100%]\",\n          style: _normalizeStyle({\n            width: \"200%\",\n            height: \"200%\",\n            backgroundImage: `radial-gradient(circle, rgba(${themeRgb.value}, 0.5) 0%,  ${colorMode.value === \"dark\" ? \"rgba(5, 5, 5,0.3)\" : \"rgba(255, 255, 255, 0.7)\"} 50%, ${props.colorMode === \"dark\" ? \"rgba(5, 5, 5,0)\" : \"rgba(255, 255, 255, 0)\"} 70%)`\n          })\n        }, null, 4),\n        _createElementVNode(\"div\", _hoisted_1, [\n          _createElementVNode(\"div\", _hoisted_2, [\n            _createElementVNode(\"div\", _hoisted_3, [\n              _createElementVNode(\"h1\", _hoisted_4, _toDisplayString(_ctx.title), 1),\n              _ctx.description ? (_openBlock(), _createElementBlock(\"p\", {\n                key: 0,\n                class: _normalizeClass([\"text-[35px]\", [\n                  colorMode.value === \"light\" ? [\"text-gray-700\"] : [\"text-gray-300\"]\n                ]])\n              }, _toDisplayString(_ctx.description), 3)) : _createCommentVNode(\"\", true)\n            ]),\n            Boolean(_ctx.icon) ? (_openBlock(), _createElementBlock(\"div\", _hoisted_5, [\n              _createVNode(_unref(IconComponent), {\n                name: _ctx.icon,\n                size: \"250px\",\n                style: { \"margin\": \"0 auto\", \"opacity\": \"0.7\" }\n              }, null, 8, [\"name\"])\n            ])) : _createCommentVNode(\"\", true)\n          ]),\n          _createElementVNode(\"div\", _hoisted_6, [\n            siteLogo.value ? (_openBlock(), _createElementBlock(\"img\", {\n              key: 0,\n              src: siteLogo.value,\n              height: \"30\"\n            }, null, 8, _hoisted_7)) : (_openBlock(), _createElementBlock(_Fragment, { key: 1 }, [\n              (_openBlock(), _createElementBlock(\"svg\", _hoisted_8, [\n                _createElementVNode(\"path\", {\n                  fill: _ctx.theme.includes(\"#\") ? _ctx.theme : `#${_ctx.theme}`,\n                  d: \"M62.3,-53.9C74.4,-34.5,73.5,-9,67.1,13.8C60.6,36.5,48.7,56.5,30.7,66.1C12.7,75.7,-11.4,74.8,-31.6,65.2C-51.8,55.7,-67.9,37.4,-73.8,15.7C-79.6,-6,-75.1,-31.2,-61.1,-51C-47.1,-70.9,-23.6,-85.4,0.8,-86C25.1,-86.7,50.2,-73.4,62.3,-53.9Z\",\n                  transform: \"translate(100 100)\"\n                }, null, 8, _hoisted_9)\n              ])),\n              siteName.value ? (_openBlock(), _createElementBlock(\"p\", _hoisted_10, _toDisplayString(siteName.value), 1)) : _createCommentVNode(\"\", true)\n            ], 64))\n          ])\n        ])\n      ], 2);\n    };\n  }\n});\n",
-      "start": 1706885058121,
-      "end": 1706885058133,
+      "start": 1707272757334,
+      "end": 1707272757359,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:css-post",
-      "start": 1706885058133,
-      "end": 1706885058133,
+      "start": 1707272757359,
+      "end": 1707272757359,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1706885058133,
-      "end": 1706885058133,
+      "start": 1707272757359,
+      "end": 1707272757359,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1706885058133,
-      "end": 1706885058133,
+      "start": 1707272757359,
+      "end": 1707272757359,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1706885058133,
-      "end": 1706885058133,
+      "start": 1707272757359,
+      "end": 1707272757359,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1706885058133,
-      "end": 1706885058133,
+      "start": 1707272757359,
+      "end": 1707272757359,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1706885058133,
-      "end": 1706885058133,
+      "start": 1707272757359,
+      "end": 1707272757359,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1706885058133,
-      "end": 1706885058133,
+      "start": 1707272757359,
+      "end": 1707272757359,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1706885058133,
-      "end": 1706885058133,
+      "start": 1707272757359,
+      "end": 1707272757359,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1706885058133,
-      "end": 1706885058133,
+      "start": 1707272757359,
+      "end": 1707272757359,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { useSiteConfig } from '/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/node_modules/nuxt-site-config/dist/runtime/nuxt/composables/useSiteConfig.mjs';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { normalizeStyle as _normalizeStyle, createElementVNode as _createElementVNode, toDisplayString as _toDisplayString, normalizeClass as _normalizeClass, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, unref as _unref, createVNode as _createVNode, Fragment as _Fragment } from \"vue\";\nconst _hoisted_1 = { class: \"h-full w-full justify-between relative\" };\nconst _hoisted_2 = { class: \"flex flex-row justify-between items-start\" };\nconst _hoisted_3 = { class: \"flex flex-col w-full max-w-[65%]\" };\nconst _hoisted_4 = { class: \"m-0 font-bold mb-[30px] text-[75px]\" };\nconst _hoisted_5 = {\n  key: 0,\n  style: { \"width\": \"30%\" },\n  class: \"flex justify-end\"\n};\nconst _hoisted_6 = { class: \"flex flex-row justify-center items-center text-left w-full\" };\nconst _hoisted_7 = [\"src\"];\nconst _hoisted_8 = {\n  height: \"50\",\n  width: \"50\",\n  class: \"mr-3\",\n  viewBox: \"0 0 200 200\",\n  xmlns: \"http://www.w3.org/2000/svg\"\n};\nconst _hoisted_9 = [\"fill\"];\nconst _hoisted_10 = {\n  key: 0,\n  style: { \"font-size\": \"25px\" },\n  class: \"font-bold\"\n};\nimport { computed, defineComponent, h, resolveComponent } from \"vue\";\nimport { useOgImageRuntimeConfig } from \"../../../../shared\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"NuxtSeo\",\n  props: {\n    colorMode: {},\n    title: { default: \"title\" },\n    description: {},\n    icon: { type: [String, Boolean] },\n    siteName: {},\n    siteLogo: {},\n    theme: { default: \"#00dc82\" }\n  },\n  setup(__props) {\n    const props = __props;\n    const HexRegex = /^#([0-9a-f]{3}){1,2}$/i;\n    const runtimeConfig = useOgImageRuntimeConfig();\n    const colorMode = computed(() => {\n      return props.colorMode || runtimeConfig.colorPreference || \"light\";\n    });\n    const themeHex = computed(() => {\n      if (HexRegex.test(props.theme))\n        return props.theme;\n      if (HexRegex.test(`#${props.theme}`))\n        return `#${props.theme}`;\n      if (props.theme.startsWith(\"rgb\")) {\n        const rgb = props.theme.replace(\"rgb(\", \"\").replace(\"rgba(\", \"\").replace(\")\", \"\").split(\",\").map((v) => Number.parseInt(v.trim(), 10));\n        const hex = rgb.map((v) => {\n          const hex2 = v.toString(16);\n          return hex2.length === 1 ? `0${hex2}` : hex2;\n        }).join(\"\");\n        return `#${hex}`;\n      }\n      return \"#FFFFFF\";\n    });\n    const themeRgb = computed(() => {\n      return themeHex.value.replace(\"#\", \"\").match(/.{1,2}/g)?.map((v) => Number.parseInt(v, 16)).join(\", \");\n    });\n    const siteConfig = useSiteConfig();\n    const siteName = computed(() => {\n      return props.siteName || siteConfig.name;\n    });\n    const siteLogo = computed(() => {\n      return props.siteLogo || siteConfig.logo;\n    });\n    const IconComponent = runtimeConfig.hasNuxtIcon ? resolveComponent(\"Icon\") : defineComponent({\n      render() {\n        return h(\"div\", \"missing nuxt-icon\");\n      }\n    });\n    if (typeof props.icon === \"string\" && !runtimeConfig.hasNuxtIcon && false) {\n      console.warn(\"Please install `nuxt-icon` to use icons with the fallback OG Image component.\");\n      console.log(\"\\nnpm add -D nuxt-icon\\n\");\n    }\n    return (_ctx, _cache) => {\n      return _openBlock(), _createElementBlock(\"div\", {\n        class: _normalizeClass([\"w-full h-full flex justify-between relative p-[60px]\", [\n          colorMode.value === \"light\" ? [\"bg-white\", \"text-gray-900\"] : [\"bg-gray-900\", \"text-gray-50\"]\n        ]])\n      }, [\n        _createElementVNode(\"div\", {\n          class: \"flex absolute top-0 right-[-100%]\",\n          style: _normalizeStyle({\n            width: \"200%\",\n            height: \"200%\",\n            backgroundImage: `radial-gradient(circle, rgba(${themeRgb.value}, 0.5) 0%,  ${colorMode.value === \"dark\" ? \"rgba(5, 5, 5,0.3)\" : \"rgba(255, 255, 255, 0.7)\"} 50%, ${props.colorMode === \"dark\" ? \"rgba(5, 5, 5,0)\" : \"rgba(255, 255, 255, 0)\"} 70%)`\n          })\n        }, null, 4),\n        _createElementVNode(\"div\", _hoisted_1, [\n          _createElementVNode(\"div\", _hoisted_2, [\n            _createElementVNode(\"div\", _hoisted_3, [\n              _createElementVNode(\"h1\", _hoisted_4, _toDisplayString(_ctx.title), 1),\n              _ctx.description ? (_openBlock(), _createElementBlock(\"p\", {\n                key: 0,\n                class: _normalizeClass([\"text-[35px]\", [\n                  colorMode.value === \"light\" ? [\"text-gray-700\"] : [\"text-gray-300\"]\n                ]])\n              }, _toDisplayString(_ctx.description), 3)) : _createCommentVNode(\"\", true)\n            ]),\n            Boolean(_ctx.icon) ? (_openBlock(), _createElementBlock(\"div\", _hoisted_5, [\n              _createVNode(_unref(IconComponent), {\n                name: _ctx.icon,\n                size: \"250px\",\n                style: { \"margin\": \"0 auto\", \"opacity\": \"0.7\" }\n              }, null, 8, [\"name\"])\n            ])) : _createCommentVNode(\"\", true)\n          ]),\n          _createElementVNode(\"div\", _hoisted_6, [\n            siteLogo.value ? (_openBlock(), _createElementBlock(\"img\", {\n              key: 0,\n              src: siteLogo.value,\n              height: \"30\"\n            }, null, 8, _hoisted_7)) : (_openBlock(), _createElementBlock(_Fragment, { key: 1 }, [\n              (_openBlock(), _createElementBlock(\"svg\", _hoisted_8, [\n                _createElementVNode(\"path\", {\n                  fill: _ctx.theme.includes(\"#\") ? _ctx.theme : `#${_ctx.theme}`,\n                  d: \"M62.3,-53.9C74.4,-34.5,73.5,-9,67.1,13.8C60.6,36.5,48.7,56.5,30.7,66.1C12.7,75.7,-11.4,74.8,-31.6,65.2C-51.8,55.7,-67.9,37.4,-73.8,15.7C-79.6,-6,-75.1,-31.2,-61.1,-51C-47.1,-70.9,-23.6,-85.4,0.8,-86C25.1,-86.7,50.2,-73.4,62.3,-53.9Z\",\n                  transform: \"translate(100 100)\"\n                }, null, 8, _hoisted_9)\n              ])),\n              siteName.value ? (_openBlock(), _createElementBlock(\"p\", _hoisted_10, _toDisplayString(siteName.value), 1)) : _createCommentVNode(\"\", true)\n            ], 64))\n          ])\n        ])\n      ], 2);\n    };\n  }\n});\n",
-      "start": 1706885058133,
-      "end": 1706885058134,
+      "start": 1707272757359,
+      "end": 1707272757360,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -196,50 +196,50 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1706885058134,
-      "end": 1706885058134,
+      "start": 1707272757360,
+      "end": 1707272757360,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1706885058134,
-      "end": 1706885058134,
+      "start": 1707272757360,
+      "end": 1707272757360,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1706885058134,
-      "end": 1706885058134,
+      "start": 1707272757360,
+      "end": 1707272757360,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1706885058134,
-      "end": 1706885058134,
+      "start": 1707272757360,
+      "end": 1707272757360,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1706885058134,
-      "end": 1706885058134,
+      "start": 1707272757360,
+      "end": 1707272757360,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1706885058134,
-      "end": 1706885058134,
+      "start": 1707272757360,
+      "end": 1707272757360,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1706885058134,
-      "end": 1706885058134,
+      "start": 1707272757360,
+      "end": 1707272757360,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1706885058134,
-      "end": 1706885058134,
+      "start": 1707272757360,
+      "end": 1707272757360,
       "order": "normal"
     }
   ]

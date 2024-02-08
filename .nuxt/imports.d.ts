@@ -37,8 +37,8 @@ export { defineOgImage } from '../node_modules/nuxt-og-image/dist/runtime/nuxt/c
 export { defineOgImageComponent } from '../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/defineOgImageComponent';
 export { defineOgImageScreenshot } from '../node_modules/nuxt-og-image/dist/runtime/nuxt/composables/defineOgImageScreenshot';
 export { useSchemaOrg } from '../node_modules/nuxt-schema-org/dist/runtime/nuxt/imports/useSchemaOrg';
-export { useI18n } from '../node_modules/@nuxtseo/module/dist/runtime/nuxt/composables/polyfills';
-export { useBreadcrumbItems } from '../node_modules/@nuxtseo/module/dist/runtime/nuxt/composables/useBreadcrumbItems';
+export { useI18n } from '../node_modules/@nuxtjs/seo/dist/runtime/nuxt/composables/polyfills';
+export { useBreadcrumbItems } from '../node_modules/@nuxtjs/seo/dist/runtime/nuxt/composables/useBreadcrumbItems';
 export { queryContent } from '../node_modules/@nuxt/content/dist/runtime/legacy/composables/query';
 export { useContentHelpers } from '../node_modules/@nuxt/content/dist/runtime/composables/helpers';
 export { useContentHead } from '../node_modules/@nuxt/content/dist/runtime/composables/head';
