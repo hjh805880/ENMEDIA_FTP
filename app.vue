@@ -22,7 +22,7 @@ onMounted(() => {
   <div>
     <HeadAndMeta />
     <NuxtLayout>
-      <NuxtLoadingIndicator />
+      <NuxtLoadingIndicator :color="false" class="bg-primary-500" />
       <NuxtPage />
     </NuxtLayout>
   </div>

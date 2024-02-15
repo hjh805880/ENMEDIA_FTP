@@ -39,6 +39,11 @@ watch(() => route.path, () => {
       ],
 
       link: [
+        // canonical 설정
+        {
+          rel: "canonical",
+          href: url,
+        },
         // 링크 설정
         {
           rel: "stylesheet",
@@ -62,7 +67,7 @@ watch(() => route.path, () => {
           sizes: "16x16",
           href: "/favicon/favicon-16x16.png",
         },
-        { rel: "manifest", href: "/site.webmanifest" },
+        { rel: "manifest", href: "/favicon/site.webmanifest" },
         {
           rel: "mask-icon",
           href: "/favicon/safari-pinned-tab.svg",
