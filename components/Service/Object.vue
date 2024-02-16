@@ -42,13 +42,13 @@
           <div class="top-14 -left-16 group/tg absolute z-20 overflow-hidden transform -translate-x-1/2 -translate-y-1/2">
             <div class="size-40 colCenter relative bg-black-300 rounded-full has-[:hover]:bg-white hover:bg-white transition-all duration-1000 delay-75 ease-in-out *:transition-all *:duration-500 *:ease-in-out *:delay-75">
               <span class="group-hover/tg:-top-full top-[40%] absolute">TG</span>
-              <NuxtImg src="/img/logo_tg.png" alt="이엔미디어 타게팅 로고" class="group-hover/tg:bottom-0 -bottom-full absolute p-12" />
+              <NuxtImg format="webp" src="/img/logo_tg.png" alt="이엔미디어 타게팅 로고" class="group-hover/tg:bottom-0 -bottom-full absolute p-12" />
             </div>
           </div>
           <div class="right-[75%] -bottom-2 absolute transform group/mobon overflow-hidden translate-x-1/2 translate-y-full z-20">
             <div class="size-40 colCenter relative bg-black-300 rounded-full has-[:hover]:bg-white hover:bg-white transition-all duration-1000 delay-75 ease-in-out *:transition-all *:duration-500 *:ease-in-out *:delay-75">
               <span class="group-hover/mobon:-top-full top-[40%] absolute">MOBON</span>
-              <NuxtImg src="/img/logo_mobon.png" alt="이엔미디어 모비온 로고" class="group-hover/mobon:bottom-0 -bottom-full absolute p-12" />
+              <NuxtImg format="webp" src="/img/logo_mobon.png" alt="이엔미디어 모비온 로고" class="group-hover/mobon:bottom-0 -bottom-full absolute p-12" />
             </div>
           </div>
           <div class="right-[25%] -bottom-2 absolute transform group/insta overflow-hidden translate-x-1/2 translate-y-full z-20">

@@ -60,9 +60,6 @@
       "#image/*": [
         "../node_modules/@nuxt/image/dist/runtime/*"
       ],
-      "#mdc-imports": [
-        "./file:/Users/hanjeonghun/Documents/GitHub/%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%86%E1%85%B5%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A5_%E1%84%92%E1%85%A9%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5FTP/.nuxt/mdc-imports"
-      ],
       "#internal/nuxt-site-config": [
         "../node_modules/nuxt-site-config/dist/runtime/nitro/composables"
       ],
@@ -76,7 +73,7 @@
         "../node_modules/nuxt-simple-robots/dist/runtime/nitro/composables/*"
       ],
       "#content/server": [
-        "../node_modules/@nuxt/content/dist/runtime/legacy/server"
+        "../node_modules/nuxt-link-checker/dist/runtime/nitro/composables/content-mock"
       ]
     }
   },
@@ -93,8 +90,6 @@
     "../node_modules/nuxt-link-checker/dist/module.mjs/runtime/server",
     "../node_modules/@nuxtjs/seo/runtime/server",
     "../node_modules/@nuxtjs/critters/runtime/server",
-    "../node_modules/@nuxtjs/mdc/runtime/server",
-    "../node_modules/@nuxt/content/runtime/server",
     "../node_modules/@nuxt/devtools/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",
     "./module/nuxt-site-config.d.ts",

@@ -4,8 +4,8 @@
     {
       "name": "vite:vue",
       "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderClass as _ssrRenderClass, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Header',\n  __ssrInlineRender: true,\n  setup(__props) {\n\nconst isScrolled = ref(false);\nconst isIndexPage = ref(false);\nconst route = useRoute();\n\nwatch(() => route.path, (newPath) => {\n  isIndexPage.value = newPath === '/';\n  if (!isIndexPage.value) {\n    isScrolled.value = true;\n  }\n}, { immediate: true });\n\nconst handleScroll = () => {\n  isScrolled.value = window.scrollY > 0;\n};\n\nonMounted(() => {\n  if (isIndexPage.value) {\n    window.addEventListener(\"scroll\", handleScroll);\n  }\n});\n\nonUnmounted(() => {\n  window.removeEventListener(\"scroll\", handleScroll);\n});\n\nwatch(isIndexPage, (newValue) => {\n  if (newValue) {\n    window.addEventListener(\"scroll\", handleScroll);\n    handleScroll();\n  } else {\n    window.removeEventListener(\"scroll\", handleScroll);\n  }\n});\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")!\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")!\n\n  _push(`<header${_ssrRenderAttrs(_mergeProps({\n    isScrolled: _unref(isScrolled),\n    id: \"header\",\n    class: [\"top-0 flex items-center lg:justify-between justify-center w-full h-16 py-[3vmin] transition-all ease-in-out delay-100 duration-500 text-white lg:py-2 lg:h-fit z-50\", { 'fixed': _unref(isIndexPage), 'sticky': !_unref(isIndexPage), 'bg-white text-black-800 lg:px-[3%]': _unref(isScrolled), 'bg-transparent text-white lg:px-[10%]': !_unref(isScrolled) }]\n  }, _attrs))}>`)\n  _push(_ssrRenderComponent(_component_NuxtLink, { to: \"/\" }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(_ssrRenderComponent(_component_NuxtImg, {\n          src: _unref(isScrolled) ? '/img/logo.svg' : '/img/logo_w.svg',\n          alt: \"이엔미디어 로고\",\n          id: \"logo\",\n          class: [\"mx-auto\", { 'lg:w-36': _unref(isScrolled), 'lg:w-56': !_unref(isScrolled) }]\n        }, null, _parent, _scopeId))\n      } else {\n        return [\n          _createVNode(_component_NuxtImg, {\n            src: _unref(isScrolled) ? '/img/logo.svg' : '/img/logo_w.svg',\n            alt: \"이엔미디어 로고\",\n            id: \"logo\",\n            class: [\"mx-auto\", { 'lg:w-36': _unref(isScrolled), 'lg:w-56': !_unref(isScrolled) }]\n          }, null, 8, [\"src\", \"class\"])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(`<nav class=\"${_ssrRenderClass([{ 'space-x-10': _unref(isScrolled), 'space-x-14': !_unref(isScrolled) }, \"rowCenter text-lg font-bold\"])}\">`)\n  _push(_ssrRenderComponent(_component_NuxtLink, {\n    to: \"/company\",\n    class: [\"navText\", { 'after:hover:border-primary-500 text-black-800 text-base font-medium': _unref(isScrolled) }]\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`COMPANY`)\n      } else {\n        return [\n          _createTextVNode(\"COMPANY\")\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(_component_NuxtLink, {\n    to: \"/service\",\n    class: [\"navText\", { 'after:hover:border-primary-500 text-black-800 text-base font-medium': _unref(isScrolled) }]\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`SERVICE`)\n      } else {\n        return [\n          _createTextVNode(\"SERVICE\")\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(_component_NuxtLink, {\n    to: \"/solution\",\n    class: [\"navText\", { 'after:hover:border-primary-500 text-black-800 text-base font-medium': _unref(isScrolled) }]\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`SOLUTION`)\n      } else {\n        return [\n          _createTextVNode(\"SOLUTION\")\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(_component_NuxtLink, {\n    to: \"/portfolio\",\n    class: [\"navText\", { 'after:hover:border-primary-500 text-black-800 text-base font-medium': _unref(isScrolled) }]\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`PORTFOLIO`)\n      } else {\n        return [\n          _createTextVNode(\"PORTFOLIO\")\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(_component_NuxtLink, {\n    to: \"/contact\",\n    class: [\"navText\", { 'after:hover:border-primary-500 text-black-800 text-base font-medium': _unref(isScrolled) }]\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`CONTACT US`)\n      } else {\n        return [\n          _createTextVNode(\"CONTACT US\")\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(`<a href=\"/2024_ENMEDIA_INTRODUCE.pdf\" download class=\"${_ssrRenderClass([{ 'text-white text-sm font-bold bg-primary-500 hover:bg-primary-400': _unref(isScrolled), 'text-primary-500 text-base bg-white/60 mix-blend-overlay hover:bg-white backdrop-blur-md': !_unref(isScrolled) }, \"rowCenter px-6 py-2 space-x-2\"])}\"><span>회사소개서</span><i class=\"fa-solid fa-file-arrow-down\"></i></a></nav></header>`)\n}\n}\n\n})",
-      "start": 1707272759125,
-      "end": 1707272759125,
+      "start": 1708047633778,
+      "end": 1708047633778,
       "sourcemaps": {
         "version": 3,
         "sources": [
@@ -20,63 +20,61 @@
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1707272759125,
-      "end": 1707272759125,
+      "start": 1708047633778,
+      "end": 1708047633778,
       "order": "pre"
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1707272759125,
-      "end": 1707272759125,
+      "start": 1708047633778,
+      "end": 1708047633778,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1707272759125,
-      "end": 1707272759125,
+      "start": 1708047633778,
+      "end": 1708047633778,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1707272759125,
-      "end": 1707272759125,
+      "start": 1708047633778,
+      "end": 1708047633778,
       "order": "pre"
     },
     {
-      "name": "content-slot",
-      "start": 1707272759125,
-      "end": 1707272759125,
-      "order": "pre"
+      "name": "transform-file",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderClass as _ssrRenderClass, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Header',\n  __ssrInlineRender: true,\n  setup(__props) {\n\nconst isScrolled = ref(false);\nconst isIndexPage = ref(false);\nconst route = useRoute();\n\nwatch(() => route.path, (newPath) => {\n  isIndexPage.value = newPath === '/';\n  if (!isIndexPage.value) {\n    isScrolled.value = true;\n  }\n}, { immediate: true });\n\nconst handleScroll = () => {\n  isScrolled.value = window.scrollY > 0;\n};\n\nonMounted(() => {\n  if (isIndexPage.value) {\n    window.addEventListener(\"scroll\", handleScroll);\n  }\n});\n\nonUnmounted(() => {\n  window.removeEventListener(\"scroll\", handleScroll);\n});\n\nwatch(isIndexPage, (newValue) => {\n  if (newValue) {\n    window.addEventListener(\"scroll\", handleScroll);\n    handleScroll();\n  } else {\n    window.removeEventListener(\"scroll\", handleScroll);\n  }\n});\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")!\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")!\n\n  _push(`<header${_ssrRenderAttrs(_mergeProps({\n    isScrolled: _unref(isScrolled),\n    id: \"header\",\n    class: [\"top-0 flex items-center lg:justify-between justify-center w-full h-16 py-[3vmin] transition-all ease-in-out delay-100 duration-500 text-white lg:py-2 lg:h-fit z-50\", { 'fixed': _unref(isIndexPage), 'sticky': !_unref(isIndexPage), 'bg-white text-black-800 lg:px-[3%]': _unref(isScrolled), 'bg-transparent text-white lg:px-[10%]': !_unref(isScrolled) }]\n  }, _attrs))}>`)\n  _push(_ssrRenderComponent(_component_NuxtLink, { to: \"/\" }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(_ssrRenderComponent(_component_NuxtImg, {\n          src: _unref(isScrolled) ? '/img/logo.svg' : '/img/logo_w.svg',\n          alt: \"이엔미디어 로고\",\n          id: \"logo\",\n          class: [\"mx-auto\", { 'lg:w-36': _unref(isScrolled), 'lg:w-56': !_unref(isScrolled) }]\n        }, null, _parent, _scopeId))\n      } else {\n        return [\n          _createVNode(_component_NuxtImg, {\n            src: _unref(isScrolled) ? '/img/logo.svg' : '/img/logo_w.svg',\n            alt: \"이엔미디어 로고\",\n            id: \"logo\",\n            class: [\"mx-auto\", { 'lg:w-36': _unref(isScrolled), 'lg:w-56': !_unref(isScrolled) }]\n          }, null, 8, [\"src\", \"class\"])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(`<nav class=\"${_ssrRenderClass([{ 'space-x-10': _unref(isScrolled), 'space-x-14': !_unref(isScrolled) }, \"rowCenter text-lg font-bold\"])}\">`)\n  _push(_ssrRenderComponent(_component_NuxtLink, {\n    to: \"/company\",\n    class: [\"navText\", { 'after:hover:border-primary-500 text-black-800 text-base font-medium': _unref(isScrolled) }]\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`COMPANY`)\n      } else {\n        return [\n          _createTextVNode(\"COMPANY\")\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(_component_NuxtLink, {\n    to: \"/service\",\n    class: [\"navText\", { 'after:hover:border-primary-500 text-black-800 text-base font-medium': _unref(isScrolled) }]\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`SERVICE`)\n      } else {\n        return [\n          _createTextVNode(\"SERVICE\")\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(_component_NuxtLink, {\n    to: \"/solution\",\n    class: [\"navText\", { 'after:hover:border-primary-500 text-black-800 text-base font-medium': _unref(isScrolled) }]\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`SOLUTION`)\n      } else {\n        return [\n          _createTextVNode(\"SOLUTION\")\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(_component_NuxtLink, {\n    to: \"/portfolio\",\n    class: [\"navText\", { 'after:hover:border-primary-500 text-black-800 text-base font-medium': _unref(isScrolled) }]\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`PORTFOLIO`)\n      } else {\n        return [\n          _createTextVNode(\"PORTFOLIO\")\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(_component_NuxtLink, {\n    to: \"/contact\",\n    class: [\"navText\", { 'after:hover:border-primary-500 text-black-800 text-base font-medium': _unref(isScrolled) }]\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`CONTACT US`)\n      } else {\n        return [\n          _createTextVNode(\"CONTACT US\")\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(`<a href=\"/2024_ENMEDIA_INTRODUCE.pdf\" download class=\"${_ssrRenderClass([{ 'text-white text-sm font-bold bg-primary-500 hover:bg-primary-400': _unref(isScrolled), 'text-primary-500 text-base bg-white/60 mix-blend-overlay hover:bg-white backdrop-blur-md': !_unref(isScrolled) }, \"rowCenter px-6 py-2 space-x-2\"])}\"><span>회사소개서</span><i class=\"fa-solid fa-file-arrow-down\"></i></a></nav></header>`)\n}\n}\n\n})",
+      "start": 1708047633778,
+      "end": 1708047633778,
+      "order": "pre",
+      "sourcemaps": null
     },
     {
-      "name": "content-slot",
-      "start": 1707272759125,
-      "end": 1707272759125,
-      "order": "pre"
+      "name": "transform-file",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderClass as _ssrRenderClass, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Header',\n  __ssrInlineRender: true,\n  setup(__props) {\n\nconst isScrolled = ref(false);\nconst isIndexPage = ref(false);\nconst route = useRoute();\n\nwatch(() => route.path, (newPath) => {\n  isIndexPage.value = newPath === '/';\n  if (!isIndexPage.value) {\n    isScrolled.value = true;\n  }\n}, { immediate: true });\n\nconst handleScroll = () => {\n  isScrolled.value = window.scrollY > 0;\n};\n\nonMounted(() => {\n  if (isIndexPage.value) {\n    window.addEventListener(\"scroll\", handleScroll);\n  }\n});\n\nonUnmounted(() => {\n  window.removeEventListener(\"scroll\", handleScroll);\n});\n\nwatch(isIndexPage, (newValue) => {\n  if (newValue) {\n    window.addEventListener(\"scroll\", handleScroll);\n    handleScroll();\n  } else {\n    window.removeEventListener(\"scroll\", handleScroll);\n  }\n});\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")!\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")!\n\n  _push(`<header${_ssrRenderAttrs(_mergeProps({\n    isScrolled: _unref(isScrolled),\n    id: \"header\",\n    class: [\"top-0 flex items-center lg:justify-between justify-center w-full h-16 py-[3vmin] transition-all ease-in-out delay-100 duration-500 text-white lg:py-2 lg:h-fit z-50\", { 'fixed': _unref(isIndexPage), 'sticky': !_unref(isIndexPage), 'bg-white text-black-800 lg:px-[3%]': _unref(isScrolled), 'bg-transparent text-white lg:px-[10%]': !_unref(isScrolled) }]\n  }, _attrs))}>`)\n  _push(_ssrRenderComponent(_component_NuxtLink, { to: \"/\" }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(_ssrRenderComponent(_component_NuxtImg, {\n          src: _unref(isScrolled) ? '/img/logo.svg' : '/img/logo_w.svg',\n          alt: \"이엔미디어 로고\",\n          id: \"logo\",\n          class: [\"mx-auto\", { 'lg:w-36': _unref(isScrolled), 'lg:w-56': !_unref(isScrolled) }]\n        }, null, _parent, _scopeId))\n      } else {\n        return [\n          _createVNode(_component_NuxtImg, {\n            src: _unref(isScrolled) ? '/img/logo.svg' : '/img/logo_w.svg',\n            alt: \"이엔미디어 로고\",\n            id: \"logo\",\n            class: [\"mx-auto\", { 'lg:w-36': _unref(isScrolled), 'lg:w-56': !_unref(isScrolled) }]\n          }, null, 8, [\"src\", \"class\"])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(`<nav class=\"${_ssrRenderClass([{ 'space-x-10': _unref(isScrolled), 'space-x-14': !_unref(isScrolled) }, \"rowCenter text-lg font-bold\"])}\">`)\n  _push(_ssrRenderComponent(_component_NuxtLink, {\n    to: \"/company\",\n    class: [\"navText\", { 'after:hover:border-primary-500 text-black-800 text-base font-medium': _unref(isScrolled) }]\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`COMPANY`)\n      } else {\n        return [\n          _createTextVNode(\"COMPANY\")\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(_component_NuxtLink, {\n    to: \"/service\",\n    class: [\"navText\", { 'after:hover:border-primary-500 text-black-800 text-base font-medium': _unref(isScrolled) }]\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`SERVICE`)\n      } else {\n        return [\n          _createTextVNode(\"SERVICE\")\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(_component_NuxtLink, {\n    to: \"/solution\",\n    class: [\"navText\", { 'after:hover:border-primary-500 text-black-800 text-base font-medium': _unref(isScrolled) }]\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`SOLUTION`)\n      } else {\n        return [\n          _createTextVNode(\"SOLUTION\")\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(_component_NuxtLink, {\n    to: \"/portfolio\",\n    class: [\"navText\", { 'after:hover:border-primary-500 text-black-800 text-base font-medium': _unref(isScrolled) }]\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`PORTFOLIO`)\n      } else {\n        return [\n          _createTextVNode(\"PORTFOLIO\")\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(_component_NuxtLink, {\n    to: \"/contact\",\n    class: [\"navText\", { 'after:hover:border-primary-500 text-black-800 text-base font-medium': _unref(isScrolled) }]\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`CONTACT US`)\n      } else {\n        return [\n          _createTextVNode(\"CONTACT US\")\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(`<a href=\"/2024_ENMEDIA_INTRODUCE.pdf\" download class=\"${_ssrRenderClass([{ 'text-white text-sm font-bold bg-primary-500 hover:bg-primary-400': _unref(isScrolled), 'text-primary-500 text-base bg-white/60 mix-blend-overlay hover:bg-white backdrop-blur-md': !_unref(isScrolled) }, \"rowCenter px-6 py-2 space-x-2\"])}\"><span>회사소개서</span><i class=\"fa-solid fa-file-arrow-down\"></i></a></nav></header>`)\n}\n}\n\n})",
+      "start": 1708047633778,
+      "end": 1708047633778,
+      "order": "pre",
+      "sourcemaps": null
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1707272759125,
-      "end": 1707272759125,
-      "order": "pre"
-    },
-    {
-      "name": "server-only-component-transform",
-      "start": 1707272759125,
-      "end": 1707272759125,
+      "start": 1708047633778,
+      "end": 1708047633778,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1707272759125,
-      "end": 1707272759125,
+      "start": 1708047633778,
+      "end": 1708047633778,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
       "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderClass as _ssrRenderClass, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Header\",\n  __ssrInlineRender: true,\n  setup(__props) {\n    const isScrolled = ref(false);\n    const isIndexPage = ref(false);\n    const route = useRoute();\n    watch(() => route.path, (newPath) => {\n      isIndexPage.value = newPath === \"/\";\n      if (!isIndexPage.value) {\n        isScrolled.value = true;\n      }\n    }, { immediate: true });\n    const handleScroll = () => {\n      isScrolled.value = window.scrollY > 0;\n    };\n    onMounted(() => {\n      if (isIndexPage.value) {\n        window.addEventListener(\"scroll\", handleScroll);\n      }\n    });\n    onUnmounted(() => {\n      window.removeEventListener(\"scroll\", handleScroll);\n    });\n    watch(isIndexPage, (newValue) => {\n      if (newValue) {\n        window.addEventListener(\"scroll\", handleScroll);\n        handleScroll();\n      } else {\n        window.removeEventListener(\"scroll\", handleScroll);\n      }\n    });\n    return (_ctx, _push, _parent, _attrs) => {\n      const _component_NuxtLink = _resolveComponent(\"NuxtLink\");\n      const _component_NuxtImg = _resolveComponent(\"NuxtImg\");\n      _push(`<header${_ssrRenderAttrs(_mergeProps({\n        isScrolled: _unref(isScrolled),\n        id: \"header\",\n        class: [\"top-0 flex items-center lg:justify-between justify-center w-full h-16 py-[3vmin] transition-all ease-in-out delay-100 duration-500 text-white lg:py-2 lg:h-fit z-50\", { \"fixed\": _unref(isIndexPage), \"sticky\": !_unref(isIndexPage), \"bg-white text-black-800 lg:px-[3%]\": _unref(isScrolled), \"bg-transparent text-white lg:px-[10%]\": !_unref(isScrolled) }]\n      }, _attrs))}>`);\n      _push(_ssrRenderComponent(_component_NuxtLink, { to: \"/\" }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(_ssrRenderComponent(_component_NuxtImg, {\n              src: _unref(isScrolled) ? \"/img/logo.svg\" : \"/img/logo_w.svg\",\n              alt: \"이엔미디어 로고\",\n              id: \"logo\",\n              class: [\"mx-auto\", { \"lg:w-36\": _unref(isScrolled), \"lg:w-56\": !_unref(isScrolled) }]\n            }, null, _parent2, _scopeId));\n          } else {\n            return [\n              _createVNode(_component_NuxtImg, {\n                src: _unref(isScrolled) ? \"/img/logo.svg\" : \"/img/logo_w.svg\",\n                alt: \"이엔미디어 로고\",\n                id: \"logo\",\n                class: [\"mx-auto\", { \"lg:w-36\": _unref(isScrolled), \"lg:w-56\": !_unref(isScrolled) }]\n              }, null, 8, [\"src\", \"class\"])\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(`<nav class=\"${_ssrRenderClass([{ \"space-x-10\": _unref(isScrolled), \"space-x-14\": !_unref(isScrolled) }, \"rowCenter text-lg font-bold\"])}\">`);\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/company\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`COMPANY`);\n          } else {\n            return [\n              _createTextVNode(\"COMPANY\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/service\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`SERVICE`);\n          } else {\n            return [\n              _createTextVNode(\"SERVICE\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/solution\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`SOLUTION`);\n          } else {\n            return [\n              _createTextVNode(\"SOLUTION\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/portfolio\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`PORTFOLIO`);\n          } else {\n            return [\n              _createTextVNode(\"PORTFOLIO\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/contact\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`CONTACT US`);\n          } else {\n            return [\n              _createTextVNode(\"CONTACT US\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(`<a href=\"/2024_ENMEDIA_INTRODUCE.pdf\" download class=\"${_ssrRenderClass([{ \"text-white text-sm font-bold bg-primary-500 hover:bg-primary-400\": _unref(isScrolled), \"text-primary-500 text-base bg-white/60 mix-blend-overlay hover:bg-white backdrop-blur-md\": !_unref(isScrolled) }, \"rowCenter px-6 py-2 space-x-2\"])}\"><span>회사소개서</span><i class=\"fa-solid fa-file-arrow-down\"></i></a></nav></header>`);\n    };\n  }\n});\n",
-      "start": 1707272759125,
-      "end": 1707272759150,
+      "start": 1708047633778,
+      "end": 1708047633839,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -95,155 +93,155 @@
     },
     {
       "name": "vite:json",
-      "start": 1707272759150,
-      "end": 1707272759150,
+      "start": 1708047633839,
+      "end": 1708047633839,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1707272759150,
-      "end": 1707272759150,
+      "start": 1708047633839,
+      "end": 1708047633839,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1707272759150,
-      "end": 1707272759150,
+      "start": 1708047633839,
+      "end": 1708047633839,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1707272759150,
-      "end": 1707272759150,
+      "start": 1708047633839,
+      "end": 1708047633839,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1707272759150,
-      "end": 1707272759150,
+      "start": 1708047633839,
+      "end": 1708047633839,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1707272759150,
-      "end": 1707272759150,
+      "start": 1708047633839,
+      "end": 1708047633839,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1707272759150,
-      "end": 1707272759150,
+      "start": 1708047633839,
+      "end": 1708047633839,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1707272759150,
-      "end": 1707272759150,
+      "start": 1708047633839,
+      "end": 1708047633839,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1707272759150,
-      "end": 1707272759150,
+      "start": 1708047633839,
+      "end": 1708047633839,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1707272759150,
-      "end": 1707272759150,
+      "start": 1708047633839,
+      "end": 1708047633839,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1707272759150,
-      "end": 1707272759150,
+      "start": 1708047633839,
+      "end": 1708047633839,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderClass as _ssrRenderClass, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Header\",\n  __ssrInlineRender: true,\n  setup(__props) {\n    const isScrolled = ref(false);\n    const isIndexPage = ref(false);\n    const route = useRoute();\n    watch(() => route.path, (newPath) => {\n      isIndexPage.value = newPath === \"/\";\n      if (!isIndexPage.value) {\n        isScrolled.value = true;\n      }\n    }, { immediate: true });\n    const handleScroll = () => {\n      isScrolled.value = (void 0).scrollY > 0;\n    };\n    onMounted(() => {\n      if (isIndexPage.value) {\n        (void 0).addEventListener(\"scroll\", handleScroll);\n      }\n    });\n    onUnmounted(() => {\n      (void 0).removeEventListener(\"scroll\", handleScroll);\n    });\n    watch(isIndexPage, (newValue) => {\n      if (newValue) {\n        (void 0).addEventListener(\"scroll\", handleScroll);\n        handleScroll();\n      } else {\n        (void 0).removeEventListener(\"scroll\", handleScroll);\n      }\n    });\n    return (_ctx, _push, _parent, _attrs) => {\n      const _component_NuxtLink = _resolveComponent(\"NuxtLink\");\n      const _component_NuxtImg = _resolveComponent(\"NuxtImg\");\n      _push(`<header${_ssrRenderAttrs(_mergeProps({\n        isScrolled: _unref(isScrolled),\n        id: \"header\",\n        class: [\"top-0 flex items-center lg:justify-between justify-center w-full h-16 py-[3vmin] transition-all ease-in-out delay-100 duration-500 text-white lg:py-2 lg:h-fit z-50\", { \"fixed\": _unref(isIndexPage), \"sticky\": !_unref(isIndexPage), \"bg-white text-black-800 lg:px-[3%]\": _unref(isScrolled), \"bg-transparent text-white lg:px-[10%]\": !_unref(isScrolled) }]\n      }, _attrs))}>`);\n      _push(_ssrRenderComponent(_component_NuxtLink, { to: \"/\" }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(_ssrRenderComponent(_component_NuxtImg, {\n              src: _unref(isScrolled) ? \"/img/logo.svg\" : \"/img/logo_w.svg\",\n              alt: \"이엔미디어 로고\",\n              id: \"logo\",\n              class: [\"mx-auto\", { \"lg:w-36\": _unref(isScrolled), \"lg:w-56\": !_unref(isScrolled) }]\n            }, null, _parent2, _scopeId));\n          } else {\n            return [\n              _createVNode(_component_NuxtImg, {\n                src: _unref(isScrolled) ? \"/img/logo.svg\" : \"/img/logo_w.svg\",\n                alt: \"이엔미디어 로고\",\n                id: \"logo\",\n                class: [\"mx-auto\", { \"lg:w-36\": _unref(isScrolled), \"lg:w-56\": !_unref(isScrolled) }]\n              }, null, 8, [\"src\", \"class\"])\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(`<nav class=\"${_ssrRenderClass([{ \"space-x-10\": _unref(isScrolled), \"space-x-14\": !_unref(isScrolled) }, \"rowCenter text-lg font-bold\"])}\">`);\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/company\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`COMPANY`);\n          } else {\n            return [\n              _createTextVNode(\"COMPANY\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/service\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`SERVICE`);\n          } else {\n            return [\n              _createTextVNode(\"SERVICE\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/solution\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`SOLUTION`);\n          } else {\n            return [\n              _createTextVNode(\"SOLUTION\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/portfolio\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`PORTFOLIO`);\n          } else {\n            return [\n              _createTextVNode(\"PORTFOLIO\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/contact\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`CONTACT US`);\n          } else {\n            return [\n              _createTextVNode(\"CONTACT US\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(`<a href=\"/2024_ENMEDIA_INTRODUCE.pdf\" download class=\"${_ssrRenderClass([{ \"text-white text-sm font-bold bg-primary-500 hover:bg-primary-400\": _unref(isScrolled), \"text-primary-500 text-base bg-white/60 mix-blend-overlay hover:bg-white backdrop-blur-md\": !_unref(isScrolled) }, \"rowCenter px-6 py-2 space-x-2\"])}\"><span>회사소개서</span><i class=\"fa-solid fa-file-arrow-down\"></i></a></nav></header>`);\n    };\n  }\n});\n",
-      "start": 1707272759150,
-      "end": 1707272759152,
+      "start": 1708047633839,
+      "end": 1708047633851,
       "order": "normal",
       "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/components/Header.vue?vue&type=script&setup=true&lang.ts\"],\n  \"sourcesContent\": [\"import { defineComponent as _defineComponent } from \\\"vue\\\";\\nimport { unref as _unref, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \\\"vue\\\";\\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderClass as _ssrRenderClass, ssrRenderAttrs as _ssrRenderAttrs } from \\\"vue/server-renderer\\\";\\nexport default /* @__PURE__ */ _defineComponent({\\n  __name: \\\"Header\\\",\\n  __ssrInlineRender: true,\\n  setup(__props) {\\n    const isScrolled = ref(false);\\n    const isIndexPage = ref(false);\\n    const route = useRoute();\\n    watch(() => route.path, (newPath) => {\\n      isIndexPage.value = newPath === \\\"/\\\";\\n      if (!isIndexPage.value) {\\n        isScrolled.value = true;\\n      }\\n    }, { immediate: true });\\n    const handleScroll = () => {\\n      isScrolled.value = window.scrollY > 0;\\n    };\\n    onMounted(() => {\\n      if (isIndexPage.value) {\\n        window.addEventListener(\\\"scroll\\\", handleScroll);\\n      }\\n    });\\n    onUnmounted(() => {\\n      window.removeEventListener(\\\"scroll\\\", handleScroll);\\n    });\\n    watch(isIndexPage, (newValue) => {\\n      if (newValue) {\\n        window.addEventListener(\\\"scroll\\\", handleScroll);\\n        handleScroll();\\n      } else {\\n        window.removeEventListener(\\\"scroll\\\", handleScroll);\\n      }\\n    });\\n    return (_ctx, _push, _parent, _attrs) => {\\n      const _component_NuxtLink = _resolveComponent(\\\"NuxtLink\\\");\\n      const _component_NuxtImg = _resolveComponent(\\\"NuxtImg\\\");\\n      _push(`<header${_ssrRenderAttrs(_mergeProps({\\n        isScrolled: _unref(isScrolled),\\n        id: \\\"header\\\",\\n        class: [\\\"top-0 flex items-center lg:justify-between justify-center w-full h-16 py-[3vmin] transition-all ease-in-out delay-100 duration-500 text-white lg:py-2 lg:h-fit z-50\\\", { \\\"fixed\\\": _unref(isIndexPage), \\\"sticky\\\": !_unref(isIndexPage), \\\"bg-white text-black-800 lg:px-[3%]\\\": _unref(isScrolled), \\\"bg-transparent text-white lg:px-[10%]\\\": !_unref(isScrolled) }]\\n      }, _attrs))}>`);\\n      _push(_ssrRenderComponent(_component_NuxtLink, { to: \\\"/\\\" }, {\\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\\n          if (_push2) {\\n            _push2(_ssrRenderComponent(_component_NuxtImg, {\\n              src: _unref(isScrolled) ? \\\"/img/logo.svg\\\" : \\\"/img/logo_w.svg\\\",\\n              alt: \\\"이엔미디어 로고\\\",\\n              id: \\\"logo\\\",\\n              class: [\\\"mx-auto\\\", { \\\"lg:w-36\\\": _unref(isScrolled), \\\"lg:w-56\\\": !_unref(isScrolled) }]\\n            }, null, _parent2, _scopeId));\\n          } else {\\n            return [\\n              _createVNode(_component_NuxtImg, {\\n                src: _unref(isScrolled) ? \\\"/img/logo.svg\\\" : \\\"/img/logo_w.svg\\\",\\n                alt: \\\"이엔미디어 로고\\\",\\n                id: \\\"logo\\\",\\n                class: [\\\"mx-auto\\\", { \\\"lg:w-36\\\": _unref(isScrolled), \\\"lg:w-56\\\": !_unref(isScrolled) }]\\n              }, null, 8, [\\\"src\\\", \\\"class\\\"])\\n            ];\\n          }\\n        }),\\n        _: 1\\n      }, _parent));\\n      _push(`<nav class=\\\"${_ssrRenderClass([{ \\\"space-x-10\\\": _unref(isScrolled), \\\"space-x-14\\\": !_unref(isScrolled) }, \\\"rowCenter text-lg font-bold\\\"])}\\\">`);\\n      _push(_ssrRenderComponent(_component_NuxtLink, {\\n        to: \\\"/company\\\",\\n        class: [\\\"navText\\\", { \\\"after:hover:border-primary-500 text-black-800 text-base font-medium\\\": _unref(isScrolled) }]\\n      }, {\\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\\n          if (_push2) {\\n            _push2(`COMPANY`);\\n          } else {\\n            return [\\n              _createTextVNode(\\\"COMPANY\\\")\\n            ];\\n          }\\n        }),\\n        _: 1\\n      }, _parent));\\n      _push(_ssrRenderComponent(_component_NuxtLink, {\\n        to: \\\"/service\\\",\\n        class: [\\\"navText\\\", { \\\"after:hover:border-primary-500 text-black-800 text-base font-medium\\\": _unref(isScrolled) }]\\n      }, {\\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\\n          if (_push2) {\\n            _push2(`SERVICE`);\\n          } else {\\n            return [\\n              _createTextVNode(\\\"SERVICE\\\")\\n            ];\\n          }\\n        }),\\n        _: 1\\n      }, _parent));\\n      _push(_ssrRenderComponent(_component_NuxtLink, {\\n        to: \\\"/solution\\\",\\n        class: [\\\"navText\\\", { \\\"after:hover:border-primary-500 text-black-800 text-base font-medium\\\": _unref(isScrolled) }]\\n      }, {\\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\\n          if (_push2) {\\n            _push2(`SOLUTION`);\\n          } else {\\n            return [\\n              _createTextVNode(\\\"SOLUTION\\\")\\n            ];\\n          }\\n        }),\\n        _: 1\\n      }, _parent));\\n      _push(_ssrRenderComponent(_component_NuxtLink, {\\n        to: \\\"/portfolio\\\",\\n        class: [\\\"navText\\\", { \\\"after:hover:border-primary-500 text-black-800 text-base font-medium\\\": _unref(isScrolled) }]\\n      }, {\\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\\n          if (_push2) {\\n            _push2(`PORTFOLIO`);\\n          } else {\\n            return [\\n              _createTextVNode(\\\"PORTFOLIO\\\")\\n            ];\\n          }\\n        }),\\n        _: 1\\n      }, _parent));\\n      _push(_ssrRenderComponent(_component_NuxtLink, {\\n        to: \\\"/contact\\\",\\n        class: [\\\"navText\\\", { \\\"after:hover:border-primary-500 text-black-800 text-base font-medium\\\": _unref(isScrolled) }]\\n      }, {\\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\\n          if (_push2) {\\n            _push2(`CONTACT US`);\\n          } else {\\n            return [\\n              _createTextVNode(\\\"CONTACT US\\\")\\n            ];\\n          }\\n        }),\\n        _: 1\\n      }, _parent));\\n      _push(`<a href=\\\"/2024_ENMEDIA_INTRODUCE.pdf\\\" download class=\\\"${_ssrRenderClass([{ \\\"text-white text-sm font-bold bg-primary-500 hover:bg-primary-400\\\": _unref(isScrolled), \\\"text-primary-500 text-base bg-white/60 mix-blend-overlay hover:bg-white backdrop-blur-md\\\": !_unref(isScrolled) }, \\\"rowCenter px-6 py-2 space-x-2\\\"])}\\\"><span>회사소개서</span><i class=\\\"fa-solid fa-file-arrow-down\\\"></i></a></nav></header>`);\\n    };\\n  }\\n});\\n\"],\n  \"mappings\": \"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\",\n  \"names\": []\n}\n"
     },
     {
       "name": "vite:css-post",
-      "start": 1707272759152,
-      "end": 1707272759152,
+      "start": 1708047633851,
+      "end": 1708047633851,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1707272759152,
-      "end": 1707272759152,
+      "start": 1708047633851,
+      "end": 1708047633851,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1707272759152,
-      "end": 1707272759152,
+      "start": 1708047633851,
+      "end": 1708047633851,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1707272759152,
-      "end": 1707272759152,
+      "start": 1708047633851,
+      "end": 1708047633851,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1707272759152,
-      "end": 1707272759152,
+      "start": 1708047633851,
+      "end": 1708047633851,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1707272759152,
-      "end": 1707272759152,
+      "start": 1708047633851,
+      "end": 1708047633851,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1707272759152,
-      "end": 1707272759152,
+      "start": 1708047633851,
+      "end": 1708047633851,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1707272759152,
-      "end": 1707272759152,
+      "start": 1708047633851,
+      "end": 1708047633851,
       "order": "post"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1707272759152,
-      "end": 1707272759152,
+      "start": 1708047633851,
+      "end": 1708047633851,
       "order": "post"
     },
     {
       "name": "unhead:remove-server-composables",
-      "start": 1707272759152,
-      "end": 1707272759152,
+      "start": 1708047633851,
+      "end": 1708047633851,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1707272759152,
-      "end": 1707272759152,
+      "start": 1708047633851,
+      "end": 1708047633851,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1707272759152,
-      "end": 1707272759152,
+      "start": 1708047633851,
+      "end": 1708047633851,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { ref, watch, onMounted, onUnmounted } from 'vue';\nimport { useRoute } from '#app/composables/router';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderClass as _ssrRenderClass, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Header\",\n  __ssrInlineRender: true,\n  setup(__props) {\n    const isScrolled = ref(false);\n    const isIndexPage = ref(false);\n    const route = useRoute();\n    watch(() => route.path, (newPath) => {\n      isIndexPage.value = newPath === \"/\";\n      if (!isIndexPage.value) {\n        isScrolled.value = true;\n      }\n    }, { immediate: true });\n    const handleScroll = () => {\n      isScrolled.value = (void 0).scrollY > 0;\n    };\n    onMounted(() => {\n      if (isIndexPage.value) {\n        (void 0).addEventListener(\"scroll\", handleScroll);\n      }\n    });\n    onUnmounted(() => {\n      (void 0).removeEventListener(\"scroll\", handleScroll);\n    });\n    watch(isIndexPage, (newValue) => {\n      if (newValue) {\n        (void 0).addEventListener(\"scroll\", handleScroll);\n        handleScroll();\n      } else {\n        (void 0).removeEventListener(\"scroll\", handleScroll);\n      }\n    });\n    return (_ctx, _push, _parent, _attrs) => {\n      const _component_NuxtLink = _resolveComponent(\"NuxtLink\");\n      const _component_NuxtImg = _resolveComponent(\"NuxtImg\");\n      _push(`<header${_ssrRenderAttrs(_mergeProps({\n        isScrolled: _unref(isScrolled),\n        id: \"header\",\n        class: [\"top-0 flex items-center lg:justify-between justify-center w-full h-16 py-[3vmin] transition-all ease-in-out delay-100 duration-500 text-white lg:py-2 lg:h-fit z-50\", { \"fixed\": _unref(isIndexPage), \"sticky\": !_unref(isIndexPage), \"bg-white text-black-800 lg:px-[3%]\": _unref(isScrolled), \"bg-transparent text-white lg:px-[10%]\": !_unref(isScrolled) }]\n      }, _attrs))}>`);\n      _push(_ssrRenderComponent(_component_NuxtLink, { to: \"/\" }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(_ssrRenderComponent(_component_NuxtImg, {\n              src: _unref(isScrolled) ? \"/img/logo.svg\" : \"/img/logo_w.svg\",\n              alt: \"이엔미디어 로고\",\n              id: \"logo\",\n              class: [\"mx-auto\", { \"lg:w-36\": _unref(isScrolled), \"lg:w-56\": !_unref(isScrolled) }]\n            }, null, _parent2, _scopeId));\n          } else {\n            return [\n              _createVNode(_component_NuxtImg, {\n                src: _unref(isScrolled) ? \"/img/logo.svg\" : \"/img/logo_w.svg\",\n                alt: \"이엔미디어 로고\",\n                id: \"logo\",\n                class: [\"mx-auto\", { \"lg:w-36\": _unref(isScrolled), \"lg:w-56\": !_unref(isScrolled) }]\n              }, null, 8, [\"src\", \"class\"])\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(`<nav class=\"${_ssrRenderClass([{ \"space-x-10\": _unref(isScrolled), \"space-x-14\": !_unref(isScrolled) }, \"rowCenter text-lg font-bold\"])}\">`);\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/company\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`COMPANY`);\n          } else {\n            return [\n              _createTextVNode(\"COMPANY\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/service\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`SERVICE`);\n          } else {\n            return [\n              _createTextVNode(\"SERVICE\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/solution\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`SOLUTION`);\n          } else {\n            return [\n              _createTextVNode(\"SOLUTION\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/portfolio\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`PORTFOLIO`);\n          } else {\n            return [\n              _createTextVNode(\"PORTFOLIO\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/contact\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`CONTACT US`);\n          } else {\n            return [\n              _createTextVNode(\"CONTACT US\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(`<a href=\"/2024_ENMEDIA_INTRODUCE.pdf\" download class=\"${_ssrRenderClass([{ \"text-white text-sm font-bold bg-primary-500 hover:bg-primary-400\": _unref(isScrolled), \"text-primary-500 text-base bg-white/60 mix-blend-overlay hover:bg-white backdrop-blur-md\": !_unref(isScrolled) }, \"rowCenter px-6 py-2 space-x-2\"])}\"><span>회사소개서</span><i class=\"fa-solid fa-file-arrow-down\"></i></a></nav></header>`);\n    };\n  }\n});\n",
-      "start": 1707272759152,
-      "end": 1707272759153,
+      "start": 1708047633851,
+      "end": 1708047633852,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -257,8 +255,8 @@
     {
       "name": "nuxt:imports-transform",
       "result": "import { ref, watch, onMounted, onUnmounted } from 'vue';\nimport { useRoute } from '#app/composables/router';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderClass as _ssrRenderClass, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Header\",\n  __ssrInlineRender: true,\n  setup(__props) {\n    const isScrolled = ref(false);\n    const isIndexPage = ref(false);\n    const route = useRoute();\n    watch(() => route.path, (newPath) => {\n      isIndexPage.value = newPath === \"/\";\n      if (!isIndexPage.value) {\n        isScrolled.value = true;\n      }\n    }, { immediate: true });\n    const handleScroll = () => {\n      isScrolled.value = (void 0).scrollY > 0;\n    };\n    onMounted(() => {\n      if (isIndexPage.value) {\n        (void 0).addEventListener(\"scroll\", handleScroll);\n      }\n    });\n    onUnmounted(() => {\n      (void 0).removeEventListener(\"scroll\", handleScroll);\n    });\n    watch(isIndexPage, (newValue) => {\n      if (newValue) {\n        (void 0).addEventListener(\"scroll\", handleScroll);\n        handleScroll();\n      } else {\n        (void 0).removeEventListener(\"scroll\", handleScroll);\n      }\n    });\n    return (_ctx, _push, _parent, _attrs) => {\n      const _component_NuxtLink = _resolveComponent(\"NuxtLink\");\n      const _component_NuxtImg = _resolveComponent(\"NuxtImg\");\n      _push(`<header${_ssrRenderAttrs(_mergeProps({\n        isScrolled: _unref(isScrolled),\n        id: \"header\",\n        class: [\"top-0 flex items-center lg:justify-between justify-center w-full h-16 py-[3vmin] transition-all ease-in-out delay-100 duration-500 text-white lg:py-2 lg:h-fit z-50\", { \"fixed\": _unref(isIndexPage), \"sticky\": !_unref(isIndexPage), \"bg-white text-black-800 lg:px-[3%]\": _unref(isScrolled), \"bg-transparent text-white lg:px-[10%]\": !_unref(isScrolled) }]\n      }, _attrs))}>`);\n      _push(_ssrRenderComponent(_component_NuxtLink, { to: \"/\" }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(_ssrRenderComponent(_component_NuxtImg, {\n              src: _unref(isScrolled) ? \"/img/logo.svg\" : \"/img/logo_w.svg\",\n              alt: \"이엔미디어 로고\",\n              id: \"logo\",\n              class: [\"mx-auto\", { \"lg:w-36\": _unref(isScrolled), \"lg:w-56\": !_unref(isScrolled) }]\n            }, null, _parent2, _scopeId));\n          } else {\n            return [\n              _createVNode(_component_NuxtImg, {\n                src: _unref(isScrolled) ? \"/img/logo.svg\" : \"/img/logo_w.svg\",\n                alt: \"이엔미디어 로고\",\n                id: \"logo\",\n                class: [\"mx-auto\", { \"lg:w-36\": _unref(isScrolled), \"lg:w-56\": !_unref(isScrolled) }]\n              }, null, 8, [\"src\", \"class\"])\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(`<nav class=\"${_ssrRenderClass([{ \"space-x-10\": _unref(isScrolled), \"space-x-14\": !_unref(isScrolled) }, \"rowCenter text-lg font-bold\"])}\">`);\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/company\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`COMPANY`);\n          } else {\n            return [\n              _createTextVNode(\"COMPANY\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/service\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`SERVICE`);\n          } else {\n            return [\n              _createTextVNode(\"SERVICE\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/solution\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`SOLUTION`);\n          } else {\n            return [\n              _createTextVNode(\"SOLUTION\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/portfolio\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`PORTFOLIO`);\n          } else {\n            return [\n              _createTextVNode(\"PORTFOLIO\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/contact\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`CONTACT US`);\n          } else {\n            return [\n              _createTextVNode(\"CONTACT US\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(`<a href=\"/2024_ENMEDIA_INTRODUCE.pdf\" download class=\"${_ssrRenderClass([{ \"text-white text-sm font-bold bg-primary-500 hover:bg-primary-400\": _unref(isScrolled), \"text-primary-500 text-base bg-white/60 mix-blend-overlay hover:bg-white backdrop-blur-md\": !_unref(isScrolled) }, \"rowCenter px-6 py-2 space-x-2\"])}\"><span>회사소개서</span><i class=\"fa-solid fa-file-arrow-down\"></i></a></nav></header>`);\n    };\n  }\n});\n",
-      "start": 1707272759152,
-      "end": 1707272759153,
+      "start": 1708047633851,
+      "end": 1708047633852,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -271,39 +269,39 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1707272759153,
-      "end": 1707272759153,
+      "start": 1708047633852,
+      "end": 1708047633852,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1707272759153,
-      "end": 1707272759153,
+      "start": 1708047633852,
+      "end": 1708047633852,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1707272759153,
-      "end": 1707272759153,
+      "start": 1708047633852,
+      "end": 1708047633852,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1707272759153,
-      "end": 1707272759153,
+      "start": 1708047633852,
+      "end": 1708047633852,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-template",
-      "start": 1707272759153,
-      "end": 1707272759153,
+      "start": 1708047633852,
+      "end": 1708047633852,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
       "result": "import { default as __nuxt_component_0 } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/node_modules/nuxt/dist/app/components/nuxt-link\";\nimport { default as __nuxt_component_1 } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/node_modules/@nuxt/image/dist/runtime/components/nuxt-img\";\nimport { ref, watch, onMounted, onUnmounted } from 'vue';\nimport { useRoute } from '#app/composables/router';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderClass as _ssrRenderClass, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Header\",\n  __ssrInlineRender: true,\n  setup(__props) {\n    const isScrolled = ref(false);\n    const isIndexPage = ref(false);\n    const route = useRoute();\n    watch(() => route.path, (newPath) => {\n      isIndexPage.value = newPath === \"/\";\n      if (!isIndexPage.value) {\n        isScrolled.value = true;\n      }\n    }, { immediate: true });\n    const handleScroll = () => {\n      isScrolled.value = (void 0).scrollY > 0;\n    };\n    onMounted(() => {\n      if (isIndexPage.value) {\n        (void 0).addEventListener(\"scroll\", handleScroll);\n      }\n    });\n    onUnmounted(() => {\n      (void 0).removeEventListener(\"scroll\", handleScroll);\n    });\n    watch(isIndexPage, (newValue) => {\n      if (newValue) {\n        (void 0).addEventListener(\"scroll\", handleScroll);\n        handleScroll();\n      } else {\n        (void 0).removeEventListener(\"scroll\", handleScroll);\n      }\n    });\n    return (_ctx, _push, _parent, _attrs) => {\n      const _component_NuxtLink = __nuxt_component_0;\n      const _component_NuxtImg = __nuxt_component_1;\n      _push(`<header${_ssrRenderAttrs(_mergeProps({\n        isScrolled: _unref(isScrolled),\n        id: \"header\",\n        class: [\"top-0 flex items-center lg:justify-between justify-center w-full h-16 py-[3vmin] transition-all ease-in-out delay-100 duration-500 text-white lg:py-2 lg:h-fit z-50\", { \"fixed\": _unref(isIndexPage), \"sticky\": !_unref(isIndexPage), \"bg-white text-black-800 lg:px-[3%]\": _unref(isScrolled), \"bg-transparent text-white lg:px-[10%]\": !_unref(isScrolled) }]\n      }, _attrs))}>`);\n      _push(_ssrRenderComponent(_component_NuxtLink, { to: \"/\" }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(_ssrRenderComponent(_component_NuxtImg, {\n              src: _unref(isScrolled) ? \"/img/logo.svg\" : \"/img/logo_w.svg\",\n              alt: \"이엔미디어 로고\",\n              id: \"logo\",\n              class: [\"mx-auto\", { \"lg:w-36\": _unref(isScrolled), \"lg:w-56\": !_unref(isScrolled) }]\n            }, null, _parent2, _scopeId));\n          } else {\n            return [\n              _createVNode(_component_NuxtImg, {\n                src: _unref(isScrolled) ? \"/img/logo.svg\" : \"/img/logo_w.svg\",\n                alt: \"이엔미디어 로고\",\n                id: \"logo\",\n                class: [\"mx-auto\", { \"lg:w-36\": _unref(isScrolled), \"lg:w-56\": !_unref(isScrolled) }]\n              }, null, 8, [\"src\", \"class\"])\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(`<nav class=\"${_ssrRenderClass([{ \"space-x-10\": _unref(isScrolled), \"space-x-14\": !_unref(isScrolled) }, \"rowCenter text-lg font-bold\"])}\">`);\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/company\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`COMPANY`);\n          } else {\n            return [\n              _createTextVNode(\"COMPANY\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/service\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`SERVICE`);\n          } else {\n            return [\n              _createTextVNode(\"SERVICE\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/solution\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`SOLUTION`);\n          } else {\n            return [\n              _createTextVNode(\"SOLUTION\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/portfolio\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`PORTFOLIO`);\n          } else {\n            return [\n              _createTextVNode(\"PORTFOLIO\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/contact\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`CONTACT US`);\n          } else {\n            return [\n              _createTextVNode(\"CONTACT US\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(`<a href=\"/2024_ENMEDIA_INTRODUCE.pdf\" download class=\"${_ssrRenderClass([{ \"text-white text-sm font-bold bg-primary-500 hover:bg-primary-400\": _unref(isScrolled), \"text-primary-500 text-base bg-white/60 mix-blend-overlay hover:bg-white backdrop-blur-md\": !_unref(isScrolled) }, \"rowCenter px-6 py-2 space-x-2\"])}\"><span>회사소개서</span><i class=\"fa-solid fa-file-arrow-down\"></i></a></nav></header>`);\n    };\n  }\n});\n",
-      "start": 1707272759153,
-      "end": 1707272759153,
+      "start": 1708047633852,
+      "end": 1708047633853,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -317,8 +315,8 @@
     {
       "name": "nuxt:tree-shake-composables:transform",
       "result": "import { default as __nuxt_component_0 } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/node_modules/nuxt/dist/app/components/nuxt-link\";\nimport { default as __nuxt_component_1 } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/node_modules/@nuxt/image/dist/runtime/components/nuxt-img\";\nimport { ref, watch, onMounted, onUnmounted } from 'vue';\nimport { useRoute } from '#app/composables/router';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderClass as _ssrRenderClass, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Header\",\n  __ssrInlineRender: true,\n  setup(__props) {\n    const isScrolled = ref(false);\n    const isIndexPage = ref(false);\n    const route = useRoute();\n    watch(() => route.path, (newPath) => {\n      isIndexPage.value = newPath === \"/\";\n      if (!isIndexPage.value) {\n        isScrolled.value = true;\n      }\n    }, { immediate: true });\n    const handleScroll = () => {\n      isScrolled.value = (void 0).scrollY > 0;\n    };\n     false && /*@__PURE__*/ onMounted(() => {\n      if (isIndexPage.value) {\n        (void 0).addEventListener(\"scroll\", handleScroll);\n      }\n    });\n    onUnmounted(() => {\n      (void 0).removeEventListener(\"scroll\", handleScroll);\n    });\n    watch(isIndexPage, (newValue) => {\n      if (newValue) {\n        (void 0).addEventListener(\"scroll\", handleScroll);\n        handleScroll();\n      } else {\n        (void 0).removeEventListener(\"scroll\", handleScroll);\n      }\n    });\n    return (_ctx, _push, _parent, _attrs) => {\n      const _component_NuxtLink = __nuxt_component_0;\n      const _component_NuxtImg = __nuxt_component_1;\n      _push(`<header${_ssrRenderAttrs(_mergeProps({\n        isScrolled: _unref(isScrolled),\n        id: \"header\",\n        class: [\"top-0 flex items-center lg:justify-between justify-center w-full h-16 py-[3vmin] transition-all ease-in-out delay-100 duration-500 text-white lg:py-2 lg:h-fit z-50\", { \"fixed\": _unref(isIndexPage), \"sticky\": !_unref(isIndexPage), \"bg-white text-black-800 lg:px-[3%]\": _unref(isScrolled), \"bg-transparent text-white lg:px-[10%]\": !_unref(isScrolled) }]\n      }, _attrs))}>`);\n      _push(_ssrRenderComponent(_component_NuxtLink, { to: \"/\" }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(_ssrRenderComponent(_component_NuxtImg, {\n              src: _unref(isScrolled) ? \"/img/logo.svg\" : \"/img/logo_w.svg\",\n              alt: \"이엔미디어 로고\",\n              id: \"logo\",\n              class: [\"mx-auto\", { \"lg:w-36\": _unref(isScrolled), \"lg:w-56\": !_unref(isScrolled) }]\n            }, null, _parent2, _scopeId));\n          } else {\n            return [\n              _createVNode(_component_NuxtImg, {\n                src: _unref(isScrolled) ? \"/img/logo.svg\" : \"/img/logo_w.svg\",\n                alt: \"이엔미디어 로고\",\n                id: \"logo\",\n                class: [\"mx-auto\", { \"lg:w-36\": _unref(isScrolled), \"lg:w-56\": !_unref(isScrolled) }]\n              }, null, 8, [\"src\", \"class\"])\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(`<nav class=\"${_ssrRenderClass([{ \"space-x-10\": _unref(isScrolled), \"space-x-14\": !_unref(isScrolled) }, \"rowCenter text-lg font-bold\"])}\">`);\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/company\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`COMPANY`);\n          } else {\n            return [\n              _createTextVNode(\"COMPANY\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/service\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`SERVICE`);\n          } else {\n            return [\n              _createTextVNode(\"SERVICE\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/solution\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`SOLUTION`);\n          } else {\n            return [\n              _createTextVNode(\"SOLUTION\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/portfolio\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`PORTFOLIO`);\n          } else {\n            return [\n              _createTextVNode(\"PORTFOLIO\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(_component_NuxtLink, {\n        to: \"/contact\",\n        class: [\"navText\", { \"after:hover:border-primary-500 text-black-800 text-base font-medium\": _unref(isScrolled) }]\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`CONTACT US`);\n          } else {\n            return [\n              _createTextVNode(\"CONTACT US\")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(`<a href=\"/2024_ENMEDIA_INTRODUCE.pdf\" download class=\"${_ssrRenderClass([{ \"text-white text-sm font-bold bg-primary-500 hover:bg-primary-400\": _unref(isScrolled), \"text-primary-500 text-base bg-white/60 mix-blend-overlay hover:bg-white backdrop-blur-md\": !_unref(isScrolled) }, \"rowCenter px-6 py-2 space-x-2\"])}\"><span>회사소개서</span><i class=\"fa-solid fa-file-arrow-down\"></i></a></nav></header>`);\n    };\n  }\n});\n",
-      "start": 1707272759153,
-      "end": 1707272759154,
+      "start": 1708047633853,
+      "end": 1708047633854,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -331,14 +329,14 @@
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1707272759154,
-      "end": 1707272759154,
+      "start": 1708047633854,
+      "end": 1708047633854,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1707272759154,
-      "end": 1707272759154,
+      "start": 1708047633854,
+      "end": 1708047633854,
       "order": "normal"
     }
   ]

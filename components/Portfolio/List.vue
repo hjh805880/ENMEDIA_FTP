@@ -45,7 +45,7 @@ const isLastItemOffset = computed(() => {
 
 <template>
   <div class="max-w-gui w-full h-full pb-56 mx-auto space-y-24" :style="isLastItemOffset ? 'padding-bottom: 14rem;' : ''">
-    <div data-aos="fade-up" date-aos-duration="1000" v-if="showCategoryButtons" class="rowCenter category-buttons space-x-6 text-xl font-bold">
+    <div data-aos="fade-up" data-aos-duration="1000" v-if="showCategoryButtons" class="rowCenter category-buttons space-x-6 text-xl font-bold">
       <button @click="setCategory('법무법인')" class="text-black-700 px-6 py-1 rounded-full" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '법무법인', 'bg-transparent text-white border-2 border-white': selectedCategory !== '법무법인' }">법무법인</button>
       <button @click="setCategory('대출/대부업')" class="text-black-700 px-6 py-1 rounded-full" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '대출/대부업', 'bg-transparent text-white border-2 border-white': selectedCategory !== '대출/대부업' }">대출/대부업</button>
       <button @click="setCategory('프랜차이즈')" class="text-black-700 px-6 py-1 rounded-full" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '프랜차이즈', 'bg-transparent text-white border-2 border-white': selectedCategory !== '프랜차이즈' }">프랜차이즈</button>

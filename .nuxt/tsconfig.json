@@ -71,9 +71,6 @@
       "#image/*": [
         "../node_modules/@nuxt/image/dist/runtime/*"
       ],
-      "#mdc-imports": [
-        "./mdc-imports"
-      ],
       "#vue-router": [
         "./vue-router-stub"
       ],
@@ -105,8 +102,6 @@
     "../node_modules/nuxt-link-checker/dist/runtime",
     "../node_modules/@nuxtjs/seo/runtime",
     "../node_modules/@nuxtjs/critters/runtime",
-    "../node_modules/@nuxtjs/mdc/runtime",
-    "../node_modules/@nuxt/content/runtime",
     "../node_modules/@nuxt/devtools/runtime",
     "../node_modules/@nuxt/telemetry/runtime",
     ".."
@@ -132,8 +127,6 @@
     "../node_modules/nuxt-link-checker/dist/runtime/server",
     "../node_modules/@nuxtjs/seo/runtime/server",
     "../node_modules/@nuxtjs/critters/runtime/server",
-    "../node_modules/@nuxtjs/mdc/runtime/server",
-    "../node_modules/@nuxt/content/runtime/server",
     "../node_modules/@nuxt/devtools/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",
     "../dist",

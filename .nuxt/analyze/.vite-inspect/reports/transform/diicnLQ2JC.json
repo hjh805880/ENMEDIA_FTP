@@ -4,63 +4,65 @@
     {
       "name": "vite:load-fallback",
       "result": "<script setup lang=\"ts\">\nconst isScrolled = ref(false);\nconst isIndexPage = ref(false);\nconst route = useRoute();\n\nwatch(() => route.path, (newPath) => {\n  isIndexPage.value = newPath === '/';\n  if (!isIndexPage.value) {\n    isScrolled.value = true;\n  }\n}, { immediate: true });\n\nconst handleScroll = () => {\n  isScrolled.value = window.scrollY > 0;\n};\n\nonMounted(() => {\n  if (isIndexPage.value) {\n    window.addEventListener(\"scroll\", handleScroll);\n  }\n});\n\nonUnmounted(() => {\n  window.removeEventListener(\"scroll\", handleScroll);\n});\n\nwatch(isIndexPage, (newValue) => {\n  if (newValue) {\n    window.addEventListener(\"scroll\", handleScroll);\n    handleScroll();\n  } else {\n    window.removeEventListener(\"scroll\", handleScroll);\n  }\n});\n</script>\n\n\n<template>\n  <header :isScrolled=\"isScrolled\" id=\"header\" class=\"top-0 flex items-center lg:justify-between justify-center w-full h-16 py-[3vmin] transition-all ease-in-out delay-100 duration-500 text-white lg:py-2 lg:h-fit z-50\" :class=\"{ 'fixed': isIndexPage, 'sticky': !isIndexPage, 'bg-white text-black-800 lg:px-[3%]': isScrolled, 'bg-transparent text-white lg:px-[10%]': !isScrolled }\">\n    <NuxtLink to=\"/\">\n      <NuxtImg :src=\"isScrolled ? '/img/logo.svg' : '/img/logo_w.svg'\" alt=\"이엔미디어 로고\" id=\"logo\" class=\"mx-auto\" :class=\"{ 'lg:w-36': isScrolled, 'lg:w-56': !isScrolled }\" />\n    </NuxtLink>\n    <nav class=\"rowCenter text-lg font-bold\" :class=\"{ 'space-x-10': isScrolled, 'space-x-14': !isScrolled }\">\n      <NuxtLink to=\"/company\" class=\"navText\" :class=\"{ 'after:hover:border-primary-500 text-black-800 text-base font-medium': isScrolled }\">COMPANY</NuxtLink>\n      <NuxtLink to=\"/service\" class=\"navText\" :class=\"{ 'after:hover:border-primary-500 text-black-800 text-base font-medium': isScrolled }\">SERVICE</NuxtLink>\n      <NuxtLink to=\"/solution\" class=\"navText\" :class=\"{ 'after:hover:border-primary-500 text-black-800 text-base font-medium': isScrolled }\">SOLUTION</NuxtLink>\n      <NuxtLink to=\"/portfolio\" class=\"navText\" :class=\"{ 'after:hover:border-primary-500 text-black-800 text-base font-medium': isScrolled }\">PORTFOLIO</NuxtLink>\n      <NuxtLink to=\"/contact\" class=\"navText\" :class=\"{ 'after:hover:border-primary-500 text-black-800 text-base font-medium': isScrolled }\">CONTACT US</NuxtLink>\n      <a href=\"/2024_ENMEDIA_INTRODUCE.pdf\" download class=\"rowCenter px-6 py-2 space-x-2\" :class=\"{ 'text-white text-sm font-bold bg-primary-500 hover:bg-primary-400': isScrolled, 'text-primary-500 text-base bg-white/60 mix-blend-overlay hover:bg-white backdrop-blur-md': !isScrolled }\">\n        <span>회사소개서</span>\n        <i class=\"fa-solid fa-file-arrow-down\"></i>\n      </a>\n    </nav>\n  </header>\n</template>\n",
-      "start": 1707272756851,
-      "end": 1707272757000,
+      "start": 1708047631298,
+      "end": 1708047631650,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1707272757000,
-      "end": 1707272757000,
+      "start": 1708047631650,
+      "end": 1708047631650,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1707272757000,
-      "end": 1707272757000,
+      "start": 1708047631650,
+      "end": 1708047631651,
       "order": "pre"
     },
     {
-      "name": "content-slot",
-      "start": 1707272757000,
-      "end": 1707272757000,
-      "order": "pre"
+      "name": "transform-file",
+      "result": "<script setup lang=\"ts\">\nconst isScrolled = ref(false);\nconst isIndexPage = ref(false);\nconst route = useRoute();\n\nwatch(() => route.path, (newPath) => {\n  isIndexPage.value = newPath === '/';\n  if (!isIndexPage.value) {\n    isScrolled.value = true;\n  }\n}, { immediate: true });\n\nconst handleScroll = () => {\n  isScrolled.value = window.scrollY > 0;\n};\n\nonMounted(() => {\n  if (isIndexPage.value) {\n    window.addEventListener(\"scroll\", handleScroll);\n  }\n});\n\nonUnmounted(() => {\n  window.removeEventListener(\"scroll\", handleScroll);\n});\n\nwatch(isIndexPage, (newValue) => {\n  if (newValue) {\n    window.addEventListener(\"scroll\", handleScroll);\n    handleScroll();\n  } else {\n    window.removeEventListener(\"scroll\", handleScroll);\n  }\n});\n</script>\n\n\n<template>\n  <header :isScrolled=\"isScrolled\" id=\"header\" class=\"top-0 flex items-center lg:justify-between justify-center w-full h-16 py-[3vmin] transition-all ease-in-out delay-100 duration-500 text-white lg:py-2 lg:h-fit z-50\" :class=\"{ 'fixed': isIndexPage, 'sticky': !isIndexPage, 'bg-white text-black-800 lg:px-[3%]': isScrolled, 'bg-transparent text-white lg:px-[10%]': !isScrolled }\">\n    <NuxtLink to=\"/\">\n      <NuxtImg :src=\"isScrolled ? '/img/logo.svg' : '/img/logo_w.svg'\" alt=\"이엔미디어 로고\" id=\"logo\" class=\"mx-auto\" :class=\"{ 'lg:w-36': isScrolled, 'lg:w-56': !isScrolled }\" />\n    </NuxtLink>\n    <nav class=\"rowCenter text-lg font-bold\" :class=\"{ 'space-x-10': isScrolled, 'space-x-14': !isScrolled }\">\n      <NuxtLink to=\"/company\" class=\"navText\" :class=\"{ 'after:hover:border-primary-500 text-black-800 text-base font-medium': isScrolled }\">COMPANY</NuxtLink>\n      <NuxtLink to=\"/service\" class=\"navText\" :class=\"{ 'after:hover:border-primary-500 text-black-800 text-base font-medium': isScrolled }\">SERVICE</NuxtLink>\n      <NuxtLink to=\"/solution\" class=\"navText\" :class=\"{ 'after:hover:border-primary-500 text-black-800 text-base font-medium': isScrolled }\">SOLUTION</NuxtLink>\n      <NuxtLink to=\"/portfolio\" class=\"navText\" :class=\"{ 'after:hover:border-primary-500 text-black-800 text-base font-medium': isScrolled }\">PORTFOLIO</NuxtLink>\n      <NuxtLink to=\"/contact\" class=\"navText\" :class=\"{ 'after:hover:border-primary-500 text-black-800 text-base font-medium': isScrolled }\">CONTACT US</NuxtLink>\n      <a href=\"/2024_ENMEDIA_INTRODUCE.pdf\" download class=\"rowCenter px-6 py-2 space-x-2\" :class=\"{ 'text-white text-sm font-bold bg-primary-500 hover:bg-primary-400': isScrolled, 'text-primary-500 text-base bg-white/60 mix-blend-overlay hover:bg-white backdrop-blur-md': !isScrolled }\">\n        <span>회사소개서</span>\n        <i class=\"fa-solid fa-file-arrow-down\"></i>\n      </a>\n    </nav>\n  </header>\n</template>\n",
+      "start": 1708047631651,
+      "end": 1708047631651,
+      "order": "pre",
+      "sourcemaps": null
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1707272757000,
-      "end": 1707272757000,
+      "start": 1708047631651,
+      "end": 1708047631651,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1707272757000,
-      "end": 1707272757000,
+      "start": 1708047631651,
+      "end": 1708047631651,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1707272757000,
-      "end": 1707272757000,
+      "start": 1708047631651,
+      "end": 1708047631651,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1707272757000,
-      "end": 1707272757000,
+      "start": 1708047631651,
+      "end": 1708047631651,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1707272757000,
-      "end": 1707272757000,
+      "start": 1708047631651,
+      "end": 1708047631651,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "import _sfc_main from \"/Users/hanjeonghun/Documents/GitHub/\\u110B\\u1175\\u110B\\u1166\\u11AB\\u1106\\u1175\\u1103\\u1175\\u110B\\u1165_\\u1112\\u1169\\u11B7\\u1111\\u1166\\u110B\\u1175\\u110C\\u1175FTP/components/Header.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/Users/hanjeonghun/Documents/GitHub/\\u110B\\u1175\\u110B\\u1166\\u11AB\\u1106\\u1175\\u1103\\u1175\\u110B\\u1165_\\u1112\\u1169\\u11B7\\u1111\\u1166\\u110B\\u1175\\u110C\\u1175FTP/components/Header.vue?vue&type=script&setup=true&lang.ts\";\nexport default _sfc_main;\n",
-      "start": 1707272757000,
-      "end": 1707272757109,
+      "start": 1708047631651,
+      "end": 1708047631740,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -68,158 +70,158 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1707272757109,
-      "end": 1707272757109,
+      "start": 1708047631740,
+      "end": 1708047631740,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1707272757109,
-      "end": 1707272757109,
+      "start": 1708047631740,
+      "end": 1708047631740,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1707272757109,
-      "end": 1707272757109,
+      "start": 1708047631740,
+      "end": 1708047631740,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1707272757109,
-      "end": 1707272757109,
+      "start": 1708047631740,
+      "end": 1708047631741,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1707272757109,
-      "end": 1707272757109,
+      "start": 1708047631741,
+      "end": 1708047631741,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1707272757109,
-      "end": 1707272757109,
+      "start": 1708047631741,
+      "end": 1708047631741,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1707272757109,
-      "end": 1707272757109,
+      "start": 1708047631741,
+      "end": 1708047631741,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1707272757109,
-      "end": 1707272757109,
+      "start": 1708047631741,
+      "end": 1708047631741,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1707272757109,
-      "end": 1707272757109,
+      "start": 1708047631741,
+      "end": 1708047631741,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1707272757109,
-      "end": 1707272757109,
+      "start": 1708047631741,
+      "end": 1708047631741,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1707272757109,
-      "end": 1707272757109,
+      "start": 1708047631741,
+      "end": 1708047631741,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1707272757109,
-      "end": 1707272757109,
+      "start": 1708047631741,
+      "end": 1708047631741,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1707272757109,
-      "end": 1707272757109,
+      "start": 1708047631741,
+      "end": 1708047631741,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1707272757109,
-      "end": 1707272757109,
+      "start": 1708047631741,
+      "end": 1708047631741,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1707272757109,
-      "end": 1707272757109,
+      "start": 1708047631741,
+      "end": 1708047631741,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1707272757109,
-      "end": 1707272757109,
+      "start": 1708047631741,
+      "end": 1708047631741,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1707272757109,
-      "end": 1707272757109,
+      "start": 1708047631741,
+      "end": 1708047631741,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1707272757109,
-      "end": 1707272757110,
+      "start": 1708047631741,
+      "end": 1708047631741,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1707272757110,
-      "end": 1707272757110,
+      "start": 1708047631741,
+      "end": 1708047631741,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1707272757110,
-      "end": 1707272757110,
+      "start": 1708047631741,
+      "end": 1708047631741,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1707272757110,
-      "end": 1707272757110,
+      "start": 1708047631741,
+      "end": 1708047631741,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1707272757110,
-      "end": 1707272757110,
+      "start": 1708047631741,
+      "end": 1708047631742,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1707272757110,
-      "end": 1707272757110,
+      "start": 1708047631742,
+      "end": 1708047631742,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1707272757110,
-      "end": 1707272757110,
+      "start": 1708047631742,
+      "end": 1708047631742,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1707272757110,
-      "end": 1707272757110,
+      "start": 1708047631742,
+      "end": 1708047631742,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1707272757110,
-      "end": 1707272757110,
+      "start": 1708047631742,
+      "end": 1708047631742,
       "order": "normal"
     }
   ]

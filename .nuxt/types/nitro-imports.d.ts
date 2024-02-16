@@ -81,7 +81,6 @@ declare global {
   const lazyEventHandler: typeof import('../../node_modules/h3')['lazyEventHandler']
   const nitroPlugin: typeof import('../../node_modules/nitropack/dist/runtime')['nitroPlugin']
   const parseCookies: typeof import('../../node_modules/h3')['parseCookies']
-  const parseMarkdown: typeof import('../../node_modules/@nuxtjs/mdc/dist/runtime/parser')['parseMarkdown']
   const promisifyNodeListener: typeof import('../../node_modules/h3')['promisifyNodeListener']
   const proxyRequest: typeof import('../../node_modules/h3')['proxyRequest']
   const readBody: typeof import('../../node_modules/h3')['readBody']
@@ -137,4 +136,3 @@ export { buildAssetsURL as __buildAssetsURL, publicAssetsURL as __publicAssetsUR
 export { defineAppConfig } from '../../node_modules/nuxt/dist/core/runtime/nitro/config';
 export { defineSitemapEventHandler } from '../../node_modules/@nuxtjs/sitemap/dist/runtime/nitro/composables/defineSitemapEventHandler';
 export { asSitemapUrl } from '../../node_modules/@nuxtjs/sitemap/dist/runtime/nitro/composables/asSitemapUrl';
-export { parseMarkdown } from '../../node_modules/@nuxtjs/mdc/dist/runtime/parser';

@@ -2,7 +2,7 @@ import site from "./site";
 const { name, description, url, keywords, defaultLocale, identity, trailingSlash, titleSeparator } = site;
 
 export default defineNuxtConfig({
-  modules: ["@vueuse/nuxt", "@nuxt/image", "@nuxtjs/seo", "@nuxtjs/critters", "@nuxt/content", "@nuxtjs/sitemap"],
+  modules: ["@vueuse/nuxt", "@nuxt/image", "@nuxtjs/seo", "@nuxtjs/critters", "@nuxtjs/sitemap"],
   devtools: { enabled: true },
   css: ["~/assets/css/tailwind.css"],
   app: {
@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     },
   },
   image: {
-    dir : "public",
+    dir: "public",
     format: ["webp, png, jpg"],
   },
   postcss: {
@@ -41,6 +41,6 @@ export default defineNuxtConfig({
     splash: true,
   },
   ogImage: {
-    enabled: false
+    enabled: false,
   },
 });
