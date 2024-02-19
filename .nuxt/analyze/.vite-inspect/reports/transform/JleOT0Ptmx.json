@@ -4,46 +4,38 @@
     {
       "name": "vite:vue",
       "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nimport site from \"@/site\";\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'HeadAndMeta',\n  setup(__props) {\n\nconst { name, description, url, author, keywords } = site;\n\nconst route = useRoute();\nconst pageTitle = computed(() => {\n  const currentPath = route.path;\n  const navItem = site.nav.find(item => item.link === currentPath);\n  return navItem ? `${navItem.text}` : site.name;\n});\nconst theDescription = computed(() => (route.meta.description || description) as string);\nconst title = computed(() => route.meta.title);\nconst theTitle = computed(() => (title.value ? `${title.value} - ${name}` : name));\n\nwatch(() => route.path, () => {\n    useHead({\n      title: pageTitle.value,\n      htmlAttrs: { lang: \"ko\" },\n\n      // 메타태그 설정\n      meta: [\n        { charset: \"UTF-8\" },\n        { name: \"viewport\", content: \"width=device-width, initial-scale=1.0\" },\n        {\n          name: \"keywords\",\n          content: keywords,\n        },\n        {\n          property: \"og:image\",\n          content: \"/og_img.png\",\n        },\n        // 파비콘 설정\n        { name: \"msapplication-TileColor\", content: \"#ffffff\" },\n        {\n          name: \"msapplication-config\",\n          content: \"/favicon/browserconfig.xml\",\n        },\n        { name: \"theme-color\", content: \"#ffffff\" },\n      ],\n\n      link: [\n        // canonical 설정\n        {\n          rel: \"canonical\",\n          href: url,\n        },\n        // 링크 설정\n        {\n          rel: \"stylesheet\",\n          href: \"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css\",\n        },\n        // 파비콘 설정\n        {\n          rel: \"apple-touch-icon\",\n          sizes: \"180x180\",\n          href: \"/favicon/apple-touch-icon.png\",\n        },\n        {\n          rel: \"icon\",\n          type: \"image/png\",\n          sizes: \"32x32\",\n          href: \"/favicon/favicon-32x32.png\",\n        },\n        {\n          rel: \"icon\",\n          type: \"image/png\",\n          sizes: \"16x16\",\n          href: \"/favicon/favicon-16x16.png\",\n        },\n        { rel: \"manifest\", href: \"/favicon/site.webmanifest\" },\n        {\n          rel: \"mask-icon\",\n          href: \"/favicon/safari-pinned-tab.svg\",\n          color: \"#ffffff\",\n        },\n        { rel: \"shortcut icon\", href: \"/favicon/favicon.ico\" },\n      ],\n\n      // 스크립트 설정\n      script: [],\n    });\n\n    useServerSeoMeta({\n      charset: \"utf-8\",\n      author,\n      viewport: \"width=device-width, initial-scale=1\",\n      keywords: keywords,\n      description: theDescription,\n      ogTitle: theTitle,\n      ogDescription: description,\n      ogType: \"website\",\n      ogImageAlt: theTitle,\n      ogUrl: url,\n      ogSiteName: theTitle,\n      twitterTitle: theTitle.value,\n      twitterDescription: theDescription,\n      twitterImageAlt: theTitle.value,\n    });\n  },\n  { immediate: true },\n);\n\nreturn (_ctx: any,_cache: any) => {\n  return (_openBlock(), _createElementBlock(\"div\"))\n}\n}\n\n})",
-      "start": 1708047632129,
-      "end": 1708047632129
+      "start": 1708316410337,
+      "end": 1708316410338
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1708047632129,
-      "end": 1708047632129,
+      "start": 1708316410338,
+      "end": 1708316410338,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1708047632129,
-      "end": 1708047632129,
+      "start": 1708316410338,
+      "end": 1708316410338,
       "order": "pre"
     },
     {
-      "name": "transform-file",
-      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nimport site from \"@/site\";\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'HeadAndMeta',\n  setup(__props) {\n\nconst { name, description, url, author, keywords } = site;\n\nconst route = useRoute();\nconst pageTitle = computed(() => {\n  const currentPath = route.path;\n  const navItem = site.nav.find(item => item.link === currentPath);\n  return navItem ? `${navItem.text}` : site.name;\n});\nconst theDescription = computed(() => (route.meta.description || description) as string);\nconst title = computed(() => route.meta.title);\nconst theTitle = computed(() => (title.value ? `${title.value} - ${name}` : name));\n\nwatch(() => route.path, () => {\n    useHead({\n      title: pageTitle.value,\n      htmlAttrs: { lang: \"ko\" },\n\n      // 메타태그 설정\n      meta: [\n        { charset: \"UTF-8\" },\n        { name: \"viewport\", content: \"width=device-width, initial-scale=1.0\" },\n        {\n          name: \"keywords\",\n          content: keywords,\n        },\n        {\n          property: \"og:image\",\n          content: \"/og_img.png\",\n        },\n        // 파비콘 설정\n        { name: \"msapplication-TileColor\", content: \"#ffffff\" },\n        {\n          name: \"msapplication-config\",\n          content: \"/favicon/browserconfig.xml\",\n        },\n        { name: \"theme-color\", content: \"#ffffff\" },\n      ],\n\n      link: [\n        // canonical 설정\n        {\n          rel: \"canonical\",\n          href: url,\n        },\n        // 링크 설정\n        {\n          rel: \"stylesheet\",\n          href: \"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css\",\n        },\n        // 파비콘 설정\n        {\n          rel: \"apple-touch-icon\",\n          sizes: \"180x180\",\n          href: \"/favicon/apple-touch-icon.png\",\n        },\n        {\n          rel: \"icon\",\n          type: \"image/png\",\n          sizes: \"32x32\",\n          href: \"/favicon/favicon-32x32.png\",\n        },\n        {\n          rel: \"icon\",\n          type: \"image/png\",\n          sizes: \"16x16\",\n          href: \"/favicon/favicon-16x16.png\",\n        },\n        { rel: \"manifest\", href: \"/favicon/site.webmanifest\" },\n        {\n          rel: \"mask-icon\",\n          href: \"/favicon/safari-pinned-tab.svg\",\n          color: \"#ffffff\",\n        },\n        { rel: \"shortcut icon\", href: \"/favicon/favicon.ico\" },\n      ],\n\n      // 스크립트 설정\n      script: [],\n    });\n\n    useServerSeoMeta({\n      charset: \"utf-8\",\n      author,\n      viewport: \"width=device-width, initial-scale=1\",\n      keywords: keywords,\n      description: theDescription,\n      ogTitle: theTitle,\n      ogDescription: description,\n      ogType: \"website\",\n      ogImageAlt: theTitle,\n      ogUrl: url,\n      ogSiteName: theTitle,\n      twitterTitle: theTitle.value,\n      twitterDescription: theDescription,\n      twitterImageAlt: theTitle.value,\n    });\n  },\n  { immediate: true },\n);\n\nreturn (_ctx: any,_cache: any) => {\n  return (_openBlock(), _createElementBlock(\"div\"))\n}\n}\n\n})",
-      "start": 1708047632129,
-      "end": 1708047632129,
-      "order": "pre",
-      "sourcemaps": null
-    },
-    {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1708047632129,
-      "end": 1708047632129,
+      "start": 1708316410338,
+      "end": 1708316410338,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1708047632129,
-      "end": 1708047632129,
+      "start": 1708316410338,
+      "end": 1708316410338,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
       "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\";\nimport site from \"@/site\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"HeadAndMeta\",\n  setup(__props) {\n    const { name, description, url, author, keywords } = site;\n    const route = useRoute();\n    const pageTitle = computed(() => {\n      const currentPath = route.path;\n      const navItem = site.nav.find((item) => item.link === currentPath);\n      return navItem ? `${navItem.text}` : site.name;\n    });\n    const theDescription = computed(() => route.meta.description || description);\n    const title = computed(() => route.meta.title);\n    const theTitle = computed(() => title.value ? `${title.value} - ${name}` : name);\n    watch(\n      () => route.path,\n      () => {\n        useHead({\n          title: pageTitle.value,\n          htmlAttrs: { lang: \"ko\" },\n          // 메타태그 설정\n          meta: [\n            { charset: \"UTF-8\" },\n            { name: \"viewport\", content: \"width=device-width, initial-scale=1.0\" },\n            {\n              name: \"keywords\",\n              content: keywords\n            },\n            {\n              property: \"og:image\",\n              content: \"/og_img.png\"\n            },\n            // 파비콘 설정\n            { name: \"msapplication-TileColor\", content: \"#ffffff\" },\n            {\n              name: \"msapplication-config\",\n              content: \"/favicon/browserconfig.xml\"\n            },\n            { name: \"theme-color\", content: \"#ffffff\" }\n          ],\n          link: [\n            // canonical 설정\n            {\n              rel: \"canonical\",\n              href: url\n            },\n            // 링크 설정\n            {\n              rel: \"stylesheet\",\n              href: \"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css\"\n            },\n            // 파비콘 설정\n            {\n              rel: \"apple-touch-icon\",\n              sizes: \"180x180\",\n              href: \"/favicon/apple-touch-icon.png\"\n            },\n            {\n              rel: \"icon\",\n              type: \"image/png\",\n              sizes: \"32x32\",\n              href: \"/favicon/favicon-32x32.png\"\n            },\n            {\n              rel: \"icon\",\n              type: \"image/png\",\n              sizes: \"16x16\",\n              href: \"/favicon/favicon-16x16.png\"\n            },\n            { rel: \"manifest\", href: \"/favicon/site.webmanifest\" },\n            {\n              rel: \"mask-icon\",\n              href: \"/favicon/safari-pinned-tab.svg\",\n              color: \"#ffffff\"\n            },\n            { rel: \"shortcut icon\", href: \"/favicon/favicon.ico\" }\n          ],\n          // 스크립트 설정\n          script: []\n        });\n        useServerSeoMeta({\n          charset: \"utf-8\",\n          author,\n          viewport: \"width=device-width, initial-scale=1\",\n          keywords,\n          description: theDescription,\n          ogTitle: theTitle,\n          ogDescription: description,\n          ogType: \"website\",\n          ogImageAlt: theTitle,\n          ogUrl: url,\n          ogSiteName: theTitle,\n          twitterTitle: theTitle.value,\n          twitterDescription: theDescription,\n          twitterImageAlt: theTitle.value\n        });\n      },\n      { immediate: true }\n    );\n    return (_ctx, _cache) => {\n      return _openBlock(), _createElementBlock(\"div\");\n    };\n  }\n});\n",
-      "start": 1708047632129,
-      "end": 1708047632156,
+      "start": 1708316410338,
+      "end": 1708316410443,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -59,123 +51,123 @@
     },
     {
       "name": "vite:json",
-      "start": 1708047632156,
-      "end": 1708047632156,
+      "start": 1708316410443,
+      "end": 1708316410443,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1708047632156,
-      "end": 1708047632156,
+      "start": 1708316410443,
+      "end": 1708316410443,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1708047632156,
-      "end": 1708047632156,
+      "start": 1708316410443,
+      "end": 1708316410443,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1708047632156,
-      "end": 1708047632156,
+      "start": 1708316410443,
+      "end": 1708316410443,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708047632156,
-      "end": 1708047632156,
+      "start": 1708316410443,
+      "end": 1708316410443,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1708047632156,
-      "end": 1708047632156,
+      "start": 1708316410443,
+      "end": 1708316410443,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1708047632156,
-      "end": 1708047632156,
+      "start": 1708316410443,
+      "end": 1708316410443,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1708047632156,
-      "end": 1708047632156,
+      "start": 1708316410443,
+      "end": 1708316410443,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708047632156,
-      "end": 1708047632156,
+      "start": 1708316410443,
+      "end": 1708316410443,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1708047632156,
-      "end": 1708047632156,
+      "start": 1708316410443,
+      "end": 1708316410443,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1708047632156,
-      "end": 1708047632156,
+      "start": 1708316410443,
+      "end": 1708316410443,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1708047632156,
-      "end": 1708047632156,
+      "start": 1708316410443,
+      "end": 1708316410443,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1708047632156,
-      "end": 1708047632156,
+      "start": 1708316410443,
+      "end": 1708316410443,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1708047632156,
-      "end": 1708047632156,
+      "start": 1708316410443,
+      "end": 1708316410443,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1708047632156,
-      "end": 1708047632156,
+      "start": 1708316410443,
+      "end": 1708316410443,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1708047632156,
-      "end": 1708047632156,
+      "start": 1708316410443,
+      "end": 1708316410443,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1708047632156,
-      "end": 1708047632156,
+      "start": 1708316410443,
+      "end": 1708316410443,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1708047632156,
-      "end": 1708047632156,
+      "start": 1708316410443,
+      "end": 1708316410443,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1708047632156,
-      "end": 1708047632156,
+      "start": 1708316410443,
+      "end": 1708316410443,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
       "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\";\nimport site from \"@/site\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"HeadAndMeta\",\n  setup(__props) {\n    const { name, description, url, author, keywords } = site;\n    const route = useRoute();\n    const pageTitle = computed(() => {\n      const currentPath = route.path;\n      const navItem = site.nav.find((item) => item.link === currentPath);\n      return navItem ? `${navItem.text}` : site.name;\n    });\n    const theDescription = computed(() => route.meta.description || description);\n    const title = computed(() => route.meta.title);\n    const theTitle = computed(() => title.value ? `${title.value} - ${name}` : name);\n    watch(\n      () => route.path,\n      () => {\n        useHead({\n          title: pageTitle.value,\n          htmlAttrs: { lang: \"ko\" },\n          // 메타태그 설정\n          meta: [\n            { charset: \"UTF-8\" },\n            { name: \"viewport\", content: \"width=device-width, initial-scale=1.0\" },\n            {\n              name: \"keywords\",\n              content: keywords\n            },\n            {\n              property: \"og:image\",\n              content: \"/og_img.png\"\n            },\n            // 파비콘 설정\n            { name: \"msapplication-TileColor\", content: \"#ffffff\" },\n            {\n              name: \"msapplication-config\",\n              content: \"/favicon/browserconfig.xml\"\n            },\n            { name: \"theme-color\", content: \"#ffffff\" }\n          ],\n          link: [\n            // canonical 설정\n            {\n              rel: \"canonical\",\n              href: url\n            },\n            // 링크 설정\n            {\n              rel: \"stylesheet\",\n              href: \"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css\"\n            },\n            // 파비콘 설정\n            {\n              rel: \"apple-touch-icon\",\n              sizes: \"180x180\",\n              href: \"/favicon/apple-touch-icon.png\"\n            },\n            {\n              rel: \"icon\",\n              type: \"image/png\",\n              sizes: \"32x32\",\n              href: \"/favicon/favicon-32x32.png\"\n            },\n            {\n              rel: \"icon\",\n              type: \"image/png\",\n              sizes: \"16x16\",\n              href: \"/favicon/favicon-16x16.png\"\n            },\n            { rel: \"manifest\", href: \"/favicon/site.webmanifest\" },\n            {\n              rel: \"mask-icon\",\n              href: \"/favicon/safari-pinned-tab.svg\",\n              color: \"#ffffff\"\n            },\n            { rel: \"shortcut icon\", href: \"/favicon/favicon.ico\" }\n          ],\n          // 스크립트 설정\n          script: []\n        });\n        useServerHead({\n  meta: [\n    { charset: \"utf-8\" },\n    { name: 'author', content: author },\n    { name: 'viewport', content: \"width=device-width, initial-scale=1\" },\n    { name: 'keywords', content: keywords },\n    { name: 'description', content: theDescription },\n    { property: 'og:title', content: theTitle },\n    { property: 'og:description', content: description },\n    { property: 'og:type', content: \"website\" },\n    { property: 'og:image:alt', content: theTitle },\n    { property: 'og:url', content: url },\n    { property: 'og:site_name', content: theTitle },\n    { name: 'twitter:title', content: theTitle.value },\n    { name: 'twitter:description', content: theDescription },\n    { name: 'twitter:image:alt', content: theTitle.value },\n  ]\n});\n      },\n      { immediate: true }\n    );\n    return (_ctx, _cache) => {\n      return _openBlock(), _createElementBlock(\"div\");\n    };\n  }\n});\n",
-      "start": 1708047632156,
-      "end": 1708047632158,
+      "start": 1708316410443,
+      "end": 1708316410445,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -192,8 +184,8 @@
     {
       "name": "nuxt:imports-transform",
       "result": "import { useRoute } from '#app/composables/router';\nimport { computed, watch } from 'vue';\nimport { useHead, useServerHead } from '@unhead/vue';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\";\nimport site from \"@/site\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"HeadAndMeta\",\n  setup(__props) {\n    const { name, description, url, author, keywords } = site;\n    const route = useRoute();\n    const pageTitle = computed(() => {\n      const currentPath = route.path;\n      const navItem = site.nav.find((item) => item.link === currentPath);\n      return navItem ? `${navItem.text}` : site.name;\n    });\n    const theDescription = computed(() => route.meta.description || description);\n    const title = computed(() => route.meta.title);\n    const theTitle = computed(() => title.value ? `${title.value} - ${name}` : name);\n    watch(\n      () => route.path,\n      () => {\n        useHead({\n          title: pageTitle.value,\n          htmlAttrs: { lang: \"ko\" },\n          // 메타태그 설정\n          meta: [\n            { charset: \"UTF-8\" },\n            { name: \"viewport\", content: \"width=device-width, initial-scale=1.0\" },\n            {\n              name: \"keywords\",\n              content: keywords\n            },\n            {\n              property: \"og:image\",\n              content: \"/og_img.png\"\n            },\n            // 파비콘 설정\n            { name: \"msapplication-TileColor\", content: \"#ffffff\" },\n            {\n              name: \"msapplication-config\",\n              content: \"/favicon/browserconfig.xml\"\n            },\n            { name: \"theme-color\", content: \"#ffffff\" }\n          ],\n          link: [\n            // canonical 설정\n            {\n              rel: \"canonical\",\n              href: url\n            },\n            // 링크 설정\n            {\n              rel: \"stylesheet\",\n              href: \"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css\"\n            },\n            // 파비콘 설정\n            {\n              rel: \"apple-touch-icon\",\n              sizes: \"180x180\",\n              href: \"/favicon/apple-touch-icon.png\"\n            },\n            {\n              rel: \"icon\",\n              type: \"image/png\",\n              sizes: \"32x32\",\n              href: \"/favicon/favicon-32x32.png\"\n            },\n            {\n              rel: \"icon\",\n              type: \"image/png\",\n              sizes: \"16x16\",\n              href: \"/favicon/favicon-16x16.png\"\n            },\n            { rel: \"manifest\", href: \"/favicon/site.webmanifest\" },\n            {\n              rel: \"mask-icon\",\n              href: \"/favicon/safari-pinned-tab.svg\",\n              color: \"#ffffff\"\n            },\n            { rel: \"shortcut icon\", href: \"/favicon/favicon.ico\" }\n          ],\n          // 스크립트 설정\n          script: []\n        });\n        useServerHead({\n  meta: [\n    { charset: \"utf-8\" },\n    { name: 'author', content: author },\n    { name: 'viewport', content: \"width=device-width, initial-scale=1\" },\n    { name: 'keywords', content: keywords },\n    { name: 'description', content: theDescription },\n    { property: 'og:title', content: theTitle },\n    { property: 'og:description', content: description },\n    { property: 'og:type', content: \"website\" },\n    { property: 'og:image:alt', content: theTitle },\n    { property: 'og:url', content: url },\n    { property: 'og:site_name', content: theTitle },\n    { name: 'twitter:title', content: theTitle.value },\n    { name: 'twitter:description', content: theDescription },\n    { name: 'twitter:image:alt', content: theTitle.value },\n  ]\n});\n      },\n      { immediate: true }\n    );\n    return (_ctx, _cache) => {\n      return _openBlock(), _createElementBlock(\"div\");\n    };\n  }\n});\n",
-      "start": 1708047632158,
-      "end": 1708047632160,
+      "start": 1708316410445,
+      "end": 1708316410446,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -206,51 +198,51 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1708047632160,
-      "end": 1708047632160,
+      "start": 1708316410446,
+      "end": 1708316410446,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1708047632160,
-      "end": 1708047632160,
+      "start": 1708316410446,
+      "end": 1708316410446,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1708047632160,
-      "end": 1708047632160,
+      "start": 1708316410446,
+      "end": 1708316410446,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1708047632160,
-      "end": 1708047632160,
+      "start": 1708316410446,
+      "end": 1708316410446,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1708047632160,
-      "end": 1708047632160,
+      "start": 1708316410446,
+      "end": 1708316410446,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
       "result": "import { useRoute } from '#app/composables/router';\nimport { computed, watch } from 'vue';\nimport { useHead, useServerHead } from '@unhead/vue';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\";\nimport site from \"@/site\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"HeadAndMeta\",\n  setup(__props) {\n    const { name, description, url, author, keywords } = site;\n    const route = useRoute();\n    const pageTitle = computed(() => {\n      const currentPath = route.path;\n      const navItem = site.nav.find((item) => item.link === currentPath);\n      return navItem ? `${navItem.text}` : site.name;\n    });\n    const theDescription = computed(() => route.meta.description || description);\n    const title = computed(() => route.meta.title);\n    const theTitle = computed(() => title.value ? `${title.value} - ${name}` : name);\n    watch(\n      () => route.path,\n      () => {\n        useHead({\n          title: pageTitle.value,\n          htmlAttrs: { lang: \"ko\" },\n          // 메타태그 설정\n          meta: [\n            { charset: \"UTF-8\" },\n            { name: \"viewport\", content: \"width=device-width, initial-scale=1.0\" },\n            {\n              name: \"keywords\",\n              content: keywords\n            },\n            {\n              property: \"og:image\",\n              content: \"/og_img.png\"\n            },\n            // 파비콘 설정\n            { name: \"msapplication-TileColor\", content: \"#ffffff\" },\n            {\n              name: \"msapplication-config\",\n              content: \"/favicon/browserconfig.xml\"\n            },\n            { name: \"theme-color\", content: \"#ffffff\" }\n          ],\n          link: [\n            // canonical 설정\n            {\n              rel: \"canonical\",\n              href: url\n            },\n            // 링크 설정\n            {\n              rel: \"stylesheet\",\n              href: \"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css\"\n            },\n            // 파비콘 설정\n            {\n              rel: \"apple-touch-icon\",\n              sizes: \"180x180\",\n              href: \"/favicon/apple-touch-icon.png\"\n            },\n            {\n              rel: \"icon\",\n              type: \"image/png\",\n              sizes: \"32x32\",\n              href: \"/favicon/favicon-32x32.png\"\n            },\n            {\n              rel: \"icon\",\n              type: \"image/png\",\n              sizes: \"16x16\",\n              href: \"/favicon/favicon-16x16.png\"\n            },\n            { rel: \"manifest\", href: \"/favicon/site.webmanifest\" },\n            {\n              rel: \"mask-icon\",\n              href: \"/favicon/safari-pinned-tab.svg\",\n              color: \"#ffffff\"\n            },\n            { rel: \"shortcut icon\", href: \"/favicon/favicon.ico\" }\n          ],\n          // 스크립트 설정\n          script: []\n        });\n         false && /*@__PURE__*/ useServerHead({\n  meta: [\n    { charset: \"utf-8\" },\n    { name: 'author', content: author },\n    { name: 'viewport', content: \"width=device-width, initial-scale=1\" },\n    { name: 'keywords', content: keywords },\n    { name: 'description', content: theDescription },\n    { property: 'og:title', content: theTitle },\n    { property: 'og:description', content: description },\n    { property: 'og:type', content: \"website\" },\n    { property: 'og:image:alt', content: theTitle },\n    { property: 'og:url', content: url },\n    { property: 'og:site_name', content: theTitle },\n    { name: 'twitter:title', content: theTitle.value },\n    { name: 'twitter:description', content: theDescription },\n    { name: 'twitter:image:alt', content: theTitle.value },\n  ]\n});\n      },\n      { immediate: true }\n    );\n    return (_ctx, _cache) => {\n      return _openBlock(), _createElementBlock(\"div\");\n    };\n  }\n});\n",
-      "start": 1708047632160,
-      "end": 1708047632160,
+      "start": 1708316410446,
+      "end": 1708316410446,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1708047632160,
-      "end": 1708047632160,
+      "start": 1708316410446,
+      "end": 1708316410447,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1708047632160,
-      "end": 1708047632160,
+      "start": 1708316410447,
+      "end": 1708316410447,
       "order": "normal"
     }
   ]

@@ -38,7 +38,8 @@ watch(isIndexPage, (newValue) => {
 <template>
   <header :isScrolled="isScrolled" id="header" class="top-0 flex items-center lg:justify-between justify-center w-full h-16 py-[3vmin] transition-all ease-in-out delay-100 duration-500 text-white lg:py-2 lg:h-fit z-50" :class="{ 'fixed': isIndexPage, 'sticky': !isIndexPage, 'bg-white text-black-800 lg:px-[3%]': isScrolled, 'bg-transparent text-white lg:px-[10%]': !isScrolled }">
     <NuxtLink to="/">
-      <NuxtImg :src="isScrolled ? '/img/logo.svg' : '/img/logo_w.svg'" alt="이엔미디어 로고" id="logo" class="mx-auto" :class="{ 'lg:w-36': isScrolled, 'lg:w-56': !isScrolled }" />
+      <img v-if="isScrolled" src="~/assets/img/logo.svg" alt="이엔미디어 로고" id="logo" class="lg:w-36 mx-auto" />
+      <img v-else src="~/assets/img/logo_w.svg" alt="이엔미디어 로고" id="logo" class="lg:w-56 mx-auto" />
     </NuxtLink>
     <nav class="rowCenter text-lg font-bold" :class="{ 'space-x-10': isScrolled, 'space-x-14': !isScrolled }">
       <NuxtLink to="/company" class="navText" :class="{ 'after:hover:border-primary-500 text-black-800 text-base font-medium': isScrolled }">COMPANY</NuxtLink>

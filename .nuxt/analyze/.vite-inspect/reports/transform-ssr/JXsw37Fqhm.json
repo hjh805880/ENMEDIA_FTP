@@ -4,217 +4,201 @@
     {
       "name": "vite:load-fallback",
       "result": "import { withoutTrailingSlash } from \"ufo\";\nimport {\n  computed,\n  defineNuxtPlugin,\n  useHead,\n  useRoute\n} from \"#imports\";\nfunction titleCase(s) {\n  return s.replaceAll(\"-\", \" \").replace(/\\w\\S*/g, (w) => w.charAt(0).toUpperCase() + w.substr(1).toLowerCase());\n}\nexport default defineNuxtPlugin({\n  name: \"nuxt-seo:fallback-titles\",\n  setup() {\n    const route = useRoute();\n    const title = computed(() => {\n      if (typeof route.meta?.title === \"string\")\n        return route.meta?.title;\n      const path = withoutTrailingSlash(route.path || \"/\");\n      const lastSegment = path.split(\"/\").pop();\n      return lastSegment ? titleCase(lastSegment) : null;\n    });\n    const minimalPriority = {\n      // give nuxt.config values higher priority\n      tagPriority: 101\n    };\n    useHead({ title: () => title.value }, minimalPriority);\n  }\n});\n",
-      "start": 1708047632891,
-      "end": 1708047633251,
+      "start": 1708316411175,
+      "end": 1708316411494,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411494,
+      "end": 1708316411494,
       "order": "pre"
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411494,
+      "end": 1708316411494,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411494,
+      "end": 1708316411494,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411494,
+      "end": 1708316411494,
       "order": "pre"
-    },
-    {
-      "name": "transform-file",
-      "result": "import { withoutTrailingSlash } from \"ufo\";\nimport {\n  computed,\n  defineNuxtPlugin,\n  useHead,\n  useRoute\n} from \"#imports\";\nfunction titleCase(s) {\n  return s.replaceAll(\"-\", \" \").replace(/\\w\\S*/g, (w) => w.charAt(0).toUpperCase() + w.substr(1).toLowerCase());\n}\nexport default defineNuxtPlugin({\n  name: \"nuxt-seo:fallback-titles\",\n  setup() {\n    const route = useRoute();\n    const title = computed(() => {\n      if (typeof route.meta?.title === \"string\")\n        return route.meta?.title;\n      const path = withoutTrailingSlash(route.path || \"/\");\n      const lastSegment = path.split(\"/\").pop();\n      return lastSegment ? titleCase(lastSegment) : null;\n    });\n    const minimalPriority = {\n      // give nuxt.config values higher priority\n      tagPriority: 101\n    };\n    useHead({ title: () => title.value }, minimalPriority);\n  }\n});\n",
-      "start": 1708047633251,
-      "end": 1708047633251,
-      "order": "pre",
-      "sourcemaps": null
-    },
-    {
-      "name": "transform-file",
-      "result": "import { withoutTrailingSlash } from \"ufo\";\nimport {\n  computed,\n  defineNuxtPlugin,\n  useHead,\n  useRoute\n} from \"#imports\";\nfunction titleCase(s) {\n  return s.replaceAll(\"-\", \" \").replace(/\\w\\S*/g, (w) => w.charAt(0).toUpperCase() + w.substr(1).toLowerCase());\n}\nexport default defineNuxtPlugin({\n  name: \"nuxt-seo:fallback-titles\",\n  setup() {\n    const route = useRoute();\n    const title = computed(() => {\n      if (typeof route.meta?.title === \"string\")\n        return route.meta?.title;\n      const path = withoutTrailingSlash(route.path || \"/\");\n      const lastSegment = path.split(\"/\").pop();\n      return lastSegment ? titleCase(lastSegment) : null;\n    });\n    const minimalPriority = {\n      // give nuxt.config values higher priority\n      tagPriority: 101\n    };\n    useHead({ title: () => title.value }, minimalPriority);\n  }\n});\n",
-      "start": 1708047633251,
-      "end": 1708047633251,
-      "order": "pre",
-      "sourcemaps": null
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411494,
+      "end": 1708316411494,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411494,
+      "end": 1708316411494,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411494,
+      "end": 1708316411494,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411494,
+      "end": 1708316411494,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411494,
+      "end": 1708316411494,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411494,
+      "end": 1708316411494,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411494,
+      "end": 1708316411494,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411494,
+      "end": 1708316411494,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411494,
+      "end": 1708316411494,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411494,
+      "end": 1708316411495,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411494,
+      "end": 1708316411495,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411495,
+      "end": 1708316411495,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411495,
+      "end": 1708316411495,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411495,
+      "end": 1708316411495,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411495,
+      "end": 1708316411495,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411495,
+      "end": 1708316411495,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411495,
+      "end": 1708316411495,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411495,
+      "end": 1708316411495,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411495,
+      "end": 1708316411495,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411495,
+      "end": 1708316411495,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411495,
+      "end": 1708316411495,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411495,
+      "end": 1708316411495,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411495,
+      "end": 1708316411495,
       "order": "post"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411495,
+      "end": 1708316411495,
       "order": "post"
     },
     {
       "name": "unhead:remove-server-composables",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411495,
+      "end": 1708316411495,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411495,
+      "end": 1708316411495,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1708047633251,
-      "end": 1708047633251,
+      "start": 1708316411495,
+      "end": 1708316411495,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { computed } from 'vue';\nimport { defineNuxtPlugin } from '#app/nuxt';\nimport { useHead } from '@unhead/vue';\nimport { useRoute } from '#app/composables/router';\nimport { withoutTrailingSlash } from \"ufo\";\nfunction titleCase(s) {\n  return s.replaceAll(\"-\", \" \").replace(/\\w\\S*/g, (w) => w.charAt(0).toUpperCase() + w.substr(1).toLowerCase());\n}\nexport default defineNuxtPlugin({\n  name: \"nuxt-seo:fallback-titles\",\n  setup() {\n    const route = useRoute();\n    const title = computed(() => {\n      if (typeof route.meta?.title === \"string\")\n        return route.meta?.title;\n      const path = withoutTrailingSlash(route.path || \"/\");\n      const lastSegment = path.split(\"/\").pop();\n      return lastSegment ? titleCase(lastSegment) : null;\n    });\n    const minimalPriority = {\n      // give nuxt.config values higher priority\n      tagPriority: 101\n    };\n    useHead({ title: () => title.value }, minimalPriority);\n  }\n});\n",
-      "start": 1708047633251,
-      "end": 1708047633252,
+      "start": 1708316411495,
+      "end": 1708316411495,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -228,8 +212,8 @@
     {
       "name": "nuxt:imports-transform",
       "result": "import { computed } from 'vue';\nimport { defineNuxtPlugin } from '#app/nuxt';\nimport { useHead } from '@unhead/vue';\nimport { useRoute } from '#app/composables/router';\nimport { withoutTrailingSlash } from \"ufo\";\nfunction titleCase(s) {\n  return s.replaceAll(\"-\", \" \").replace(/\\w\\S*/g, (w) => w.charAt(0).toUpperCase() + w.substr(1).toLowerCase());\n}\nexport default defineNuxtPlugin({\n  name: \"nuxt-seo:fallback-titles\",\n  setup() {\n    const route = useRoute();\n    const title = computed(() => {\n      if (typeof route.meta?.title === \"string\")\n        return route.meta?.title;\n      const path = withoutTrailingSlash(route.path || \"/\");\n      const lastSegment = path.split(\"/\").pop();\n      return lastSegment ? titleCase(lastSegment) : null;\n    });\n    const minimalPriority = {\n      // give nuxt.config values higher priority\n      tagPriority: 101\n    };\n    useHead({ title: () => title.value }, minimalPriority);\n  }\n});\n",
-      "start": 1708047633251,
-      "end": 1708047633252,
+      "start": 1708316411495,
+      "end": 1708316411495,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -242,56 +226,56 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1708047633252,
-      "end": 1708047633252,
+      "start": 1708316411495,
+      "end": 1708316411496,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1708047633252,
-      "end": 1708047633252,
+      "start": 1708316411495,
+      "end": 1708316411496,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1708047633252,
-      "end": 1708047633252,
+      "start": 1708316411496,
+      "end": 1708316411496,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1708047633252,
-      "end": 1708047633252,
+      "start": 1708316411496,
+      "end": 1708316411496,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-template",
-      "start": 1708047633252,
-      "end": 1708047633252,
+      "start": 1708316411496,
+      "end": 1708316411496,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1708047633252,
-      "end": 1708047633252,
+      "start": 1708316411496,
+      "end": 1708316411496,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1708047633252,
-      "end": 1708047633252,
+      "start": 1708316411496,
+      "end": 1708316411496,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1708047633252,
-      "end": 1708047633252,
+      "start": 1708316411496,
+      "end": 1708316411496,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1708047633252,
-      "end": 1708047633252,
+      "start": 1708316411496,
+      "end": 1708316411496,
       "order": "normal"
     }
   ]

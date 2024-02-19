@@ -30,7 +30,7 @@ onUnmounted(() => {
       </video>
       <div class="absolute lg:top-[32%] left-0 lg:left-[15%] z-30 col-center w-fit mainTextAfter">
         <h1 class="sr-only">주식회사 이엔미디어</h1>
-        <NuxtImg width="600px" src="/img/main_visual_text.webp" alt="이엔미디어" class="lg:w-[calc(83%+1.25rem)] w-[90%]" />
+        <img src="~/assets/img/main_visual_text.webp" alt="이엔미디어" class="lg:w-[calc(83%+1.25rem)] w-[90%]" />
       </div>
       <div class="rowCenter space-x-3 absolute lg:top-[85%] left-0 lg:left-[calc(15%+12px)] z-30">
         <div class="mainScrollMouse"></div>
@@ -40,7 +40,7 @@ onUnmounted(() => {
   </section>
 
   <!-- 섹션2 시작 -->
-  <section id="section2" class="text-black-800 w-screen overflow-hidden bg-[url('/img/section2_visual_bg.webp')] bg-cover text-center bg-center bg-no-repeat">
+  <section id="section2" class="text-black-800 w-screen overflow-hidden bg-[url('~/assets/img/section2_visual_bg.webp')] bg-cover text-center bg-center bg-no-repeat">
     <div class="max-w-gui space-y-14 px-12 py-32 mx-auto">
       <div data-aos="fade-up" data-aos-duration="1000" class="colCenter space-y-4">
         <h2 class="text-4xl font-extrabold">전문적이고 체계적인 <span class="text-primary-500">최적의 솔루션</span>을 제공합니다</h2>
@@ -68,7 +68,7 @@ onUnmounted(() => {
   </section>
 
   <!-- 섹션3 시작 -->
-  <section id="section3" class="text-white w-screen overflow-hidden bg-fixed bg-[url('/img/section3_visual_bg.webp')] bg-cover bg-center text-center bg-no-repeat">
+  <section id="section3" class="text-white w-screen overflow-hidden bg-fixed bg-[url('~/assets/img/section3_visual_bg.webp')] bg-cover bg-center text-center bg-no-repeat">
     <div class="max-w-gui space-y-14 colCenter px-12 py-32 mx-auto">
       <div data-aos="fade-up" data-aos-duration="1000" class="colCenter space-y-4">
         <h2 class="pb-4 text-4xl font-extrabold">PORTFOLIO</h2>
@@ -81,7 +81,7 @@ onUnmounted(() => {
   </section>
 
   <!-- 섹션4 시작 -->
-  <section id="section4" class="text-black-800 w-screen overflow-hidden bg-[url('/img/section4_visual_bg.webp')] bg-cover text-center bg-center bg-no-repeat">
+  <section id="section4" class="text-black-800 w-screen overflow-hidden bg-[url('~/assets/img/section4_visual_bg.webp')] bg-cover text-center bg-center bg-no-repeat">
     <div class="max-w-gui space-y-14 colCenter px-12 py-32 mx-auto">
       <div data-aos="fade-up" data-aos-duration="1000" class="colCenter space-y-4">
         <h2 class="pb-4 text-4xl font-extrabold">창의적인 생각과 <span class="text-primary-500">Creative</span>한 아이디어로<br /><span class="text-secondary-500">확실한 성과</span>를 만들어냅니다</h2>
@@ -119,7 +119,7 @@ onUnmounted(() => {
   </section>
 
   <!-- 섹션5 시작 -->
-  <section id="section5" class="bg-[url('/img/section5_visual_bg.webp')] w-screen overflow-hidden min-h-lvh text-center text-white bg-center bg-no-repeat bg-cover">
+  <section id="section5" class="bg-[url('~/assets/img/section5_visual_bg.webp')] w-screen overflow-hidden min-h-lvh text-center text-white bg-center bg-no-repeat bg-cover">
     <div class="max-w-gui space-y-80 colCenter px-12 py-32 mx-auto">
       <div data-aos="fade-up" data-aos-duration="1000" class="colCenter space-y-4">
         <h2 class="pb-4 text-4xl font-extrabold">SERVICE</h2>

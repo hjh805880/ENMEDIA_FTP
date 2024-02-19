@@ -4,175 +4,167 @@
     {
       "name": "vite:load-fallback",
       "result": "import { defineNuxtPlugin, useRequestEvent, useRuntimeConfig, useState } from \"#imports\";\nexport default defineNuxtPlugin({\n  name: \"nuxt-site-config:init\",\n  enforce: \"pre\",\n  async setup(nuxtApp) {\n    const state = useState(\"site-config\");\n    if (process.server) {\n      const { context } = useRequestEvent();\n      nuxtApp.hooks.hook(\"app:rendered\", () => {\n        state.value = context.siteConfig.get({\n          debug: useRuntimeConfig()[\"nuxt-site-config\"].debug,\n          resolveRefs: true\n        });\n      });\n    }\n    let stack = {};\n    if (process.client)\n      stack = state.value || window.__NUXT_SITE_CONFIG__;\n    return {\n      provide: {\n        nuxtSiteConfig: stack\n      }\n    };\n  }\n});\n",
-      "start": 1708047630907,
-      "end": 1708047630955,
+      "start": 1708316409193,
+      "end": 1708316409237,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1708047630955,
-      "end": 1708047630955,
+      "start": 1708316409237,
+      "end": 1708316409237,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1708047630955,
-      "end": 1708047630956,
+      "start": 1708316409237,
+      "end": 1708316409237,
       "order": "pre"
     },
     {
-      "name": "transform-file",
-      "result": "import { defineNuxtPlugin, useRequestEvent, useRuntimeConfig, useState } from \"#imports\";\nexport default defineNuxtPlugin({\n  name: \"nuxt-site-config:init\",\n  enforce: \"pre\",\n  async setup(nuxtApp) {\n    const state = useState(\"site-config\");\n    if (process.server) {\n      const { context } = useRequestEvent();\n      nuxtApp.hooks.hook(\"app:rendered\", () => {\n        state.value = context.siteConfig.get({\n          debug: useRuntimeConfig()[\"nuxt-site-config\"].debug,\n          resolveRefs: true\n        });\n      });\n    }\n    let stack = {};\n    if (process.client)\n      stack = state.value || window.__NUXT_SITE_CONFIG__;\n    return {\n      provide: {\n        nuxtSiteConfig: stack\n      }\n    };\n  }\n});\n",
-      "start": 1708047630956,
-      "end": 1708047630956,
-      "order": "pre",
-      "sourcemaps": null
-    },
-    {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1708047630956,
-      "end": 1708047630956,
+      "start": 1708316409237,
+      "end": 1708316409237,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1708047630956,
-      "end": 1708047630956,
+      "start": 1708316409237,
+      "end": 1708316409237,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1708047630956,
-      "end": 1708047630956,
+      "start": 1708316409237,
+      "end": 1708316409237,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1708047630956,
-      "end": 1708047630956,
+      "start": 1708316409237,
+      "end": 1708316409237,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1708047630956,
-      "end": 1708047630956,
+      "start": 1708316409237,
+      "end": 1708316409237,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1708047630956,
-      "end": 1708047630956,
+      "start": 1708316409237,
+      "end": 1708316409237,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1708047630956,
-      "end": 1708047630956,
+      "start": 1708316409237,
+      "end": 1708316409237,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708047630956,
-      "end": 1708047630956,
+      "start": 1708316409237,
+      "end": 1708316409237,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1708047630956,
-      "end": 1708047630956,
+      "start": 1708316409237,
+      "end": 1708316409238,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1708047630956,
-      "end": 1708047630956,
+      "start": 1708316409238,
+      "end": 1708316409238,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1708047630956,
-      "end": 1708047630956,
+      "start": 1708316409238,
+      "end": 1708316409238,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708047630956,
-      "end": 1708047630956,
+      "start": 1708316409238,
+      "end": 1708316409238,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1708047630956,
-      "end": 1708047630956,
+      "start": 1708316409238,
+      "end": 1708316409238,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "import { defineNuxtPlugin, useRequestEvent, useRuntimeConfig, useState } from \"#imports\";\nexport default defineNuxtPlugin({\n  name: \"nuxt-site-config:init\",\n  enforce: \"pre\",\n  async setup(nuxtApp) {\n    const state = useState(\"site-config\");\n    if (false) {\n      const { context } = useRequestEvent();\n      nuxtApp.hooks.hook(\"app:rendered\", () => {\n        state.value = context.siteConfig.get({\n          debug: useRuntimeConfig()[\"nuxt-site-config\"].debug,\n          resolveRefs: true\n        });\n      });\n    }\n    let stack = {};\n    if (true)\n      stack = state.value || window.__NUXT_SITE_CONFIG__;\n    return {\n      provide: {\n        nuxtSiteConfig: stack\n      }\n    };\n  }\n});\n",
-      "start": 1708047630956,
-      "end": 1708047631009,
+      "start": 1708316409238,
+      "end": 1708316409282,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:css-post",
-      "start": 1708047631010,
-      "end": 1708047631010,
+      "start": 1708316409282,
+      "end": 1708316409282,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1708047631010,
-      "end": 1708047631010,
+      "start": 1708316409282,
+      "end": 1708316409282,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1708047631010,
-      "end": 1708047631010,
+      "start": 1708316409282,
+      "end": 1708316409282,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1708047631010,
-      "end": 1708047631010,
+      "start": 1708316409282,
+      "end": 1708316409282,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1708047631010,
-      "end": 1708047631010,
+      "start": 1708316409283,
+      "end": 1708316409283,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1708047631010,
-      "end": 1708047631010,
+      "start": 1708316409283,
+      "end": 1708316409283,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1708047631010,
-      "end": 1708047631010,
+      "start": 1708316409283,
+      "end": 1708316409283,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1708047631010,
-      "end": 1708047631011,
+      "start": 1708316409283,
+      "end": 1708316409284,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1708047631011,
-      "end": 1708047631011,
+      "start": 1708316409284,
+      "end": 1708316409284,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { defineNuxtPlugin, useRuntimeConfig } from '#app/nuxt';\nimport { useRequestEvent } from '#app/composables/ssr';\nimport { useState } from '#app/composables/state';\nexport default defineNuxtPlugin({\n  name: \"nuxt-site-config:init\",\n  enforce: \"pre\",\n  async setup(nuxtApp) {\n    const state = useState(\"site-config\");\n    if (false) {\n      const { context } = useRequestEvent();\n      nuxtApp.hooks.hook(\"app:rendered\", () => {\n        state.value = context.siteConfig.get({\n          debug: useRuntimeConfig()[\"nuxt-site-config\"].debug,\n          resolveRefs: true\n        });\n      });\n    }\n    let stack = {};\n    if (true)\n      stack = state.value || window.__NUXT_SITE_CONFIG__;\n    return {\n      provide: {\n        nuxtSiteConfig: stack\n      }\n    };\n  }\n});\n",
-      "start": 1708047631011,
-      "end": 1708047631012,
+      "start": 1708316409284,
+      "end": 1708316409286,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -185,50 +177,50 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1708047631012,
-      "end": 1708047631012,
+      "start": 1708316409286,
+      "end": 1708316409286,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1708047631012,
-      "end": 1708047631012,
+      "start": 1708316409286,
+      "end": 1708316409286,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1708047631012,
-      "end": 1708047631012,
+      "start": 1708316409286,
+      "end": 1708316409286,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1708047631012,
-      "end": 1708047631012,
+      "start": 1708316409286,
+      "end": 1708316409286,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1708047631012,
-      "end": 1708047631012,
+      "start": 1708316409286,
+      "end": 1708316409286,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1708047631012,
-      "end": 1708047631012,
+      "start": 1708316409286,
+      "end": 1708316409287,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1708047631012,
-      "end": 1708047631012,
+      "start": 1708316409287,
+      "end": 1708316409287,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1708047631012,
-      "end": 1708047631012,
+      "start": 1708316409287,
+      "end": 1708316409287,
       "order": "normal"
     }
   ]

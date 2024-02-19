@@ -4,127 +4,111 @@
     {
       "name": "vite:load-fallback",
       "result": "import {\n  defineNuxtPlugin,\n  useRequestEvent,\n  useServerHead\n} from \"#imports\";\nexport default defineNuxtPlugin({\n  setup() {\n    const event = useRequestEvent();\n    const ctx = event.context.robots;\n    if (!ctx)\n      return;\n    useServerHead({\n      meta: [\n        {\n          \"name\": \"robots\",\n          \"content\": () => ctx.rule || \"\",\n          \"data-hint\": import.meta.dev && !ctx.indexable ? \"disabled in development\" : void 0\n        }\n      ]\n    });\n  }\n});\n",
-      "start": 1708047632891,
-      "end": 1708047633257,
+      "start": 1708316411175,
+      "end": 1708316411499,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1708047633257,
-      "end": 1708047633257,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "pre"
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1708047633257,
-      "end": 1708047633257,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1708047633257,
-      "end": 1708047633257,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1708047633257,
-      "end": 1708047633257,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "pre"
-    },
-    {
-      "name": "transform-file",
-      "result": "import {\n  defineNuxtPlugin,\n  useRequestEvent,\n  useServerHead\n} from \"#imports\";\nexport default defineNuxtPlugin({\n  setup() {\n    const event = useRequestEvent();\n    const ctx = event.context.robots;\n    if (!ctx)\n      return;\n    useServerHead({\n      meta: [\n        {\n          \"name\": \"robots\",\n          \"content\": () => ctx.rule || \"\",\n          \"data-hint\": import.meta.dev && !ctx.indexable ? \"disabled in development\" : void 0\n        }\n      ]\n    });\n  }\n});\n",
-      "start": 1708047633257,
-      "end": 1708047633257,
-      "order": "pre",
-      "sourcemaps": null
-    },
-    {
-      "name": "transform-file",
-      "result": "import {\n  defineNuxtPlugin,\n  useRequestEvent,\n  useServerHead\n} from \"#imports\";\nexport default defineNuxtPlugin({\n  setup() {\n    const event = useRequestEvent();\n    const ctx = event.context.robots;\n    if (!ctx)\n      return;\n    useServerHead({\n      meta: [\n        {\n          \"name\": \"robots\",\n          \"content\": () => ctx.rule || \"\",\n          \"data-hint\": import.meta.dev && !ctx.indexable ? \"disabled in development\" : void 0\n        }\n      ]\n    });\n  }\n});\n",
-      "start": 1708047633257,
-      "end": 1708047633257,
-      "order": "pre",
-      "sourcemaps": null
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1708047633257,
-      "end": 1708047633257,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1708047633257,
-      "end": 1708047633257,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1708047633257,
-      "end": 1708047633257,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1708047633257,
-      "end": 1708047633257,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1708047633257,
-      "end": 1708047633257,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1708047633257,
-      "end": 1708047633257,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1708047633257,
-      "end": 1708047633257,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708047633257,
-      "end": 1708047633257,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708047633257,
-      "end": 1708047633257,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1708047633257,
-      "end": 1708047633257,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1708047633257,
-      "end": 1708047633257,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1708047633257,
-      "end": 1708047633257,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "replace",
       "result": "import {\n  defineNuxtPlugin,\n  useRequestEvent,\n  useServerHead\n} from \"#imports\";\nexport default defineNuxtPlugin({\n  setup() {\n    const event = useRequestEvent();\n    const ctx = event.context.robots;\n    if (!ctx)\n      return;\n    useServerHead({\n      meta: [\n        {\n          \"name\": \"robots\",\n          \"content\": () => ctx.rule || \"\",\n          \"data-hint\": false && !ctx.indexable ? \"disabled in development\" : void 0\n        }\n      ]\n    });\n  }\n});\n",
-      "start": 1708047633257,
-      "end": 1708047633257,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -137,93 +121,93 @@
     },
     {
       "name": "ssr-styles",
-      "start": 1708047633257,
-      "end": 1708047633258,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "post"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "post"
     },
     {
       "name": "unhead:remove-server-composables",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411499,
+      "end": 1708316411499,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { defineNuxtPlugin } from '#app/nuxt';\nimport { useRequestEvent } from '#app/composables/ssr';\nimport { useServerHead } from '@unhead/vue';\nexport default defineNuxtPlugin({\n  setup() {\n    const event = useRequestEvent();\n    const ctx = event.context.robots;\n    if (!ctx)\n      return;\n    useServerHead({\n      meta: [\n        {\n          \"name\": \"robots\",\n          \"content\": () => ctx.rule || \"\",\n          \"data-hint\": false && !ctx.indexable ? \"disabled in development\" : void 0\n        }\n      ]\n    });\n  }\n});\n",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411499,
+      "end": 1708316411500,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -237,8 +221,8 @@
     {
       "name": "nuxt:imports-transform",
       "result": "import { defineNuxtPlugin } from '#app/nuxt';\nimport { useRequestEvent } from '#app/composables/ssr';\nimport { useServerHead } from '@unhead/vue';\nexport default defineNuxtPlugin({\n  setup() {\n    const event = useRequestEvent();\n    const ctx = event.context.robots;\n    if (!ctx)\n      return;\n    useServerHead({\n      meta: [\n        {\n          \"name\": \"robots\",\n          \"content\": () => ctx.rule || \"\",\n          \"data-hint\": false && !ctx.indexable ? \"disabled in development\" : void 0\n        }\n      ]\n    });\n  }\n});\n",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411499,
+      "end": 1708316411500,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -251,56 +235,56 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411500,
+      "end": 1708316411500,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411500,
+      "end": 1708316411500,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411500,
+      "end": 1708316411500,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411500,
+      "end": 1708316411500,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-template",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411500,
+      "end": 1708316411500,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411500,
+      "end": 1708316411500,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411500,
+      "end": 1708316411500,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411500,
+      "end": 1708316411500,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1708047633258,
-      "end": 1708047633258,
+      "start": 1708316411500,
+      "end": 1708316411500,
       "order": "normal"
     }
   ]

@@ -4,219 +4,203 @@
     {
       "name": "vite:load-fallback",
       "result": "import { defu } from \"defu\";\nimport {\n  useNuxtApp,\n  useRequestEvent\n} from \"#imports\";\nexport function useSiteConfig(options) {\n  let stack;\n  if (process.server)\n    stack = useRequestEvent().context.siteConfig.get(defu({ resolveRefs: true }, options));\n  else\n    stack = useNuxtApp().$nuxtSiteConfig;\n  return stack || {};\n}\n",
-      "start": 1708047633268,
-      "end": 1708047633299,
+      "start": 1708316411511,
+      "end": 1708316411548,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1708047633299,
-      "end": 1708047633299,
+      "start": 1708316411548,
+      "end": 1708316411548,
       "order": "pre"
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1708047633299,
-      "end": 1708047633299,
+      "start": 1708316411548,
+      "end": 1708316411548,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1708047633299,
-      "end": 1708047633299,
+      "start": 1708316411548,
+      "end": 1708316411548,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1708047633299,
-      "end": 1708047633299,
+      "start": 1708316411548,
+      "end": 1708316411548,
       "order": "pre"
-    },
-    {
-      "name": "transform-file",
-      "result": "import { defu } from \"defu\";\nimport {\n  useNuxtApp,\n  useRequestEvent\n} from \"#imports\";\nexport function useSiteConfig(options) {\n  let stack;\n  if (process.server)\n    stack = useRequestEvent().context.siteConfig.get(defu({ resolveRefs: true }, options));\n  else\n    stack = useNuxtApp().$nuxtSiteConfig;\n  return stack || {};\n}\n",
-      "start": 1708047633299,
-      "end": 1708047633299,
-      "order": "pre",
-      "sourcemaps": null
-    },
-    {
-      "name": "transform-file",
-      "result": "import { defu } from \"defu\";\nimport {\n  useNuxtApp,\n  useRequestEvent\n} from \"#imports\";\nexport function useSiteConfig(options) {\n  let stack;\n  if (process.server)\n    stack = useRequestEvent().context.siteConfig.get(defu({ resolveRefs: true }, options));\n  else\n    stack = useNuxtApp().$nuxtSiteConfig;\n  return stack || {};\n}\n",
-      "start": 1708047633299,
-      "end": 1708047633299,
-      "order": "pre",
-      "sourcemaps": null
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1708047633299,
-      "end": 1708047633299,
+      "start": 1708316411548,
+      "end": 1708316411548,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1708047633299,
-      "end": 1708047633299,
+      "start": 1708316411548,
+      "end": 1708316411548,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1708047633299,
-      "end": 1708047633299,
+      "start": 1708316411548,
+      "end": 1708316411548,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1708047633299,
-      "end": 1708047633299,
+      "start": 1708316411548,
+      "end": 1708316411548,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1708047633299,
-      "end": 1708047633299,
+      "start": 1708316411548,
+      "end": 1708316411548,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1708047633299,
-      "end": 1708047633299,
+      "start": 1708316411548,
+      "end": 1708316411548,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1708047633299,
-      "end": 1708047633299,
+      "start": 1708316411548,
+      "end": 1708316411548,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708047633299,
-      "end": 1708047633299,
+      "start": 1708316411548,
+      "end": 1708316411548,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708047633299,
-      "end": 1708047633299,
+      "start": 1708316411548,
+      "end": 1708316411548,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1708047633299,
-      "end": 1708047633299,
+      "start": 1708316411548,
+      "end": 1708316411548,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1708047633299,
-      "end": 1708047633299,
+      "start": 1708316411548,
+      "end": 1708316411548,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1708047633299,
-      "end": 1708047633299,
+      "start": 1708316411548,
+      "end": 1708316411548,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708047633299,
-      "end": 1708047633301,
+      "start": 1708316411548,
+      "end": 1708316411548,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1708047633301,
-      "end": 1708047633301,
+      "start": 1708316411548,
+      "end": 1708316411549,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "import { defu } from \"defu\";\nimport {\n  useNuxtApp,\n  useRequestEvent\n} from \"#imports\";\nexport function useSiteConfig(options) {\n  let stack;\n  if (true)\n    stack = useRequestEvent().context.siteConfig.get(defu({ resolveRefs: true }, options));\n  else\n    stack = useNuxtApp().$nuxtSiteConfig;\n  return stack || {};\n}\n",
-      "start": 1708047633301,
-      "end": 1708047633510,
+      "start": 1708316411549,
+      "end": 1708316411596,
       "order": "normal",
       "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/node_modules/nuxt-site-config/dist/runtime/nuxt/composables/useSiteConfig.mjs\"],\n  \"sourcesContent\": [\"import { defu } from \\\"defu\\\";\\nimport {\\n  useNuxtApp,\\n  useRequestEvent\\n} from \\\"#imports\\\";\\nexport function useSiteConfig(options) {\\n  let stack;\\n  if (process.server)\\n    stack = useRequestEvent().context.siteConfig.get(defu({ resolveRefs: true }, options));\\n  else\\n    stack = useNuxtApp().$nuxtSiteConfig;\\n  return stack || {};\\n}\\n\"],\n  \"mappings\": \"AAAA,SAAS,YAAY;AACrB;AAAA,EACE;AAAA,EACA;AAAA,OACK;AACA,gBAAS,cAAc,SAAS;AACrC,MAAI;AACJ,MAAI;AACF,YAAQ,gBAAgB,EAAE,QAAQ,WAAW,IAAI,KAAK,EAAE,aAAa,KAAK,GAAG,OAAO,CAAC;AAAA;AAErF,YAAQ,WAAW,EAAE;AACvB,SAAO,SAAS,CAAC;AACnB;\",\n  \"names\": []\n}\n"
     },
     {
       "name": "vite:css-post",
-      "start": 1708047633510,
-      "end": 1708047633510,
+      "start": 1708316411596,
+      "end": 1708316411596,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1708047633510,
-      "end": 1708047633510,
+      "start": 1708316411596,
+      "end": 1708316411596,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1708047633510,
-      "end": 1708047633510,
+      "start": 1708316411596,
+      "end": 1708316411596,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1708047633510,
-      "end": 1708047633510,
+      "start": 1708316411596,
+      "end": 1708316411596,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1708047633510,
-      "end": 1708047633510,
+      "start": 1708316411597,
+      "end": 1708316411597,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1708047633510,
-      "end": 1708047633510,
+      "start": 1708316411597,
+      "end": 1708316411597,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1708047633510,
-      "end": 1708047633510,
+      "start": 1708316411597,
+      "end": 1708316411597,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1708047633510,
-      "end": 1708047633510,
+      "start": 1708316411597,
+      "end": 1708316411597,
       "order": "post"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1708047633510,
-      "end": 1708047633510,
+      "start": 1708316411597,
+      "end": 1708316411597,
       "order": "post"
     },
     {
       "name": "unhead:remove-server-composables",
-      "start": 1708047633510,
-      "end": 1708047633510,
+      "start": 1708316411597,
+      "end": 1708316411597,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1708047633510,
-      "end": 1708047633510,
+      "start": 1708316411597,
+      "end": 1708316411597,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1708047633510,
-      "end": 1708047633510,
+      "start": 1708316411597,
+      "end": 1708316411597,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { useNuxtApp } from '#app/nuxt';\nimport { useRequestEvent } from '#app/composables/ssr';\nimport { defu } from \"defu\";\nexport function useSiteConfig(options) {\n  let stack;\n  if (true)\n    stack = useRequestEvent().context.siteConfig.get(defu({ resolveRefs: true }, options));\n  else\n    stack = useNuxtApp().$nuxtSiteConfig;\n  return stack || {};\n}\n",
-      "start": 1708047633510,
-      "end": 1708047633511,
+      "start": 1708316411597,
+      "end": 1708316411598,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -230,8 +214,8 @@
     {
       "name": "nuxt:imports-transform",
       "result": "import { useNuxtApp } from '#app/nuxt';\nimport { useRequestEvent } from '#app/composables/ssr';\nimport { defu } from \"defu\";\nexport function useSiteConfig(options) {\n  let stack;\n  if (true)\n    stack = useRequestEvent().context.siteConfig.get(defu({ resolveRefs: true }, options));\n  else\n    stack = useNuxtApp().$nuxtSiteConfig;\n  return stack || {};\n}\n",
-      "start": 1708047633510,
-      "end": 1708047633511,
+      "start": 1708316411597,
+      "end": 1708316411598,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -244,56 +228,56 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1708047633511,
-      "end": 1708047633511,
+      "start": 1708316411598,
+      "end": 1708316411598,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1708047633511,
-      "end": 1708047633511,
+      "start": 1708316411598,
+      "end": 1708316411598,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1708047633511,
-      "end": 1708047633511,
+      "start": 1708316411598,
+      "end": 1708316411598,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1708047633511,
-      "end": 1708047633511,
+      "start": 1708316411598,
+      "end": 1708316411598,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-template",
-      "start": 1708047633511,
-      "end": 1708047633511,
+      "start": 1708316411598,
+      "end": 1708316411598,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1708047633511,
-      "end": 1708047633511,
+      "start": 1708316411598,
+      "end": 1708316411598,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1708047633511,
-      "end": 1708047633511,
+      "start": 1708316411598,
+      "end": 1708316411598,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1708047633511,
-      "end": 1708047633511,
+      "start": 1708316411598,
+      "end": 1708316411598,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1708047633511,
-      "end": 1708047633511,
+      "start": 1708316411598,
+      "end": 1708316411598,
       "order": "normal"
     }
   ]

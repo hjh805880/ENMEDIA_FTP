@@ -2,7 +2,7 @@
   <footer id="footer" class="bg-black-800 w-full px-12 py-32 text-white">
     <div class="lg:flex-row max-w-gui flex flex-col items-center justify-between w-full mx-auto space-x-8">
       <div class="lg:items-start flex flex-col justify-center space-y-6">
-        <NuxtImg src="/img/logo_w.svg" alt="이엔미디어 로고" class="w-80" />
+        <img src="~/assets/img/logo_w.svg" alt="이엔미디어 로고" class="w-80" />
         <div class="text-black-400 border-black-500 pt-6 space-y-3 border-t">
           <div class="text-black-200 flex items-center justify-start space-x-4 font-medium">
             <p class=""><b>회사명 :</b> 주식회사 이엔미디어</p>

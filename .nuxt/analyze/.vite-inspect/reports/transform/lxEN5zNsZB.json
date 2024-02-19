@@ -4,65 +4,57 @@
     {
       "name": "vite:load-fallback",
       "result": "<style>\n.cls-1 {\n  stroke: #7b22f3;\n}\n.cls-1,\n.cls-2 {\n  fill: none;\n  stroke-linecap: round;\n  stroke-linejoin: round;\n  stroke-width: 3px;\n}\n.cls-2 {\n  stroke: #404040;\n}\n</style>\n<template>\n  <div class=\"colCenter relative w-full\">\n    <svg class=\"relative w-[40%]\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 75.89 69\">\n      <path class=\"cls-2\" d=\"M40.71,57.78v-7.88H1.5v7.88c0,8.31,3.37,9.72,8.74,9.72h38.68c-4.94,0-8.22-3.13-8.22-9.72Z\" />\n      <path class=\"cls-2\" d=\"M57.8,51.43v6.35c0,7.25-4.35,9.72-8.88,9.72\" />\n      <path class=\"cls-2\" d=\"M57.8,51.43V12.5c0-3.68-.45-11,6.73-11\" />\n      <path class=\"cls-2\" d=\"M58.03,21.15h13.72v-8.65c0-6.87-2.09-11-9.23-11H20.06c-5.79,0-10.08,3.75-10.08,11v36.47\" />\n      <polyline class=\"cls-1\" points=\"24.42 25.56 32.52 33.81 42.66 21.44 65.72 49.31 74.39 40.65\" />\n    </svg>\n    <div class=\"bg-primary-500 size-12 aspect-1 opacity-60 right-[29%] -bottom-[6%] absolute rounded-full animate-pulse\"></div>\n  </div>\n</template>\n",
-      "start": 1708047631993,
-      "end": 1708047632003,
+      "start": 1708316410325,
+      "end": 1708316410351,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1708047632003,
-      "end": 1708047632003,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1708047632003,
-      "end": 1708047632003,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "pre"
     },
     {
-      "name": "transform-file",
-      "result": "<style>\n.cls-1 {\n  stroke: #7b22f3;\n}\n.cls-1,\n.cls-2 {\n  fill: none;\n  stroke-linecap: round;\n  stroke-linejoin: round;\n  stroke-width: 3px;\n}\n.cls-2 {\n  stroke: #404040;\n}\n</style>\n<template>\n  <div class=\"colCenter relative w-full\">\n    <svg class=\"relative w-[40%]\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 75.89 69\">\n      <path class=\"cls-2\" d=\"M40.71,57.78v-7.88H1.5v7.88c0,8.31,3.37,9.72,8.74,9.72h38.68c-4.94,0-8.22-3.13-8.22-9.72Z\" />\n      <path class=\"cls-2\" d=\"M57.8,51.43v6.35c0,7.25-4.35,9.72-8.88,9.72\" />\n      <path class=\"cls-2\" d=\"M57.8,51.43V12.5c0-3.68-.45-11,6.73-11\" />\n      <path class=\"cls-2\" d=\"M58.03,21.15h13.72v-8.65c0-6.87-2.09-11-9.23-11H20.06c-5.79,0-10.08,3.75-10.08,11v36.47\" />\n      <polyline class=\"cls-1\" points=\"24.42 25.56 32.52 33.81 42.66 21.44 65.72 49.31 74.39 40.65\" />\n    </svg>\n    <div class=\"bg-primary-500 size-12 aspect-1 opacity-60 right-[29%] -bottom-[6%] absolute rounded-full animate-pulse\"></div>\n  </div>\n</template>\n",
-      "start": 1708047632003,
-      "end": 1708047632003,
-      "order": "pre",
-      "sourcemaps": null
-    },
-    {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1708047632003,
-      "end": 1708047632003,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1708047632003,
-      "end": 1708047632003,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1708047632003,
-      "end": 1708047632003,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1708047632003,
-      "end": 1708047632003,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1708047632003,
-      "end": 1708047632003,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"colCenter relative w-full\" }\nconst _hoisted_2 = /*#__PURE__*/_createStaticVNode(\"<svg class=\\\"relative w-[40%]\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\" viewBox=\\\"0 0 75.89 69\\\"><path class=\\\"cls-2\\\" d=\\\"M40.71,57.78v-7.88H1.5v7.88c0,8.31,3.37,9.72,8.74,9.72h38.68c-4.94,0-8.22-3.13-8.22-9.72Z\\\"></path><path class=\\\"cls-2\\\" d=\\\"M57.8,51.43v6.35c0,7.25-4.35,9.72-8.88,9.72\\\"></path><path class=\\\"cls-2\\\" d=\\\"M57.8,51.43V12.5c0-3.68-.45-11,6.73-11\\\"></path><path class=\\\"cls-2\\\" d=\\\"M58.03,21.15h13.72v-8.65c0-6.87-2.09-11-9.23-11H20.06c-5.79,0-10.08,3.75-10.08,11v36.47\\\"></path><polyline class=\\\"cls-1\\\" points=\\\"24.42 25.56 32.52 33.81 42.66 21.44 65.72 49.31 74.39 40.65\\\"></polyline></svg><div class=\\\"bg-primary-500 size-12 aspect-1 opacity-60 right-[29%] -bottom-[6%] absolute rounded-full animate-pulse\\\"></div>\", 2)\nconst _hoisted_4 = [\n  _hoisted_2\n]\n\nfunction _sfc_render(_ctx, _cache) {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, _hoisted_4))\n}\n\nimport \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/components/Main/SolutionIcon.vue?vue&type=style&index=0&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
-      "start": 1708047632003,
-      "end": 1708047632004,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -70,158 +62,158 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410351,
+      "end": 1708316410351,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410351,
+      "end": 1708316410352,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410352,
+      "end": 1708316410352,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410352,
+      "end": 1708316410352,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410352,
+      "end": 1708316410352,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410352,
+      "end": 1708316410352,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410352,
+      "end": 1708316410352,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410352,
+      "end": 1708316410352,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410352,
+      "end": 1708316410352,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410352,
+      "end": 1708316410352,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410352,
+      "end": 1708316410352,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1708047632004,
-      "end": 1708047632004,
+      "start": 1708316410352,
+      "end": 1708316410352,
       "order": "normal"
     }
   ]

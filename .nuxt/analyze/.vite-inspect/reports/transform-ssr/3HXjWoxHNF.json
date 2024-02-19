@@ -3,86 +3,70 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "<template>\n  <!-- SUBTOP 시작 -->\n  <article id=\"subtop\" class=\"text-center\">\n    <div class=\"flex flex-col items-center justify-center w-full lg:h-[300px] h-[200px] text-white relative overflow-hidden\">\n      <NuxtImg :src=\"subTopImg\" :alt=\"`이엔미디어 ${subTopTitle} 페이지 상단이미지`\" class=\"object-cover w-full h-full\" />\n      <div class=\"colCenter absolute top-[30%]\">\n        <h2 class=\"lg:text-4xl z-20 text-3xl font-extrabold\">\n          {{ subTopTitle }}\n        </h2>\n        <div class=\"z-20 w-12 pt-3 border-b-4 border-white\"></div>\n        <h3 class=\"lg:text-xl z-20 px-8 pt-5\">\n          {{ subTopDesc }}\n        </h3>\n      </div>\n    </div>\n  </article>\n</template>\n\n<script setup lang=\"ts\">\ndefineProps({\n  subTopImg: String,\n  subTopTitle: String,\n  subTopDesc: String,\n});\n</script>\n",
-      "start": 1708047633513,
-      "end": 1708047633663,
+      "result": "<template>\n  <!-- SUBTOP 시작 -->\n  <article id=\"subtop\" class=\"text-center\">\n    <div class=\"flex flex-col items-center justify-center w-full lg:h-[300px] h-[200px] text-white relative overflow-hidden\">\n      <img :src=\"subTopImgSrc\" :alt=\"`이엔미디어 ${subTopTitle} 페이지 상단이미지`\" class=\"object-cover w-full h-full\" />\n      <div class=\"colCenter absolute top-[30%]\">\n        <h2 class=\"lg:text-4xl z-20 text-3xl font-extrabold\">\n          {{ subTopTitle }}\n        </h2>\n        <div class=\"z-20 w-12 pt-3 border-b-4 border-white\"></div>\n        <h3 class=\"lg:text-xl z-20 px-8 pt-5\">\n          {{ subTopDesc }}\n        </h3>\n      </div>\n    </div>\n  </article>\n</template>\n\n<script setup lang=\"ts\">\nconst props = defineProps({\n  subTopImg: String,\n  subTopTitle: String,\n  subTopDesc: String,\n});\n\nconst subTopImgSrc = ref('');\n\nonMounted(async () => {\n  if (props.subTopImg) {\n    const image = await import(/* @vite-ignore */`../assets${props.subTopImg}`);\n    subTopImgSrc.value = image.default;\n  }\n});\n</script>\n",
+      "start": 1708316411775,
+      "end": 1708316411908,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1708047633663,
-      "end": 1708047633663,
+      "start": 1708316411908,
+      "end": 1708316411908,
       "order": "pre"
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1708047633663,
-      "end": 1708047633663,
+      "start": 1708316411908,
+      "end": 1708316411908,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1708047633663,
-      "end": 1708047633663,
+      "start": 1708316411908,
+      "end": 1708316411908,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1708047633663,
-      "end": 1708047633663,
+      "start": 1708316411908,
+      "end": 1708316411908,
       "order": "pre"
-    },
-    {
-      "name": "transform-file",
-      "result": "<template>\n  <!-- SUBTOP 시작 -->\n  <article id=\"subtop\" class=\"text-center\">\n    <div class=\"flex flex-col items-center justify-center w-full lg:h-[300px] h-[200px] text-white relative overflow-hidden\">\n      <NuxtImg :src=\"subTopImg\" :alt=\"`이엔미디어 ${subTopTitle} 페이지 상단이미지`\" class=\"object-cover w-full h-full\" />\n      <div class=\"colCenter absolute top-[30%]\">\n        <h2 class=\"lg:text-4xl z-20 text-3xl font-extrabold\">\n          {{ subTopTitle }}\n        </h2>\n        <div class=\"z-20 w-12 pt-3 border-b-4 border-white\"></div>\n        <h3 class=\"lg:text-xl z-20 px-8 pt-5\">\n          {{ subTopDesc }}\n        </h3>\n      </div>\n    </div>\n  </article>\n</template>\n\n<script setup lang=\"ts\">\ndefineProps({\n  subTopImg: String,\n  subTopTitle: String,\n  subTopDesc: String,\n});\n</script>\n",
-      "start": 1708047633663,
-      "end": 1708047633663,
-      "order": "pre",
-      "sourcemaps": null
-    },
-    {
-      "name": "transform-file",
-      "result": "<template>\n  <!-- SUBTOP 시작 -->\n  <article id=\"subtop\" class=\"text-center\">\n    <div class=\"flex flex-col items-center justify-center w-full lg:h-[300px] h-[200px] text-white relative overflow-hidden\">\n      <NuxtImg :src=\"subTopImg\" :alt=\"`이엔미디어 ${subTopTitle} 페이지 상단이미지`\" class=\"object-cover w-full h-full\" />\n      <div class=\"colCenter absolute top-[30%]\">\n        <h2 class=\"lg:text-4xl z-20 text-3xl font-extrabold\">\n          {{ subTopTitle }}\n        </h2>\n        <div class=\"z-20 w-12 pt-3 border-b-4 border-white\"></div>\n        <h3 class=\"lg:text-xl z-20 px-8 pt-5\">\n          {{ subTopDesc }}\n        </h3>\n      </div>\n    </div>\n  </article>\n</template>\n\n<script setup lang=\"ts\">\ndefineProps({\n  subTopImg: String,\n  subTopTitle: String,\n  subTopDesc: String,\n});\n</script>\n",
-      "start": 1708047633663,
-      "end": 1708047633663,
-      "order": "pre",
-      "sourcemaps": null
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1708047633663,
-      "end": 1708047633663,
+      "start": 1708316411908,
+      "end": 1708316411908,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1708047633663,
-      "end": 1708047633663,
+      "start": 1708316411908,
+      "end": 1708316411908,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1708047633663,
-      "end": 1708047633663,
+      "start": 1708316411908,
+      "end": 1708316411908,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1708047633663,
-      "end": 1708047633663,
+      "start": 1708316411908,
+      "end": 1708316411908,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1708047633663,
-      "end": 1708047633663,
+      "start": 1708316411908,
+      "end": 1708316411908,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "import _sfc_main from \"/Users/hanjeonghun/Documents/GitHub/\\u110B\\u1175\\u110B\\u1166\\u11AB\\u1106\\u1175\\u1103\\u1175\\u110B\\u1165_\\u1112\\u1169\\u11B7\\u1111\\u1166\\u110B\\u1175\\u110C\\u1175FTP/components/SubTop.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/Users/hanjeonghun/Documents/GitHub/\\u110B\\u1175\\u110B\\u1166\\u11AB\\u1106\\u1175\\u1103\\u1175\\u110B\\u1165_\\u1112\\u1169\\u11B7\\u1111\\u1166\\u110B\\u1175\\u110C\\u1175FTP/components/SubTop.vue?vue&type=script&setup=true&lang.ts\";\nimport { useSSRContext as __vite_useSSRContext } from \"vue\";\nconst _sfc_setup = _sfc_main.setup;\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext();\n  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add(\"components/SubTop.vue\");\n  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;\n};\nexport default _sfc_main;\n",
-      "start": 1708047633663,
-      "end": 1708047633682,
+      "start": 1708316411908,
+      "end": 1708316411926,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -90,194 +74,194 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411926,
+      "end": 1708316411926,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411926,
+      "end": 1708316411926,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411926,
+      "end": 1708316411926,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411926,
+      "end": 1708316411926,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411926,
+      "end": 1708316411926,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411926,
+      "end": 1708316411926,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411926,
+      "end": 1708316411926,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411926,
+      "end": 1708316411926,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411926,
+      "end": 1708316411926,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411926,
+      "end": 1708316411926,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411926,
+      "end": 1708316411926,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411926,
+      "end": 1708316411927,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "post"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "post"
     },
     {
       "name": "unhead:remove-server-composables",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1708047633682,
-      "end": 1708047633682,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1708047633682,
-      "end": 1708047633683,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1708047633682,
-      "end": 1708047633683,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-template",
-      "start": 1708047633683,
-      "end": 1708047633683,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1708047633683,
-      "end": 1708047633683,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1708047633683,
-      "end": 1708047633683,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1708047633683,
-      "end": 1708047633683,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1708047633683,
-      "end": 1708047633683,
+      "start": 1708316411927,
+      "end": 1708316411927,
       "order": "normal"
     }
   ]

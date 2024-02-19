@@ -4,173 +4,165 @@
     {
       "name": "vite:load-fallback",
       "result": "import {\n  computed,\n  createSitePathResolver,\n  defineNuxtPlugin,\n  useHead,\n  useRoute,\n  useSeoMeta,\n  useServerHead,\n  useSiteConfig\n} from \"#imports\";\nexport default defineNuxtPlugin({\n  name: \"nuxt-seo:defaults\",\n  setup() {\n    const siteConfig = useSiteConfig();\n    const route = useRoute();\n    const resolveUrl = createSitePathResolver({ withBase: true, absolute: true });\n    const canonicalUrl = computed(() => resolveUrl(route.path || \"/\").value || route.path);\n    const minimalPriority = {\n      // give nuxt.config values higher priority\n      tagPriority: 101\n    };\n    useHead({\n      link: [{ rel: \"canonical\", href: () => canonicalUrl.value }]\n    });\n    const locale = siteConfig.currentLocale || siteConfig.defaultLocale;\n    if (locale) {\n      useServerHead({\n        htmlAttrs: { lang: locale }\n      });\n    }\n    useHead({\n      templateParams: { site: siteConfig, siteName: siteConfig.name || \"\" },\n      titleTemplate: \"%s %separator %siteName\"\n    }, minimalPriority);\n    const seoMeta = {\n      ogType: \"website\",\n      ogUrl: () => canonicalUrl.value,\n      ogLocale: locale,\n      ogSiteName: siteConfig.name\n    };\n    if (siteConfig.description)\n      seoMeta.description = siteConfig.description;\n    if (siteConfig.twitter) {\n      const id = siteConfig.twitter.startsWith(\"@\") ? siteConfig.twitter : `@${siteConfig.twitter}`;\n      seoMeta.twitterCreator = id;\n      seoMeta.twitterSite = id;\n    }\n    useSeoMeta(seoMeta, minimalPriority);\n  }\n});\n",
-      "start": 1708047630907,
-      "end": 1708047630962,
+      "start": 1708316409193,
+      "end": 1708316409243,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409243,
+      "end": 1708316409243,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409243,
+      "end": 1708316409244,
       "order": "pre"
     },
     {
-      "name": "transform-file",
-      "result": "import {\n  computed,\n  createSitePathResolver,\n  defineNuxtPlugin,\n  useHead,\n  useRoute,\n  useSeoMeta,\n  useServerHead,\n  useSiteConfig\n} from \"#imports\";\nexport default defineNuxtPlugin({\n  name: \"nuxt-seo:defaults\",\n  setup() {\n    const siteConfig = useSiteConfig();\n    const route = useRoute();\n    const resolveUrl = createSitePathResolver({ withBase: true, absolute: true });\n    const canonicalUrl = computed(() => resolveUrl(route.path || \"/\").value || route.path);\n    const minimalPriority = {\n      // give nuxt.config values higher priority\n      tagPriority: 101\n    };\n    useHead({\n      link: [{ rel: \"canonical\", href: () => canonicalUrl.value }]\n    });\n    const locale = siteConfig.currentLocale || siteConfig.defaultLocale;\n    if (locale) {\n      useServerHead({\n        htmlAttrs: { lang: locale }\n      });\n    }\n    useHead({\n      templateParams: { site: siteConfig, siteName: siteConfig.name || \"\" },\n      titleTemplate: \"%s %separator %siteName\"\n    }, minimalPriority);\n    const seoMeta = {\n      ogType: \"website\",\n      ogUrl: () => canonicalUrl.value,\n      ogLocale: locale,\n      ogSiteName: siteConfig.name\n    };\n    if (siteConfig.description)\n      seoMeta.description = siteConfig.description;\n    if (siteConfig.twitter) {\n      const id = siteConfig.twitter.startsWith(\"@\") ? siteConfig.twitter : `@${siteConfig.twitter}`;\n      seoMeta.twitterCreator = id;\n      seoMeta.twitterSite = id;\n    }\n    useSeoMeta(seoMeta, minimalPriority);\n  }\n});\n",
-      "start": 1708047630962,
-      "end": 1708047630962,
-      "order": "pre",
-      "sourcemaps": null
-    },
-    {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1708047630962,
-      "end": 1708047630962,
+      "start": 1708316409244,
+      "end": 1708316409244,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { computed } from 'vue';\nimport { createSitePathResolver } from '/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/node_modules/nuxt-site-config/dist/runtime/nuxt/composables/utils.mjs';\nimport { defineNuxtPlugin } from '#app/nuxt';\nimport { useHead, useSeoMeta, useServerHead } from '@unhead/vue';\nimport { useRoute } from '#app/composables/router';\nimport { useSiteConfig } from '/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/node_modules/nuxt-site-config/dist/runtime/nuxt/composables/useSiteConfig.mjs';\nexport default defineNuxtPlugin({\n  name: \"nuxt-seo:defaults\",\n  setup() {\n    const siteConfig = useSiteConfig();\n    const route = useRoute();\n    const resolveUrl = createSitePathResolver({ withBase: true, absolute: true });\n    const canonicalUrl = computed(() => resolveUrl(route.path || \"/\").value || route.path);\n    const minimalPriority = {\n      // give nuxt.config values higher priority\n      tagPriority: 101\n    };\n    useHead({\n      link: [{ rel: \"canonical\", href: () => canonicalUrl.value }]\n    });\n    const locale = siteConfig.currentLocale || siteConfig.defaultLocale;\n    if (locale) {\n      useServerHead({\n        htmlAttrs: { lang: locale }\n      });\n    }\n    useHead({\n      templateParams: { site: siteConfig, siteName: siteConfig.name || \"\" },\n      titleTemplate: \"%s %separator %siteName\"\n    }, minimalPriority);\n    const seoMeta = {\n      ogType: \"website\",\n      ogUrl: () => canonicalUrl.value,\n      ogLocale: locale,\n      ogSiteName: siteConfig.name\n    };\n    if (siteConfig.description)\n      seoMeta.description = siteConfig.description;\n    if (siteConfig.twitter) {\n      const id = siteConfig.twitter.startsWith(\"@\") ? siteConfig.twitter : `@${siteConfig.twitter}`;\n      seoMeta.twitterCreator = id;\n      seoMeta.twitterSite = id;\n    }\n    useSeoMeta(seoMeta, minimalPriority);\n  }\n});\n",
-      "start": 1708047630962,
-      "end": 1708047630963,
+      "start": 1708316409244,
+      "end": 1708316409245,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -183,51 +175,51 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1708047630963,
-      "end": 1708047630963,
+      "start": 1708316409245,
+      "end": 1708316409245,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1708047630963,
-      "end": 1708047630963,
+      "start": 1708316409245,
+      "end": 1708316409245,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1708047630963,
-      "end": 1708047630963,
+      "start": 1708316409245,
+      "end": 1708316409245,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1708047630963,
-      "end": 1708047630963,
+      "start": 1708316409245,
+      "end": 1708316409245,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1708047630963,
-      "end": 1708047630963,
+      "start": 1708316409245,
+      "end": 1708316409245,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
       "result": "import { computed } from 'vue';\nimport { createSitePathResolver } from '/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/node_modules/nuxt-site-config/dist/runtime/nuxt/composables/utils.mjs';\nimport { defineNuxtPlugin } from '#app/nuxt';\nimport { useHead, useSeoMeta, useServerHead } from '@unhead/vue';\nimport { useRoute } from '#app/composables/router';\nimport { useSiteConfig } from '/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/node_modules/nuxt-site-config/dist/runtime/nuxt/composables/useSiteConfig.mjs';\nexport default defineNuxtPlugin({\n  name: \"nuxt-seo:defaults\",\n  setup() {\n    const siteConfig = useSiteConfig();\n    const route = useRoute();\n    const resolveUrl = createSitePathResolver({ withBase: true, absolute: true });\n    const canonicalUrl = computed(() => resolveUrl(route.path || \"/\").value || route.path);\n    const minimalPriority = {\n      // give nuxt.config values higher priority\n      tagPriority: 101\n    };\n    useHead({\n      link: [{ rel: \"canonical\", href: () => canonicalUrl.value }]\n    });\n    const locale = siteConfig.currentLocale || siteConfig.defaultLocale;\n    if (locale) {\n       false && /*@__PURE__*/ useServerHead({\n        htmlAttrs: { lang: locale }\n      });\n    }\n    useHead({\n      templateParams: { site: siteConfig, siteName: siteConfig.name || \"\" },\n      titleTemplate: \"%s %separator %siteName\"\n    }, minimalPriority);\n    const seoMeta = {\n      ogType: \"website\",\n      ogUrl: () => canonicalUrl.value,\n      ogLocale: locale,\n      ogSiteName: siteConfig.name\n    };\n    if (siteConfig.description)\n      seoMeta.description = siteConfig.description;\n    if (siteConfig.twitter) {\n      const id = siteConfig.twitter.startsWith(\"@\") ? siteConfig.twitter : `@${siteConfig.twitter}`;\n      seoMeta.twitterCreator = id;\n      seoMeta.twitterSite = id;\n    }\n    useSeoMeta(seoMeta, minimalPriority);\n  }\n});\n",
-      "start": 1708047630963,
-      "end": 1708047630964,
+      "start": 1708316409245,
+      "end": 1708316409245,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1708047630964,
-      "end": 1708047630964,
+      "start": 1708316409245,
+      "end": 1708316409245,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1708047630964,
-      "end": 1708047630964,
+      "start": 1708316409245,
+      "end": 1708316409245,
       "order": "normal"
     }
   ]
