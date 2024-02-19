@@ -30,7 +30,7 @@ onUnmounted(() => {
       </video>
       <div class="absolute lg:top-[32%] left-0 lg:left-[15%] z-30 col-center w-fit mainTextAfter">
         <h1 class="sr-only">주식회사 이엔미디어</h1>
-        <NuxtImg src="/img/main_visual_text.webp" alt="이엔미디어" class="lg:w-[calc(83%+1.25rem)] w-[90%]" />
+        <NuxtImg width="600px" src="/img/main_visual_text.webp" alt="이엔미디어" class="lg:w-[calc(83%+1.25rem)] w-[90%]" />
       </div>
       <div class="rowCenter space-x-3 absolute lg:top-[85%] left-0 lg:left-[calc(15%+12px)] z-30">
         <div class="mainScrollMouse"></div>
