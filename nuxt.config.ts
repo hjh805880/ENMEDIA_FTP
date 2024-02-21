@@ -1,4 +1,5 @@
 import site from "./site";
+import { nodePolyfills } from 'vite-plugin-node-polyfills'
 const { name, description, url, keywords, defaultLocale, identity, trailingSlash, titleSeparator } = site;
 
 export default defineNuxtConfig({
@@ -22,6 +23,11 @@ export default defineNuxtConfig({
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+  vite: {
+    plugins: [
+      nodePolyfills(),
+    ],
   },
   site: {
     url,

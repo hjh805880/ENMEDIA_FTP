@@ -1,9 +1,12 @@
 globalThis._importMeta_={url:import.meta.url,env:process.env};import { Server } from 'node:http';
 import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { join as join$2 } from 'node:path';
 import fs, { mkdirSync } from 'node:fs';
 import { parentPort, threadId } from 'node:worker_threads';
 import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, setResponseHeader, send, getResponseStatus, setResponseStatus, setResponseHeaders, getQuery as getQuery$1, getRequestHost, getRequestProtocol, getRequestHeaders, setHeader, getHeader, readBody, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent, createError, getResponseStatusText } from 'file:///Users/hanjeonghun/Documents/GitHub/%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%86%E1%85%B5%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A5_%E1%84%92%E1%85%A9%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5FTP/node_modules/h3/dist/index.mjs';
+import { createConnection } from 'file:///Users/hanjeonghun/Documents/GitHub/%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%86%E1%85%B5%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A5_%E1%84%92%E1%85%A9%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5FTP/node_modules/mysql2/promise.js';
+import bcrypt from 'file:///Users/hanjeonghun/Documents/GitHub/%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%86%E1%85%B5%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A5_%E1%84%92%E1%85%A9%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5FTP/node_modules/bcryptjs/index.js';
+import jwt from 'file:///Users/hanjeonghun/Documents/GitHub/%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%86%E1%85%B5%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A5_%E1%84%92%E1%85%A9%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5FTP/node_modules/jsonwebtoken/index.js';
 import fs$1 from 'fs';
 import path from 'path';
 import { marked } from 'file:///Users/hanjeonghun/Documents/GitHub/%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%86%E1%85%B5%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A5_%E1%84%92%E1%85%A9%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5FTP/node_modules/marked/lib/marked.esm.js';
@@ -215,109 +218,9 @@ const _inlineRuntimeConfig = {
           "/"
         ],
         "allow": []
-      },
-      {
-        "userAgent": [
-          "Nuclei",
-          "WikiDo",
-          "Riddler",
-          "PetalBot",
-          "Zoominfobot",
-          "Go-http-client",
-          "Node/simplecrawler",
-          "CazoodleBot",
-          "dotbot/1.0",
-          "Gigabot",
-          "Barkrowler",
-          "BLEXBot",
-          "magpie-crawler"
-        ],
-        "comment": [
-          "Block bots that don't benefit us."
-        ],
-        "disallow": [
-          "/"
-        ],
-        "allow": []
-      },
-      {
-        "userAgent": [
-          "Nuclei",
-          "WikiDo",
-          "Riddler",
-          "PetalBot",
-          "Zoominfobot",
-          "Go-http-client",
-          "Node/simplecrawler",
-          "CazoodleBot",
-          "dotbot/1.0",
-          "Gigabot",
-          "Barkrowler",
-          "BLEXBot",
-          "magpie-crawler"
-        ],
-        "comment": [
-          "Block bots that don't benefit us."
-        ],
-        "disallow": [
-          "/"
-        ],
-        "allow": []
-      },
-      {
-        "userAgent": [
-          "Nuclei",
-          "WikiDo",
-          "Riddler",
-          "PetalBot",
-          "Zoominfobot",
-          "Go-http-client",
-          "Node/simplecrawler",
-          "CazoodleBot",
-          "dotbot/1.0",
-          "Gigabot",
-          "Barkrowler",
-          "BLEXBot",
-          "magpie-crawler"
-        ],
-        "comment": [
-          "Block bots that don't benefit us."
-        ],
-        "disallow": [
-          "/"
-        ],
-        "allow": []
-      },
-      {
-        "userAgent": [
-          "Nuclei",
-          "WikiDo",
-          "Riddler",
-          "PetalBot",
-          "Zoominfobot",
-          "Go-http-client",
-          "Node/simplecrawler",
-          "CazoodleBot",
-          "dotbot/1.0",
-          "Gigabot",
-          "Barkrowler",
-          "BLEXBot",
-          "magpie-crawler"
-        ],
-        "comment": [
-          "Block bots that don't benefit us."
-        ],
-        "disallow": [
-          "/"
-        ],
-        "allow": []
       }
     ],
     "sitemap": [
-      "/sitemap.xml",
-      "/sitemap.xml",
-      "/sitemap.xml",
-      "/sitemap.xml",
       "/sitemap.xml"
     ],
     "robotsEnabledValue": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
@@ -2889,6 +2792,9 @@ const _zpLl2h = defineEventHandler(async (e) => {
 });
 
 const pagePaths = [
+  "/admin",
+  "/admin/join",
+  "/admin/login",
   "/company",
   "/contact",
   "/",
@@ -2945,10 +2851,16 @@ const _JGjIRw = lazyEventHandler(() => {
   return useBase(opts.baseURL, ipxHandler);
 });
 
+const _lazy_Jmh8zC = () => Promise.resolve().then(function () { return homepages$1; });
+const _lazy_rtxenE = () => Promise.resolve().then(function () { return join$1; });
+const _lazy_1B0nGn = () => Promise.resolve().then(function () { return login$1; });
 const _lazy_aoAzma = () => Promise.resolve().then(function () { return portfolio$1; });
 const _lazy_s1P1wo = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
+  { route: '/api/homepages', handler: _lazy_Jmh8zC, lazy: true, middleware: false, method: undefined },
+  { route: '/api/join', handler: _lazy_rtxenE, lazy: true, middleware: false, method: undefined },
+  { route: '/api/login', handler: _lazy_1B0nGn, lazy: true, middleware: false, method: undefined },
   { route: '/api/portfolio', handler: _lazy_aoAzma, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_error', handler: _lazy_s1P1wo, lazy: true, middleware: false, method: undefined },
   { route: '', handler: _mpyi7m, lazy: false, middleware: true, method: undefined },
@@ -3099,11 +3011,11 @@ function getAddress() {
   }
   const socketName = `worker-${process.pid}-${threadId}.sock`;
   if (a) {
-    return join("\\\\.\\pipe\\nitro", socketName);
+    return join$2("\\\\.\\pipe\\nitro", socketName);
   } else {
-    const socketDir = join(tmpdir(), "nitro");
+    const socketDir = join$2(tmpdir(), "nitro");
     mkdirSync(socketDir, { recursive: true });
-    return join(socketDir, socketName);
+    return join$2(socketDir, socketName);
   }
 }
 const listenAddress = getAddress();
@@ -3170,6 +3082,15 @@ const sources$1 = [
         },
         "urls": [
             {
+                "loc": "/admin"
+            },
+            {
+                "loc": "/admin/join"
+            },
+            {
+                "loc": "/admin/login"
+            },
+            {
                 "loc": "/company"
             },
             {
@@ -3202,6 +3123,66 @@ const sources = {};
 const childSources = /*#__PURE__*/Object.freeze({
   __proto__: null,
   sources: sources
+});
+
+const homepages = defineEventHandler(async (event) => {
+  const { url, name } = await readBody(event);
+  const connection = await createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
+  });
+  await connection.execute("INSERT INTO homepages (url, name) VALUES (?, ?)", [url, name]);
+  await connection.end();
+  return { success: true };
+});
+
+const homepages$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: homepages
+});
+
+const join = defineEventHandler(async (event) => {
+  const { name, username, password } = await readBody(event);
+  const hashedPassword = bcrypt.hashSync(password, 8);
+  const connection = await createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
+  });
+  await connection.execute("INSERT INTO user (name, username, password) VALUES (?, ?, ?)", [name, username, hashedPassword]);
+  return { success: true, message: "User registered successfully" };
+});
+
+const join$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: join
+});
+
+const login = defineEventHandler(async (event) => {
+  const { username, password } = await readBody(event);
+  const connection = await createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
+  });
+  const [rows] = await connection.execute("SELECT * FROM user WHERE username = ?", [username]);
+  if (rows.length > 0) {
+    const user = rows[0];
+    if (bcrypt.compareSync(password, user.password)) {
+      const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: "1h" });
+      return { success: true, message: "\uB85C\uADF8\uC778 \uC131\uACF5", token };
+    }
+  }
+  return { success: false, message: "\uC544\uC774\uB514\uB098 \uBE44\uBC00\uBC88\uD638\uB97C \uB2E4\uC2DC \uD655\uC778\uD574\uC8FC\uC138\uC694." };
+});
+
+const login$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: login
 });
 
 const portfolio = defineEventHandler(async (event) => {

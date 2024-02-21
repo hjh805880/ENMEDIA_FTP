@@ -3,12 +3,16 @@ const isScrolled = ref(false);
 const isIndexPage = ref(false);
 const route = useRoute();
 
-watch(() => route.path, (newPath) => {
-  isIndexPage.value = newPath === '/';
-  if (!isIndexPage.value) {
-    isScrolled.value = true;
-  }
-}, { immediate: true });
+watch(
+  () => route.path,
+  (newPath) => {
+    isIndexPage.value = newPath === "/";
+    if (!isIndexPage.value) {
+      isScrolled.value = true;
+    }
+  },
+  { immediate: true },
+);
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 0;
@@ -34,9 +38,8 @@ watch(isIndexPage, (newValue) => {
 });
 </script>
 
-
 <template>
-  <header :isScrolled="isScrolled" id="header" class="top-0 flex items-center lg:justify-between justify-center w-full h-16 py-[3vmin] transition-all ease-in-out delay-100 duration-500 text-white lg:py-2 lg:h-fit z-50" :class="{ 'fixed': isIndexPage, 'sticky': !isIndexPage, 'bg-white text-black-800 lg:px-[3%]': isScrolled, 'bg-transparent text-white lg:px-[10%]': !isScrolled }">
+  <header :isScrolled="isScrolled" id="header" class="top-0 flex items-center lg:justify-between justify-center w-full h-16 py-[3vmin] transition-all ease-in-out delay-100 duration-500 text-white lg:py-2 lg:h-fit z-50" :class="{ fixed: isIndexPage, sticky: !isIndexPage, 'bg-white text-black-800 lg:px-[3%]': isScrolled, 'bg-transparent text-white lg:px-[10%]': !isScrolled }">
     <NuxtLink to="/">
       <img v-if="isScrolled" src="~/assets/img/logo.svg" alt="이엔미디어 로고" id="logo" class="lg:w-36 mx-auto" />
       <img v-else src="~/assets/img/logo_w.svg" alt="이엔미디어 로고" id="logo" class="lg:w-56 mx-auto" />

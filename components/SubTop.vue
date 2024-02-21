@@ -2,7 +2,7 @@
   <!-- SUBTOP 시작 -->
   <article id="subtop" class="text-center">
     <div class="flex flex-col items-center justify-center w-full lg:h-[300px] h-[200px] text-white relative overflow-hidden">
-      <NuxtImg format="webp" width="1920px" :src="subTopImg" :alt="`이엔미디어 ${subTopTitle} 페이지 상단이미지`" class="object-cover w-full h-full" />
+      <NuxtImg format="webp" quality="90" width="1920px" :src="subTopImg" :alt="`이엔미디어 ${subTopTitle} 페이지 상단이미지`" class="object-cover w-full h-full" />
       <div class="colCenter absolute top-[30%]">
         <h2 class="lg:text-4xl z-20 text-3xl font-extrabold">
           {{ subTopTitle }}

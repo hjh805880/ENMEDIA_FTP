@@ -15,14 +15,13 @@ onMounted(() => {
     once: false,
   });
 });
-
 </script>
 
 <template>
   <div>
     <HeadAndMeta />
     <NuxtLayout>
-      <NuxtLoadingIndicator :color="false" class="bg-primary-500" />
+      <NuxtLoadingIndicator :height="4" :color="false" class="bg-primary-500" />
       <NuxtPage />
     </NuxtLayout>
   </div>
