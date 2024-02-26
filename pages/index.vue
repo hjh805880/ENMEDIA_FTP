@@ -18,6 +18,13 @@ onUnmounted(() => {
   document.removeEventListener("visibilitychange", handleVisibilityChange);
 });
 /* -------------- */
+/* 포트폴리오 모달 */
+const selectedItem = ref(null);
+
+const closeModal = () => {
+  selectedItem.value = null;
+};
+/* -------------- */
 </script>
 
 <template>
@@ -76,10 +83,11 @@ onUnmounted(() => {
           <div class="w-12 border-b-8 border-white"></div>
           <h3 class="pt-1 text-xl font-light">BRAND의 성장으로 가기위한 모든 길을 만들어 갑니다.</h3>
         </div>
-        <PortfolioList data-aos="fade-up" data-aos-duration="1200" :maxItems="10" :showCategoryButtons="true" />
+        <PortfolioList data-aos="fade-up" data-aos-duration="1200" :maxItems="10" :categoryButtons="false" @selectItem="selectedItem = $event"/>
         <NuxtLink data-aos="fade-up" data-aos-duration="1200" to="/portfolio" class="hover:bg-white hover:text-primary-500 px-6 py-1 text-lg font-bold border-2 border-white rounded-full"> MORE PORTFOLIO </NuxtLink>
       </div>
     </section>
+    <PortfolioListModal :item="selectedItem" @close="closeModal" />
 
     <!-- 섹션4 시작 -->
     <section id="section4" class="text-black-800 w-screen overflow-hidden bg-[url('~/assets/img/section4_visual_bg.webp')] bg-cover text-center bg-center bg-no-repeat">
