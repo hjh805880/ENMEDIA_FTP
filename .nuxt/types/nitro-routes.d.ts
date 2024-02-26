@@ -3,17 +3,23 @@ import type { Serialize, Simplify } from 'nitropack'
 declare module 'nitropack' {
   type Awaited<T> = T extends PromiseLike<infer U> ? Awaited<U> : T
   interface InternalApi {
+    '/api/authCheck': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/authCheck').default>>>>
+    }
+    '/api/bizmoney': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/bizmoney').default>>>>
+    }
+    '/api/data': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/data').default>>>>
+    }
     '/api/homepages': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/homepages').default>>>>
     }
-    '/api/join': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/join').default>>>>
-    }
-    '/api/login': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/login').default>>>>
-    }
     '/api/portfolio': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/portfolio').default>>>>
+    }
+    '/api/saveAccount': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/saveAccount').default>>>>
     }
     '/__nuxt_error': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/nuxt/dist/core/runtime/nitro/renderer').default>>>>

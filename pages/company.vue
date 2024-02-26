@@ -1,5 +1,4 @@
 <script setup>
-import SubTop from "@/components/SubTop.vue";
 </script>
 
 <template>

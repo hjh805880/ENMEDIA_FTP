@@ -1,5 +1,4 @@
 import site from "./site";
-import { nodePolyfills } from 'vite-plugin-node-polyfills'
 const { name, description, url, keywords, defaultLocale, identity, trailingSlash, titleSeparator } = site;
 
 export default defineNuxtConfig({
@@ -8,6 +7,20 @@ export default defineNuxtConfig({
   css: ["~/assets/css/tailwind.css"],
   app: {
     baseURL: "/",
+  },
+  runtimeConfig: {
+    DB_HOST: process.env.DB_HOST,
+    DB_USER: process.env.DB_USER,
+    DB_PASSWORD: process.env.DB_PASSWORD,
+    DB_NAME: process.env.DB_NAME,
+  },
+  routeRules: {
+    '/admin/**': {
+      robots: false
+    },
+    '/api/data': {
+      cors: true,
+    },
   },
   critters: {
     config: {
@@ -24,11 +37,6 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  vite: {
-    plugins: [
-      nodePolyfills(),
-    ],
-  },
   site: {
     url,
     name,
@@ -38,6 +46,9 @@ export default defineNuxtConfig({
     identity,
     trailingSlash,
     titleSeparator,
+  },
+  sitemap: {
+    exclude: ['/admin/**'],
   },
   robots: {
     blockNonSeoBots: true,

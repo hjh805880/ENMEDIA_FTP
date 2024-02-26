@@ -3,58 +3,58 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "<template>\n  <footer id=\"footer\" class=\"bg-black-800 w-full px-12 py-32 text-white\">\n    <div class=\"lg:flex-row max-w-gui flex flex-col items-center justify-between w-full mx-auto space-x-8\">\n      <div class=\"lg:items-start flex flex-col justify-center space-y-6\">\n        <img src=\"~/assets/img/logo_w.svg\" alt=\"이엔미디어 로고\" class=\"w-80\" />\n        <div class=\"text-black-400 border-black-500 pt-6 space-y-3 border-t\">\n          <div class=\"text-black-200 flex items-center justify-start space-x-4 font-medium\">\n            <p class=\"\"><b>회사명 :</b> 주식회사 이엔미디어</p>\n            <p class=\"\"><b>대표 :</b> 이희주</p>\n            <p class=\"\"><b>사업자번호 :</b> 183-87-00290</p>\n          </div>\n          <p class=\"\"><b>통신판매업신고번호 :</b> 2016-서울강서-1348</p>\n          <p class=\"\"><b>주소 :</b> 서울특별시 강서구 공항대로 227 (마곡동, 마곡센트럴타워Ⅰ) 5층 501호</p>\n          <div class=\"flex items-center justify-start space-x-4 font-light\">\n            <p class=\"\"><b>대표번호 :</b> 02-3429-3161</p>\n            <p class=\"\"><b>팩스 :</b> 0505-369-1729</p>\n          </div>\n          <div class=\"flex items-center justify-start space-x-4 font-light\">\n            <p class=\"\"><b>근무시간 :</b> 09:00~18:00</p>\n            <p class=\"\"><b>점심시간 :</b> 12:00~13:10</p>\n            <p class=\"\"><b>쉬는시간 :</b> 15:30~15:50</p>\n          </div>\n        </div>\n        <p class=\"text-black-500 font-extralight pt-8\">Copyrights 2024. <span class=\"font-medium\">주식회사 이엔미디어</span> All Rights Reserved.</p>\n      </div>\n      <FooterMap />\n    </div>\n  </footer>\n</template>\n",
-      "start": 1708316409568,
-      "end": 1708316409945,
+      "result": "<template>\n  <footer id=\"footer\" class=\"bg-black-800 w-full px-12 py-32 text-white\">\n    <div class=\"lg:flex-row max-w-gui flex flex-col items-center justify-between w-full mx-auto space-x-8\">\n      <div class=\"lg:items-start flex flex-col justify-center space-y-6\">\n        <NuxtLink to=\"/admin\">\n          <img src=\"~/assets/img/logo_w.svg\" alt=\"이엔미디어 로고\" class=\"w-80\" />\n        </NuxtLink>\n        <div class=\"text-black-400 border-black-500 pt-6 space-y-3 border-t\">\n          <div class=\"text-black-200 flex items-center justify-start space-x-4 font-medium\">\n            <p class=\"\"><b>회사명 :</b> 주식회사 이엔미디어</p>\n            <p class=\"\"><b>대표 :</b> 이희주</p>\n            <p class=\"\"><b>사업자번호 :</b> 183-87-00290</p>\n          </div>\n          <p class=\"\"><b>통신판매업신고번호 :</b> 2016-서울강서-1348</p>\n          <p class=\"\"><b>주소 :</b> 서울특별시 강서구 공항대로 227 (마곡동, 마곡센트럴타워Ⅰ) 5층 501호</p>\n          <div class=\"flex items-center justify-start space-x-4 font-light\">\n            <p class=\"\"><b>대표번호 :</b> 02-3429-3161</p>\n            <p class=\"\"><b>팩스 :</b> 0505-369-1729</p>\n          </div>\n          <div class=\"flex items-center justify-start space-x-4 font-light\">\n            <p class=\"\"><b>근무시간 :</b> 09:00~18:00</p>\n            <p class=\"\"><b>점심시간 :</b> 12:00~13:10</p>\n            <p class=\"\"><b>쉬는시간 :</b> 15:30~15:50</p>\n          </div>\n        </div>\n        <p class=\"text-black-500 font-extralight pt-8\">Copyrights 2024. <span class=\"font-medium\">주식회사 이엔미디어</span> All Rights Reserved.</p>\n      </div>\n      <FooterMap />\n    </div>\n  </footer>\n</template>\n",
+      "start": 1708909170623,
+      "end": 1708909171034,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1708316409945,
-      "end": 1708316409945,
+      "start": 1708909171035,
+      "end": 1708909171035,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1708316409945,
-      "end": 1708316409945,
+      "start": 1708909171035,
+      "end": 1708909171035,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1708316409945,
-      "end": 1708316409945,
+      "start": 1708909171035,
+      "end": 1708909171035,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1708316409945,
-      "end": 1708316409945,
+      "start": 1708909171035,
+      "end": 1708909171035,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1708316409945,
-      "end": 1708316409945,
+      "start": 1708909171035,
+      "end": 1708909171035,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1708316409945,
-      "end": 1708316409945,
+      "start": 1708909171035,
+      "end": 1708909171035,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1708316409945,
-      "end": 1708316409945,
+      "start": 1708909171035,
+      "end": 1708909171035,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "result": "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, createVNode as _createVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from 'assets/img/logo_w.svg'\n\n\nconst _hoisted_1 = {\n  id: \"footer\",\n  class: \"bg-black-800 w-full px-12 py-32 text-white\"\n}\nconst _hoisted_2 = { class: \"lg:flex-row max-w-gui flex flex-col items-center justify-between w-full mx-auto space-x-8\" }\nconst _hoisted_3 = /*#__PURE__*/_createStaticVNode(\"<div class=\\\"lg:items-start flex flex-col justify-center space-y-6\\\"><img src=\\\"\" + _imports_0 + \"\\\" alt=\\\"이엔미디어 로고\\\" class=\\\"w-80\\\"><div class=\\\"text-black-400 border-black-500 pt-6 space-y-3 border-t\\\"><div class=\\\"text-black-200 flex items-center justify-start space-x-4 font-medium\\\"><p class=\\\"\\\"><b>회사명 :</b> 주식회사 이엔미디어</p><p class=\\\"\\\"><b>대표 :</b> 이희주</p><p class=\\\"\\\"><b>사업자번호 :</b> 183-87-00290</p></div><p class=\\\"\\\"><b>통신판매업신고번호 :</b> 2016-서울강서-1348</p><p class=\\\"\\\"><b>주소 :</b> 서울특별시 강서구 공항대로 227 (마곡동, 마곡센트럴타워Ⅰ) 5층 501호</p><div class=\\\"flex items-center justify-start space-x-4 font-light\\\"><p class=\\\"\\\"><b>대표번호 :</b> 02-3429-3161</p><p class=\\\"\\\"><b>팩스 :</b> 0505-369-1729</p></div><div class=\\\"flex items-center justify-start space-x-4 font-light\\\"><p class=\\\"\\\"><b>근무시간 :</b> 09:00~18:00</p><p class=\\\"\\\"><b>점심시간 :</b> 12:00~13:10</p><p class=\\\"\\\"><b>쉬는시간 :</b> 15:30~15:50</p></div></div><p class=\\\"text-black-500 font-extralight pt-8\\\">Copyrights 2024. <span class=\\\"font-medium\\\">주식회사 이엔미디어</span> All Rights Reserved.</p></div>\", 1)\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_FooterMap = _resolveComponent(\"FooterMap\")\n\n  return (_openBlock(), _createElementBlock(\"footer\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _hoisted_3,\n      _createVNode(_component_FooterMap)\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
-      "start": 1708316409945,
-      "end": 1708316409946,
+      "result": "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createTextVNode as _createTextVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from 'assets/img/logo_w.svg'\n\n\nconst _hoisted_1 = {\n  id: \"footer\",\n  class: \"bg-black-800 w-full px-12 py-32 text-white\"\n}\nconst _hoisted_2 = { class: \"lg:flex-row max-w-gui flex flex-col items-center justify-between w-full mx-auto space-x-8\" }\nconst _hoisted_3 = { class: \"lg:items-start flex flex-col justify-center space-y-6\" }\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"img\", {\n  src: _imports_0,\n  alt: \"이엔미디어 로고\",\n  class: \"w-80\"\n}, null, -1)\nconst _hoisted_5 = /*#__PURE__*/_createStaticVNode(\"<div class=\\\"text-black-400 border-black-500 pt-6 space-y-3 border-t\\\"><div class=\\\"text-black-200 flex items-center justify-start space-x-4 font-medium\\\"><p class=\\\"\\\"><b>회사명 :</b> 주식회사 이엔미디어</p><p class=\\\"\\\"><b>대표 :</b> 이희주</p><p class=\\\"\\\"><b>사업자번호 :</b> 183-87-00290</p></div><p class=\\\"\\\"><b>통신판매업신고번호 :</b> 2016-서울강서-1348</p><p class=\\\"\\\"><b>주소 :</b> 서울특별시 강서구 공항대로 227 (마곡동, 마곡센트럴타워Ⅰ) 5층 501호</p><div class=\\\"flex items-center justify-start space-x-4 font-light\\\"><p class=\\\"\\\"><b>대표번호 :</b> 02-3429-3161</p><p class=\\\"\\\"><b>팩스 :</b> 0505-369-1729</p></div><div class=\\\"flex items-center justify-start space-x-4 font-light\\\"><p class=\\\"\\\"><b>근무시간 :</b> 09:00~18:00</p><p class=\\\"\\\"><b>점심시간 :</b> 12:00~13:10</p><p class=\\\"\\\"><b>쉬는시간 :</b> 15:30~15:50</p></div></div><p class=\\\"text-black-500 font-extralight pt-8\\\">Copyrights 2024. <span class=\\\"font-medium\\\">주식회사 이엔미디어</span> All Rights Reserved.</p>\", 2)\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")\n  const _component_FooterMap = _resolveComponent(\"FooterMap\")\n\n  return (_openBlock(), _createElementBlock(\"footer\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createVNode(_component_NuxtLink, { to: \"/admin\" }, {\n          default: _withCtx(() => [\n            _hoisted_4\n          ]),\n          _: 1\n        }),\n        _hoisted_5\n      ]),\n      _createVNode(_component_FooterMap)\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1708909171035,
+      "end": 1708909171035,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -62,159 +62,159 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171035,
+      "end": 1708909171035,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171035,
+      "end": 1708909171035,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171035,
+      "end": 1708909171036,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171036,
+      "end": 1708909171036,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171036,
+      "end": 1708909171036,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171036,
+      "end": 1708909171036,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171036,
+      "end": 1708909171036,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171036,
+      "end": 1708909171036,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171036,
+      "end": 1708909171036,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171036,
+      "end": 1708909171036,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171036,
+      "end": 1708909171036,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171036,
+      "end": 1708909171036,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171036,
+      "end": 1708909171036,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171036,
+      "end": 1708909171036,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171036,
+      "end": 1708909171036,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171036,
+      "end": 1708909171036,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171036,
+      "end": 1708909171036,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171036,
+      "end": 1708909171037,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171037,
+      "end": 1708909171037,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171037,
+      "end": 1708909171037,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171037,
+      "end": 1708909171037,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1708316409946,
-      "end": 1708316409946,
+      "start": 1708909171037,
+      "end": 1708909171037,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "result": "import { default as __nuxt_component_0 } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/components/FooterMap.vue\";\nconst _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, createVNode as _createVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from 'assets/img/logo_w.svg'\n\n\nconst _hoisted_1 = {\n  id: \"footer\",\n  class: \"bg-black-800 w-full px-12 py-32 text-white\"\n}\nconst _hoisted_2 = { class: \"lg:flex-row max-w-gui flex flex-col items-center justify-between w-full mx-auto space-x-8\" }\nconst _hoisted_3 = /*#__PURE__*/_createStaticVNode(\"<div class=\\\"lg:items-start flex flex-col justify-center space-y-6\\\"><img src=\\\"\" + _imports_0 + \"\\\" alt=\\\"이엔미디어 로고\\\" class=\\\"w-80\\\"><div class=\\\"text-black-400 border-black-500 pt-6 space-y-3 border-t\\\"><div class=\\\"text-black-200 flex items-center justify-start space-x-4 font-medium\\\"><p class=\\\"\\\"><b>회사명 :</b> 주식회사 이엔미디어</p><p class=\\\"\\\"><b>대표 :</b> 이희주</p><p class=\\\"\\\"><b>사업자번호 :</b> 183-87-00290</p></div><p class=\\\"\\\"><b>통신판매업신고번호 :</b> 2016-서울강서-1348</p><p class=\\\"\\\"><b>주소 :</b> 서울특별시 강서구 공항대로 227 (마곡동, 마곡센트럴타워Ⅰ) 5층 501호</p><div class=\\\"flex items-center justify-start space-x-4 font-light\\\"><p class=\\\"\\\"><b>대표번호 :</b> 02-3429-3161</p><p class=\\\"\\\"><b>팩스 :</b> 0505-369-1729</p></div><div class=\\\"flex items-center justify-start space-x-4 font-light\\\"><p class=\\\"\\\"><b>근무시간 :</b> 09:00~18:00</p><p class=\\\"\\\"><b>점심시간 :</b> 12:00~13:10</p><p class=\\\"\\\"><b>쉬는시간 :</b> 15:30~15:50</p></div></div><p class=\\\"text-black-500 font-extralight pt-8\\\">Copyrights 2024. <span class=\\\"font-medium\\\">주식회사 이엔미디어</span> All Rights Reserved.</p></div>\", 1)\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_FooterMap = __nuxt_component_0\n\n  return (_openBlock(), _createElementBlock(\"footer\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _hoisted_3,\n      _createVNode(_component_FooterMap)\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
-      "start": 1708316409946,
-      "end": 1708316409947,
+      "result": "import { default as __nuxt_component_0 } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/node_modules/nuxt/dist/app/components/nuxt-link\";\nimport { default as __nuxt_component_1 } from \"/Users/hanjeonghun/Documents/GitHub/이엔미디어_홈페이지FTP/components/FooterMap.vue\";\nconst _sfc_main = {}\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createTextVNode as _createTextVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from 'assets/img/logo_w.svg'\n\n\nconst _hoisted_1 = {\n  id: \"footer\",\n  class: \"bg-black-800 w-full px-12 py-32 text-white\"\n}\nconst _hoisted_2 = { class: \"lg:flex-row max-w-gui flex flex-col items-center justify-between w-full mx-auto space-x-8\" }\nconst _hoisted_3 = { class: \"lg:items-start flex flex-col justify-center space-y-6\" }\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"img\", {\n  src: _imports_0,\n  alt: \"이엔미디어 로고\",\n  class: \"w-80\"\n}, null, -1)\nconst _hoisted_5 = /*#__PURE__*/_createStaticVNode(\"<div class=\\\"text-black-400 border-black-500 pt-6 space-y-3 border-t\\\"><div class=\\\"text-black-200 flex items-center justify-start space-x-4 font-medium\\\"><p class=\\\"\\\"><b>회사명 :</b> 주식회사 이엔미디어</p><p class=\\\"\\\"><b>대표 :</b> 이희주</p><p class=\\\"\\\"><b>사업자번호 :</b> 183-87-00290</p></div><p class=\\\"\\\"><b>통신판매업신고번호 :</b> 2016-서울강서-1348</p><p class=\\\"\\\"><b>주소 :</b> 서울특별시 강서구 공항대로 227 (마곡동, 마곡센트럴타워Ⅰ) 5층 501호</p><div class=\\\"flex items-center justify-start space-x-4 font-light\\\"><p class=\\\"\\\"><b>대표번호 :</b> 02-3429-3161</p><p class=\\\"\\\"><b>팩스 :</b> 0505-369-1729</p></div><div class=\\\"flex items-center justify-start space-x-4 font-light\\\"><p class=\\\"\\\"><b>근무시간 :</b> 09:00~18:00</p><p class=\\\"\\\"><b>점심시간 :</b> 12:00~13:10</p><p class=\\\"\\\"><b>쉬는시간 :</b> 15:30~15:50</p></div></div><p class=\\\"text-black-500 font-extralight pt-8\\\">Copyrights 2024. <span class=\\\"font-medium\\\">주식회사 이엔미디어</span> All Rights Reserved.</p>\", 2)\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_NuxtLink = __nuxt_component_0\n  const _component_FooterMap = __nuxt_component_1\n\n  return (_openBlock(), _createElementBlock(\"footer\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createVNode(_component_NuxtLink, { to: \"/admin\" }, {\n          default: _withCtx(() => [\n            _hoisted_4\n          ]),\n          _: 1\n        }),\n        _hoisted_5\n      ]),\n      _createVNode(_component_FooterMap)\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1708909171037,
+      "end": 1708909171037,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1708316409947,
-      "end": 1708316409947,
+      "start": 1708909171037,
+      "end": 1708909171037,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1708316409947,
-      "end": 1708316409947,
+      "start": 1708909171037,
+      "end": 1708909171037,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1708316409947,
-      "end": 1708316409947,
+      "start": 1708909171037,
+      "end": 1708909171037,
       "order": "normal"
     }
   ]

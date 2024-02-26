@@ -4,111 +4,111 @@
     {
       "name": "vite:load-fallback",
       "result": "import { useHead, useRuntimeConfig, useServerHead } from \"#imports\";\nexport function useSchemaOrg(input) {\n  const config = useRuntimeConfig()[\"nuxt-schema-org\"] || useRuntimeConfig().public[\"nuxt-schema-org\"];\n  const script = {\n    type: \"application/ld+json\",\n    key: \"schema-org-graph\",\n    nodes: input,\n    ...config?.scriptAttributes || {}\n  };\n  if (import.meta.server) {\n    return useServerHead({\n      script: [script]\n    });\n  } else {\n    if (config?.reactive) {\n      return useHead({\n        script: [script]\n      });\n    }\n  }\n}\n",
-      "start": 1708316411516,
-      "end": 1708316411550,
+      "start": 1708909172556,
+      "end": 1708909172594,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172594,
+      "end": 1708909172594,
       "order": "pre"
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172594,
+      "end": 1708909172594,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172594,
+      "end": 1708909172594,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172594,
+      "end": 1708909172594,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172594,
+      "end": 1708909172594,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172594,
+      "end": 1708909172594,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172594,
+      "end": 1708909172594,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172594,
+      "end": 1708909172594,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172594,
+      "end": 1708909172594,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172594,
+      "end": 1708909172594,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172594,
+      "end": 1708909172594,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172594,
+      "end": 1708909172594,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172594,
+      "end": 1708909172594,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172594,
+      "end": 1708909172595,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172594,
+      "end": 1708909172595,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "normal"
     },
     {
       "name": "replace",
       "result": "import { useHead, useRuntimeConfig, useServerHead } from \"#imports\";\nexport function useSchemaOrg(input) {\n  const config = useRuntimeConfig()[\"nuxt-schema-org\"] || useRuntimeConfig().public[\"nuxt-schema-org\"];\n  const script = {\n    type: \"application/ld+json\",\n    key: \"schema-org-graph\",\n    nodes: input,\n    ...config?.scriptAttributes || {}\n  };\n  if (true) {\n    return useServerHead({\n      script: [script]\n    });\n  } else {\n    if (config?.reactive) {\n      return useHead({\n        script: [script]\n      });\n    }\n  }\n}\n",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -121,93 +121,93 @@
     },
     {
       "name": "ssr-styles",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "post"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "post"
     },
     {
       "name": "unhead:remove-server-composables",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "post"
     },
     {
       "name": "unhead:use-seo-meta-transform",
-      "start": 1708316411550,
-      "end": 1708316411550,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { useHead, useServerHead } from '@unhead/vue';\nimport { useRuntimeConfig } from '#app/nuxt';\nexport function useSchemaOrg(input) {\n  const config = useRuntimeConfig()[\"nuxt-schema-org\"] || useRuntimeConfig().public[\"nuxt-schema-org\"];\n  const script = {\n    type: \"application/ld+json\",\n    key: \"schema-org-graph\",\n    nodes: input,\n    ...config?.scriptAttributes || {}\n  };\n  if (true) {\n    return useServerHead({\n      script: [script]\n    });\n  } else {\n    if (config?.reactive) {\n      return useHead({\n        script: [script]\n      });\n    }\n  }\n}\n",
-      "start": 1708316411550,
-      "end": 1708316411551,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -221,8 +221,8 @@
     {
       "name": "nuxt:imports-transform",
       "result": "import { useHead, useServerHead } from '@unhead/vue';\nimport { useRuntimeConfig } from '#app/nuxt';\nexport function useSchemaOrg(input) {\n  const config = useRuntimeConfig()[\"nuxt-schema-org\"] || useRuntimeConfig().public[\"nuxt-schema-org\"];\n  const script = {\n    type: \"application/ld+json\",\n    key: \"schema-org-graph\",\n    nodes: input,\n    ...config?.scriptAttributes || {}\n  };\n  if (true) {\n    return useServerHead({\n      script: [script]\n    });\n  } else {\n    if (config?.reactive) {\n      return useHead({\n        script: [script]\n      });\n    }\n  }\n}\n",
-      "start": 1708316411550,
-      "end": 1708316411551,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -235,56 +235,56 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1708316411551,
-      "end": 1708316411551,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1708316411551,
-      "end": 1708316411551,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1708316411551,
-      "end": 1708316411551,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1708316411551,
-      "end": 1708316411551,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-template",
-      "start": 1708316411551,
-      "end": 1708316411551,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1708316411551,
-      "end": 1708316411551,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1708316411551,
-      "end": 1708316411551,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1708316411551,
-      "end": 1708316411551,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1708316411551,
-      "end": 1708316411551,
+      "start": 1708909172595,
+      "end": 1708909172595,
       "order": "normal"
     }
   ]

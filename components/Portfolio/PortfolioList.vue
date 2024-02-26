@@ -48,12 +48,9 @@ const isLastItemOffset = computed(() => {
     <div class="max-w-gui w-full h-full pb-56 mx-auto space-y-24" :style="isLastItemOffset ? 'padding-bottom: 14rem;' : ''">
       <div data-aos="fade-up" data-aos-duration="1000" v-if="showCategoryButtons" class="rowCenter category-buttons space-x-6 text-xl font-bold *:px-6 *:py-1 *:rounded-full">
         <button @click="setCategory('법무법인')" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '법무법인', 'bg-transparent text-white border-2 border-white': selectedCategory !== '법무법인' }">법무법인</button>
-        <button @click="setCategory('대출/대부업')" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '대출/대부업', 'bg-transparent text-white border-2 border-white': selectedCategory !== '대출/대부업' }">대출/대부업</button>
         <button @click="setCategory('프랜차이즈')" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '프랜차이즈', 'bg-transparent text-white border-2 border-white': selectedCategory !== '프랜차이즈' }">프랜차이즈</button>
-        <button @click="setCategory('요식업')" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '요식업', 'bg-transparent text-white border-2 border-white': selectedCategory !== '요식업' }">요식업</button>
         <button @click="setCategory('쇼핑몰')" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '쇼핑몰', 'bg-transparent text-white border-2 border-white': selectedCategory !== '쇼핑몰' }">쇼핑몰</button>
         <button @click="setCategory('병원/의료업')" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '병원/의료업', 'bg-transparent text-white border-2 border-white': selectedCategory !== '병원/의료업' }">병원/의료업</button>
-        <button @click="setCategory('삼성화재')" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '삼성화재', 'bg-transparent text-white border-2 border-white': selectedCategory !== '삼성화재' }">삼성화재</button>
         <button @click="setCategory('그 외')" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '그 외', 'bg-transparent text-white border-2 border-white': selectedCategory !== '그 외' }">그 외</button>
       </div>
       <div class="grid grid-cols-5 gap-5">

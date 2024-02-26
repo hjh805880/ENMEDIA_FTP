@@ -1,12 +1,12 @@
 globalThis._importMeta_={url:import.meta.url,env:process.env};import { Server } from 'node:http';
 import { tmpdir } from 'node:os';
-import { join as join$2 } from 'node:path';
+import { join } from 'node:path';
 import fs, { mkdirSync } from 'node:fs';
 import { parentPort, threadId } from 'node:worker_threads';
 import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, setResponseHeader, send, getResponseStatus, setResponseStatus, setResponseHeaders, getQuery as getQuery$1, getRequestHost, getRequestProtocol, getRequestHeaders, setHeader, getHeader, readBody, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent, createError, getResponseStatusText } from 'file:///Users/hanjeonghun/Documents/GitHub/%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%86%E1%85%B5%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A5_%E1%84%92%E1%85%A9%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5FTP/node_modules/h3/dist/index.mjs';
-import { createConnection } from 'file:///Users/hanjeonghun/Documents/GitHub/%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%86%E1%85%B5%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A5_%E1%84%92%E1%85%A9%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5FTP/node_modules/mysql2/promise.js';
-import bcrypt from 'file:///Users/hanjeonghun/Documents/GitHub/%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%86%E1%85%B5%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A5_%E1%84%92%E1%85%A9%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5FTP/node_modules/bcryptjs/index.js';
-import jwt from 'file:///Users/hanjeonghun/Documents/GitHub/%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%86%E1%85%B5%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A5_%E1%84%92%E1%85%A9%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5FTP/node_modules/jsonwebtoken/index.js';
+import axios from 'file:///Users/hanjeonghun/Documents/GitHub/%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%86%E1%85%B5%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A5_%E1%84%92%E1%85%A9%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5FTP/node_modules/axios/index.js';
+import crypto from 'crypto';
+import { createPool, createConnection } from 'file:///Users/hanjeonghun/Documents/GitHub/%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%86%E1%85%B5%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A5_%E1%84%92%E1%85%A9%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5FTP/node_modules/mysql2/promise.js';
 import fs$1 from 'fs';
 import path from 'path';
 import { marked } from 'file:///Users/hanjeonghun/Documents/GitHub/%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%86%E1%85%B5%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A5_%E1%84%92%E1%85%A9%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5FTP/node_modules/marked/lib/marked.esm.js';
@@ -63,6 +63,18 @@ const _inlineRuntimeConfig = {
       "/__nuxt_error": {
         "cache": false
       },
+      "/admin/**": {
+        "robots": false
+      },
+      "/api/data": {
+        "cors": true,
+        "headers": {
+          "access-control-allow-origin": "*",
+          "access-control-allow-methods": "*",
+          "access-control-allow-headers": "*",
+          "access-control-max-age": "0"
+        }
+      },
       "/sitemap.xsl": {
         "headers": {
           "Content-Type": "application/xslt+xml"
@@ -103,6 +115,10 @@ const _inlineRuntimeConfig = {
       "fetchRemoteUrls": false
     }
   },
+  "DB_HOST": "43.202.249.242",
+  "DB_USER": "root",
+  "DB_PASSWORD": "dldps1099@@",
+  "DB_NAME": "enmedia",
   "sitemap": {
     "isI18nMapped": false,
     "sitemapName": "sitemap.xml",
@@ -142,6 +158,7 @@ const _inlineRuntimeConfig = {
         "defaults": {},
         "include": [],
         "exclude": [
+          "/admin/**",
           "/_nuxt/**",
           "/api/**"
         ],
@@ -191,7 +208,8 @@ const _inlineRuntimeConfig = {
           "*"
         ],
         "disallow": [
-          ""
+          "",
+          "/admin/*"
         ],
         "allow": []
       },
@@ -697,9 +715,9 @@ function normalizeCookieHeaders(headers) {
   return outgoingHeaders;
 }
 
-const config = useRuntimeConfig();
+const config$2 = useRuntimeConfig();
 const _routeRulesMatcher = toRouteMatcher(
-  createRouter({ routes: config.nitro.routeRules })
+  createRouter({ routes: config$2.nitro.routeRules })
 );
 function createRouteRulesHandler(ctx) {
   return eventHandler((event) => {
@@ -2793,8 +2811,8 @@ const _zpLl2h = defineEventHandler(async (e) => {
 
 const pagePaths = [
   "/admin",
-  "/admin/join",
-  "/admin/login",
+  "/admin/naver%20copy",
+  "/admin/naver",
   "/company",
   "/contact",
   "/",
@@ -2851,17 +2869,21 @@ const _JGjIRw = lazyEventHandler(() => {
   return useBase(opts.baseURL, ipxHandler);
 });
 
+const _lazy_YIV00T = () => Promise.resolve().then(function () { return authCheck$1; });
+const _lazy_9uFidK = () => Promise.resolve().then(function () { return bizmoney$1; });
+const _lazy_5HtjXA = () => Promise.resolve().then(function () { return data$1; });
 const _lazy_Jmh8zC = () => Promise.resolve().then(function () { return homepages$1; });
-const _lazy_rtxenE = () => Promise.resolve().then(function () { return join$1; });
-const _lazy_1B0nGn = () => Promise.resolve().then(function () { return login$1; });
 const _lazy_aoAzma = () => Promise.resolve().then(function () { return portfolio$1; });
+const _lazy_3OHGHe = () => Promise.resolve().then(function () { return saveAccount$1; });
 const _lazy_s1P1wo = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
+  { route: '/api/authCheck', handler: _lazy_YIV00T, lazy: true, middleware: false, method: undefined },
+  { route: '/api/bizmoney', handler: _lazy_9uFidK, lazy: true, middleware: false, method: undefined },
+  { route: '/api/data', handler: _lazy_5HtjXA, lazy: true, middleware: false, method: undefined },
   { route: '/api/homepages', handler: _lazy_Jmh8zC, lazy: true, middleware: false, method: undefined },
-  { route: '/api/join', handler: _lazy_rtxenE, lazy: true, middleware: false, method: undefined },
-  { route: '/api/login', handler: _lazy_1B0nGn, lazy: true, middleware: false, method: undefined },
   { route: '/api/portfolio', handler: _lazy_aoAzma, lazy: true, middleware: false, method: undefined },
+  { route: '/api/saveAccount', handler: _lazy_3OHGHe, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_error', handler: _lazy_s1P1wo, lazy: true, middleware: false, method: undefined },
   { route: '', handler: _mpyi7m, lazy: false, middleware: true, method: undefined },
   { route: '/__site-config__/debug.json', handler: _e3XVb1, lazy: false, middleware: false, method: undefined },
@@ -3011,11 +3033,11 @@ function getAddress() {
   }
   const socketName = `worker-${process.pid}-${threadId}.sock`;
   if (a) {
-    return join$2("\\\\.\\pipe\\nitro", socketName);
+    return join("\\\\.\\pipe\\nitro", socketName);
   } else {
-    const socketDir = join$2(tmpdir(), "nitro");
+    const socketDir = join(tmpdir(), "nitro");
     mkdirSync(socketDir, { recursive: true });
-    return join$2(socketDir, socketName);
+    return join(socketDir, socketName);
   }
 }
 const listenAddress = getAddress();
@@ -3085,10 +3107,10 @@ const sources$1 = [
                 "loc": "/admin"
             },
             {
-                "loc": "/admin/join"
+                "loc": "/admin/naver%20copy"
             },
             {
-                "loc": "/admin/login"
+                "loc": "/admin/naver"
             },
             {
                 "loc": "/company"
@@ -3110,6 +3132,19 @@ const sources$1 = [
             }
         ],
         "sourceType": "app"
+    },
+    {
+        "context": {
+            "name": "nuxt:route-rules",
+            "description": "Generated from your route rules config.",
+            "tips": [
+                "Can be disabled with `{ excludeAppSources: ['nuxt:route-rules'] }`."
+            ]
+        },
+        "urls": [
+            "/api/data"
+        ],
+        "sourceType": "app"
     }
 ];
 
@@ -3125,64 +3160,105 @@ const childSources = /*#__PURE__*/Object.freeze({
   sources: sources
 });
 
+const authCheck = defineEventHandler(async (event) => {
+  var _a;
+  const allowedIPs = ["1.217.136.83", "106.246.235.98", "127.0.0.1"];
+  const clientIP = ((_a = event.node.req.headers["x-forwarded-for"]) == null ? void 0 : _a.split(",")[0].trim()) || event.node.req.socket.remoteAddress;
+  if (!allowedIPs.includes(clientIP)) {
+    return { allowed: false };
+  }
+  return { allowed: true };
+});
+
+const authCheck$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: authCheck
+});
+
+const bizmoney = defineEventHandler(async (event) => {
+  const { accessLicense, secretKey, customerId, threshold } = await readBody(event);
+  const API_URL = "https://api.naver.com/billing/bizmoney";
+  const timestamp = Date.now().toString();
+  const signature = crypto.createHmac("sha256", secretKey).update(timestamp + ".GET./billing/bizmoney").digest("base64");
+  try {
+    const response = await axios.get(API_URL, {
+      headers: {
+        "X-Timestamp": timestamp,
+        "X-API-KEY": accessLicense,
+        "X-Customer": customerId,
+        "X-Signature": signature
+      }
+    });
+    const bizmoney = response.data.bizmoney;
+    if (bizmoney <= threshold) {
+      return send(event, JSON.stringify({ message: "\uC794\uC561\uC774 \uC124\uC815\uD55C \uC784\uACC4\uAC12 \uC774\uD558\uC785\uB2C8\uB2E4.", bizmoney }), { headers: { "Content-Type": "application/json" } });
+    } else {
+      return send(event, JSON.stringify({ message: "\uC794\uC561\uC774 \uC784\uACC4\uAC12 \uC774\uC0C1\uC785\uB2C8\uB2E4.", bizmoney }), { headers: { "Content-Type": "application/json" } });
+    }
+  } catch (error) {
+    console.error("API \uC694\uCCAD \uC624\uB958:", error);
+    return send(event, JSON.stringify({ error: "API \uC694\uCCAD \uC2E4\uD328" }), 500, { headers: { "Content-Type": "application/json" } });
+  }
+});
+
+const bizmoney$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: bizmoney
+});
+
+const config$1 = useRuntimeConfig();
+const pool$1 = createPool({
+  host: config$1.DB_HOST,
+  user: config$1.DB_USER,
+  password: config$1.DB_PASSWORD,
+  database: config$1.DB_NAME,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
+});
+const data = defineEventHandler(async (event) => {
+  try {
+    const [rows] = await pool$1.query("SELECT url, name FROM homepages");
+    return rows;
+  } catch (error) {
+    console.error("Database query error:", error);
+    throw error;
+  }
+});
+
+const data$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: data
+});
+
 const homepages = defineEventHandler(async (event) => {
   const { url, name } = await readBody(event);
+  const config = useRuntimeConfig();
+  const safeUrl = url != null ? url : null;
+  const safeName = name != null ? name : null;
   const connection = await createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
+    host: config.DB_HOST,
+    user: config.DB_USER,
+    password: config.DB_PASSWORD,
+    database: config.DB_NAME
   });
-  await connection.execute("INSERT INTO homepages (url, name) VALUES (?, ?)", [url, name]);
-  await connection.end();
-  return { success: true };
+  try {
+    await connection.execute(
+      "INSERT INTO homepages (url, name) VALUES (?, ?)",
+      [safeUrl, safeName]
+    );
+    await connection.end();
+    return { success: true };
+  } catch (error) {
+    console.error("DB Insert Error:", error);
+    await connection.end();
+    throw error;
+  }
 });
 
 const homepages$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
   default: homepages
-});
-
-const join = defineEventHandler(async (event) => {
-  const { name, username, password } = await readBody(event);
-  const hashedPassword = bcrypt.hashSync(password, 8);
-  const connection = await createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
-  });
-  await connection.execute("INSERT INTO user (name, username, password) VALUES (?, ?, ?)", [name, username, hashedPassword]);
-  return { success: true, message: "User registered successfully" };
-});
-
-const join$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  default: join
-});
-
-const login = defineEventHandler(async (event) => {
-  const { username, password } = await readBody(event);
-  const connection = await createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
-  });
-  const [rows] = await connection.execute("SELECT * FROM user WHERE username = ?", [username]);
-  if (rows.length > 0) {
-    const user = rows[0];
-    if (bcrypt.compareSync(password, user.password)) {
-      const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: "1h" });
-      return { success: true, message: "\uB85C\uADF8\uC778 \uC131\uACF5", token };
-    }
-  }
-  return { success: false, message: "\uC544\uC774\uB514\uB098 \uBE44\uBC00\uBC88\uD638\uB97C \uB2E4\uC2DC \uD655\uC778\uD574\uC8FC\uC138\uC694." };
-});
-
-const login$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  default: login
 });
 
 const portfolio = defineEventHandler(async (event) => {
@@ -3205,6 +3281,47 @@ function parseMarkdown(markdownContent) {
 const portfolio$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
   default: portfolio
+});
+
+const config = useRuntimeConfig();
+const pool = createPool({
+  host: config.DB_HOST,
+  user: config.DB_USER,
+  password: config.DB_PASSWORD,
+  database: config.DB_NAME,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
+});
+const saveAccount = defineEventHandler(async (event) => {
+  const { customerId, setAmount, accessLicense, secretKey } = await readBody(event);
+  try {
+    const query = `
+      INSERT INTO bizmoney (customerId, setAmount, accessLicense, secretKey)
+      VALUES (?, ?, ?, ?);
+    `;
+    const values = [customerId, setAmount, accessLicense, secretKey];
+    await pool.query(query, values);
+    return {
+      statusCode: 200,
+      body: {
+        message: "\uACC4\uC815 \uC815\uBCF4 \uC800\uC7A5 \uBC0F \uC794\uC561 \uD655\uC778 \uC2A4\uCF00\uC904 \uC124\uC815 \uC644\uB8CC"
+      }
+    };
+  } catch (error) {
+    console.error("\uB370\uC774\uD130\uBCA0\uC774\uC2A4 \uC800\uC7A5 \uC624\uB958:", error);
+    return {
+      statusCode: 500,
+      body: {
+        message: "\uACC4\uC815 \uC815\uBCF4 \uC800\uC7A5 \uC2E4\uD328"
+      }
+    };
+  }
+});
+
+const saveAccount$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: saveAccount
 });
 
 const UsesMergeStrategy = ["templateParams", "htmlAttrs", "bodyAttrs"];
