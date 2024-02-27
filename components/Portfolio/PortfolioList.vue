@@ -32,9 +32,9 @@ const setCategory = (category) => {
 
 const isOffset = (index) => index % 5 === 1 || index % 5 === 3;
 
-const emit = defineEmits(['selectItem']);
+const emit = defineEmits(["selectItem"]);
 const selectItem = (item) => {
-  emit('selectItem', item);
+  emit("selectItem", item);
 };
 
 const isLastItemOffset = computed(() => {
