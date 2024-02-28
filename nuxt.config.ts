@@ -2,9 +2,16 @@ import site from "./site";
 const { name, description, url, keywords, defaultLocale, identity, trailingSlash, titleSeparator } = site;
 
 export default defineNuxtConfig({
-  modules: ["@vueuse/nuxt", "@nuxt/image", "@nuxtjs/seo", "@nuxtjs/critters", "@nuxtjs/sitemap"],
-  devtools: { enabled: true },
-  css: ["~/assets/css/tailwind.css"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/devtools", "nuxt-security", "@vueuse/nuxt", "@nuxt/image", "@nuxtjs/seo", "@nuxtjs/critters", "@nuxtjs/sitemap"],
+  devtools: {
+    enabled: true,
+  },
+  tailwindcss: {
+    cssPath: "~/assets/css/tailwind.css",
+    configPath: "tailwind.config",
+    viewer: true,
+    editorSupport: true,
+  },
   app: {
     baseURL: "/",
   },
@@ -15,11 +22,17 @@ export default defineNuxtConfig({
     DB_NAME: process.env.DB_NAME,
   },
   routeRules: {
-    '/admin/**': {
-      robots: false
+    "/admin/**": {
+      robots: false,
     },
-    '/api/data': {
+    "/api/data": {
       cors: true,
+    },
+  },
+  security: {
+    headers: {
+      crossOriginEmbedderPolicy: process.env.NODE_ENV === "development" ? "unsafe-none" : "require-corp",
+      contentSecurityPolicy: false,
     },
   },
   critters: {
@@ -48,7 +61,7 @@ export default defineNuxtConfig({
     titleSeparator,
   },
   sitemap: {
-    exclude: ['/admin/**'],
+    exclude: ["/admin/**"],
   },
   robots: {
     blockNonSeoBots: true,

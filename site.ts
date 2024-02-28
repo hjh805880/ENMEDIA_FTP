@@ -1,6 +1,6 @@
 export default {
-  name: '주식회사 이엔미디어',
-  description: '전문적이고 체계적인 최적의 솔루션을 제공하는 이엔미디어는 언제나 결과로 증명합니다.',
+  name: '주식회사 이엔미디어 미디어 시장의 중심이 되다',
+  description: '전문적이고 체계적인 최적의 솔루션을 제공하는 이엔미디어는 언제나 결과로 증명하겠습니다.',
   keywords: '주식회사 이엔미디어,검색광고,SA광고,',
   author: '주식회사 이엔미디어',
   url: 'https://en-media.kr',
@@ -37,8 +37,18 @@ export default {
       type: 'secondary',
     },
     {
+      text: 'GALLERY',
+      link: '/portfolio/gallery',
+      type: 'secondary',
+    },
+    {
       text: 'CONTACT US',
       link: '/contact',
+      type: 'secondary',
+    },
+    {
+      text: '관리자페이지',
+      link: '/admin',
       type: 'secondary',
     },
   ],
