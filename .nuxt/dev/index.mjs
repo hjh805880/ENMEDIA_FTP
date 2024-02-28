@@ -2816,6 +2816,7 @@ const pagePaths = [
   "/company",
   "/contact",
   "/",
+  "/portfolio/gallery",
   "/portfolio",
   "/service",
   "/solution"
@@ -3120,6 +3121,9 @@ const sources$1 = [
             },
             {
                 "loc": "/"
+            },
+            {
+                "loc": "/portfolio/gallery"
             },
             {
                 "loc": "/portfolio"

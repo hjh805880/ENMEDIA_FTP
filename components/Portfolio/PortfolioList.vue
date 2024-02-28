@@ -53,18 +53,18 @@ const isLastItemOffset = computed(() => {
         <button @click="setCategory('병원/의료업')" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '병원/의료업', 'bg-transparent text-white border-2 border-white': selectedCategory !== '병원/의료업' }">병원/의료업</button>
         <button @click="setCategory('그 외')" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '그 외', 'bg-transparent text-white border-2 border-white': selectedCategory !== '그 외' }">그 외</button>
       </div>
-      <div class="grid grid-cols-5 gap-5">
+      <div class="grid grid-cols-5 gap-4">
         <div v-for="(item, index) in filteredPortfolio" :key="item.slug" class="shadow-primary-700/60 group/portfolio text-black-800 rounded-2xl pb-14 relative w-full col-span-1 overflow-hidden text-center bg-white shadow-xl" :class="{ 'transform translate-y-24': isOffset(index) }">
           <a @click.prevent="selectItem(item)">
-            <div class="colCenter w-full space-y-6">
-              <div class="lg:h-32 colCenter w-full overflow-hidden">
-                <NuxtImg format="webp" quality="80" width="1200px" :src="`/img/portfolio/${item.titleImg}`" :alt="`이엔미디어 포트폴리오 업체 ${item.title} 썸네일 이미지`" class="group-hover/portfolio:scale-100 w-full transition-all duration-700 ease-in-out scale-150" />
+            <div class="colCenter w-full space-y-10">
+              <div class="lg:h-36 colCenter w-full overflow-hidden">
+                <NuxtImg format="webp" quality="90" width="1200px" :src="`/img/portfolio/${item.titleImg}`" :alt="`이엔미디어 포트폴리오 업체 ${item.title} 썸네일 이미지`" class="group-hover/portfolio:scale-100 w-full object-cover min-w-[calc(100%+4px)] transition-all duration-700 ease-in-out lg:scale-[1.15] scale-100" />
               </div>
               <div class="colCenter px-4 space-y-4">
-                <NuxtImg :src="`/img/portfolio/${item.logo}`" :alt="`이엔미디어 포트폴리오 업체 ${item.title} 로고`" class="w-16" />
+                <NuxtImg :src="`/img/portfolio/${item.logo}`" :alt="`이엔미디어 포트폴리오 업체 ${item.title} 로고`" class="lg:max-w-20 lg:max-h-20 w-full" />
                 <div class="space-y-1">
                   <h4 class="text-2xl font-bold">{{ item.title }}</h4>
-                  <p class="font-light">{{ item.titleSub }}</p>
+                  <p class="text-black-500 font-medium">{{ item.titleSub }}</p>
                 </div>
               </div>
               <div class="bg-primary-500 group-hover/portfolio:bottom-0 absolute left-0 rowCenter transition-all duration-300 ease-in-out -bottom-[100%] w-full h-8 text-white">
