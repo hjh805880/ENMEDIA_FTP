@@ -83,7 +83,7 @@ const closeModal = () => {
           <div class="w-12 border-b-8 border-white"></div>
           <h3 class="pt-1 text-xl font-light">BRAND의 성장으로 가기위한 모든 길을 만들어 갑니다.</h3>
         </div>
-        <PortfolioList data-aos="fade-up" data-aos-duration="1200" :maxItems="10" :categoryButtons="false" @selectItem="selectedItem = $event"/>
+        <PortfolioList data-aos="fade-up" data-aos-duration="1200" :maxItems="10" :categoryButtons="false" @selectItem="selectedItem = $event" />
         <NuxtLink data-aos="fade-up" data-aos-duration="1200" to="/portfolio" class="hover:bg-white hover:text-primary-500 px-6 py-1 text-lg font-bold border-2 border-white rounded-full"> MORE PORTFOLIO </NuxtLink>
       </div>
     </section>
@@ -124,18 +124,29 @@ const closeModal = () => {
             </h4>
           </div>
         </div>
+        <NuxtLink data-aos="fade-up" data-aos-duration="1200" to="/company" class="hover:bg-black-800 hover:text-white border-black-800 px-6 py-1 text-lg font-bold border-2 rounded-full"> MORE COMPANY </NuxtLink>
       </div>
     </section>
 
     <!-- 섹션5 시작 -->
-    <section id="section5" class="bg-[url('~/assets/img/section5_visual_bg.webp')] w-screen overflow-hidden min-h-lvh text-center text-white bg-center bg-no-repeat bg-cover">
-      <div class="max-w-gui space-y-80 colCenter px-12 py-32 mx-auto">
-        <div data-aos="fade-up" data-aos-duration="1000" class="colCenter space-y-4">
+    <section id="section5" class="bg-[url('~/assets/img/section5_visual_bg.webp')] w-screen overflow-visible min-h-lvh text-center text-white bg-center bg-no-repeat bg-cover">
+      <div class="max-w-gui colCenter relative px-12 lg:pt-32 lg:pb-[20%] mx-auto">
+        <div data-aos="fade-up" data-aos-duration="1000" class="colCenter space-y-4 overflow-hidden">
           <h2 class="pb-4 text-4xl font-extrabold">SERVICE</h2>
           <div class="w-12 border-b-8 border-white"></div>
           <h3 class="pt-1 text-xl font-light">더 많은 소비자에게 도달할 수 있는 키워드 검색 광고를 집행합니다.</h3>
         </div>
-        <ServiceObject data-aos="fade-up" data-aos-duration="1200" />
+        <ServiceObject data-aos="fade-up" data-aos-duration="1200" class="lg:mt-80 lg:mb-14" />
+        <NuxtLink data-aos="fade-up" data-aos-duration="1200" to="/service" class="hover:bg-white hover:text-black-800 px-6 py-1 text-lg font-bold border-2 border-white rounded-full"> MORE SERVICE </NuxtLink>
+        <!-- 여기부터 솔루션 시작 -->
+        <div data-aos="fade-up" data-aos-duration="1000" class="shadow-black-800/80 space-y-14 lg:-bottom-20 text-black-800 absolute w-full px-12 py-32 bg-white shadow-lg">
+          <div class="colCenter space-y-4 overflow-hidden">
+            <h2 class="pb-4 text-4xl font-extrabold">SOLUTION</h2>
+            <div class="border-primary-500 w-12 border-b-8"></div>
+            <h3 class="pt-1 text-xl font-light">체계적인 시스템과 전문 인력 구성으로 보다 더 만족도 높은 솔루션을 제공합니다.</h3>
+          </div>
+          <SolutionObject data-aos="fade-up" data-aos-duration="1200" />
+        </div>
       </div>
     </section>
   </div>
