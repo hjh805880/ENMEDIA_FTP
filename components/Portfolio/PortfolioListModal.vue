@@ -1,3 +1,15 @@
+<script setup>
+const props = defineProps({
+  item: Object,
+});
+
+const emit = defineEmits(["close"]);
+
+const closeModal = () => {
+  emit("close");
+};
+</script>
+
 <template>
   <div>
     <div v-if="item" class="fixed top-0 left-0 z-[999999] bg-black-800/60 flex items-center justify-center w-screen h-screen min-h-lvh">
@@ -61,15 +73,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-const props = defineProps({
-  item: Object,
-});
-
-const emit = defineEmits(["close"]);
-
-const closeModal = () => {
-  emit("close");
-};
-</script>

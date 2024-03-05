@@ -75,7 +75,7 @@
 			l1.4-16l-3.3-4.6l-50.1-6.1L381.2,276.2z"
           />
         </g>
-        <NuxtLink to="https://m.place.naver.com/share?id=1525327240&tabsPath=%2Fhome&appMode=detail" target="_blank">
+        <NuxtLink to="https://kko.to/Io6hs4G4Ui" target="_blank">
           <path
             class="st2 hover:fill-primary-400"
             d="M461.9,160.3c2.9-6.7,4.5-14.1,4.5-21.8c0-30.4-24.6-55-55-55s-55,24.6-55,55c0,7.7,2.6,14.4,4.5,21.8

@@ -2,7 +2,7 @@ import site from "./site";
 const { name, description, url, keywords, defaultLocale, identity, trailingSlash, titleSeparator } = site;
 
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/devtools", "nuxt-security", "@vueuse/nuxt", "@nuxt/image", "@nuxtjs/seo", "@nuxtjs/critters", "@nuxtjs/sitemap"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/devtools", "nuxt-aos", "@vueuse/nuxt", "@nuxt/image", "@nuxtjs/seo", "@nuxtjs/critters", "@nuxtjs/sitemap", "@pinia/nuxt"],
   devtools: {
     enabled: true,
   },
@@ -27,12 +27,6 @@ export default defineNuxtConfig({
     },
     "/api/data": {
       cors: true,
-    },
-  },
-  security: {
-    headers: {
-      crossOriginEmbedderPolicy: process.env.NODE_ENV === "development" ? "unsafe-none" : "require-corp",
-      contentSecurityPolicy: false,
     },
   },
   critters: {
@@ -73,4 +67,7 @@ export default defineNuxtConfig({
   ogImage: {
     enabled: false,
   },
+  aos: {
+    once: false,
+  }
 });

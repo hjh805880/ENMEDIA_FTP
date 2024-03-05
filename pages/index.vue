@@ -129,8 +129,8 @@ const closeModal = () => {
     </section>
 
     <!-- 섹션5 시작 -->
-    <section id="section5" class="bg-[url('~/assets/img/section5_visual_bg.webp')] w-screen overflow-visible min-h-lvh text-center text-white bg-center bg-no-repeat bg-cover">
-      <div class="max-w-gui colCenter relative px-12 lg:pt-32 lg:pb-[20%] mx-auto">
+    <section id="section5" class="bg-[url('~/assets/img/section5_visual_bg.webp')] w-full overflow-visible min-h-lvh text-center text-white bg-center bg-no-repeat bg-cover">
+      <div class="max-w-gui colCenter relative px-12 lg:pt-32 lg:pb-[40%] mx-auto">
         <div data-aos="fade-up" data-aos-duration="1000" class="colCenter space-y-4 overflow-hidden">
           <h2 class="pb-4 text-4xl font-extrabold">SERVICE</h2>
           <div class="w-12 border-b-8 border-white"></div>
@@ -139,13 +139,51 @@ const closeModal = () => {
         <ServiceObject data-aos="fade-up" data-aos-duration="1200" class="lg:mt-80 lg:mb-14" />
         <NuxtLink data-aos="fade-up" data-aos-duration="1200" to="/service" class="hover:bg-white hover:text-black-800 px-6 py-1 text-lg font-bold border-2 border-white rounded-full"> MORE SERVICE </NuxtLink>
         <!-- 여기부터 솔루션 시작 -->
-        <div data-aos="fade-up" data-aos-duration="1000" class="shadow-black-800/80 space-y-14 lg:-bottom-20 text-black-800 absolute w-full px-12 py-32 bg-white shadow-lg">
+        <div data-aos="fade-up" data-aos-duration="1000" class="shadow-black-600/60 space-y-14 rounded-sm lg:-bottom-[28%] text-black-800 absolute w-full px-16 py-32 bg-white shadow-xl">
           <div class="colCenter space-y-4 overflow-hidden">
             <h2 class="pb-4 text-4xl font-extrabold">SOLUTION</h2>
             <div class="border-primary-500 w-12 border-b-8"></div>
             <h3 class="pt-1 text-xl font-light">체계적인 시스템과 전문 인력 구성으로 보다 더 만족도 높은 솔루션을 제공합니다.</h3>
           </div>
-          <SolutionObject data-aos="fade-up" data-aos-duration="1200" />
+          <SolutionObject data-aos="fade-up" data-aos-duration="1200" class="pb-28" />
+          <NuxtLink data-aos="fade-up" data-aos-duration="1200" to="/solution" class="hover:bg-black-800 hover:text-white border-black-800 px-6 py-1 text-lg font-bold border-2 rounded-full"> MORE SOLUTION </NuxtLink>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션6 시작 -->
+    <section id="section6" class="min-h-lvh text-black-800 z-10 lg:mt-[40%] w-full h-full text-center bg-white">
+      <div class="max-w-gui colCenter relative px-12 pb-32 mx-auto space-y-16">
+        <div data-aos="fade-up" data-aos-duration="1000" class="colCenter space-y-4 overflow-hidden">
+          <h2 class="pb-4 text-4xl font-extrabold">LOCATION</h2>
+          <div class="border-primary-500 w-12 border-b-8"></div>
+          <h3 class="pt-1 text-xl font-light">이엔미디어는 성장하고자 하는 모든 비즈니스에 열려있습니다.</h3>
+        </div>
+        <KakaoMap />
+        <div class="grid w-full grid-cols-1 px-2 space-y-6">
+          <div class="flex flex-col items-start justify-center space-y-2">
+            <h4 class="before:content-['-'] before:text-3xl before:mr-2 before:text-primary-500 text-2xl font-bold">ADDRESS</h4>
+            <h5 class="text-black-700 text-lg">서울특별시 강서구 공항대로 227, 마곡센트럴타워 5층 501호</h5>
+          </div>
+          <div class="flex flex-col items-start justify-center space-y-2">
+            <h4 class="before:content-['-'] before:text-3xl before:mr-2 before:text-primary-500 text-2xl font-bold">WAY TO COME</h4>
+            <h5 class="text-black-700 text-lg">발산역 9번출구에서 300M 직진</h5>
+          </div>
+          <div class="flex flex-col items-start justify-center space-y-2">
+            <h4 class="before:content-['-'] before:text-3xl before:mr-2 before:text-primary-500 text-2xl font-bold">CONTACT INFO</h4>
+            <NuxtLink to="tel:02-3429-3161" class="rowCenter hover:underline hover:underline-offset-4 space-x-2">
+              <div class="bg-black-700 colCenter aspect-1 p-1.5 text-xs text-white rounded-full">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <h5 class="text-black-700 text-lg">02) 3429-3161</h5>
+            </NuxtLink>
+            <NuxtLink to="mailto:ads_com@naver.com" class="rowCenter hover:underline hover:underline-offset-4 space-x-2">
+              <div class="bg-black-700 colCenter aspect-1 p-1.5 text-xs text-white rounded-full">
+                <i class="fa-solid fa-paper-plane"></i>
+              </div>
+              <h5 class="text-black-700 text-lg">ads_com@naver.com</h5>
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </section>
