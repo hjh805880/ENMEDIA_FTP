@@ -31,18 +31,18 @@ const closeModal = () => {
   <div>
     <!-- 섹션1 시작 -->
     <section id="section1" class="min-h-dvh w-screen h-screen overflow-hidden text-white">
-      <div class="lg:block hidden">
+      <div class="">
         <video ref="mainVideo" class="lg:w-auto lg:h-auto min-h-lvh relative z-0 object-cover w-full h-full min-w-full" autoplay playsinline loop muted>
           <source src="~/assets/video/main_visual_bg.webm" type="video/webm" class="object-cover w-full h-full" />
           <source src="~/assets/video/main_visual_bg.mp4" type="video/mp4" class="object-cover w-full h-full" />
         </video>
-        <div class="absolute lg:top-[32%] left-0 lg:left-[15%] z-30 col-center w-fit mainTextAfter">
+        <div class="lg:px-0 px-4 absolute lg:top-[32%] left-0 lg:left-[15%] top-[35%] z-30 col-center w-fit mainTextAfter">
           <h1 class="sr-only">주식회사 이엔미디어</h1>
           <img src="~/assets/img/main_visual_text.webp" alt="이엔미디어" class="lg:w-[calc(83%+1.25rem)] w-[90%]" />
         </div>
-        <div class="rowCenter space-x-3 absolute lg:top-[85%] left-0 lg:left-[calc(15%+12px)] z-30">
+        <div class="rowCenter space-x-3 absolute lg:top-[85%] top-[65%] left-0 px-6 lg:px-0 lg:left-[calc(15%+12px)] z-30">
           <div class="mainScrollMouse"></div>
-          <span class="text-xl font-bold">SCROLL DOWN</span>
+          <span class="lg:text-xl text-base font-bold">SCROLL DOWN</span>
         </div>
       </div>
     </section>

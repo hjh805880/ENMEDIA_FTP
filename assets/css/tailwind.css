@@ -97,10 +97,29 @@
 
   /* 섹션1 정의 */
   .mainTextAfter {
-    @apply after:absolute after:lg:top-[13%] after:left-0 after:lg:left-[72%] after:z-30 after:content-[url('~/assets/img/main_visual_text_spin.webp')] after:animate-spin after:animate-ease-linear after:animate-duration-[7000ms];
+    @apply after:absolute after:lg:top-[13%] after:right-3 after:-top-10 after:lg:left-[72%] after:z-30 after:content-[url('~/assets/img/main_visual_text_spin.webp')] after:animate-spin after:animate-ease-linear after:animate-duration-[7000ms];
   }
   .mainScrollMouse {
-    @apply w-6 h-10 border-2 border-white rounded-full relative before:absolute before:top-2 before:left-[calc(50%-2px)] before:size-[5px] before:bg-white before:rounded-full before:animate-ease-in-out before:animate-[mouseScroll] before:animate-duration-[2000ms] before:animate-infinite;
+    @apply lg:w-6 lg:h-10 w-5 h-8 border-2 border-white rounded-full relative before:absolute before:top-2 before:lg:left-[calc(50%-3px)] before:left-[calc(50%-2px)] before:lg:size-[6px] before:size-[4px] before:bg-white before:rounded-full before:animate-ease-in-out before:animate-[mouseScroll] before:animate-duration-[2000ms] before:animate-infinite;
+  }
+
+  @media screen(lg) {
+    @keyframes mouseScroll {
+      0% {
+        transform: translate(0, 0);
+        opacity: 0;
+      }
+      40% {
+        opacity: 1;
+      }
+      80% {
+        transform: translate(0, 20px);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
   }
 
   @keyframes mouseScroll {
@@ -112,7 +131,7 @@
       opacity: 1;
     }
     80% {
-      transform: translate(0, 20px);
+      transform: translate(0, 12px);
       opacity: 0;
     }
     100% {
