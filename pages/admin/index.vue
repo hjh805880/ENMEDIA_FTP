@@ -1,7 +1,6 @@
 <script setup>
 const url = ref("");
 const name = ref("");
-import { useKakaoWorkStore } from "@/stores/kakaoWorkStore";
 
 const { data } = useFetch("/api/authCheck");
 
@@ -12,10 +11,24 @@ onMounted(async () => {
   }
 });
 
-const store = useKakaoWorkStore();
+const kakaoLink = ref(null);
+
+async function fetchKakaoLink() {
+  try {
+    const response = await fetch('/api/kakaoWork');
+    if (response.ok) {
+      const data = await response.json();
+      kakaoLink.value = data;
+    } else {
+      console.error('Failed to fetch the link from API');
+    }
+  } catch (error) {
+    console.error('Error fetching link:', error);
+  }
+}
 
 onMounted(() => {
-  store.fetchLink();
+  fetchKakaoLink();
 });
 
 const submitData = async () => {
@@ -58,8 +71,8 @@ const submitData = async () => {
         </form>
         <div class="colCenter w-1/2 mx-auto text-center">
           <div class="flex items-start justify-center w-full space-x-4 text-lg font-medium text-white">
-            <div class="colCenter space-y-2">
-              <NuxtLink :to="store.link?.link || ''" target="_blank" class="bg-black-800 px-4 py-1.5 rounded-sm rowCenter space-x-2 hover:shadow-lg hover:shadow-black-600/70 hover:transition-all hover:duration-500 hover:ease-in-out">
+            <div v-if="kakaoLink" class="colCenter space-y-2">
+              <NuxtLink :to="kakaoLink.link || '#'" target="_blank" class="bg-black-800 px-4 py-1.5 rounded-sm rowCenter space-x-2 hover:shadow-lg hover:shadow-black-600/70 hover:transition-all hover:duration-500 hover:ease-in-out">
                 <span class="">카카오워크 가입링크 바로가기</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
