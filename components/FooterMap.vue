@@ -20,7 +20,7 @@
 </style>
 
 <template>
-  <div class="w-1/2">
+  <div class="lg:w-1/2 w-full">
     <svg version="1.1" id="Layer_2_00000178172762394590652600000001751301500085148853_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1013.5 545" style="enable-background: new 0 0 1013.5 545" xml:space="preserve">
       <g id="Layer_1-2">
         <g>

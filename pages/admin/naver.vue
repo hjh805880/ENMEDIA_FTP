@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="max-w-gui colCenter w-full h-full py-56 mx-auto space-y-24">
+    <div class="lg:max-w-gui max-w-full colCenter w-full h-full py-56 mx-auto space-y-24">
       <div class="colCenter mt-20">
         <input v-model="customerId" placeholder="CUSTOMER_ID" required />
         <input v-model.number="setAmount" type="number" placeholder="설정 금액" required />

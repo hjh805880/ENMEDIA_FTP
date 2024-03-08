@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="after:top-[43%] after:border-b after:border-black-800 after:w-[83%] after:absolute after:z-10 after:left-0 relative z-20 grid grid-cols-5 items-center justify-center place-content-center w-full gap-10">
+    <div class="after:top-[43%] after:border-b after:border-black-800 after:w-[83%] after:absolute after:z-10 after:left-0 relative z-20 grid lg:grid-cols-5 grid-cols-1 items-center justify-center place-content-center w-full gap-10">
       <div data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300" class="colCenter z-20 w-full space-y-4 text-2xl text-white">
         <span class="bg-primary-500 aspect-1 colCenter w-full p-8 rounded-full">브랜드 진단 및 분석</span>
         <span class="bg-primary-500 aspect-1 colCenter w-full p-8 rounded-full">마케팅 방향성 및 컨셉 수립</span>
       </div>
-      <div class="rowCenter z-20 w-full col-span-3 -space-x-16 text-white">
+      <div class="lg:rowCenter colCenter z-20 w-full col-span-3 -space-x-16 text-white">
         <div data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500" class="bg-black-500 aspect-1 colCenter w-full p-8 rounded-full">
             <span class="text-3xl font-extrabold">01</span>
             <span class="text-xl">특정 상품에 대한<br>고객 타겟팅 광고</span>
