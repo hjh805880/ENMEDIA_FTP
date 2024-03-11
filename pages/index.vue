@@ -160,7 +160,7 @@ const closeModal = () => {
           <h3 class="pt-1 text-xl font-light">이엔미디어는 성장하고자 하는 모든 비즈니스에 열려있습니다.</h3>
         </div>
         <KakaoMap />
-        <div class="grid w-full grid-cols-1 px-2 space-y-6">
+        <div class="grid w-full grid-cols-1 px-2 space-y-6 text-left">
           <div class="flex flex-col items-start justify-center space-y-2">
             <h4 class="before:content-['-'] before:text-3xl before:mr-2 before:text-primary-500 text-2xl font-bold">ADDRESS</h4>
             <h5 class="text-black-700 text-lg">서울특별시 강서구 공항대로 227, 마곡센트럴타워 5층 501호</h5>

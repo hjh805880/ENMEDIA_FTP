@@ -14,9 +14,9 @@ const closeModal = () => {
   <div>
     <div v-if="item" class="fixed top-0 left-0 z-[999999] bg-black-800/60 flex items-center justify-center w-screen h-screen">
       <div class="shadow-black-800/60 lg:max-w-5xl flex flex-col items-center justify-between w-full max-w-[90%] bg-white shadow-lg">
-        <div class="bg-primary-500 lg:px-8 flex items-center justify-between w-full px-4 py-5 text-white">
-          <div class="rowCenter lg:space-x-8 space-x-4">
-            <div class="lg:rowCenter lg:space-x-4 flex flex-col items-start justify-center">
+        <div class="bg-primary-500 lg:px-8 flex items-center justify-between w-full px-5 py-6 text-white">
+          <div class="lg:rowCenter lg:space-x-8 flex flex-col items-start justify-center space-y-2">
+            <div class="rowCenter lg:space-x-4 space-x-2">
               <span class="lg:text-2xl text-xl font-bold">{{ item.title }}</span>
               <span class="lg:text-base text-sm font-light">{{ item.titleSub }}</span>
             </div>
@@ -50,7 +50,7 @@ const closeModal = () => {
               <span class="text-black-700 lg:text-base col-span-2 text-sm font-light text-left">{{ item.type }}</span>
               <span class="text-black-800 lg:text-lg text-base font-bold text-left"><b class="text-primary-500">-</b> 홈페이지</span>
               <div class="col-span-2">
-                <NuxtLink :to="`${item.homepage}`" target="_blank" class="has-[:hover]:text-primary-500 has-[:hover]:underline-offset-4 has-[:hover]:underline flex w-fit items-center text-black-700 justify-start lg:space-x-1">
+                <NuxtLink :to="`${item.homepage}`" target="_blank" class="has-[:hover]:text-primary-500 has-[:hover]:underline-offset-4 has-[:hover]:underline flex w-fit items-center text-black-700 justify-start space-x-1">
                   <span class="lg:text-base w-fit text-sm font-semibold text-left">{{ item.homepage }}</span>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.0" stroke="currentColor" class="size-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
