@@ -68,7 +68,7 @@ const isLastItemOffset = computed(() => {
 
 <template>
   <div>
-    <div class="lg:max-w-gui max-w-full w-full h-full pb-56 mx-auto space-y-24" :style="isLastItemOffset ? 'padding-bottom: 14rem;' : ''">
+    <div class="lg:max-w-gui w-full h-full max-w-full pb-56 mx-auto space-y-24" :style="isLastItemOffset ? 'padding-bottom: 14rem;' : ''">
       <div data-aos="fade-up" data-aos-duration="1000" v-if="categoryButtons" class="lg:rowCenter grid grid-cols-3 category-buttons lg:space-x-6 whitespace-nowrap lg:gap-0 gap-4 text-lg lg:text-xl text-center font-bold *:lg:px-6 *:py-1 *:px-4 *:rounded-full">
         <button @click="setCategory('법무법인')" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '법무법인', 'bg-transparent text-white border-2 border-white': selectedCategory !== '법무법인' }">법무법인</button>
         <button @click="setCategory('프랜차이즈')" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '프랜차이즈', 'bg-transparent text-white border-2 border-white': selectedCategory !== '프랜차이즈' }">프랜차이즈</button>
@@ -77,7 +77,7 @@ const isLastItemOffset = computed(() => {
         <button @click="setCategory('그 외')" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '그 외', 'bg-transparent text-white border-2 border-white': selectedCategory !== '그 외' }">그 외</button>
       </div>
       <div class="lg:grid-cols-5 grid grid-cols-2 gap-4">
-        <div v-for="(item, index) in filteredPortfolio" :key="item.slug" class="shadow-primary-700/60 group/portfolio text-black-800 rounded-2xl lg:pb-14 relative w-full col-span-1 pb-8 overflow-hidden text-center bg-white shadow-xl" :class="{ 'transform translate-y-24': isOffset(index) }">
+        <div v-for="(item, index) in filteredPortfolio" :key="item.slug" class="shadow-primary-700/60 group/portfolio text-black-800 lg:rounded-2xl rounded-xl lg:pb-14 relative w-full col-span-1 pb-8 overflow-hidden text-center bg-white shadow-xl" :class="{ 'transform translate-y-24': isOffset(index) }">
           <a @click.prevent="selectItem(item)">
             <div class="colCenter lg:space-y-10 w-full space-y-6">
               <div class="lg:h-36 colCenter h-28 w-full overflow-hidden">

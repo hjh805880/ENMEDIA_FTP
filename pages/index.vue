@@ -84,7 +84,7 @@ const closeModal = () => {
           <h3 class="lg:text-xl pt-1 text-lg font-light">BRAND의 성장으로 가기위한 모든 길을 만들어 갑니다.</h3>
         </div>
         <PortfolioList data-aos="fade-up" data-aos-duration="1200" :maxItems="10" :categoryButtons="false" @selectItem="selectedItem = $event" />
-        <NuxtLink data-aos="fade-up" data-aos-duration="1200" to="/portfolio" class="hover:bg-white hover:text-primary-500 px-6 py-1 text-lg font-bold border-2 border-white rounded-full"> MORE PORTFOLIO </NuxtLink>
+        <NuxtLink data-aos="fade-up" data-aos-duration="1200" to="/portfolio" class="hover:bg-white hover:text-primary-500 lg:text-lg px-6 py-1 text-base font-bold border-2 border-white rounded-full"> MORE PORTFOLIO </NuxtLink>
       </div>
     </section>
     <PortfolioListModal :item="selectedItem" @close="closeModal" />
@@ -93,66 +93,66 @@ const closeModal = () => {
     <section id="section4" class="text-black-800 w-screen overflow-hidden bg-[url('~/assets/img/section4_visual_bg.webp')] bg-cover text-center bg-center bg-no-repeat">
       <div class="lg:max-w-gui space-y-14 colCenter lg:px-12 lg:py-40 max-w-full px-4 py-32 mx-auto">
         <div data-aos="fade-up" data-aos-duration="1000" class="colCenter space-y-4">
-          <h2 class="pb-4 text-4xl font-extrabold">창의적인 생각과 <span class="text-primary-500">Creative</span>한 아이디어로<br /><span class="text-secondary-500">확실한 성과</span>를 만들어냅니다</h2>
+          <h2 class="lg:text-4xl lg:pb-4 pb-2 text-3xl font-extrabold">창의적인 생각과 <span class="text-primary-500">Creative</span>한 아이디어로<br /><span class="text-secondary-500">확실한 성과</span>를 만들어냅니다</h2>
         </div>
-        <MainCreativeIcon data-aos="fade-up" data-aos-duration="1200" class="pc-only"/>
+        <MainCreativeIcon data-aos="fade-up" data-aos-duration="1200"/>
         <div class="flex items-start justify-between w-full">
-          <div data-aos="fade-right" data-aos-duration="1200" class="flex flex-col items-start justify-start space-y-2">
-            <h3 class="text-primary-500 text-2xl font-bold">Performance Marketing</h3>
-            <h4 class="text-black-700 flex items-center w-full space-x-3 text-lg font-light text-left">
+          <div data-aos="fade-right" data-aos-duration="1200" class="flex flex-col items-start justify-start space-y-2 text-left">
+            <h3 class="text-primary-500 lg:text-2xl text-xl font-bold">Performance Marketing</h3>
+            <h4 class="text-black-700 lg:text-lg flex items-center w-full space-x-3 text-sm font-light text-left">
               <span class="">SearchAD</span>
               <span class="">Retargeting AD</span>
             </h4>
-            <h4 class="text-black-700 flex items-center w-full space-x-3 text-lg font-light text-left">
+            <h4 class="text-black-700 lg:text-lg flex items-center w-full space-x-3 text-sm font-light text-left">
               <span class="">Display AD</span>
               <span class="">SNS</span>
             </h4>
           </div>
-          <div data-aos="fade-left" data-aos-duration="1200" class="flex flex-col items-end justify-end space-y-2">
-            <h3 class="text-secondary-500 text-2xl font-bold">Brand Marketing</h3>
-            <h4 class="text-black-700 flex items-center justify-end w-full space-x-3 text-lg font-light text-right">
+          <div data-aos="fade-left" data-aos-duration="1200" class="flex flex-col items-end justify-end space-y-2 text-right">
+            <h3 class="text-secondary-500 lg:text-2xl text-xl font-bold">Brand Marketing</h3>
+            <h4 class="text-black-700 lg:text-lg flex items-center justify-end w-full space-x-3 text-sm font-light text-right">
               <span class="">Video Ad</span>
               <span class="">OOH</span>
             </h4>
-            <h4 class="text-black-700 flex items-center justify-end w-full space-x-3 text-lg font-light text-right">
+            <h4 class="text-black-700 lg:text-lg flex items-center justify-end w-full space-x-3 text-sm font-light text-right">
               <span class="">Brand Consulting</span>
               <span class="">ATL</span>
             </h4>
-            <h4 class="text-black-700 flex items-center justify-end w-full space-x-3 text-lg font-light text-right">
+            <h4 class="text-black-700 lg:text-lg flex items-center justify-end w-full space-x-3 text-sm font-light text-right">
               <span class="">Creative Strategy</span>
               <span class="">BTL</span>
             </h4>
           </div>
         </div>
-        <NuxtLink data-aos="fade-up" data-aos-duration="1200" to="/company" class="hover:bg-black-800 hover:text-white border-black-800 px-6 py-1 text-lg font-bold border-2 rounded-full"> MORE COMPANY </NuxtLink>
+        <NuxtLink data-aos="fade-up" data-aos-duration="1200" to="/company" class="hover:bg-black-800 hover:text-white border-black-800 lg:text-lg px-6 py-1 text-base font-bold border-2 rounded-full"> MORE COMPANY </NuxtLink>
       </div>
     </section>
 
     <!-- 섹션5 시작 -->
     <section id="section5" class="bg-[url('~/assets/img/section5_visual_bg.webp')] w-full overflow-visible text-center text-white bg-center bg-no-repeat bg-cover">
-      <div class="lg:max-w-gui max-w-full colCenter relative lg:px-12 px-4 lg:pt-40 pt-32 lg:pb-[42%] mx-auto">
+      <div class="lg:max-w-gui max-w-full colCenter relative lg:px-12 px-4 lg:pt-40 pt-32 lg:pb-[42%] pb-[100%] mx-auto">
         <div data-aos="fade-up" data-aos-duration="1000" class="colCenter space-y-4 overflow-hidden">
-          <h2 class="pb-4 text-4xl font-extrabold">SERVICE</h2>
-          <div class="w-12 border-b-8 border-white"></div>
-          <h3 class="pt-1 text-xl font-light">더 많은 소비자에게 도달할 수 있는 키워드 검색 광고를 집행합니다.</h3>
+          <h2 class="lg:text-4xl lg:pb-4 pb-2 text-3xl font-extrabold">SERVICE</h2>
+          <div class="lg:w-12 w-10 border-b-8 border-white"></div>
+          <h3 class="lg:text-xl pt-1 text-lg font-light">더 많은 소비자에게 도달할 수 있는 키워드 검색 광고를 집행합니다.</h3>
         </div>
-        <ServiceObject data-aos="fade-up" data-aos-duration="1200" class="lg:mt-80 lg:mb-14 pc-only" />
-        <NuxtLink data-aos="fade-up" data-aos-duration="1200" to="/service" class="hover:bg-white hover:text-black-800 px-6 py-1 text-lg font-bold border-2 border-white rounded-full"> MORE SERVICE </NuxtLink>
+        <ServiceObject data-aos="fade-up" data-aos-duration="1200" class="lg:mt-80 lg:mb-14 mt-40 mb-12" />
+        <NuxtLink data-aos="fade-up" data-aos-duration="1200" to="/service" class="hover:bg-white hover:text-black-800 lg:text-lg px-6 py-1 text-base font-bold border-2 border-white rounded-full"> MORE SERVICE </NuxtLink>
         <!-- 여기부터 솔루션 시작 -->
-        <div data-aos="fade-up" data-aos-duration="1000" class="shadow-black-600/60 space-y-14 rounded-sm lg:-bottom-[28%] text-black-800 absolute w-full lg:px-16 px-4 lg:py-40 py-32 bg-white shadow-xl">
+         <div data-aos="fade-up" data-aos-duration="1000" class="shadow-black-600/60 space-y-14 lg:max-w-full max-w-[95%] rounded-sm lg:-bottom-[28%] -bottom-[40%] text-black-800 absolute w-full lg:px-16 px-4 lg:py-40 py-32 bg-white shadow-xl">
           <div class="colCenter space-y-4 overflow-hidden">
-            <h2 class="pb-4 text-4xl font-extrabold">SOLUTION</h2>
-            <div class="border-primary-500 w-12 border-b-8"></div>
-            <h3 class="pt-1 text-xl font-light">체계적인 시스템과 전문 인력 구성으로 보다 더 만족도 높은 솔루션을 제공합니다.</h3>
+            <h2 class="lg:text-4xl lg:pb-4 pb-2 text-3xl font-extrabold">SOLUTION</h2>
+            <div class="border-primary-500 lg:w-12 w-10 border-b-8"></div>
+            <h3 class="lg:text-xl pt-1 text-lg font-light">체계적인 시스템과 전문 인력 구성으로 보다 더 만족도 높은 솔루션을 제공합니다.</h3>
           </div>
-          <SolutionObject data-aos="fade-up" data-aos-duration="1200" class="pb-28 pc-only" />
-          <NuxtLink data-aos="fade-up" data-aos-duration="1200" to="/solution" class="hover:bg-black-800 hover:text-white border-black-800 px-6 py-1 text-lg font-bold border-2 rounded-full"> MORE SOLUTION </NuxtLink>
+          <SolutionObject data-aos="fade-up" data-aos-duration="1200" class="pb-28 max-w-full" />
+          <NuxtLink data-aos="fade-up" data-aos-duration="1200" to="/solution" class="hover:bg-black-800 hover:text-white border-black-800 lg:text-lg px-6 py-1 text-base font-bold border-2 rounded-full"> MORE SOLUTION </NuxtLink>
         </div>
       </div>
     </section>
 
     <!-- 섹션6 시작 -->
-    <section id="section6" class="text-black-800 z-10 lg:mt-[40%] w-full h-full text-center bg-white">
+    <section id="section6" class="text-black-800 z-10 lg:mt-[40%] mt-[35%] w-full h-full text-center bg-white">
       <div class="lg:max-w-gui colCenter lg:px-12 lg:pb-40 relative max-w-full px-4 pb-32 mx-auto space-y-16">
         <div data-aos="fade-up" data-aos-duration="1000" class="colCenter space-y-4 overflow-hidden">
           <h2 class="pb-4 text-4xl font-extrabold">LOCATION</h2>

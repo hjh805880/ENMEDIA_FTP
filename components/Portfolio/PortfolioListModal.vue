@@ -59,8 +59,8 @@ const closeModal = () => {
               </div>
               <span class="text-black-800 lg:text-lg text-base font-bold text-left"><b class="text-primary-500">-</b> 작업매체</span>
               <span class="text-black-700 lg:text-base col-span-2 text-sm font-light text-left">{{ item.media }}</span>
-              <div class="lg:grid-cols-4 whitespace-nowrap grid items-center justify-start w-full grid-cols-3 col-span-3 gap-2 my-2 text-center">
-                <div v-for="(historyItem, index) in item.history" :key="`history-${index}`" class="text-black-500 border-black-500 hover:text-primary-500 w-fit hover:border-primary-500 px-2 py-1 text-xs font-medium border rounded-full">
+              <div class="lg:grid-cols-4 whitespace-nowrap grid items-center justify-start w-full grid-cols-3 col-span-3 gap-4 my-2 text-center">
+                <div v-for="(historyItem, index) in item.history" :key="`history-${index}`" class="text-black-500 border-black-500 hover:text-primary-500 hover:border-primary-500 w-full px-2 py-1 text-xs font-medium border rounded-full">
                   {{ historyItem }}
                 </div>
               </div>
