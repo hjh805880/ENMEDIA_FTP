@@ -1,9 +1,9 @@
 <template>
   <footer id="footer" class="bg-black-800 lg:text-left lg:px-12 lg:py-32 w-full px-4 py-24 text-center text-white">
-    <div class="lg:flex-row lg:max-w-gui max-w-full lg:space-x-8 flex flex-col-reverse items-center justify-between w-full mx-auto">
-      <div class="lg:items-start flex flex-col items-center justify-center space-y-6">
+    <div class="lg:flex-row lg:max-w-gui lg:space-x-8 flex flex-col-reverse items-center justify-between w-full max-w-full mx-auto">
+      <div class="lg:items-start lg:space-y-6 flex flex-col items-center justify-center space-y-8">
         <img src="~/assets/img/logo_w.svg" alt="이엔미디어 로고" class="lg:w-80 w-56" />
-        <div class="text-black-400 border-black-500 pt-6 space-y-3 border-t">
+        <div class="text-black-400 border-black-500 lg:space-y-3 pt-6 space-y-6 border-t">
           <div class="text-black-200 lg:flex-row lg:space-x-4 flex flex-col items-center justify-start font-medium">
             <p class=""><b>회사명 :</b> 주식회사 이엔미디어</p>
             <p class=""><b>대표 :</b> 이희주</p>
