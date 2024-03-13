@@ -1,38 +1,32 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { onMounted, ref } from 'vue';
 
-const typingText = ref("");
-
-const originalText = `데이터는 이엔미디어의 핵심이고 창의성은 저희가 살아가는 방식입니다.<br>Trend를 따라가는 것에 본질을 놓치지 않고<br>저희만의 노하우를 반영하여<br>데이터 기반의 <span class="border-black-700 font-semibold border-b">Creative 광고 솔루션</span>을 제공합니다.`;
-
+const textContent = ref(""); // 텍스트 내용을 저장할 ref
+const cursor = ref(""); // 커서 문자
+let text = "Data & Creative"; // 표시할 전체 텍스트
 let index = 0;
-let isTag = false;
-let tagBuffer = "";
+let delay = 120; // 타이핑 지연 시간 (ms)
+let loop = true; // 무한 반복 여부
 
-function typeWriter() {
-  if (index < originalText.length) {
-    let char = originalText.charAt(index);
-
-    if (char === "<") isTag = true;
-
-    if (isTag) {
-      tagBuffer += char;
-      if (char === ">") {
-        isTag = false;
-        typingText.value += tagBuffer;
-        tagBuffer = "";
-      }
-    } else {
-      typingText.value += char;
-    }
-
+function type() {
+  if (index < text.length) {
+    textContent.value = text.substring(0, index + 1);
     index++;
-    setTimeout(typeWriter, 50); // Adjust typing speed
+    setTimeout(type, delay);
+  } else {
+    if (loop) {
+      setTimeout(() => {
+        index = 0;
+        type(); // 무한 반복
+      }, 3500);
+    } else {
+      cursor.value = ""; // 마지막에 커서 제거
+    }
   }
 }
 
 onMounted(() => {
-  typeWriter();
+  type(); // 컴포넌트 마운트 시 타이핑 시작
 });
 </script>
 
@@ -43,9 +37,9 @@ onMounted(() => {
       <div class="w-full text-left bg-fixed bg-[url('~/assets/img/company/section1_visual_bg.webp')] shadow-xl shadow-black/60 bg-cover bg-center bg-no-repeat">
         <div class="max-w-gui lg:px-12 lg:py-40 lg:flex-row flex flex-col items-center justify-between px-4 py-32 mx-auto">
           <div class="flex flex-col items-start justify-center">
-            <span class="text-5xl font-bold leading-snug tracking-tight">Data <b class="text-black-500">&</b> Creative</span>
+            <span class="text-5xl font-bold leading-snug tracking-tight">{{ textContent }}<b class="cursor animate-pulse animate-duration-500 text-black-500 animate-ease-in-out border-black-600 pt-4 ml-1 text-xl border-r-2">{{ cursor }}</b></span>
             <span class="text-8xl text-primary-500 font-extrabold leading-snug tracking-tight">ENMEDIA</span>
-            <div v-html="typingText" class="text-black-700 mt-4 text-xl font-light"></div>
+            <span class="text-black-700 mt-4 text-xl font-light"><span class="font-semibold">데이터는 이엔미디어의 핵심이고 창의성은 저희가 살아가는 방식입니다.</span><br />Trend를 따라가는 것에 본질을 놓치지 않고<br />저희만의 노하우를 반영하여<br />데이터 기반의 <span class="border-black-700 pb-1 font-semibold border-b">Creative 광고 솔루션</span>을 제공합니다.</span>
           </div>
           <div class="border-primary-500 flex flex-col items-start justify-between pl-8 space-y-6 border-l-2">
             <div class="flex flex-col items-start justify-center space-y-2">

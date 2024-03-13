@@ -57,7 +57,7 @@ const submitData = async () => {
 <template>
   <div>
     <div class="text-black-800 bg-black-100 w-full h-full py-56 mx-auto space-y-24">
-      <div class="lg:max-w-gui max-w-full w-full mx-auto space-y-20">
+      <div class="lg:max-w-gui w-full max-w-full mx-auto space-y-20">
         <form @submit.prevent="submitData" class="shadow-black-400/60 grid items-center justify-center w-1/2 grid-cols-4 gap-4 px-20 py-32 mx-auto bg-white shadow-md">
           <div class="rowCenter col-span-4 mx-auto mb-2">
             <img src="~/assets/img/symbol.svg" class="w-10 mr-6" alt="" />

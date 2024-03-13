@@ -96,7 +96,7 @@ const closeModal = () => {
           <h2 class="lg:text-4xl lg:pb-4 pb-2 text-3xl font-extrabold">창의적인 생각과 <span class="text-primary-500">Creative</span>한 아이디어로<br /><span class="text-secondary-500">확실한 성과</span>를 만들어냅니다</h2>
         </div>
         <MainCreativeIcon data-aos="fade-up" data-aos-duration="1200"/>
-        <div class="flex items-start justify-between w-full">
+        <div class="flex items-start justify-between w-full gap-4">
           <div data-aos="fade-right" data-aos-duration="1200" class="flex flex-col items-start justify-start space-y-2 text-left">
             <h3 class="text-primary-500 lg:text-2xl text-xl font-bold">Performance Marketing</h3>
             <h4 class="text-black-700 lg:text-lg flex items-center w-full space-x-3 text-sm font-light text-left">
