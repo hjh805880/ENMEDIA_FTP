@@ -18,9 +18,7 @@ onMounted(() => {
 
     const mapOption = {
       center: new kakao.maps.LatLng(37.5596003426585, 126.832686373319), // 지도의 중심좌표
-      level: isMobile
-      ? 4
-      : 3, // 지도의 확대 레벨
+      level: 4,
     };
 
     const map = new kakao.maps.Map(mapContainer, mapOption);

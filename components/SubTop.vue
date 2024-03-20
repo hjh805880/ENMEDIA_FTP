@@ -1,3 +1,11 @@
+<script setup lang="ts">
+const props = defineProps({
+  subTopImg: String,
+  subTopTitle: String,
+  subTopDesc: String,
+});
+</script>
+
 <template>
   <!-- SUBTOP 시작 -->
   <article id="subtop" class="text-center">
@@ -15,11 +23,3 @@
     </div>
   </article>
 </template>
-
-<script setup lang="ts">
-const props = defineProps({
-  subTopImg: String,
-  subTopTitle: String,
-  subTopDesc: String,
-});
-</script>

@@ -15,7 +15,7 @@ const closeModal = () => {
     <div v-if="item" class="fixed top-0 left-0 z-[999999] bg-black-800/60 flex items-center justify-center w-screen h-screen">
       <div class="shadow-black-800/60 lg:max-w-5xl flex flex-col items-center justify-between w-full max-w-[90%] bg-white shadow-lg">
         <div class="bg-primary-500 lg:px-8 flex items-center justify-between w-full px-5 py-6 text-white">
-          <div class="lg:rowCenter lg:space-x-8 flex flex-col items-start justify-center space-y-2">
+          <div class="lg:rowCenter lg:space-x-8 lg:space-y-0 flex flex-col items-start justify-center space-y-2">
             <div class="rowCenter lg:space-x-4 space-x-2">
               <span class="lg:text-2xl text-xl font-bold">{{ item.title }}</span>
               <span class="lg:text-base text-sm font-light">{{ item.titleSub }}</span>
