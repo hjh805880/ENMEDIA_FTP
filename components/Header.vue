@@ -44,6 +44,7 @@ const toggleModal = () => {
 </script>
 
 <template>
+  <!-- 데스크탑 헤더 -->
   <header :isScrolled="isScrolled" id="header" class="top-0 flex items-center max-w-full justify-between w-full h-fit py-[2.5vmin] transition-all ease-in-out delay-100 duration-500 text-white lg:py-2 lg:h-fit z-[999998]" :class="{ 'fixed': isIndexPage, 'sticky': !isIndexPage, 'bg-white/80 backdrop-blur-md text-black-800 lg:px-[3%] px-4': isScrolled, 'bg-transparent text-white lg:px-[10%] px-7': !isScrolled, 'translate-y-0': !isModalOpen, '-translate-y-full': isModalOpen }">
     <NuxtLink to="/">
       <img v-if="isScrolled" src="~/assets/img/logo.svg" alt="이엔미디어 로고" id="logo" class="lg:w-36 w-28 mx-auto" />
@@ -67,7 +68,8 @@ const toggleModal = () => {
     </svg>
   </header>
   
-  <div class="lg:hidden z-[999999] w-full max-w-[70%] fixed left-0 top-0 h-full bg-white text-black-800 flex flex-col items-start justify-between transition-all duration-500 delay-100 ease-in-out" :class="{ '-translate-x-full': !isModalOpen, 'translate-x-0': isModalOpen }">
+  <!-- 모바일 모달 헤더 -->
+  <div class="lg:hidden z-[999999] w-full max-w-[70%] fixed left-0 top-0 h-full bg-white/90 backdrop-blur-md text-black-800 flex flex-col items-start justify-between transition-all duration-500 delay-100 ease-in-out" :class="{ '-translate-x-full': !isModalOpen, 'translate-x-0': isModalOpen }">
     <div class="bg-primary-500 h-fit flex items-center justify-start w-full px-4 py-3">
       <svg @click="toggleModal" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 text-white">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />

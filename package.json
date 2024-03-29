@@ -22,21 +22,21 @@
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",
+    "@types/aos": "^3.0.7",
     "@types/bcryptjs": "^2.4.6",
     "@types/jsonwebtoken": "^9.0.5",
     "@types/node": "^18.17.5",
     "@types/node-cron": "^3.0.11",
-    "@types/aos": "^3.0.7",
     "@vueuse/nuxt": "^10.7.2",
     "autoprefixer": "^10.4.17",
     "flowbite": "^2.2.1",
     "nuxt": "^3.10.0",
+    "nuxt-swiper": "^1.2.2",
     "nuxt-vite": "^0.3.5",
     "postcss": "^8.4.33",
     "tailwindcss-animated": "^1.0.1",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
-    
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
@@ -53,6 +53,7 @@
     "mysql2": "^3.9.1",
     "node-cron": "^3.0.3",
     "nuxt-aos": "^1.2.4",
-    "pinia": "^2.1.7"
+    "pinia": "^2.1.7",
+    "swiper": "^11.1.0"
   }
 }
