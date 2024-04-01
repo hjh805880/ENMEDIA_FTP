@@ -177,11 +177,11 @@ const closeModal = () => {
               </div>
               <h5 class="text-black-700 lg:text-lg">02) 3429-3161</h5>
             </NuxtLink>
-            <NuxtLink data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" to="mailto:ads_com@naver.com" class="rowCenter hover:underline hover:underline-offset-4 space-x-2">
+            <NuxtLink data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" to="mailto:contact@en-media.kr" class="rowCenter hover:underline hover:underline-offset-4 space-x-2">
               <div class="bg-black-700 colCenter aspect-1 p-1.5 text-xs text-white rounded-full">
                 <i class="fa-solid fa-paper-plane"></i>
               </div>
-              <h5 class="text-black-700 lg:text-lg">ads_com@naver.com</h5>
+              <h5 class="text-black-700 lg:text-lg">contact@en-media.kr</h5>
             </NuxtLink>
           </div>
         </div>

@@ -96,7 +96,7 @@ const toggleModal = () => {
         </div>
         <span>전화상담</span>
       </NuxtLink>
-      <NuxtLink to="mailto:ads_com@naver.com" class="bg-primary-500 hover:bg-primary-400 flex items-center justify-start px-8 py-2 space-x-2 text-sm font-bold text-white rounded-sm">
+      <NuxtLink to="mailto:contact@en-media.kr" class="bg-primary-500 hover:bg-primary-400 flex items-center justify-start px-8 py-2 space-x-2 text-sm font-bold text-white rounded-sm">
         <div class="text-primary-500 aspect-1 colCenter p-2 text-sm bg-white rounded-full">
           <i class="fa-solid fa-share"></i>
         </div>

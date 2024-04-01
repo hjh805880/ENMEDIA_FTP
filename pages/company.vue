@@ -90,9 +90,9 @@ const selectedYearRange = ref("2023~2020");
               <div class="flex flex-col items-start justify-center w-full p-2">
                 <span class="text-primary-500 lg:text-4xl text-2xl font-extrabold">2023</span>
                 <ul class="text-black-800 lg:text-lg flex flex-col items-start justify-center text-base *:before:content-['-'] *:before:text-primary-500 *:lg:before:text-xl *:before:font-bold *:before:mr-2">
-                  <li class="">Digital markting & Displays markting 부서설립</li>
-                  <li class="">VIRAL markting 부서설립</li>
-                  <li class="">CPA markting 부서설립</li>
+                  <li class="">Digital marketing & Displays marketing 부서설립</li>
+                  <li class="">VIRAL marketing 부서설립</li>
+                  <li class="">CPA marketing 부서설립</li>
                 </ul>
               </div>
             </div>
@@ -102,6 +102,8 @@ const selectedYearRange = ref("2023~2020");
                 <span class="text-primary-500 lg:text-4xl text-2xl font-extrabold">2022</span>
                 <ul class="text-black-800 lg:text-lg flex flex-col items-start justify-center text-base *:before:content-['-'] *:before:text-primary-500 *:lg:before:text-xl *:before:font-bold *:before:mr-2">
                   <li class="">삼성화재 마케팅 대행</li>
+                  <li class="">27개소 법무법인 홈페이지 제작·광고대행</li>
+                  <li class="">89개 병원·의료업 대행관리 달성</li>
                 </ul>
               </div>
             </div>
@@ -110,8 +112,8 @@ const selectedYearRange = ref("2023~2020");
               <div class="flex flex-col items-start justify-center w-full p-2">
                 <span class="text-primary-500 lg:text-4xl text-2xl font-extrabold">2021</span>
                 <ul class="text-black-800 lg:text-lg flex flex-col items-start justify-center text-base *:before:content-['-'] *:before:text-primary-500 *:lg:before:text-xl *:before:font-bold *:before:mr-2">
-                  <li class="">법무법인 효성 홈페이지 제작·광고대행</li>
-                  <li class="">법무법인 강건 홈페이지 제작·광고대행</li>
+                  <li class="">17개소 법무법인 홈페이지 제작·광고대행</li>
+                  <li class="">11개 대형병원 홈페이지 제작·광고대행</li>
                   <li class="">약 700여건 검색광고 대행관리 달성</li>
                 </ul>
               </div>
@@ -190,16 +192,16 @@ const selectedYearRange = ref("2023~2020");
             <h4 class="lg:text-lg pt-1 text-base font-light">확실한 성과로 오랜기간 장기적인 관계를 유지하며 신뢰에 보답하고 있습니다.</h4>
           </div>
           <div data-aos="zoom-in-up" data-aos-duration="1200" class="lg:grid-cols-4 text-black-800 lg:px-12 lg:gap-10 grid grid-cols-2 gap-4 px-4">
-            <CompanyShuffle :title="'취급고'" :targetNumber="100" :unit="'억'" :duration="2200" />
-            <CompanyShuffle :title="'고객과 함께 성장한'" :targetNumber="7" :unit="'년'" :duration="1200" />
-            <CompanyShuffle :title="'광고유지율'" :targetNumber="88" :unit="'%'" :duration="1800" />
-            <CompanyShuffle :title="'평균 광고 지속기간'" :targetNumber="4" :unit="'년'" :duration="1000" />
+            <CompanyShuffle :title="'취급고'" :targetNumber="168" :unit="'억'" :duration="2200" />
+            <CompanyShuffle :title="'고객과 함께 성장한'" :targetNumber="9" :unit="'년'" :duration="1200" />
+            <CompanyShuffle :title="'광고유지율'" :targetNumber="88.7" :unit="'%'" :duration="1800" />
+            <CompanyShuffle :title="'평균 광고 지속기간'" :targetNumber="4.2" :unit="'년'" :duration="1000" />
           </div>
         </div>
       </div>
     </section>
 
-    <section id="section4" class="text-black-800 w-screen overflow-hidden text-center lg:decoText lg:after:text-black-100 relative lg:after:-right-[29%] lg:after:-rotate-90 lg:after:top-[43%] lg:after:content-['ORGANIZATION']">
+    <!-- <section id="section4" class="text-black-800 w-screen overflow-hidden text-center lg:decoText lg:after:text-black-100 relative lg:after:-right-[29%] lg:after:-rotate-90 lg:after:top-[43%] lg:after:content-['ORGANIZATION']">
       <div class="lg:max-w-gui colCenter lg:px-12 lg:py-40 relative max-w-full px-4 py-32 mx-auto space-y-16">
         <div data-aos="fade-up" data-aos-duration="1000" class="colCenter space-y-4 overflow-hidden">
           <h3 class="lg:text-2xl text-black-700 text-xl">체계적인 시스템과 전문 인력 구성으로</h3>
@@ -239,6 +241,6 @@ const selectedYearRange = ref("2023~2020");
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </div>
 </template>

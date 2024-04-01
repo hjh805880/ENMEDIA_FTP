@@ -52,6 +52,7 @@
     "medium-zoom": "^1.1.0",
     "mysql2": "^3.9.1",
     "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.13",
     "nuxt-aos": "^1.2.4",
     "pinia": "^2.1.7",
     "swiper": "^11.1.0"

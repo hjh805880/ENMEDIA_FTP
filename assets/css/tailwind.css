@@ -167,6 +167,7 @@
   .decoText::after {
     @apply text-black-200 absolute text-[11.25rem] font-extrabold tracking-tighter whitespace-nowrap;
   }
+
 }
 
 @layer utilities {
