@@ -14,7 +14,7 @@
         <div class="p-6 space-y-4 text-left">
           <div class="space-y-1">
             <p class="dark:text-gray-600 text-black-800 text-base font-bold leading-relaxed">1.수집하는 개인정보의 항목 및 수집 방법</p>
-            <p class="text-sm">회사는 귀하의 서비스 이용을 위해 최소한의 개인정보를 수집하며, 다음과 같은 개인정보를 수집할 수 있습니다.</p>
+            <p class="text-sm">주식회사 이엔미디어(이하, 회사라함)는 귀하의 서비스 이용을 위해 최소한의 개인정보를 수집하며, 다음과 같은 개인정보를 수집할 수 있습니다.</p>
             <ul class="dark:text-gray-400 text-black-600 pl-6 text-sm font-light leading-relaxed list-disc">
               <li>성명, 연락처 (이메일 주소, 전화번호 등)</li>
               <li>주소, 우편번호</li>

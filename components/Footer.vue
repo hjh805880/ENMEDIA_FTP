@@ -11,6 +11,7 @@
           </div>
           <p class=""><b>통신판매업신고번호 :</b> 2016-서울강서-1348</p>
           <p class=""><b>주소 :</b> 서울특별시 강서구 공항대로 227 (마곡동, 마곡센트럴타워Ⅰ) 5층 501호</p>
+          <p class=""><b>이메일 :</b> contact@en-media.kr</p>
           <div class="lg:flex-row lg:space-x-4 flex flex-col items-center justify-start font-light">
             <p class=""><b>대표번호 :</b> 02-3429-3161</p>
             <p class=""><b>팩스 :</b> 0505-369-1729</p>

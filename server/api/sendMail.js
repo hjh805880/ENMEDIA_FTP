@@ -40,35 +40,35 @@ export default defineEventHandler(async (event) => {
         <h1 style="color: #242424; text-align: center; margin-bottom: 26px;">상담 문의</h1>
         <table style="width: 100%; border-collapse: collapse; color: #242424;">
             <tr>
-                <td style="padding: 14px; background: #f9f9f9; border-bottom: 1px solid #eee; font-weight: bold;">회사명:</td>
+                <td style="padding: 14px; background: #f9f9f9; border-bottom: 1px solid #eee; font-weight: bold;">회사명</td>
                 <td style="padding: 14px; border-bottom: 1px solid #eee;">${cleanCompany}</td>
             </tr>
             <tr>
-                <td style="padding: 14px; background: #f9f9f9; border-bottom: 1px solid #eee; font-weight: bold;">담당자명:</td>
+                <td style="padding: 14px; background: #f9f9f9; border-bottom: 1px solid #eee; font-weight: bold;">담당자명</td>
                 <td style="padding: 14px; border-bottom: 1px solid #eee;">${cleanName}</td>
             </tr>
             <tr>
-                <td style="padding: 14px; background: #f9f9f9; border-bottom: 1px solid #eee; font-weight: bold;">연락처:</td>
+                <td style="padding: 14px; background: #f9f9f9; border-bottom: 1px solid #eee; font-weight: bold;">연락처</td>
                 <td style="padding: 14px; border-bottom: 1px solid #eee;">${cleanContact}</td>
             </tr>
             <tr>
-                <td style="padding: 14px; background: #f9f9f9; border-bottom: 1px solid #eee; font-weight: bold;">이메일:</td>
+                <td style="padding: 14px; background: #f9f9f9; border-bottom: 1px solid #eee; font-weight: bold;">이메일</td>
                 <td style="padding: 14px; border-bottom: 1px solid #eee;">${cleanEmail}</td>
             </tr>
             <tr>
-                <td style="padding: 14px; background: #f9f9f9; font-weight: bold;">홈페이지주소:</td>
+                <td style="padding: 14px; background: #f9f9f9; font-weight: bold;">홈페이지주소</td>
                 <td style="padding: 14px;">${cleanHomepage}</td>
             </tr>
             <tr>
-                <td style="padding: 14px; background: #f9f9f9; border-top: 1px solid #eee; font-weight: bold;">문의내용:</td>
+                <td style="padding: 14px; background: #f9f9f9; border-top: 1px solid #eee; font-weight: bold;">문의내용</td>
                 <td style="padding: 14px; border-top: 1px solid #eee;">${cleanRequest}</td>
             </tr>
             <tr>
-                <td style="padding: 14px; background: #f9f9f9; border-top: 1px solid #eee; font-weight: bold;">문의 시간:</td>
+                <td style="padding: 14px; background: #f9f9f9; border-top: 1px solid #eee; font-weight: bold;">문의 시간</td>
                 <td style="padding: 14px; border-top: 1px solid #eee;">${dateTime}</td>
             </tr>
             <tr>
-                <td style="padding: 14px; background: #f9f9f9; border-top: 1px solid #eee; font-weight: bold;">문의 IP:</td>
+                <td style="padding: 14px; background: #f9f9f9; border-top: 1px solid #eee; font-weight: bold;">문의 IP</td>
                 <td style="padding: 14px; border-top: 1px solid #eee;">${userIp}</td>
             </tr>
             
@@ -83,7 +83,7 @@ export default defineEventHandler(async (event) => {
   const mailOptions = {
     from: '"(주)이엔미디어 발신 전용" <noreply@en-media.kr>',
     to: "contact@en-media.kr",
-    subject: `신청자(${cleanCompany}) 이엔미디어 홈페이지에 문의가 등록되었습니다. (${dateTime})`,
+    subject: `신청자 [${cleanCompany}] 이엔미디어 홈페이지에 문의가 등록되었습니다. (${dateTime})`,
     html: emailTemplate,
   };
 
