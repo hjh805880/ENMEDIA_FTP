@@ -36,6 +36,9 @@ watch(() => route.path, () => {
           content: "/favicon/browserconfig.xml",
         },
         { name: "theme-color", content: "#ffffff" },
+        // 네이버 검색엔진 최적화
+        { name: "naver-site-verification", content: "6d7fd71bc63e5a6d43e9cb616ea24d9898bb715a" },
+        { name: "theme-color", content: "#ffffff" },
       ],
 
       link: [
