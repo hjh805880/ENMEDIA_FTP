@@ -6,6 +6,9 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
+  plugins: [
+    '~/plugins/clarity.client.js'
+  ],
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
     configPath: "tailwind.config",

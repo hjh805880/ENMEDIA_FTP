@@ -84,7 +84,7 @@ const selectedYearRange = ref("2023~2020");
           </div>
         </div>
 
-        <div class="bg-black-100 lg:decoText lg:after:-right-[15%] lg:after:-rotate-90 lg:after:top-[30%] lg:after:content-['HISTORY'] relative w-full lg:min-h-[43.75rem] min-h-[50rem] overflow-hidden">
+        <div class="bg-black-100 lg:decoText z-10 lg:after:-right-[15%] lg:after:-rotate-90 lg:after:top-[30%] lg:after:content-['HISTORY'] relative w-full lg:min-h-[43.75rem] min-h-[50rem] overflow-hidden">
           <div v-if="selectedYearRange == '2023~2020'" class="lg:max-w-gui lg:px-12 lg:gap-20 lg:py-24 grid w-full max-w-full grid-cols-2 gap-8 px-4 py-20 mx-auto text-left">
             <div class="border-black-500 before:border-t-4 before:border-primary-500 before:absolute relative w-full border-t before:w-[25%] z-20 before:-z-10 before:left-0 before:-top-[2px]">
               <div class="flex flex-col items-start justify-center w-full p-2">
@@ -182,7 +182,7 @@ const selectedYearRange = ref("2023~2020");
       </div>
     </section>
 
-    <section id="section3" class="text-white bg-[url('~/assets/img/company/section3_visual_bg.webp')] relative lg:decoText lg:after:text-primary-100/15 lg:after:-left-[19.5%] lg:after:rotate-90 lg:after:top-[34%] lg:after:content-['OVERVIEW'] bg-center bg-cover bg-no-repeat w-screen overflow-hidden text-center">
+    <section id="section3" class="text-white bg-[url('~/assets/img/company/section3_visual_bg.webp')] relative lg:decoText z-10 lg:after:text-primary-100/15 lg:after:-left-[19.5%] lg:after:rotate-90 lg:after:top-[34%] lg:after:content-['OVERVIEW'] bg-center bg-cover bg-no-repeat w-screen overflow-hidden text-center">
       <div class="lg:space-y-14 lg:py-40 py-32 space-y-16">
         <div class="lg:max-w-gui lg:space-y-14 max-w-full mx-auto space-y-16">
           <div data-aos="fade-up" data-aos-duration="1000" class="colCenter lg:px-12 px-4 space-y-4">
