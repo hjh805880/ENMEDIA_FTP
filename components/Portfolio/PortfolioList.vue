@@ -69,7 +69,7 @@ const isLastItemOffset = computed(() => {
 <template>
   <div>
     <div class="lg:max-w-gui w-full h-full max-w-full pb-56 mx-auto space-y-24" :style="isLastItemOffset ? 'padding-bottom: 14rem;' : ''">
-      <div data-aos="fade-up" data-aos-duration="1000" v-if="categoryButtons" class="lg:rowCenter grid grid-cols-3 category-buttons lg:space-x-6 whitespace-nowrap lg:gap-0 gap-4 text-lg lg:text-xl text-center font-bold *:lg:px-6 *:py-1 *:px-4 *:rounded-full">
+      <div data-aos="fade-up" data-aos-duration="1000" v-if="categoryButtons" class="lg:rowCenter grid grid-cols-3 category-buttons lg:space-x-6 whitespace-nowrap lg:gap-0 gap-2 text-lg lg:text-xl text-center font-bold *:lg:px-6 *:py-1 *:px-2 *:rounded-full">
         <button @click="setCategory('법무법인')" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '법무법인', 'bg-transparent text-white border-2 border-white': selectedCategory !== '법무법인' }">법무법인</button>
         <button @click="setCategory('프랜차이즈')" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '프랜차이즈', 'bg-transparent text-white border-2 border-white': selectedCategory !== '프랜차이즈' }">프랜차이즈</button>
         <button @click="setCategory('쇼핑몰')" :class="{ 'text-primary-500 bg-white border-2 border-white': selectedCategory === '쇼핑몰', 'bg-transparent text-white border-2 border-white': selectedCategory !== '쇼핑몰' }">쇼핑몰</button>

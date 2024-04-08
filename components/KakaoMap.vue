@@ -24,8 +24,8 @@ onMounted(() => {
     const map = new kakao.maps.Map(mapContainer, mapOption);
 
     const content = isMobile
-      ? `<a href="https://kko.to/Io6hs4G4Ui" target="_blank" rel="noopener noreferrer" class="block" style="width: 200px; height: 140px;"><img src="${markerEnmedia}" style="width: 100%;" /></a>`
-      : `<a href="https://kko.to/Io6hs4G4Ui" target="_blank" rel="noopener noreferrer" class="block" style="width: 300px; height: 140px;"><img src="${markerEnmedia}" style="width: 100%;" /></a>`;
+      ? `<a href="https://kko.to/Io6hs4G4Ui" target="_blank" rel="noopener noreferrer" class="block" style="width: 200px; height: 140px;"><img src="${markerEnmedia}" alt="이엔미디어 지도 마커" style="width: 100%;" /></a>`
+      : `<a href="https://kko.to/Io6hs4G4Ui" target="_blank" rel="noopener noreferrer" class="block" style="width: 300px; height: 140px;"><img src="${markerEnmedia}" alt="이엔미디어 지도 마커" style="width: 100%;" /></a>`;
       
     const ogPosition = new kakao.maps.LatLng(37.5596003426585, 126.832686373319);
     const adPosition = isMobile

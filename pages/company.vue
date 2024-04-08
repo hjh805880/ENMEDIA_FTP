@@ -67,7 +67,7 @@ const selectedYearRange = ref("2023~2020");
           </div>
         </div>
       </div>
-    </section>
+    </section>''
     <section id="section2" class="text-black-800 w-screen overflow-hidden text-center">
       <div data-aos="fade-up" data-aos-duration="1000" class="lg:space-y-14 lg:py-40 py-32 space-y-16">
         <div class="lg:max-w-gui lg:space-y-14 max-w-full mx-auto space-y-16">
