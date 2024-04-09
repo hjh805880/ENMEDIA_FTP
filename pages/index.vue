@@ -136,7 +136,7 @@ const closeModal = () => {
           <div class="lg:w-12 w-10 border-b-8 border-white"></div>
           <h3 class="lg:text-xl pt-1 text-lg font-light">더 많은 소비자에게 도달할 수 있는 키워드 검색 광고를 집행합니다.</h3>
         </div>
-        <ServiceObject data-aos="fade-up" data-aos-duration="1200" class="lg:mt-80 lg:mb-14 mt-40 mb-12" />
+        <ServiceObject data-aos="zoom-in-up" data-aos-duration="1200" class="lg:mt-80 lg:mb-14 mt-40 mb-12" />
         <NuxtLink data-aos="fade-up" data-aos-duration="1200" to="/service" class="hover:bg-white hover:text-black-800 lg:text-lg px-6 py-1 text-base font-bold border-2 border-white rounded-full"> MORE SERVICE </NuxtLink>
         <!-- 여기부터 솔루션 시작 -->
          <div data-aos="fade-up" data-aos-duration="1000" class="shadow-black-600/60 space-y-14 lg:max-w-full max-w-[95%] rounded-sm lg:-bottom-[28%] -bottom-[141vmin] text-black-800 absolute w-full lg:px-16 px-4 lg:py-40 py-32 bg-white shadow-xl">

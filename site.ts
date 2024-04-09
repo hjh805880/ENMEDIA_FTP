@@ -47,6 +47,16 @@ export default {
       type: 'secondary',
     },
     {
+      text: '개인정보처리방침',
+      link: '/service/개인정보처리방침',
+      type: 'secondary',
+    },
+    {
+      text: '이메일무단수집거부',
+      link: '/service/이메일무단수집거부',
+      type: 'secondary',
+    },
+    {
       text: '관리자페이지',
       link: '/admin',
       type: 'secondary',

@@ -2,7 +2,7 @@
   <div id="kakaoMap" class="lg:aspect-2 lg:h-full w-full h-[100vmin]"></div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import markerEnmedia from "~/assets/img/en_marker.svg";
 
 useHead({

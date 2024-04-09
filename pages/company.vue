@@ -1,33 +1,4 @@
 <script setup>
-// 타이핑 애니메이션 관련
-const textContent = ref("");
-const cursor = ref("");
-let text = "Data & Creative";
-let index = 0;
-let delay = 120;
-let loop = true;
-
-function type() {
-  if (index < text.length) {
-    textContent.value = text.substring(0, index + 1);
-    index++;
-    setTimeout(type, delay);
-  } else {
-    if (loop) {
-      setTimeout(() => {
-        index = 0;
-        type();
-      }, 3500);
-    } else {
-      cursor.value = "";
-    }
-  }
-}
-
-onMounted(() => {
-  type();
-});
-
 // 연혁 관련
 const yearRanges = ["2023~2020", "2019", "2018", "2017", "2016"];
 const selectedYearRange = ref("2023~2020");
@@ -40,9 +11,8 @@ const selectedYearRange = ref("2023~2020");
       <div class="w-full text-left bg-[url('~/assets/img/company/section1_visual_bg.webp')] shadow-xl shadow-black/60 bg-cover bg-center bg-no-repeat px-4 lg:px-0">
         <div class="max-w-gui lg:px-12 lg:py-40 lg:flex-row lg:space-y-0 lg:items-center flex flex-col items-start justify-between px-4 py-24 mx-auto space-y-16">
           <div class="flex flex-col items-start justify-center">
-            <span class="lg:text-5xl text-3xl font-bold leading-snug tracking-tight"
-              >{{ textContent }}
-              <b class="cursor animate-pulse animate-duration-500 text-black-500 animate-ease-in-out border-black-600 lg:text-xl lg:pt-4 pt-2 ml-1 text-lg border-r-2">{{ cursor }}</b>
+            <span class="lg:text-5xl text-3xl font-bold leading-snug tracking-tight">
+              <TextTyping :text="'Data & Creative'" :delay="120" :loop="true" />
             </span>
             <span class="lg:text-8xl text-primary-500 text-6xl font-extrabold leading-snug tracking-tight">ENMEDIA</span>
             <span class="text-black-700 lg:text-xl lg:mt-4 mt-2 text-lg font-light"><span class="font-semibold">데이터는 이엔미디어의 핵심이고 창의성은 저희가 살아가는 방식입니다.</span><br />Trend를 따라가는 것에 본질을 놓치지 않고<br />저희만의 노하우를 반영하여<br />데이터 기반의 <span class="border-black-700 pb-1 font-semibold border-b">Creative 광고 솔루션</span>을 제공합니다.</span>
@@ -192,10 +162,10 @@ const selectedYearRange = ref("2023~2020");
             <h4 class="lg:text-lg pt-1 text-base font-light">확실한 성과로 오랜기간 장기적인 관계를 유지하며 신뢰에 보답하고 있습니다.</h4>
           </div>
           <div data-aos="zoom-in-up" data-aos-duration="1200" class="lg:grid-cols-4 text-black-800 lg:px-12 lg:gap-10 grid grid-cols-2 gap-4 px-4">
-            <CompanyShuffle :title="'취급고'" :targetNumber="168" :unit="'억'" :duration="2200" />
-            <CompanyShuffle :title="'고객과 함께 성장한'" :targetNumber="9" :unit="'년'" :duration="1200" />
-            <CompanyShuffle :title="'광고유지율'" :targetNumber="88.7" :unit="'%'" :duration="1800" />
-            <CompanyShuffle :title="'평균 광고 지속기간'" :targetNumber="4.2" :unit="'년'" :duration="1000" />
+            <TextShuffle :title="'취급고'" :targetNumber="168" :unit="'억'" :duration="2200" />
+            <TextShuffle :title="'고객과 함께 성장한'" :targetNumber="9" :unit="'년'" :duration="1200" />
+            <TextShuffle :title="'광고유지율'" :targetNumber="88.7" :unit="'%'" :duration="1800" />
+            <TextShuffle :title="'평균 광고 지속기간'" :targetNumber="4.2" :unit="'년'" :duration="1000" />
           </div>
         </div>
       </div>
