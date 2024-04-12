@@ -47,7 +47,7 @@ const selectedYearRange = ref("2023~2020");
             <div class="border-primary-500 lg:w-12 w-10 border-b-8"></div>
             <h4 class="lg:text-lg text-black-700 pt-1 text-base font-light">열정과 노력으로 같이 걸어 온 길이 지금의 이엔미디어를 만들었습니다.<br />함께 성장하기 위해 앞으로도 같이 걸어가겠습니다.</h4>
           </div>
-          <div class="lg:grid-cols-5 lg:gap-12 lg:px-12 grid w-full grid-cols-2 gap-4 px-4">
+          <div  class="lg:grid-cols-5 lg:gap-12 lg:px-12 grid w-full grid-cols-2 gap-4 px-4">
             <button v-for="yearRange in yearRanges" :key="yearRange" @click="selectedYearRange = yearRange" :class="yearRange === selectedYearRange ? 'bg-primary-500 text-white lg:selectHistory' : 'border-black-800 border-2 text-black-800'" class="lg:text-lg relative z-10 px-4 py-1.5 font-bold rounded-full rowCenter">
               <span>{{ yearRange }}</span>
             </button>

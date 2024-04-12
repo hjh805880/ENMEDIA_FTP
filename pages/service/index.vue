@@ -77,7 +77,7 @@
       </div>
     </section>
 
-    <section id="section2" class="text-black-800 w-screen text-center">
+    <section id="section3" class="text-black-800 w-screen text-center">
       <div class="w-full text-center bg-[url('~/assets/img/service/section3_visual_bg.webp')] bg-cover bg-center bg-no-repeat px-4 lg:px-0">
         <div class="max-w-gui lg:px-12 lg:py-40 colCenter px-4 py-24 mx-auto space-y-16">
           <div data-aos="fade-up" data-aos-duration="1000" class="colCenter lg:px-12 px-4 space-y-4">
@@ -86,19 +86,61 @@
             <div class="lg:w-12 border-primary-500 w-10 border-b-8"></div>
             <h4 class="lg:text-lg pt-1 text-base font-light">데이터 기반의 크리에이티브로 더 강력한 마케팅 전략을 제공합니다.</h4>
           </div>
-          <div class="colCenter border-primary-500 w-full lg:w-[60%] pt-4 space-y-8 border-t-4">
-            <div class="flex items-center justify-between w-full px-6">
+
+          <div data-aos="fade-up" data-aos-duration="1000" class="colCenter border-primary-500 w-full lg:w-[60%] pt-4 space-y-8 border-t-4">
+            <div class="lg:flex-row lg:items-center lg:px-6 lg:space-y-0 flex flex-col items-start justify-between w-full px-2 space-y-4">
               <div class="flex flex-col items-start justify-center">
                 <h5 class="lg:text-4xl text-primary-500 text-3xl font-bold">01</h5>
                 <p class="text-black-700 font-light">(클릭초이스·쇼핑검색광고)</p>
                 <h6 class="lg:text-3xl text-2xl font-bold"><span class="text-primary-500">네이버</span> 검색광고</h6>
               </div>
-              <div class="text-black-700 lg:text-lg flex flex-col items-start justify-center space-y-2 font-light text-left">
+              <div class="text-black-700 lg:text-lg flex flex-col items-start max-w-full lg:max-w-[40%] justify-center space-y-2 font-light text-left">
                 <p class="">- 대한민국 공식 CPC광고</p>
-                <p class="">- 높은 매체력을 기반으로 한 노출량을 통해<br />광고 효과를 올릴 수 있으며 관리방법에 따라<br />천차만별의 효과가 나타나는 광고 솔루션</p>
+                <p class="">- 높은 매체력을 기반으로 한 노출량을 통해 광고 효과를 올릴 수 있으며 관리방법에 따라 천차만별의 효과가 나타나는 광고 솔루션</p>
               </div>
             </div>
+            <div class="lg:grid-cols-2 grid w-full grid-cols-1 gap-6">
+              <img src="~/assets/img/service/section3_visual_naver_01.webp" alt="이엔미디어 서비스 네이버 검색광고" class="object-cover w-full" />
+              <img src="~/assets/img/service/section3_visual_naver_02.webp" alt="이엔미디어 서비스 네이버 검색광고" class="object-cover w-full" />
+            </div>
           </div>
+
+          <div data-aos="fade-up" data-aos-duration="1000" class="colCenter border-primary-500 w-full lg:w-[60%] pt-4 space-y-8 border-t-4">
+            <div class="lg:flex-row lg:items-center lg:px-6 lg:space-y-0 flex flex-col items-start justify-between w-full px-2 space-y-4">
+              <div class="flex flex-col items-start justify-center">
+                <h5 class="lg:text-4xl text-primary-500 text-3xl font-bold">02</h5>
+                <p class="text-black-700 font-light">(Google ADS, GTM)</p>
+                <h6 class="lg:text-3xl text-2xl font-bold"><span class="text-primary-500">구글</span> 검색광고</h6>
+              </div>
+              <div class="text-black-700 lg:text-lg flex flex-col items-start max-w-full lg:max-w-[40%] justify-center space-y-2 font-light text-left">
+                <p class="">- 구글 검색을 활용하는 유저 및 키워드 볼륨 증가</p>
+                <p class="">- 높은 전환율</p>
+                <p class="">- 구글 검색을 통해 들어온 유저들의 이탈율이 타 매체보다 낮고 체류시간이 상대적으로 길게 나타남</p>
+              </div>
+            </div>
+            <div class="lg:grid-cols-2 grid w-full grid-cols-1 gap-6">
+              <img src="~/assets/img/service/section3_visual_google_01.webp" alt="이엔미디어 서비스 구글 검색광고" class="object-cover w-full" />
+              <img src="~/assets/img/service/section3_visual_google_02.webp" alt="이엔미디어 서비스 구글 검색광고" class="object-cover w-full" />
+            </div>
+          </div>
+
+          <div data-aos="fade-up" data-aos-duration="1000" class="colCenter border-primary-500 w-full lg:w-[60%] pt-4 space-y-8 border-t-4">
+            <div class="lg:flex-row lg:items-center lg:px-6 lg:space-y-0 flex flex-col items-start justify-between w-full px-2 space-y-4">
+              <div class="flex flex-col items-start justify-center">
+                <h5 class="lg:text-4xl text-primary-500 text-3xl font-bold">03</h5>
+                <p class="text-black-700 font-light">(Kakao Business)</p>
+                <h6 class="lg:text-3xl text-2xl font-bold"><span class="text-primary-500">카카오</span> 검색광고</h6>
+              </div>
+              <div class="text-black-700 lg:text-lg flex flex-col items-start max-w-full lg:max-w-[40%] justify-center space-y-2 font-light text-left">
+                <p class="">- 모바일이 대세인 요즘, 다음카카오의 모바일 플랫폼인 카카오톡을 시작으로 셀 수 없이 다양한 광고 상품을 통해 광고주의 브랜드와 상품을 소비자에게 어필하는 광고 솔루션</p>
+              </div>
+            </div>
+            <div class="lg:grid-cols-2 grid w-full grid-cols-1 gap-6">
+              <img src="~/assets/img/service/section3_visual_google_01.webp" alt="이엔미디어 서비스 구글 검색광고" class="object-cover w-full" />
+              <img src="~/assets/img/service/section3_visual_google_02.webp" alt="이엔미디어 서비스 구글 검색광고" class="object-cover w-full" />
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

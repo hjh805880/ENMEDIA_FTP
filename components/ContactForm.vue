@@ -31,6 +31,16 @@ const form = ref<ContactForm>({
 const submitForm = () => {
   store.submitForm(form.value);
 };
+function setAlertClass(type: any) {
+  return {
+    'success-alert': type === 'success',
+    'error-alert': type === 'error',
+    'warning-alert': type === 'warning',
+  };
+}
+const removeAlert = (index: any) => {
+  store.alerts.splice(index, 1);
+};
 </script>
 <template>
   <div>
@@ -57,38 +67,37 @@ const submitForm = () => {
           </div>
           <ContactPrivacy />
           <button type="submit" :disabled="store.isSending" class="place-self-center disabled:border-white/50 disabled:text-white/50 lg:col-span-10 lg:mt-2 lg:w-1/2 lg:text-xl w-full col-span-1 p-2 mt-4 text-lg font-bold text-white transition-all bg-transparent border-2 border-white rounded-md">문의 신청하기</button>
-          <div v-if="store.isSending" class="place-self-center lg:col-span-10 lg:w-1/2 w-full col-span-1 mt-4">
+          <div v-if="store.isSending" v-auto-animate class="place-self-center lg:col-span-10 lg:w-1/2 w-full col-span-1 mt-4">
             <div class="bg-primary-400 w-full overflow-hidden rounded-full">
               <div class="bg-white h-1.5 rounded-full animate-[loading] animate-duration-1000 animate-infinite animate-ease-in-out"></div>
             </div>
           </div>
         </div>
       </form>
-      <div v-if="store.alertType === 'success'" id="toast-success" class="dark:text-gray-400 dark:bg-gray-800 animate-flip-up shadow-black-700/40 z-[9999] lg:w-fit text-black-600 lg:mt-2 bottom-6 right-[1%] fixed flex items-center w-fit col-span-1 lg:py-4 lg:px-6 px-4 py-2 mx-auto mt-4 bg-white rounded-lg shadow-lg" role="alert">
-        <div class="dark:bg-green-800 dark:text-green-200 inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg">
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-          </svg>
+      <div v-auto-animate class="lg:gap-3 gap-1.5 z-[9999] bottom-6 right-[1%] fixed colCenter">
+        <div v-for="(alert, index) in store.alerts" :key="index" :class="setAlertClass(alert.type)" class="dark:text-gray-400 dark:bg-gray-800 shadow-primary-800/20 lg:w-fit text-black-600 w-fit lg:py-4 lg:px-6 flex items-center col-span-1 px-4 py-2 mx-auto bg-white rounded-lg shadow-xl">
+          <div v-if="store.alertType === 'success'" class="dark:bg-green-800 dark:text-green-200 inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg">
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+            </svg>
+          </div>
+          <div v-if="store.alertType === 'error'" class="dark:bg-red-800 dark:text-red-200 inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-red-500 bg-red-100 rounded-lg">
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 11.793a1 1 0 1 1-1.414 1.414L10 11.414l-2.293 2.293a1 1 0 0 1-1.414-1.414L8.586 10 6.293 7.707a1 1 0 0 1 1.414-1.414L10 8.586l2.293-2.293a1 1 0 0 1 1.414 1.414L11.414 10l2.293 2.293Z" />
+            </svg>
+          </div>
+          <div v-if="store.alertType === 'warning'" class="dark:bg-orange-700 dark:text-orange-200 inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-orange-500 bg-orange-100 rounded-lg">
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM10 15a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm1-4a1 1 0 0 1-2 0V6a1 1 0 0 1 2 0v5Z" />
+            </svg>
+          </div>
+          <div class="ms-3 whitespace-nowrap text-sm font-normal">{{ alert.message }}</div>
+          <button @click="removeAlert(index)" class="text-black-500 ml-1 bg-transparent border-none">
+            <svg class="lg:size-5 size-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path d="M14.348 14.849a1 1 0 0 1-1.414 0L10 11.415l-2.934 2.934a1 1 0 0 1-1.414-1.414L8.586 10 5.652 7.066a1 1 0 1 1 1.414-1.414L10 8.586l2.934-2.934a1 1 0 0 1 1.414 1.414L11.414 10l2.934 2.934a1 1 0 0 1 0 1.415z"/>
+            </svg>
+          </button>
         </div>
-        <div class="ms-3 text-sm font-normal">상담 신청에 성공했습니다. 빠른 시일 내로 연락드리겠습니다.</div>
-      </div>
-      <div v-if="store.alertType === 'error'" id="toast-failed" class="dark:text-gray-400 dark:bg-gray-800 animate-flip-up shadow-black-700/40 z-[9999] lg:w-fit text-black-600 lg:mt-2 bottom-6 right-[1%] fixed flex items-center w-fit col-span-1 lg:py-4 lg:px-6 px-4 py-2 mx-auto mt-4 bg-white rounded-lg shadow-lg" role="alert">
-        <div class="dark:bg-red-800 dark:text-red-200 inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-red-500 bg-red-100 rounded-lg">
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 11.793a1 1 0 1 1-1.414 1.414L10 11.414l-2.293 2.293a1 1 0 0 1-1.414-1.414L8.586 10 6.293 7.707a1 1 0 0 1 1.414-1.414L10 8.586l2.293-2.293a1 1 0 0 1 1.414 1.414L11.414 10l2.293 2.293Z" />
-          </svg>
-          <span class="sr-only">Error icon</span>
-        </div>
-        <div class="ms-3 text-sm font-normal">상담 신청에 실패했습니다. 다시 시도해주세요.</div>
-      </div>
-      <div v-if="store.alertType === 'warning'" id="toast-warning" class="dark:text-gray-400 dark:bg-gray-800 animate-flip-up shadow-black-700/40 z-[9999] lg:w-fit text-black-600 lg:mt-2 bottom-6 right-[1%] fixed flex items-center w-fit col-span-1 lg:py-4 lg:px-6 px-4 py-2 mx-auto mt-4 bg-white rounded-lg shadow-lg" role="alert">
-        <div class="dark:bg-orange-700 dark:text-orange-200 inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-orange-500 bg-orange-100 rounded-lg">
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM10 15a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm1-4a1 1 0 0 1-2 0V6a1 1 0 0 1 2 0v5Z" />
-          </svg>
-          <span class="sr-only">Warning icon</span>
-        </div>
-        <div class="ms-3 text-sm font-normal">양식의 필수 요소를 전부 입력해주세요.</div>
       </div>
     </div>
   </div>

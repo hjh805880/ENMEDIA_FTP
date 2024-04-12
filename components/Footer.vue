@@ -15,9 +15,9 @@
           <NuxtLink to="/portfolio" class="text-black-400 font-medium">
             <span class="">포트폴리오</span>
           </NuxtLink>
-          <NuxtLink to="/portfolio/gallery" class="text-black-400 font-medium">
+          <!-- <NuxtLink to="/portfolio/gallery" class="text-black-400 font-medium">
             <span class="">갤러리</span>
-          </NuxtLink>
+          </NuxtLink> -->
           <NuxtLink to="/contact" class="text-black-400 font-medium">
             <span class="">광고문의</span>
           </NuxtLink>

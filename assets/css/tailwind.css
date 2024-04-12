@@ -175,6 +175,14 @@
       transform: translate(100%, 0);
     }
   }
+
+  .solutionSection1::after {
+    border-bottom: 0px solid transparent;
+    border-top: 50px solid #7b22f4;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    @apply absolute content-[''] -bottom-12 z-20 lg:left-[48.5%] left-[44%];
+  }
 }
 
 @layer utilities {
