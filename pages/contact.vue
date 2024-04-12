@@ -17,7 +17,7 @@
             <h4 class="lg:text-lg text-black-700 text-base font-light">서울특별시 강서구 공항대로 227, 마곡센트럴타워 1차 501호</h4>
           </div>
         </div>
-        <ContactForm data-aos="fade-up" data-aos-duration="1000" />
+        <ContactForm />
       </div>
     </section>
   </div>

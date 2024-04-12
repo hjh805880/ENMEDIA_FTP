@@ -19,7 +19,7 @@
             <span class="">갤러리</span>
           </NuxtLink>
           <NuxtLink to="/contact" class="text-black-400 font-medium">
-            <span class="">광고상담신청</span>
+            <span class="">광고문의</span>
           </NuxtLink>
         </div>
         <div class="rowCenter lg:space-x-10 lg:text-base space-x-4 text-sm">

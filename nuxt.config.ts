@@ -73,4 +73,12 @@ export default defineNuxtConfig({
   aos: {
     once: false,
   },
+  pinia: {
+    autoImports: [
+      'defineStore',
+      ['defineStore', 'definePiniaStore'],
+      'storeToRefs',
+      'acceptHMRUpdate',
+    ],
+  },
 });

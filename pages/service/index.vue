@@ -76,5 +76,31 @@
         </div>
       </div>
     </section>
+
+    <section id="section2" class="text-black-800 w-screen text-center">
+      <div class="w-full text-center bg-[url('~/assets/img/service/section3_visual_bg.webp')] bg-cover bg-center bg-no-repeat px-4 lg:px-0">
+        <div class="max-w-gui lg:px-12 lg:py-40 colCenter px-4 py-24 mx-auto space-y-16">
+          <div data-aos="fade-up" data-aos-duration="1000" class="colCenter lg:px-12 px-4 space-y-4">
+            <h3 class="lg:text-2xl text-xl">더 나은 솔루션의 진행을 위해</h3>
+            <h2 class="lg:text-4xl text-2xl font-extrabold"><span class="text-primary-500">다방면으로 검색광고를 집행</span>하고 있습니다</h2>
+            <div class="lg:w-12 border-primary-500 w-10 border-b-8"></div>
+            <h4 class="lg:text-lg pt-1 text-base font-light">데이터 기반의 크리에이티브로 더 강력한 마케팅 전략을 제공합니다.</h4>
+          </div>
+          <div class="colCenter border-primary-500 w-full lg:w-[60%] pt-4 space-y-8 border-t-4">
+            <div class="flex items-center justify-between w-full px-6">
+              <div class="flex flex-col items-start justify-center">
+                <h5 class="lg:text-4xl text-primary-500 text-3xl font-bold">01</h5>
+                <p class="text-black-700 font-light">(클릭초이스·쇼핑검색광고)</p>
+                <h6 class="lg:text-3xl text-2xl font-bold"><span class="text-primary-500">네이버</span> 검색광고</h6>
+              </div>
+              <div class="text-black-700 lg:text-lg flex flex-col items-start justify-center space-y-2 font-light text-left">
+                <p class="">- 대한민국 공식 CPC광고</p>
+                <p class="">- 높은 매체력을 기반으로 한 노출량을 통해<br />광고 효과를 올릴 수 있으며 관리방법에 따라<br />천차만별의 효과가 나타나는 광고 솔루션</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
