@@ -130,7 +130,7 @@
             <h2 class="lg:text-3xl text-2xl font-extrabold">이엔미디어는 성장하고자 하는 모든 길에 열려있습니다</h2>
             <h4 class="lg:text-lg pt-1 text-base font-light">언제든 문의 주시면 바로 답변드리겠습니다</h4>
           </div>
-          <NuxtLink to="/contact" class="lg:text-xl rowCenter text-black-800 px-6 py-1 space-x-4 text-lg font-bold bg-white">
+          <NuxtLink data-aos="fade-up" data-aos-duration="1000" to="/contact" class="lg:text-xl rowCenter text-black-800 px-6 py-1 space-x-4 text-lg font-bold bg-white">
             <span>GO CONTACT!</span>
             <i class="fa-solid fa-arrow-right"></i>
           </NuxtLink>

@@ -2,13 +2,11 @@ import site from "./site";
 const { name, description, url, keywords, defaultLocale, identity, trailingSlash, titleSeparator } = site;
 
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/devtools", "nuxt-aos", "@vueuse/nuxt", "@nuxt/image", "@nuxtjs/seo", "@nuxtjs/critters", "@nuxtjs/sitemap", "@pinia/nuxt", "nuxt-swiper", "nuxt-schema-org", "@formkit/auto-animate",],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/devtools", "nuxt-aos", "@vueuse/nuxt", "@nuxt/image", "@nuxtjs/seo", "@nuxtjs/critters", "@nuxtjs/sitemap", "@pinia/nuxt", "nuxt-swiper", "nuxt-schema-org", "@formkit/auto-animate"],
   devtools: {
     enabled: true,
   },
-  plugins: [
-    '~/plugins/clarity.client.js'
-  ],
+  plugins: ["~/plugins/clarity.client.js"],
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
     configPath: "tailwind.config",
@@ -74,11 +72,6 @@ export default defineNuxtConfig({
     once: false,
   },
   pinia: {
-    autoImports: [
-      'defineStore',
-      ['defineStore', 'definePiniaStore'],
-      'storeToRefs',
-      'acceptHMRUpdate',
-    ],
+    autoImports: ["defineStore", ["defineStore", "definePiniaStore"], "storeToRefs", "acceptHMRUpdate"],
   },
 });
