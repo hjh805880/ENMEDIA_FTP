@@ -14,7 +14,7 @@
               <NuxtLink to="tel:02-3429-3161" class="lg:text-lg text-black-700 border-black-800 lg:pr-6 pr-4 text-base font-light border-r"><span class="text-primary-500 mr-1 font-bold">Tel</span> 02-3429-3161</NuxtLink>
               <NuxtLink to="mailto:contact@en-media.kr" class="lg:text-lg text-black-700 text-base font-light"><span class="text-primary-500 mr-1 font-bold">E-Mail</span> contact@en-media.kr</NuxtLink>
             </div>
-            <h4 class="lg:text-lg text-black-700 text-base font-light">서울특별시 강서구 공항대로 227, 마곡센트럴타워 1차 501호</h4>
+            <h4 class="lg:text-lg text-black-700 text-base font-light">서울특별시 강서구 강서로56가길 141 케이엠빌딩, 6층</h4>
           </div>
         </div>
         <ContactForm />

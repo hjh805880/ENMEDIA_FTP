@@ -45,7 +45,7 @@
             <li class=""><b>사업자번호 :</b> <span>183-87-00290</span></li>
           </div>
           <li class=""><b>통신판매업신고번호 :</b> <span>2016-서울강서-1348</span></li>
-          <li class=""><b>주소 :</b> <span>서울특별시 강서구 공항대로 227 (마곡동, 마곡센트럴타워Ⅰ) 5층 501호</span></li>
+          <li class=""><b>주소 :</b> <span>서울특별시 강서구 강서로56가길 141 케이엠빌딩, 6층</span></li>
           <li class=""><b>이메일 :</b> <span>contact@en-media.kr</span></li>
           <div class="lg:flex-row lg:space-x-4 flex flex-col items-center justify-start font-light">
             <li class=""><b>대표번호 :</b> <span>02-3429-3161</span></li>

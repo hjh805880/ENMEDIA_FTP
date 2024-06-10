@@ -104,7 +104,7 @@ const toggleModal = () => {
       </NuxtLink>
     </div>
     <div class="bg-black-800 h-fit flex flex-col items-start justify-center w-full px-4 py-3 space-y-2">
-      <span class="text-black-300 text-xs">서울특별시 강서구 공항대로 227<br />(마곡동, 마곡센트럴타워Ⅰ) 5층 501호</span>
+      <span class="text-black-300 text-xs">서울특별시 강서구 강서로56가길 141 케이엠빌딩, 6층</span>
       <span class="text-black-500 text-xs">Copyrights 2024. <span class="font-medium">주식회사 이엔미디어</span> All Rights Reserved.</span>
     </div>
   </div>

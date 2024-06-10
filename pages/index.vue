@@ -163,7 +163,7 @@ const closeModal = () => {
         <div class="grid w-full grid-cols-1 px-2 space-y-6 text-left">
           <div class="flex flex-col items-start justify-center space-y-2">
             <h4 data-aos="fade-up" data-aos-duration="1000" class="before:content-['-'] before:text-3xl before:mr-2 before:text-primary-500 lg:text-2xl text-xl font-bold">ADDRESS</h4>
-            <h5 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" class="text-black-700 lg:text-lg">서울특별시 강서구 공항대로 227, 마곡센트럴타워 5층 501호</h5>
+            <h5 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" class="text-black-700 lg:text-lg">서울특별시 강서구 강서로56가길 141 케이엠빌딩, 6층</h5>
           </div>
           <div class="flex flex-col items-start justify-center space-y-2">
             <h4 data-aos="fade-up" data-aos-duration="1000" class="before:content-['-'] before:text-3xl before:mr-2 before:text-primary-500 lg:text-2xl text-xl font-bold">WAY TO COME</h4>
