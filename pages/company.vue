@@ -93,7 +93,6 @@ const selectedYearRange = ref("2023~2020");
               <div class="flex flex-col items-start justify-center w-full p-2">
                 <span class="text-primary-500 lg:text-4xl text-2xl font-extrabold">2020</span>
                 <ul class="text-black-800 lg:text-lg flex flex-col items-start justify-center text-base *:before:content-['-'] *:before:text-primary-500 *:lg:before:text-xl *:before:font-bold *:before:mr-2">
-                  <li class="">이승혜 법률사무소 홈페이지 제작 및 광고대행</li>
                   <li class="">순수치킨/달리는커피/응급실떡볶이/소소떡볶이/누들보쌈/심봉사고로케 등 프랜차이즈 업종 성공사례 관리</li>
                   <li class="">약 2,000여건 홈페이지 제작 달성</li>
                 </ul>

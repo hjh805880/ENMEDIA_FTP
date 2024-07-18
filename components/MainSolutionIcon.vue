@@ -1,4 +1,4 @@
-<style>
+<style scoped>
 .cls-1 {
   stroke: #7b22f3;
 }

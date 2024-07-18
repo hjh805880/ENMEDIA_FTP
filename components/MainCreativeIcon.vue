@@ -1,4 +1,4 @@
-<style>
+<style scoped>
 .creative-cls-1 {
   fill: url(#linear-gradient);
 }
