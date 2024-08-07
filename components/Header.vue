@@ -57,7 +57,7 @@ const toggleModal = () => {
       <NuxtLink to="/portfolio" class="navText" :class="{ 'after:hover:border-primary-500 text-black-800 text-base font-medium': isScrolled }">PORTFOLIO</NuxtLink>
       <!-- <NuxtLink to="/portfolio/gallery" class="navText" :class="{ 'after:hover:border-primary-500 text-black-800 text-base font-medium': isScrolled }">GALLERY</NuxtLink> -->
       <NuxtLink to="/contact" class="navText" :class="{ 'after:hover:border-primary-500 text-black-800 text-base font-medium': isScrolled }">CONTACT US</NuxtLink>
-      <NuxtLink to="/2024_ENMEDIA_INTRODUCE.pdf" external class="rowCenter px-6 py-2 space-x-2" :class="{ 'text-white text-sm font-bold bg-primary-500 hover:bg-primary-400': isScrolled, 'text-primary-500 text-base bg-white/60 mix-blend-overlay hover:bg-white backdrop-blur-md': !isScrolled }">
+      <NuxtLink to="/2024_08_ENMEDIA_INTRODUCE.pdf" external class="rowCenter px-6 py-2 space-x-2" :class="{ 'text-white text-sm font-bold bg-primary-500 hover:bg-primary-400': isScrolled, 'text-primary-500 text-base bg-white/60 mix-blend-overlay hover:bg-white backdrop-blur-md': !isScrolled }">
         <span>회사소개서</span>
         <i class="fa-solid fa-file-arrow-down"></i>
       </NuxtLink>
