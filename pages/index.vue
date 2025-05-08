@@ -29,6 +29,7 @@ const closeModal = () => {
 
 <template>
   <div>
+    <Popup />
     <!-- 섹션1 시작 -->
     <section id="section1" class="min-h-lvh w-screen h-screen overflow-hidden text-white">
       <div class="">
@@ -95,7 +96,7 @@ const closeModal = () => {
         <div data-aos="fade-up" data-aos-duration="1000" class="colCenter space-y-4">
           <h2 class="lg:text-4xl lg:pb-4 pb-2 text-3xl font-extrabold">창의적인 생각과 <span class="text-primary-500">Creative</span>한 아이디어로<br /><span class="text-secondary-500">확실한 성과</span>를 만들어냅니다</h2>
         </div>
-        <MainCreativeIcon data-aos="fade-up" data-aos-duration="1200"/>
+        <MainCreativeIcon data-aos="fade-up" data-aos-duration="1200" />
         <div class="flex items-start justify-between w-full gap-4">
           <div data-aos="fade-right" data-aos-duration="1200" class="flex flex-col items-start justify-start space-y-2 text-left">
             <h3 class="text-primary-500 lg:text-2xl text-xl font-bold">Performance Marketing</h3>
@@ -139,7 +140,7 @@ const closeModal = () => {
         <ServiceObject data-aos="zoom-in-up" data-aos-duration="1200" class="lg:mt-80 lg:mb-14 mt-40 mb-12" />
         <NuxtLink data-aos="fade-up" data-aos-duration="1200" to="/service" class="hover:bg-white hover:text-black-800 lg:text-lg px-6 py-1 text-base font-bold border-2 border-white rounded-full"> MORE SERVICE </NuxtLink>
         <!-- 여기부터 솔루션 시작 -->
-         <div data-aos="fade-up" data-aos-duration="1000" class="shadow-black-600/60 space-y-14 lg:max-w-full max-w-[95%] rounded-sm lg:-bottom-[28%] -bottom-[141vmin] text-black-800 absolute w-full lg:px-16 px-4 lg:py-40 py-32 bg-white shadow-xl">
+        <div data-aos="fade-up" data-aos-duration="1000" class="shadow-black-600/60 space-y-14 lg:max-w-full max-w-[95%] rounded-sm lg:-bottom-[28%] -bottom-[141vmin] text-black-800 absolute w-full lg:px-16 px-4 lg:py-40 py-32 bg-white shadow-xl">
           <div data-aos="fade-up" data-aos-duration="1200" class="colCenter space-y-4 overflow-hidden">
             <h2 class="lg:text-4xl lg:pb-4 pb-2 text-3xl font-extrabold">SOLUTION</h2>
             <div class="border-primary-500 lg:w-12 w-10 border-b-8"></div>
